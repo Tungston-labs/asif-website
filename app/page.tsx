@@ -1,4 +1,5 @@
 import AboutHome from "@/components/Home/About";
+import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Home/Hero/HeroSection";
 import Mission from "@/components/Home/Mission/Mission";
 import ProjectsSection from "@/components/Home/ProjectSession";
@@ -11,5 +12,7 @@ export default function Home() {
   <AboutHome/>
   <AboutArchitect/>
   <ProjectsSection/>
+    <Footer/>
   </>;
+
 }
