@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../styles/styles";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
