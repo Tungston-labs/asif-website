@@ -1,6 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+
 import {
   HeroSection,
   Container,
@@ -9,31 +12,76 @@ import {
   ButtonGroup,
   PrimaryButton,
   SecondaryButton,
-} from "./herosection.styles";
+  ImageWrapper,
+  SliderImage,
+  FloatingNote,
+  FloatingText,
+  ArrowImage,} from "./herosection.styles";
+
+const images = [
+  "/images/home/home1.svg",
+  "/images/home/home2.svg",
+  "/images/home/home3.svg",
+];
 
 const Hero = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-    <Navbar/>
-    <HeroSection>
-      <Container>
-        <Title>
-          VISIONARY <span>ARCHITECT</span>
-          <br />
-          DESIGNED FOR <span>THE WAY</span> YOU LIVE
-        </Title>
+      <Navbar />
 
-        <Subtitle>
-          We design thoughtful spaces that reflect your lifestyle as a
-          professional architecture firm
-        </Subtitle>
+      <HeroSection>
+        <Container>
+          <Title>
+            VISIONARY <span>ARCHITECT</span>
+            <br />
+            DESIGNED FOR <span>THE WAY</span> YOU LIVE
+          </Title>
 
-        <ButtonGroup>
-          <PrimaryButton>KNOW MORE</PrimaryButton>
-          <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
-        </ButtonGroup>
-      </Container>
-    </HeroSection>
+          <Subtitle>
+            We design thoughtful spaces that reflect your lifestyle as a
+            professional architecture firm
+          </Subtitle>
+
+          <ButtonGroup>
+            <PrimaryButton>KNOW MORE</PrimaryButton>
+            <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
+          </ButtonGroup>
+
+      <ImageWrapper>
+  {images.map((img, index) => (
+    <SliderImage key={index} $active={index === current}>
+      <Image
+        src={img}
+        alt="Hero"
+        fill
+        priority
+        style={{ objectFit: "cover" }}
+      />
+    </SliderImage>
+  ))}
+
+  <FloatingNote>
+    <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
+
+    <FloatingText>
+      Let’s Build Something <br />
+      Great Together
+    </FloatingText>
+  </FloatingNote>
+</ImageWrapper>
+
+        </Container>
+      </HeroSection>
     </>
   );
 };

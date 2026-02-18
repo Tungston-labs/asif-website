@@ -12,6 +12,8 @@ import {
   MenuItem,
   Button,
   HamburgerIcon,
+  CenterMenu,
+  RightSection,
 } from "./navbar.styles";
 
 const Navbar = () => {
@@ -19,7 +21,8 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      {/* Logo Image */}
+
+      {/* LEFT — LOGO */}
       <Logo>
         <Link href="/">
           <Image
@@ -32,32 +35,38 @@ const Navbar = () => {
         </Link>
       </Logo>
 
-      {/* Menu */}
-      <Menu $open={menuOpen}>
-        <MenuItem>
-          <Link href="/about">About Our Company</Link>
-        </MenuItem>
+      {/* CENTER — MENU */}
+      <CenterMenu>
+        <Menu $open={menuOpen}>
+             <MenuItem>
+            <Link href="/">Home</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link href="/about">About Our Company</Link>
+          </MenuItem>
 
-        <MenuItem>
-          <Link href="/portfolio">Our Portfolio</Link>
-        </MenuItem>
+          <MenuItem>
+            <Link href="/portfolio">Our Portfolio</Link>
+          </MenuItem>
 
-        <MenuItem>
-          <Link href="/contact">Contact Us</Link>
-        </MenuItem>
+          <MenuItem>
+            <Link href="/contact">Contact Us</Link>
+          </MenuItem>
+        </Menu>
+      </CenterMenu>
 
-        <MenuItem>
-          <Button href="tel:+919876543210">
-            <FaPhoneAlt />
-            +91 98765 43210
-          </Button>
-        </MenuItem>
-      </Menu>
+      {/* RIGHT — CALL BUTTON + HAMBURGER */}
+      <RightSection>
+        <Button href="tel:+919876543210">
+          <FaPhoneAlt />
+          +91 98765 43210
+        </Button>
 
-      {/* Hamburger */}
-      <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </HamburgerIcon>
+        <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </HamburgerIcon>
+      </RightSection>
+
     </NavbarContainer>
   );
 };
