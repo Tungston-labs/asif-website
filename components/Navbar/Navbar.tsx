@@ -34,6 +34,10 @@ const Navbar = () => {
 
       {/* Menu */}
       <Menu $open={menuOpen}>
+          <MenuItem>
+          <Link href="/">Home</Link>
+        </MenuItem>
+
         <MenuItem>
           <Link href="/about">About Our Company</Link>
         </MenuItem>
