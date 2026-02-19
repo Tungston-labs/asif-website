@@ -1,0 +1,64 @@
+"use client";
+
+import Image from "next/image";
+import {
+  Section,
+  Container,
+  CardsWrapper,
+  Card,
+  IconWrapper,
+  Title,
+  Description,
+  Divider,
+} from "./Mission.styles";
+
+const missionData = [
+  {
+    icon: "/images/home/success.svg",
+    title: "200+ Successful Projects",
+    description:
+      "Delivering diverse residential and commercial architecture house design and architectural home plans solutions that reflect our creativity, precision, and commitment as a trusted best house architects studio.",
+  },
+  {
+    icon: "/images/home/happy.svg",
+    title: "100% Happy Customers",
+    description:
+      "Client satisfaction is our top priority. Our commitment to excellence is reflected in consistent house building design plan results, lasting relationships, and strong, trusted partnerships with best house architects.",
+  },
+  {
+    icon: "/images/home/ontime.svg",
+    title: "On-Time Project Delivery",
+    description:
+      "We value your time and investment, ensuring every house building design plan and architect plans for house project is executed with precision, clear timelines, and reliable completion.",
+  },
+];
+
+const Mission = () => {
+  return (
+    <Section>
+      <Container>
+        <CardsWrapper>
+          {missionData.map((item, index) => (
+            <Card key={index}>
+              <IconWrapper>
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={100}
+                  height={100}
+                />
+              </IconWrapper>
+
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+
+              <Divider />
+            </Card>
+          ))}
+        </CardsWrapper>
+      </Container>
+    </Section>
+  );
+};
+
+export default Mission;
