@@ -1,10 +1,13 @@
-import { CircleButton } from "./AboutArchitect.styled";
-import { FaArrowRight } from "react-icons/fa";
+import { IoArrowRedoSharp    } from "react-icons/io5";
+import { CircleButton, CircleInside } from "./AboutArchitect.styled";
 
 const PortfolioCircle = () => {
   return (
+    
     <CircleButton>
-      <FaArrowRight />
+      <CircleInside>
+      <IoArrowRedoSharp    size={40} />
+      </CircleInside>
     </CircleButton>
   );
 };

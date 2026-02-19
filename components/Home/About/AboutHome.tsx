@@ -5,7 +5,6 @@ import {
   Section,
   Container,
   LeftContent,
-  Tag,
   Title,
   Description,
   ReadMoreButton,
@@ -15,6 +14,7 @@ import {
   ImageSubtitle,
   BgBlueprint,
 } from "./AboutHome.styled";
+import { Tag } from "../Sessions/AboutArchitect.styled";
 
 const AboutHome = () => {
   return (
@@ -26,7 +26,7 @@ const AboutHome = () => {
       <Container>
         {/* LEFT SIDE */}
         <LeftContent>
-          <Tag>ABOUT US</Tag>
+          <Tag $color="#000">ABOUT US</Tag>
 
           <Title>
             <strong>ARCHITECTURE</strong> IS NOT

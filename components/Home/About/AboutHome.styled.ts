@@ -26,12 +26,6 @@ export const LeftContent = styled.div`
   z-index: 2;
 `;
 
-export const Tag = styled.span`
-  font-size: 0.75rem;
-  letter-spacing: 0.15rem;
-  color: #c09949;
-  font-weight: 500;
-`;
 
 export const Title = styled.h2`
   margin-top: 1rem;

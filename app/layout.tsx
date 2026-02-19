@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Jost,Caveat } from "next/font/google";
+import { Jost,Caveat, Manrope } from "next/font/google";
 import StyledComponentsRegistry from "../lib/styled-registry";
 
 import Providers from "@/providers/providers";
@@ -20,14 +20,18 @@ const caveat = Caveat({
   weight: ["400", "500", "600"],
   variable: "--font-caveat",
 });
-
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-manrope",
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jost.className} ${caveat.variable}`}>
+    <html lang="en" className={`${jost.className} ${caveat.variable} ${manrope.variable}`}>
     <body>
         <StyledComponentsRegistry>
           <Providers>
