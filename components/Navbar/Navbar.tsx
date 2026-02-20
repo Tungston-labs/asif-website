@@ -35,15 +35,15 @@ const Navbar = () => {
         </Link>
       </Logo>
 
-      {/* Menu */}
-      <Menu $open={menuOpen}>
+      {/* CENTER — MENU */}
+      <CenterMenu>
+        <Menu $open={menuOpen}>
+             <MenuItem>
+            <Link href="/">Home</Link>
+          </MenuItem>
           <MenuItem>
-          <Link href="/">Home</Link>
-        </MenuItem>
-
-        <MenuItem>
-          <Link href="/about">About Our Company</Link>
-        </MenuItem>
+            <Link href="/about">About Our Company</Link>
+          </MenuItem>
 
           <MenuItem>
             <Link href="/portfolio">Our Portfolio</Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar"; // keep your existing path
+import Navbar from "@/components/Navbar"; 
 import {
   PageWrapper,
   HeroSection,
@@ -13,10 +13,7 @@ import {
 const AboutPage: React.FC = () => {
   return (
     <PageWrapper>
-      {/* Existing Navbar */}
       <Navbar />
-
-      {/* Hero Section */}
       <HeroSection>
         <HeroOverlay />
 
