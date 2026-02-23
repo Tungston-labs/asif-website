@@ -15,7 +15,7 @@ export const BannerWrapper = styled.div`
   background-color: #cfa652;
   overflow: hidden;
   white-space: nowrap;
-  padding: 14px 0;
+  padding: 0.875rem 0; /* 14px */
 `;
 
 export const MovingText = styled.div`
@@ -27,17 +27,17 @@ export const TextItem = styled.span`
   display: flex;
   align-items: center;
   font-family: var(--font-jost), sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem; /* 3px */
   text-transform: uppercase;
-  margin-right: 40px;
+  margin-right: 2.5rem; /* 40px */
   color: #000;
 `;
 
 export const Separator = styled.span`
   display: flex;
   align-items: center;
-  margin-left: 40px;
-  font-size: 14px;
+  margin-left: 2.5rem; /* 40px */
+  font-size: 0.875rem; /* 14px */
 `;
