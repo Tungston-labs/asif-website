@@ -29,7 +29,6 @@ export const Description = styled.p`
   text-transform: capitalize;   /* 👈 add this */
 `;
 
-
 export const Bold = styled.span`
   font-weight: 500;
 

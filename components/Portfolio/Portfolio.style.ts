@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: #ffffff;
+  background: #f2f2f2;
 `;
 
 /* Hero Section */
