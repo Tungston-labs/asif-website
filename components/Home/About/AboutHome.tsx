@@ -22,7 +22,6 @@ const AboutHome = () => {
 
       {/* BACKGROUND IMAGE */}
     
-
       <Container>
         {/* LEFT SIDE */}
         <LeftContent>
