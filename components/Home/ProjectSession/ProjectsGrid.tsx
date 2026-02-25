@@ -3,7 +3,17 @@
 import { useRef, useState } from "react";
 import { projects } from "./Projects.data";
 import ProjectCard from "./ProjectsCard";
-import { Grid } from "./Projects.styled";
+import {
+  Grid,
+  HeaderWrapper,
+  LocationTitle,
+  LocationDescription,
+  PortButton,
+  HeaderGrid,
+  BorderLine,
+  GridSection,
+} from "./Projects.styled";
+import { Button } from "@/components/Navbar/navbar.styles";
 
 interface Props {
   location: string;
@@ -13,6 +23,8 @@ const ProjectsGrid = ({ location }: Props) => {
   const filteredProjects = projects.filter(
     (p) => p.location === location
   );
+
+  const description = filteredProjects[0]?.description;
 
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -37,22 +49,44 @@ const ProjectsGrid = ({ location }: Props) => {
     e.preventDefault();
 
     const x = e.pageX - gridRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // drag speed
+    const walk = (x - startX) * 1.5;
     gridRef.current.scrollLeft = scrollLeft - walk;
   };
+const project = projects.find(
+  (p) => p.location === location
+);
 
+if (!project) return null;
   return (
-    <Grid
-      ref={gridRef}
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-    >
-      {filteredProjects.map((project) => (
-        <ProjectCard key={project.id} {...project} />
-      ))}
-    </Grid>
+<>
+<GridSection>
+   <div className="v-line v-left" />
+  <div className="v-line v-left v-bottom" />
+  <HeaderGrid>
+    <LocationTitle>{project.location}</LocationTitle>
+    <LocationDescription>
+      {project.description}
+    </LocationDescription>
+  </HeaderGrid>
+  <Grid
+    ref={gridRef}
+    onMouseDown={handleMouseDown}
+    onMouseLeave={handleMouseLeave}
+    onMouseUp={handleMouseUp}
+    onMouseMove={handleMouseMove}
+  >
+    {project.images.map((image, index) => (
+      <ProjectCard
+        key={index}
+        image={image}
+        title={project.title}
+      />
+    ))}
+  </Grid>
+
+  <PortButton>See full portfolio</PortButton>
+  </GridSection>
+</>
   );
 };
 

@@ -5,6 +5,7 @@ import Mission from "@/components/Home/Mission/Mission";
 import ProjectsSection from "@/components/Home/ProjectSession";
 import AboutArchitect from "@/components/Home/Sessions";
 import Banner from "@/components/About/Banner/Banner";
+import WhatWeDo from "@/components/Home/WhatWeDo";
 
 export default function Home() {
   return <>
@@ -14,6 +15,7 @@ export default function Home() {
   <AboutArchitect/>
   <Banner/>
   <ProjectsSection/>
+  <WhatWeDo/>
    <Footer/>
   </>;
 
