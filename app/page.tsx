@@ -6,6 +6,7 @@ import ProjectsSection from "@/components/Home/ProjectSession";
 import AboutArchitect from "@/components/Home/Sessions";
 import Banner from "@/components/About/Banner/Banner";
 import Testimonials from "@/components/Home/Testimonials/Testimonials";
+import WhatWeDo from "@/components/Home/WhatWeDo";
 
 export default function Home() {
   return <>
@@ -16,6 +17,7 @@ export default function Home() {
   <Banner/>
   <ProjectsSection/>
   <Testimonials/>
+  <WhatWeDo/>
    <Footer/>
   </>;
 
