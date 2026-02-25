@@ -21,7 +21,7 @@ const AboutHome = () => {
     <Section>
 
       {/* BACKGROUND IMAGE */}
-    
+
       <Container>
         {/* LEFT SIDE */}
         <LeftContent>
@@ -48,13 +48,13 @@ const AboutHome = () => {
           </Description>
 
           <ReadMoreButton>READ MORE</ReadMoreButton>
-            <BgBlueprint>
-        <Image
-          src="/images/about/about-back.svg"
-          alt="Blueprint"
-          fill
-        />
-      </BgBlueprint>
+          <BgBlueprint>
+            <Image
+              src="/images/about/about-back.svg"
+              alt="Blueprint"
+              fill
+            />
+          </BgBlueprint>
         </LeftContent>
 
         {/* RIGHT SIDE IMAGES */}

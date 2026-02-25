@@ -68,6 +68,7 @@ export const Tab = styled.button<{ $active?: boolean }>`
     background: rgba(215, 174, 91, 0.3);
   }
 `;
+
 export const Grid = styled.div`
   display: flex;
   gap: 2rem;
