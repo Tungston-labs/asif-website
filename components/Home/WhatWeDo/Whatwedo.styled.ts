@@ -42,7 +42,7 @@ export const Description = styled.p`
   font-family: Jost;
   font-size: 16px;
   line-height: 1.8;
-  color: #666;
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 2rem;
 `;
 
@@ -58,14 +58,14 @@ export const FeatureTitle = styled.h4`
   font-family: Jost;
   font-size: 16px;
   font-weight: 500;
-  color: #111;
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 0.4rem;
 `;
 
 export const FeatureText = styled.p`
   font-family: Jost;
   font-size: 15px;
-  color: #666;
+  color: rgba(0, 0, 0, 1);
   line-height: 1.7;
 `;
 
