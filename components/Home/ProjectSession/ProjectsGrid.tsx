@@ -10,7 +10,6 @@ import {
   LocationDescription,
   PortButton,
   HeaderGrid,
-  BorderLine,
   GridSection,
 } from "./Projects.styled";
 import { Button } from "@/components/Navbar/navbar.styles";
