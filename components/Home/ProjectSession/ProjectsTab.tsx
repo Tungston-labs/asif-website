@@ -4,7 +4,7 @@ import { TabsWrapper, Tab } from "./Projects.styled";
 import { useState } from "react";
 
 const locations = [
-  "Ernakulam",
+  "ERNAKULAM",
   "PAYYANUR",
   "KOTTAYAM",
   "KAKKANAD",

@@ -9,6 +9,9 @@ import {
   LocationTitle,
   LocationDescription,
   PortButton,
+  HeaderGrid,
+  BorderLine,
+  GridSection,
 } from "./Projects.styled";
 import { Button } from "@/components/Navbar/navbar.styles";
 
@@ -49,33 +52,41 @@ const ProjectsGrid = ({ location }: Props) => {
     const walk = (x - startX) * 1.5;
     gridRef.current.scrollLeft = scrollLeft - walk;
   };
+const project = projects.find(
+  (p) => p.location === location
+);
 
+if (!project) return null;
   return (
-    <>
-      {/* HEADER SECTION */}
-      <HeaderWrapper>
-        <LocationTitle>{location}</LocationTitle>
-        {description && (
-          <LocationDescription>
-            {description}
-          </LocationDescription>
-        )}
-      </HeaderWrapper>
+<>
+<GridSection>
+   <div className="v-line v-left" />
+  <div className="v-line v-left v-bottom" />
+  <HeaderGrid>
+    <LocationTitle>{project.location}</LocationTitle>
+    <LocationDescription>
+      {project.description}
+    </LocationDescription>
+  </HeaderGrid>
+  <Grid
+    ref={gridRef}
+    onMouseDown={handleMouseDown}
+    onMouseLeave={handleMouseLeave}
+    onMouseUp={handleMouseUp}
+    onMouseMove={handleMouseMove}
+  >
+    {project.images.map((image, index) => (
+      <ProjectCard
+        key={index}
+        image={image}
+        title={project.title}
+      />
+    ))}
+  </Grid>
 
-      {/* GRID */}
-      <Grid
-        ref={gridRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
-      </Grid>
-      <PortButton>See full portfolio</PortButton>
-    </>
+  <PortButton>See full portfolio</PortButton>
+  </GridSection>
+</>
   );
 };
 
