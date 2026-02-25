@@ -6,7 +6,7 @@ const PortfolioCircle = () => {
     
     <CircleButton>
       <CircleInside>
-      <IoArrowRedoSharp    size={40} />
+      <IoArrowRedoSharp    size={20} />
       </CircleInside>
     </CircleButton>
   );

@@ -4,6 +4,7 @@ import Hero from "@/components/Home/Hero/HeroSection";
 import Mission from "@/components/Home/Mission/Mission";
 import ProjectsSection from "@/components/Home/ProjectSession";
 import AboutArchitect from "@/components/Home/Sessions";
+import Banner from "@/components/About/Banner/Banner";
 
 export default function Home() {
   return <>
@@ -11,8 +12,9 @@ export default function Home() {
   <Mission/>
   <AboutHome/>
   <AboutArchitect/>
+  <Banner/>
   <ProjectsSection/>
-    <Footer/>
+   <Footer/>
   </>;
 
 }
