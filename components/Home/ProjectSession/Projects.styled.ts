@@ -78,9 +78,8 @@ export const Grid = styled.div`
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  /* ⭐ creates half-visible next card */
-  padding-left: calc((100%- 800px) / 2);
-  padding-right: calc((100% - 800px) / 2);
+  padding-left: calc((100%- 80%) / 2);
+  padding-right: calc((100% - 80%) / 2);
 
   scrollbar-width: none;
 
@@ -110,6 +109,36 @@ export const Card = styled.div`
   }
 `;
 
+
+export const LocationTitle = styled.h2`
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+`;
+
+export const LocationDescription = styled.p`
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+`;
+export const PortButton = styled.button`
+  display: block;
+  margin: 2rem auto 0;
+
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 12px 28px;
+  cursor: pointer;
+`;
 export const CardImage = styled.div`
   width: 100%;
   height: 100%;
