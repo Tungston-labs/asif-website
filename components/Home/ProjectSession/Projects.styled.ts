@@ -25,12 +25,11 @@ export const GridSection = styled.div`
   position: relative;
   padding: 3rem 0;
 
-  --border-color: #000;
-  --border-size: 2px;
+  --border-color: rgba(0, 0, 0, 0.3);
+  --border-size: 1px;
   --grid-start: 10%;
   --grid-width: 94.1%; /* important */
 
-  /* TOP + BOTTOM HORIZONTAL */
   &::before,
   &::after {
     content: "";
