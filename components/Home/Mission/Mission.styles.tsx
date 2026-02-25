@@ -2,71 +2,89 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  padding: 5rem 3.75rem; /* 80px 60px */
+  padding: 5rem 3.75rem;
   position: relative;
   overflow: hidden;
-
   background: #000;
 
   /* GOLD GRADIENT EFFECT */
   &::before {
     content: "";
     position: absolute;
-    top: -12.5rem;     /* -200px */
-    right: -6.25rem;   /* -100px */
-    width: 37.5rem;    /* 600px */
+    top: -12.5rem;
+    right: -6.25rem;
+    width: 37.5rem;
     height: 37.5rem;
-
     background: radial-gradient(
       rgba(192, 153, 73, 0.35) 0%,
       rgba(192, 153, 73, 0.15) 30%,
       rgba(0, 0, 0, 0) 70%
     );
-
     pointer-events: none;
     z-index: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 4rem 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
   }
 `;
 
 export const Container = styled.div`
-  max-width: 87.5rem; /* 1400px */
+  max-width: 87.5rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 `;
 
 export const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.875rem; /* 30px */
+  gap: 1.875rem;
 
-  @media (max-width: 64rem) { /* 1024px */
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  @media (max-width: 48rem) { /* 768px */
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 `;
 
 export const Card = styled.div`
-  border: 0.0625rem solid rgba(255, 255, 255, 0.15); /* 1px */
-  padding: 2.5rem 2.1875rem; /* 40px 35px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+  padding: 2.5rem 2.1875rem;
   color: #fff;
   background: transparent;
   transition: 0.35s ease;
 
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem;
 
   &:hover {
-    border-color: #D7AE5B;
-    transform: translateY(-0.375rem); /* -6px */
+    border-color: #d7ae5b;
+    transform: translateY(-0.375rem);
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
   }
 `;
 
 export const IconWrapper = styled.div`
-  width: 6.25rem;  /* 100px */
+  width: 6.25rem;
   height: 6.25rem;
+
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+  }
 
   img {
     width: 100%;
@@ -76,20 +94,32 @@ export const IconWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.375rem; /* 22px */
+  font-size: 1.375rem;
   font-weight: 500;
-  letter-spacing: 0.025rem; /* 0.4px */
+  letter-spacing: 0.025rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.15rem;
+  }
 `;
 
 export const Description = styled.p`
-  font-size: 0.9375rem; /* 15px */
+  font-size: 0.9375rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.75);
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const Divider = styled.div`
-  width: 3.125rem; /* 50px */
-  height: 0.125rem; /* 2px */
+  width: 3.125rem;
+  height: 0.125rem;
   background: rgba(255, 255, 255, 0.5);
   margin-top: auto;
 `;

@@ -20,28 +20,31 @@ import Image from "next/image";
 const AboutArchitect = () => {
   return (
     <Section>
-        <DarkSection>
-          <SideNav/>
-      <Container>
-        <LeftWrapper>
-          <LeftGallery />
-        </LeftWrapper>
+      <DarkSection>
+        <SideNav />
 
-        <CenterWrapper>
-          <AboutContent />
-        </CenterWrapper>
+        <Container>
+          <LeftWrapper>
+            <LeftGallery />
+          </LeftWrapper>
+
+          <CenterWrapper>
+            <SideImage>
+              <Image
+                src="/images/about/about-me.svg"
+                alt="Architect"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </SideImage>
+
+            <AboutContent />
+          </CenterWrapper>
 
           <SocialLinks />
-      </Container>
-  <SideImage>
-          <Image
-            src="/images/about/about-me.svg"
-            alt="Architect"
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </SideImage>
-      <PortfolioCircle />
+        </Container>
+
+        <PortfolioCircle />
       </DarkSection>
     </Section>
   );

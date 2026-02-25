@@ -22,6 +22,8 @@ const images = [
   "/images/home/home1.svg",
   "/images/home/home2.svg",
   "/images/home/home3.svg",
+  "/images/home/home4.svg",
+
 ];
 
 const Hero = () => {

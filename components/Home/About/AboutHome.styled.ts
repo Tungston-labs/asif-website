@@ -3,29 +3,48 @@ import styled from "styled-components";
 export const Section = styled.section`
   position: relative;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 6rem 6rem ;
   background: #f6f6f6;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 5rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5rem 2rem;
+  }
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 62rem) {
+  @media (max-width: 1024px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 `;
 
 export const LeftContent = styled.div`
   position: relative;
   z-index: 2;
-`;
 
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
 
 export const Title = styled.h2`
   margin-top: 1rem;
@@ -41,14 +60,34 @@ export const Title = styled.h2`
   span {
     font-weight: 700;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.9rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Description = styled.p`
   margin-top: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: #666;
   max-width: 32rem;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.95rem;
+  }
 `;
 
 export const ReadMoreButton = styled.button`
@@ -61,11 +100,17 @@ export const ReadMoreButton = styled.button`
   font-weight: 500;
   cursor: pointer;
   letter-spacing: 0.05rem;
-
   transition: 0.3s ease;
 
   &:hover {
     transform: translateY(-0.2rem);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -73,6 +118,16 @@ export const RightImages = styled.div`
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const ImageCard = styled.div<{ $offset?: boolean }>`
@@ -86,6 +141,12 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
       margin-top: -3rem;
     `}
 
+  @media (max-width: 768px) {
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -94,29 +155,41 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
 `;
 
 export const ImageTitle = styled.h4`
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
   color: #111;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const ImageSubtitle = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #777;
 `;
 
 export const BgBlueprint = styled.div`
-  position: relative;
-
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
   width: 28rem;
   height: 18rem;
-
-
   opacity: 0.7;
   pointer-events: none;
+  z-index: 0;
 
   img {
     object-fit: contain;
   }
-`;
 
+  @media (max-width: 1024px) {
+    width: 22rem;
+    height: 24rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
