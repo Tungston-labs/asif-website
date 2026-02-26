@@ -10,15 +10,17 @@ import WhatWeDo from "@/components/Home/WhatWeDo";
 
 export default function Home() {
   return <>
-  <Hero/>
-  <Mission/>
-  <AboutHome/>
-  <AboutArchitect/>
-  <Banner/>
-  <ProjectsSection/>
-  <Testimonials/>
-  <WhatWeDo/>
-   <Footer/>
+    <Hero />
+    <Mission />
+    <AboutHome />
+    <AboutArchitect />
+    <Banner />
+    <ProjectsSection />
+    <section id="testimonials">
+      <Testimonials />
+    </section>
+    <WhatWeDo />
+    <Footer />
   </>;
 
 }

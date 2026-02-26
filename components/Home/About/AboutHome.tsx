@@ -15,6 +15,7 @@ import {
   BgBlueprint,
 } from "./AboutHome.styled";
 import { Tag } from "../Sessions/AboutArchitect.styled";
+import Link from "next/link";
 
 const AboutHome = () => {
   return (
@@ -47,7 +48,11 @@ const AboutHome = () => {
             and a strong commitment to quality and excellence.
           </Description>
 
-          <ReadMoreButton>READ MORE</ReadMoreButton>
+          <ReadMoreButton>
+            <Link href="/about" passHref>
+              READ MORE
+            </Link>
+          </ReadMoreButton>
           <BgBlueprint>
             <Image
               src="/images/about/about-back.svg"

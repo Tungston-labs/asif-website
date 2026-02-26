@@ -13,10 +13,15 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 62.5rem; /* 1000px */
-  margin-top: 0.625rem; /* 10px */
-
+  margin-top: 0.625rem;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
+
+  /* ✅ ADD THIS BLOCK (this is the only change) */
+  @media (max-width: 48rem) {  /* 768px */
+    height: 70vh;              /* responsive height for mobile */
+    margin-left: 0;            /* prevent horizontal shift on mobile */
+  }
 `;
 
 export const SliderImage = styled.div<{ $active: boolean }>`
@@ -46,7 +51,7 @@ const floatFadeMove = keyframes`
     transform: translateY(1.25rem); /* 20px */
     opacity: 0.85;
   }
-
+ 
   75% {
     transform: translateY(3.125rem); /* 50px */
     opacity: 0;
@@ -121,10 +126,21 @@ export const PrimaryButton = styled.button`
   color: #fff;
   border: none;
   border-radius: 0.3rem;
-  padding: 1.125rem 1.75rem; /* 18px 28px */
+  padding: 1.125rem 1.75rem;
   font-weight: 500;
   cursor: pointer;
-  letter-spacing: 0.0625rem; /* 1px */
+  letter-spacing: 0.0625rem;
+
+  text-decoration: none;   /* remove underline */
+  display: inline-block;   /* fixes anchor behavior */
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+    color: #fff;
+  }
 `;
 
 export const SecondaryButton = styled.button`
@@ -132,8 +148,19 @@ export const SecondaryButton = styled.button`
   color: #fff;
   border-radius: 0.3rem;
   border: none;
-  padding: 1.125rem 1.75rem; /* 18px 28px */
+  padding: 1.125rem 1.75rem;
   font-weight: 500;
   cursor: pointer;
   letter-spacing: 0.0625rem;
+
+  text-decoration: none;   /* remove underline */
+  display: inline-block;   /* fix anchor behavior */
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+    color: #fff;           /* prevent purple visited color */
+  }
 `;

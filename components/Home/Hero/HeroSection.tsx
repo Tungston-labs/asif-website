@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   HeroSection,
@@ -16,13 +17,15 @@ import {
   SliderImage,
   FloatingNote,
   FloatingText,
-  ArrowImage,} from "./herosection.styles";
+  ArrowImage,
+} from "./herosection.styles";
 
 const images = [
   "/images/home/home1.svg",
   "/images/home/home2.svg",
   "/images/home/home3.svg",
   "/images/home/home4.svg",
+  "/images/home/home5.svg",
 
 ];
 
@@ -55,32 +58,37 @@ const Hero = () => {
           </Subtitle>
 
           <ButtonGroup>
-            <PrimaryButton>KNOW MORE</PrimaryButton>
-            <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
+            <Link href="/about">
+              <PrimaryButton>KNOW MORE</PrimaryButton>
+            </Link>
+
+            <Link href="/portfolio">
+              <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
+            </Link>
           </ButtonGroup>
 
-      <ImageWrapper>
-  {images.map((img, index) => (
-    <SliderImage key={index} $active={index === current}>
-      <Image
-        src={img}
-        alt="Hero"
-        fill
-        priority
-        style={{ objectFit: "cover" }}
-      />
-    </SliderImage>
-  ))}
+          <ImageWrapper>
+            {images.map((img, index) => (
+              <SliderImage key={index} $active={index === current}>
+                <Image
+                  src={img}
+                  alt="Hero"
+                  fill
+                  priority
+                  style={{ objectFit: "cover" }}
+                />
+              </SliderImage>
+            ))}
 
-  <FloatingNote>
-    <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
+            <FloatingNote>
+              <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
 
-    <FloatingText>
-      Let’s Build Something <br />
-      Great Together
-    </FloatingText>
-  </FloatingNote>
-</ImageWrapper>
+              <FloatingText>
+                Let’s Build Something <br />
+                Great Together
+              </FloatingText>
+            </FloatingNote>
+          </ImageWrapper>
 
         </Container>
       </HeroSection>

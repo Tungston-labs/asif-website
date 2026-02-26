@@ -50,17 +50,36 @@ const Footer = () => {
           />
 
           <SocialIcons>
-            <IconBox>
-              <Image src="/images/twitter.svg" alt="fb" width={18} height={18} />
+            {/* FACEBOOK - First Icon */}
+            <IconBox
+
+            >
+              <Image src="/images/facebook.svg" alt="facebook" width={18} height={18} />
             </IconBox>
+
+            {/* LINKEDIN */}
             <IconBox>
               <Image src="/images/linkedin.svg" alt="linkedin" width={18} height={18} />
             </IconBox>
-            <IconBox>
-              <Image src="/images/facebook.svg" alt="twitter" width={18} height={18} />
+
+            {/* TWITTER */}
+            <IconBox
+              as="a"
+              href="https://www.facebook.com/share/1JsGiUxt3S/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/images/twitter.svg" alt="twitter" width={18} height={18} />
             </IconBox>
-            <IconBox>
-              <Image src="/images/instagram.svg" alt="insta" width={18} height={18} />
+
+            {/* INSTAGRAM - Last Icon */}
+            <IconBox
+              as="a"
+              href="https://www.instagram.com/architect_asif_ahmed?igsh=NzhtaWlkczQ2anNs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/images/instagram.svg" alt="instagram" width={18} height={18} />
             </IconBox>
           </SocialIcons>
         </Center>

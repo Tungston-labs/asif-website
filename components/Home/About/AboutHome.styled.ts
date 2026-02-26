@@ -133,7 +133,7 @@ export const RightImages = styled.div`
 export const ImageCard = styled.div<{ $offset?: boolean }>`
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
 
   ${({ $offset }) =>
     $offset &&
@@ -141,16 +141,26 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
       margin-top: -3rem;
     `}
 
-  @media (max-width: 768px) {
-    margin-top: 0;
-    align-items: center;
-    text-align: center;
-  }
-
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 22rem;   /* fixed equal width */
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+      height: 25rem;    /* fixed equal height */
+      object-fit: cover;
+    }
   }
 `;
 

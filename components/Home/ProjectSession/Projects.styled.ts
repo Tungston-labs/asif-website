@@ -1,26 +1,38 @@
 import styled, { keyframes } from "styled-components";
+
 const zoomAnimation = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 `;
 
 export const Section = styled.section`
   padding: 6rem 4rem;
   background: #f7f7f7;
+
+  @media (max-width: 1024px) {
+    padding: 5rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
   text-align: center;
   max-width: 900px;
   margin: 0 auto 3rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 `;
+
 export const GridSection = styled.div`
   position: relative;
   padding: 3rem 0;
@@ -28,7 +40,7 @@ export const GridSection = styled.div`
   --border-color: rgba(0, 0, 0, 0.3);
   --border-size: 1px;
   --grid-start: 10%;
-  --grid-width: 94.1%; /* important */
+  --grid-width: 94.1%;
 
   &::before,
   &::after {
@@ -38,18 +50,12 @@ export const GridSection = styled.div`
     width: var(--grid-width);
     height: var(--border-size);
     background: var(--border-color);
-    pointer-events: none; /* prevents drag issues */
+    pointer-events: none;
   }
 
-  &::before {
-    top: 0;
-  }
+  &::before { top: 0; }
+  &::after { bottom: 0; }
 
-  &::after {
-    bottom: 0;
-  }
-
-  /* SMALL VERTICAL TOUCH LINES */
   .v-line {
     position: absolute;
     width: var(--border-size);
@@ -72,14 +78,23 @@ export const GridSection = styled.div`
     top: auto;
     bottom: 0;
   }
+
+  @media (max-width: 768px) {
+    --grid-start: 5%;
+    --grid-width: 90%;
+  }
 `;
 
 export const HeaderGrid = styled.div`
   text-align: center;
   max-width: 70%;
-  width: 90% ;
+  width: 90%;
+  margin: 0 2rem 2rem 0;
 
-  margin: 0 2rem 2rem 0 ;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
 `;
 
 export const Tag = styled.span`
@@ -93,14 +108,24 @@ export const Title = styled.h2`
   font-size: 2.2rem;
   font-weight: 300;
 
-  strong {
-    font-weight: 700;
+  strong { font-weight: 700; }
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
   }
 `;
 
 export const Description = styled.p`
   margin-top: 1rem;
   color: #666;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 export const TabsWrapper = styled.div`
@@ -109,6 +134,11 @@ export const TabsWrapper = styled.div`
   margin-left: 5%;
   flex-wrap: wrap;
 
+  @media (max-width: 768px) {
+    margin-left: 0;
+    justify-content: center;
+    gap: 0.5rem;
+  }
 `;
 
 export const Tab = styled.button<{ $active?: boolean }>`
@@ -121,11 +151,18 @@ export const Tab = styled.button<{ $active?: boolean }>`
   padding: 0.6rem 2.9rem;
   border-radius: 0.2rem;
   cursor: pointer;
-
   transition: all 0.3s ease;
 
   &:hover {
     background: rgba(215, 174, 91, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `;
 
@@ -139,7 +176,7 @@ export const Grid = styled.div`
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  padding-left: calc((100%- 80%) / 2);
+  padding-left: calc((100% - 80%) / 2);
   padding-right: calc((100% - 80%) / 2);
 
   scrollbar-width: none;
@@ -147,12 +184,17 @@ export const Grid = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 export const Card = styled.div`
   flex: 0 0 800px;
   height: 476px;
-  
   position: relative;
   overflow: hidden;
 
@@ -160,46 +202,75 @@ export const Card = styled.div`
   scroll-snap-align: center;
 
   box-shadow: 10px 4px 10px 10px rgba(0, 0, 0, 0.45);
-
   cursor: pointer;
-
   transition: transform 0.35s ease;
 
   &:hover {
     transform: scale(1.03);
   }
+
+  @media (max-width: 1024px) {
+    flex: 0 0 650px;
+    height: 420px;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 500px;
+    height: 350px;
+  }
+
+  @media (max-width: 480px) {
+    flex: 0 0 90%;
+    height: 300px;
+  }
 `;
 
-
 export const LocationTitle = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 12px;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const LocationDescription = styled.p`
   max-width: 80%;
   margin-left: 15%;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   opacity: 0.8;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-left: 0;
+  }
 `;
+
 export const PortButton = styled.button`
   display: block;
   margin: 2rem auto 0;
 
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   text-transform: uppercase;
 
-  padding: 12px 28px;
+  padding: 0.75rem 1.75rem;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
+
 export const CardImage = styled.div`
   width: 100%;
   height: 100%;
@@ -217,7 +288,3 @@ export const CardImage = styled.div`
     transform: scale(1.08);
   }
 `;
-
-
-
-
