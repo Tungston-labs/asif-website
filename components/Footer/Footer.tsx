@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <TopSection>
-        {/* LEFT */}
+        
         <Left>
           <InfoItem>
             <Image src="/images/phone.svg" alt="phone" width={22} height={22} />
@@ -40,7 +40,7 @@ const Footer = () => {
           </InfoItem>
         </Left>
 
-        {/* CENTER */}
+        
         <Center>
           <Image
             src="/images/logo2.svg"
@@ -50,19 +50,19 @@ const Footer = () => {
           />
 
           <SocialIcons>
-            {/* FACEBOOK - First Icon */}
+             
             <IconBox
 
             >
               <Image src="/images/facebook.svg" alt="facebook" width={18} height={18} />
             </IconBox>
 
-            {/* LINKEDIN */}
+            
             <IconBox>
               <Image src="/images/linkedin.svg" alt="linkedin" width={18} height={18} />
             </IconBox>
 
-            {/* TWITTER */}
+             
             <IconBox
               as="a"
               href="https://www.facebook.com/share/1JsGiUxt3S/"
@@ -72,7 +72,7 @@ const Footer = () => {
               <Image src="/images/twitter.svg" alt="twitter" width={18} height={18} />
             </IconBox>
 
-            {/* INSTAGRAM - Last Icon */}
+             
             <IconBox
               as="a"
               href="https://www.instagram.com/architect_asif_ahmed?igsh=NzhtaWlkczQ2anNs"
@@ -84,7 +84,7 @@ const Footer = () => {
           </SocialIcons>
         </Center>
 
-        {/* RIGHT */}
+         
         <Right>
           <InfoItem>
             <Image src="/images/location.svg" alt="location" width={22} height={22} />

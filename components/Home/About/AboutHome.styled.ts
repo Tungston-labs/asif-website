@@ -152,13 +152,13 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 22rem;   /* fixed equal width */
+    max-width: 22rem;    
   }
 
   @media (max-width: 768px) {
     img {
       width: 100%;
-      height: 25rem;    /* fixed equal height */
+      height: 25rem;    
       object-fit: cover;
     }
   }
