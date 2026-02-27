@@ -1,12 +1,16 @@
-import { IoArrowRedoSharp    } from "react-icons/io5";
+"use client";
+
+import { IoArrowRedoSharp } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import { CircleButton, CircleInside } from "./AboutArchitect.styled";
 
 const PortfolioCircle = () => {
+  const router = useRouter();
+
   return (
-    
-    <CircleButton>
+    <CircleButton onClick={() => router.push("/portfolio")}>
       <CircleInside>
-      <IoArrowRedoSharp    size={20} />
+        <IoArrowRedoSharp size={20} />
       </CircleInside>
     </CircleButton>
   );

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   HeroSection,
@@ -16,26 +17,54 @@ import {
   SliderImage,
   FloatingNote,
   FloatingText,
-  ArrowImage,} from "./herosection.styles";
+  ArrowImage,
+} from "./herosection.styles";
 
-const images = [
+
+const desktopImages = [
   "/images/home/home1.svg",
   "/images/home/home2.svg",
   "/images/home/home3.svg",
   "/images/home/home4.svg",
+  "/images/home/home5.svg",
+];
 
+
+const mobileImages = [
+  "/images/home/home1-mobile.svg",
+  "/images/home/home2-mobile.svg",
+  "/images/home/home3-mobile.svg",
+  "/images/home/home4-mobile.svg",
+  "/images/home/home5-mobile.svg",
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      const activeImages = isMobile ? mobileImages : desktopImages;
+      setCurrent((prev) => (prev + 1) % activeImages.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
+
+  const activeImages = isMobile ? mobileImages : desktopImages;
 
   return (
     <>
@@ -55,33 +84,36 @@ const Hero = () => {
           </Subtitle>
 
           <ButtonGroup>
-            <PrimaryButton>KNOW MORE</PrimaryButton>
-            <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
+            <Link href="/about">
+              <PrimaryButton>KNOW MORE</PrimaryButton>
+            </Link>
+
+            <Link href="/portfolio">
+              <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
+            </Link>
           </ButtonGroup>
 
-      <ImageWrapper>
-  {images.map((img, index) => (
-    <SliderImage key={index} $active={index === current}>
-      <Image
-        src={img}
-        alt="Hero"
-        fill
-        priority
-        style={{ objectFit: "cover" }}
-      />
-    </SliderImage>
-  ))}
+          <ImageWrapper>
+            {activeImages.map((img, index) => (
+              <SliderImage key={index} $active={index === current}>
+                <Image
+                  src={img}
+                  alt="Hero"
+                  fill
+                  priority
+                  style={{ objectFit: "cover" }}
+                />
+              </SliderImage>
+            ))}
 
-  <FloatingNote>
-    <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
-
-    <FloatingText>
-      Let’s Build Something <br />
-      Great Together
-    </FloatingText>
-  </FloatingNote>
-</ImageWrapper>
-
+            <FloatingNote>
+              <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
+              <FloatingText>
+                Let’s Build Something <br />
+                Great Together
+              </FloatingText>
+            </FloatingNote>
+          </ImageWrapper>
         </Container>
       </HeroSection>
     </>

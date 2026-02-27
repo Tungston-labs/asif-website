@@ -42,9 +42,9 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 90%;
   height: 37.5rem; /* 600px */
-  border-radius: 1.25rem; /* 20px */
+  border-radius: 1.25rem;
   overflow: hidden;
-  margin-left: 0.5rem; /* 8px */
+  margin-left: 0.5rem;
 
   .profile-image {
     object-fit: cover;
@@ -55,13 +55,22 @@ export const ImageWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 28rem;
+    width: 286px;       /* ✅ exact width */
+    height: 461px;      /* ✅ exact height */
     margin-left: 0;
+
+    .profile-image {
+      object-fit: contain;   /* ✅ prevent cropping */
+    }
   }
 
   @media (max-width: 480px) {
-    height: 24rem;
+    width: 286px;
+    height: 461px;
+
+    .profile-image {
+      object-fit: contain;
+    }
   }
 `;
 

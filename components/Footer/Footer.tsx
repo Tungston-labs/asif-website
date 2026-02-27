@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <TopSection>
-        {/* LEFT */}
+        
         <Left>
           <InfoItem>
             <Image src="/images/phone.svg" alt="phone" width={22} height={22} />
@@ -40,7 +40,7 @@ const Footer = () => {
           </InfoItem>
         </Left>
 
-        {/* CENTER */}
+        
         <Center>
           <Image
             src="/images/logo2.svg"
@@ -50,22 +50,41 @@ const Footer = () => {
           />
 
           <SocialIcons>
-            <IconBox>
-              <Image src="/images/twitter.svg" alt="fb" width={18} height={18} />
+             
+            <IconBox
+
+            >
+              <Image src="/images/facebook.svg" alt="facebook" width={18} height={18} />
             </IconBox>
+
+            
             <IconBox>
               <Image src="/images/linkedin.svg" alt="linkedin" width={18} height={18} />
             </IconBox>
-            <IconBox>
-              <Image src="/images/facebook.svg" alt="twitter" width={18} height={18} />
+
+             
+            <IconBox
+              as="a"
+              href="https://www.facebook.com/share/1JsGiUxt3S/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/images/twitter.svg" alt="twitter" width={18} height={18} />
             </IconBox>
-            <IconBox>
-              <Image src="/images/instagram.svg" alt="insta" width={18} height={18} />
+
+             
+            <IconBox
+              as="a"
+              href="https://www.instagram.com/architect_asif_ahmed?igsh=NzhtaWlkczQ2anNs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/images/instagram.svg" alt="instagram" width={18} height={18} />
             </IconBox>
           </SocialIcons>
         </Center>
 
-        {/* RIGHT */}
+         
         <Right>
           <InfoItem>
             <Image src="/images/location.svg" alt="location" width={22} height={22} />

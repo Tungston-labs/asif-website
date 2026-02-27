@@ -1,28 +1,53 @@
 "use client";
 
+import { useRouter, usePathname } from "next/navigation";
 import { SideNavWrapper, NavItem, Divider } from "./SideSession.styled";
 
 const sections = [
-  { id: "about", label: "About Me" },
-  { id: "projects", label: "Our Projects" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "contact", label: "Get Free Consultant" },
+  { type: "page", path: "/about", label: "About Me" },
+  { type: "portfolio-section", id: "projects", label: "Our Projects" },
+  { type: "home-section", id: "testimonials", label: "Testimonials" },
+  { type: "page", path: "/contact", label: "Get Free Consultant" },
 ];
 
 const SideNav = () => {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = (item: any) => {
+    if (item.type === "page") {
+      router.push(item.path);
+      return;
+    }
+
+    // Projects inside Portfolio page
+    if (item.type === "portfolio-section") {
+      if (pathname === "/portfolio") {
+        const el = document.getElementById(item.id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push(`/portfolio#${item.id}`);
+      }
+      return;
+    }
+
+    // Testimonials inside Home page
+    if (item.type === "home-section") {
+      if (pathname === "/") {
+        const el = document.getElementById(item.id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push(`/#${item.id}`);
+      }
     }
   };
 
   return (
     <SideNavWrapper>
       {sections.map((item, index) => (
-        <NavItem key={item.id} onClick={() => scrollTo(item.id)}>
+        <NavItem key={item.label} onClick={() => handleClick(item)}>
           {item.label}
-          {index === 0 && <Divider />} 
+          {index === 0 && <Divider />}
         </NavItem>
       ))}
     </SideNavWrapper>
