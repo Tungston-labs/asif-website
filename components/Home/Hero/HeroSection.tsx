@@ -20,25 +20,51 @@ import {
   ArrowImage,
 } from "./herosection.styles";
 
-const images = [
+
+const desktopImages = [
   "/images/home/home1.svg",
   "/images/home/home2.svg",
   "/images/home/home3.svg",
   "/images/home/home4.svg",
   "/images/home/home5.svg",
+];
 
+
+const mobileImages = [
+  "/images/home/home1-mobile.svg",
+  "/images/home/home2-mobile.svg",
+  "/images/home/home3-mobile.svg",
+  "/images/home/home4-mobile.svg",
+  "/images/home/home5-mobile.svg",
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      const activeImages = isMobile ? mobileImages : desktopImages;
+      setCurrent((prev) => (prev + 1) % activeImages.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
+
+  const activeImages = isMobile ? mobileImages : desktopImages;
 
   return (
     <>
@@ -68,7 +94,7 @@ const Hero = () => {
           </ButtonGroup>
 
           <ImageWrapper>
-            {images.map((img, index) => (
+            {activeImages.map((img, index) => (
               <SliderImage key={index} $active={index === current}>
                 <Image
                   src={img}
@@ -82,14 +108,12 @@ const Hero = () => {
 
             <FloatingNote>
               <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
-
               <FloatingText>
                 Let’s Build Something <br />
                 Great Together
               </FloatingText>
             </FloatingNote>
           </ImageWrapper>
-
         </Container>
       </HeroSection>
     </>

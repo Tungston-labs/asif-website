@@ -12,15 +12,15 @@ export const Container = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 62.5rem; /* 1000px */
+  height: 62.5rem; 
   margin-top: 0.625rem;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
 
-  /* ✅ ADD THIS BLOCK (this is the only change) */
-  @media (max-width: 48rem) {  /* 768px */
-    height: 70vh;              /* responsive height for mobile */
-    margin-left: 0;            /* prevent horizontal shift on mobile */
+  
+  @media (max-width: 48rem) {
+    height: 236px;
+    margin-left: 0;
   }
 `;
 
@@ -38,22 +38,22 @@ export const SliderImage = styled.div<{ $active: boolean }>`
 
 const floatFadeMove = keyframes`
   0% {
-    transform: translateY(0.625rem); /* 10px */
+    transform: translateY(10px);
     opacity: 0;
   }
 
   25% {
-    transform: translateY(0.625rem);
+    transform: translateY(10px);
     opacity: 0;
   }
 
   50% {
-    transform: translateY(1.25rem); /* 20px */
+    transform: translateY(20px);
     opacity: 0.85;
   }
- 
+
   75% {
-    transform: translateY(3.125rem); /* 50px */
+    transform: translateY(40px);
     opacity: 0;
   }
 
@@ -63,38 +63,77 @@ const floatFadeMove = keyframes`
   }
 `;
 
+const floatFadeMoveMobile = keyframes`
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(12px);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+`;
+
 export const FloatingNote = styled.div`
   position: absolute;
-  right: 17.5rem; /* 280px */
+  right: 17.5rem;
 
   display: flex;
   align-items: center;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem;
 
   animation: ${floatFadeMove} 3s ease-in-out infinite 1s;
 
-  @media (max-width: 48rem) { /* 768px */
-    left: 1.25rem; /* 20px */
-    top: -3.75rem; /* -60px */
+  @media (max-width: 48rem) {
+    left: 1rem;
+    right: auto;
+    top: 1rem;
+    gap: 0.5rem;
+
+    animation: ${floatFadeMoveMobile} 3s ease-in-out infinite 1s;
   }
 `;
 
 export const ArrowImage = styled.img`
-  width: 7.5rem; /* 120px */
+  width: 7.5rem;
   height: auto;
+
+  @media (max-width: 48rem) {
+    width: 3.5rem; 
+  }
 `;
 
 export const FloatingText = styled.p`
   font-family: var(--font-caveat);
-  font-size: 2rem; /* 32px */
+  font-size: 2rem; 
   line-height: 1.2;
   color: #000;
-`;
 
+  @media (max-width: 48rem) {
+    font-size: 1rem;   
+    line-height: 1.1;
+  }
+`;
 export const Title = styled.h1`
-  font-size: 4rem; /* 64px */
+  font-size: 4rem; 
   font-weight: 300;
-  letter-spacing: 0.125rem; /* 2px */
+  letter-spacing: 0.125rem; 
   color: #111;
   line-height: 1.2;
 
@@ -103,21 +142,21 @@ export const Title = styled.h1`
   }
 
   @media (max-width: 48rem) {
-    font-size: 2.25rem; /* 36px */
+    font-size: 2.25rem; 
   }
 `;
 
 export const Subtitle = styled.p`
-  margin-top: 1.25rem; /* 20px */
-  font-size: 1rem; /* 16px */
+  margin-top: 1.25rem; 
+  font-size: 1rem; 
   color: #666;
 `;
 
 export const ButtonGroup = styled.div`
-  margin-top: 2.5rem; /* 40px */
+  margin-top: 2.5rem; 
   display: flex;
   justify-content: center;
-  gap: 1rem; /* 16px */
+  gap: 1rem; 
   flex-wrap: wrap;
 `;
 
@@ -131,8 +170,8 @@ export const PrimaryButton = styled.button`
   cursor: pointer;
   letter-spacing: 0.0625rem;
 
-  text-decoration: none;   /* remove underline */
-  display: inline-block;   /* fixes anchor behavior */
+  text-decoration: none;   
+  display: inline-block;   
 
   &:hover,
   &:focus,
@@ -153,14 +192,14 @@ export const SecondaryButton = styled.button`
   cursor: pointer;
   letter-spacing: 0.0625rem;
 
-  text-decoration: none;   /* remove underline */
-  display: inline-block;   /* fix anchor behavior */
+  text-decoration: none;   
+  display: inline-block;  
 
   &:hover,
   &:focus,
   &:active,
   &:visited {
     text-decoration: none;
-    color: #fff;           /* prevent purple visited color */
+    color: #fff;           
   }
 `;
