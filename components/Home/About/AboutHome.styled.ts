@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Link from "next/link";
+
 
 export const Section = styled.section`
   position: relative;
@@ -90,7 +92,7 @@ export const Description = styled.p`
   }
 `;
 
-export const ReadMoreButton = styled.button`
+export const ReadMoreButton = styled(Link)`
   margin-top: 2rem;
   background: #d7ae5b;
   color: #fff;
@@ -101,9 +103,15 @@ export const ReadMoreButton = styled.button`
   cursor: pointer;
   letter-spacing: 0.05rem;
   transition: 0.3s ease;
+  text-decoration: none;   /* REMOVE underline */
+  display: inline-block;
 
   &:hover {
     transform: translateY(-0.2rem);
+  }
+
+  &:visited {
+    color: #fff;           /* Prevent purple */
   }
 
   @media (max-width: 768px) {
@@ -111,6 +119,7 @@ export const ReadMoreButton = styled.button`
     max-width: 16rem;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 `;
 

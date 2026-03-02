@@ -48,10 +48,8 @@ const AboutHome = () => {
             and a strong commitment to quality and excellence.
           </Description>
 
-          <ReadMoreButton>
-            <Link href="/about" passHref>
-              READ MORE
-            </Link>
+          <ReadMoreButton href="/about">
+            READ MORE
           </ReadMoreButton>
           <BgBlueprint>
             <Image
