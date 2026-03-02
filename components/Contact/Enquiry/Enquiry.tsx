@@ -15,7 +15,7 @@ import {
 
 const Enquiry = () => {
   return (
-    <Section>
+    <Section id="enquiry">
       <LeftContainer>
 
         <Title>Have A Project In Mind?</Title>
