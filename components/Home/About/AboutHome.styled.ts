@@ -103,7 +103,7 @@ export const ReadMoreButton = styled(Link)`
   cursor: pointer;
   letter-spacing: 0.05rem;
   transition: 0.3s ease;
-  text-decoration: none;   /* REMOVE underline */
+  text-decoration: none;   
   display: inline-block;
 
   &:hover {
@@ -111,7 +111,7 @@ export const ReadMoreButton = styled(Link)`
   }
 
   &:visited {
-    color: #fff;           /* Prevent purple */
+    color: #fff;           
   }
 
   @media (max-width: 768px) {

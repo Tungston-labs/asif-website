@@ -7,7 +7,6 @@ export const Section = styled.section`
   overflow: hidden;
   background: #000;
 
-  /* GOLD GRADIENT EFFECT */
   &::before {
     content: "";
     position: absolute;

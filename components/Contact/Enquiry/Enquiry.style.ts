@@ -18,9 +18,9 @@ export const Section = styled.section`
 `;
 
 export const LeftContainer = styled.div`
-  width: 52.6875rem;   /* 843px */
-  height: 41.625rem;   /* 666px */
-  padding: 5rem 5.625rem; /* 80px 90px */
+  width: 52.6875rem;   
+  height: 41.625rem;   
+  padding: 5rem 5.625rem; 
   position: relative;
   color: #fff;
   display: flex;
@@ -44,8 +44,8 @@ export const LeftContainer = styled.div`
 `;
 
 export const RightContainer = styled.div`
-  width: 37.75rem;   /* 604px */
-  height: 41.625rem; /* 666px */
+  width: 37.75rem;   
+  height: 41.625rem; 
 
   background-image: url("/images/enquiry-right.svg");
   background-size: cover;
@@ -64,9 +64,9 @@ export const RightContainer = styled.div`
 
 export const Title = styled.h2`
   font-family: var(--font-jost), sans-serif;
-  font-size: 2.375rem; /* 38px */
+  font-size: 2.375rem; 
   font-weight: 400;
-  margin-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem; 
 
   @media (max-width: 48rem) {
     font-size: 1.75rem;
@@ -75,10 +75,10 @@ export const Title = styled.h2`
 
 export const SubText = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem; 
   font-weight: 300;
   line-height: 1.8;
-  margin-bottom: 2.5rem; /* 40px */
+  margin-bottom: 2.5rem; 
   color: #ccc;
 
   @media (max-width: 48rem) {
@@ -91,13 +91,13 @@ export const Form = styled.form`
   h4 {
     font-family: var(--font-jost), sans-serif;
     font-weight: 400;
-    margin: 1.875rem 0 1.25rem; /* 30px 0 20px */
+    margin: 1.875rem 0 1.25rem; 
   }
 `;
 
 export const Row = styled.div`
   display: flex;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem; 
   margin-bottom: 1.25rem;
 
   @media (max-width: 48rem) {
@@ -108,13 +108,13 @@ export const Row = styled.div`
 export const Input = styled.input`
   flex: 1;
   background: transparent;
-  border: 0.0625rem solid #444; /* 1px */
-  padding: 0.875rem 1rem; /* 14px 16px */
+  border: 0.0625rem solid #444; 
+  padding: 0.875rem 1rem; 
   color: #fff;
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
   outline: none;
-  border-radius: 0.3125rem; /* 5px */
+  border-radius: 0.3125rem; 
 
   &::placeholder {
     color: #888;
@@ -134,15 +134,15 @@ export const Select = styled.select`
 `;
 
 export const Button = styled.button`
-  margin-top: 1.875rem; /* 30px */
-  padding: 1rem 2.5rem; /* 16px 40px */
+  margin-top: 1.875rem; 
+  padding: 1rem 2.5rem; 
   background: linear-gradient(90deg, #c8a24c, #d8b36a);
   border: none;
-  border-radius: 0.3125rem; /* 5px */
+  border-radius: 0.3125rem; 
   color: #fff;
   font-family: var(--font-jost), sans-serif;
   font-weight: 500;
-  letter-spacing: 0.0625rem; /* 1px */
+  letter-spacing: 0.0625rem; 
   cursor: pointer;
   width: fit-content;
 

@@ -12,7 +12,7 @@ export const PageWrapper = styled.div`
 export const HeroSection = styled.section`
   position: relative;
   width: 100%;
-  height: 30rem; /* 480px */
+  height: 30rem; 
   background-image: url("/images/portfolio-bg.svg");
   background-size: cover;
   background-position: center;
@@ -21,15 +21,15 @@ export const HeroSection = styled.section`
   display: flex;
   align-items: center;
 
-  @media (max-width: 64rem) { /* 1024px */
+  @media (max-width: 64rem) { 
     height: 26rem;
   }
 
-  @media (max-width: 48rem) { /* 768px */
+  @media (max-width: 48rem) { 
     height: 22rem;
   }
 
-  @media (max-width: 30rem) { /* 480px */
+  @media (max-width: 30rem) { 
     height: 18rem;
   }
 `;
@@ -41,7 +41,7 @@ export const HeroOverlay = styled.div`
 
 export const HeroContent = styled.div`
   position: relative;
-  padding-left: 5rem; /* 80px */
+  padding-left: 5rem; 
 
   @media (max-width: 64rem) {
     padding-left: 3rem;
@@ -58,18 +58,18 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 4rem; /* 64px */
+  font-size: 4rem; 
   font-weight: 500;
-  letter-spacing: 0.125rem; /* 2px */
+  letter-spacing: 0.125rem; 
   margin: 0;
   font-family: var(--font-jost), sans-serif;
 
   @media (max-width: 64rem) {
-    font-size: 3rem; /* ~48px */
+    font-size: 3rem; 
   }
 
   @media (max-width: 48rem) {
-    font-size: 2.25rem; /* ~36px */
+    font-size: 2.25rem; 
   }
 
   @media (max-width: 30rem) {

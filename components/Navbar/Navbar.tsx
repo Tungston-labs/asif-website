@@ -22,7 +22,6 @@ const Navbar = () => {
   return (
     <NavbarContainer>
 
-      {/* LEFT — LOGO */}
       <Logo>
         <Link href="/">
           <Image
@@ -35,7 +34,6 @@ const Navbar = () => {
         </Link>
       </Logo>
 
-      {/* CENTER — MENU */}
       <CenterMenu>
         <Menu $open={menuOpen}>
              <MenuItem>
@@ -55,7 +53,6 @@ const Navbar = () => {
         </Menu>
       </CenterMenu>
 
-      {/* RIGHT — CALL BUTTON + HAMBURGER */}
       <RightSection>
         <Button href="tel:+919876543210">
           <FaPhoneAlt />

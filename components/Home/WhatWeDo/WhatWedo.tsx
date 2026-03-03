@@ -19,7 +19,6 @@ export default function WhatWeDo() {
   return (
     <Section>
       <ContentWrapper>
-        {/* LEFT CONTENT */}
         <LeftContent>
           <Tag $color="#000">WHAT WE DO</Tag>
 
@@ -60,7 +59,6 @@ export default function WhatWeDo() {
           <QuoteButton>GET A QUOTE</QuoteButton>
         </LeftContent>
 
-        {/* RIGHT IMAGE */}
         <RightImage>
           <img src="/images/home/whatwedo.svg" alt="Modern House" />
         </RightImage>

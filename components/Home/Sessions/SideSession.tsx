@@ -19,8 +19,6 @@ const SideNav = () => {
       router.push(item.path);
       return;
     }
-
-    // Projects inside Portfolio page
     if (item.type === "portfolio-section") {
       if (pathname === "/portfolio") {
         const el = document.getElementById(item.id);
