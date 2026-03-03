@@ -48,12 +48,10 @@ export const Container = styled.div`
   margin: 0 auto;
   position: relative;
 
-  /* Tablet */
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -83,8 +81,6 @@ export const CenterWrapper = styled.div`
 export const RightWrapper = styled.div`
   display: flex;
 `;
-
-/* ================= GALLERY ================= */
 
 const fadeZoom = keyframes`
   0% { opacity: 0; transform: scale(1.08); }
@@ -135,8 +131,6 @@ export const ExperienceText = styled.h3`
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
 `;
-
-/* ================= CONTENT ================= */
 
 export const ContentWrapper = styled.div`
   margin-top: 0.5rem;
@@ -196,15 +190,14 @@ export const TalkButton = styled(Link)`
   padding: 0.9rem 2rem;
   color: #fff;
   cursor: pointer;
-  text-decoration: none;   /* remove underline */
+  text-decoration: none;   
   display: inline-block;
 
   &:visited {
-    color: #fff;           /* prevent purple */
+    color: #fff;          
   }
 `;
 
-/* ================= PORTFOLIO TEXT ================= */
 
 export const PortfolioText = styled.h1`
   font-family: "Manrope";
@@ -223,7 +216,6 @@ export const PortfolioText = styled.h1`
   }
 `;
 
-/* ================= SIDE IMAGE ================= */
 
 export const SideImage = styled.div`
   position: absolute;
@@ -256,11 +248,10 @@ export const SideImage = styled.div`
   }
 `;
 
-/* ================= SOCIAL ================= */
 
 export const SocialWrapper = styled.div`
   position: absolute;
-  right: -3.5rem;   /* pushes icons just outside image */
+  right: -3.5rem;   
   top: 50%;
   transform: translateY(-50%);
   
@@ -282,20 +273,16 @@ export const SocialWrapper = styled.div`
     transform: translateY(-2px);
   }
 
-  /* Tablet */
   @media (max-width: 1024px) {
     right: -2.5rem;
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
     right: -1rem;
     top: 1.5rem;
     transform: none;
   }
 `;
-
-/* ================= CIRCLE BUTTON ================= */
 
 export const CircleButton = styled.div`
   position: absolute;

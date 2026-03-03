@@ -12,7 +12,6 @@ export const SideNavWrapper = styled.div`
 
   z-index: 5;
 
-  /* Hide on mobile */
   @media (max-width: 768px) {
     display: none;
   }

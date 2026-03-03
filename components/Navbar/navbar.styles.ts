@@ -11,7 +11,7 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
 
   position: relative;
-  z-index:1000; /* 1000px */
+  z-index:1000; 
 `;
 
 export const CenterMenu = styled.div`
@@ -19,7 +19,7 @@ export const CenterMenu = styled.div`
   justify-content: center;
 
   flex: 1;
-  max-width: 56.25rem; /* 900px */
+  max-width: 56.25rem; 
 
   margin: 0 auto;
 `;
@@ -52,15 +52,15 @@ export const Menu = styled.ul<{ $open: boolean }>`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 48rem) { /* 768px */
+  @media (max-width: 48rem) { 
     position: absolute;
-    top: 4.375rem; /* 70px */
+    top: 4.375rem; 
     left: 0;
     width: 100%;
     flex-direction: column;
     background: #fff;
-    padding: 1.25rem 0; /* 20px */
-    border-top: 0.0625rem solid #eee; /* 1px */
+    padding: 1.25rem 0; 
+    border-top: 0.0625rem solid #eee; 
 
     display: ${({ $open }) => ($open ? "flex" : "none")};
   }
@@ -69,7 +69,7 @@ export const Menu = styled.ul<{ $open: boolean }>`
 export const RightSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem; 
 `;
 
 export const MenuItem = styled.li`
@@ -91,27 +91,27 @@ export const MenuItem = styled.li`
 export const Button = styled.a`
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* 8px */
+  gap: 0.5rem; 
   background: #D7AE5B;
   color: #000;
-  padding: 0.75rem 1.125rem; /* 12px 18px */
-  border-radius: 0.375rem; /* 6px */
+  padding: 0.75rem 1.125rem; 
+  border-radius: 0.375rem; 
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
 
   &:hover {
-    transform: translateY(-0.125rem); /* -2px */
+    transform: translateY(-0.125rem); 
   }
 
   @media (max-width: 48rem) {
-    margin-top: 0.625rem; /* 10px */
+    margin-top: 0.625rem; 
   }
 `;
 
 export const HamburgerIcon = styled.div`
   display: none;
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem; 
   cursor: pointer;
 
   @media (max-width: 48rem) {

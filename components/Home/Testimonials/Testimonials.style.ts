@@ -117,8 +117,6 @@ export const Subtitle = styled.p`
   }
 `;
 
-/* ================= SLIDER ================= */
-
 export const SliderWrapper = styled.div`
   position: relative;
   z-index: 2;
@@ -135,8 +133,6 @@ export const SliderTrack = styled.div`
     animation-play-state: paused;
   }
 `;
-
-/* ================= CARD ================= */
 
 export const Card = styled.div`
   width: 40rem;
@@ -171,8 +167,6 @@ export const Card = styled.div`
   }
 `;
 
-/* ================= TEXT ================= */
-
 export const Quote = styled.div`
   display: flex;
   gap: 1.2rem;
@@ -205,8 +199,6 @@ export const Content = styled.p`
   }
 `;
 
-/* ================= AUTHOR ================= */
-
 export const AuthorWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -232,8 +224,6 @@ export const AuthorInfo = styled.div`
     color: #aaa;
   }
 `;
-
-/* ================= LABEL ================= */
 
 export const Label = styled.div`
   font-size: 0.9rem;

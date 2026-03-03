@@ -2,8 +2,8 @@
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 23.6875rem 32.3125rem; /* 379px 517px */
-  gap: 2.5rem; /* 40px */
+  grid-template-columns: 23.6875rem 32.3125rem; 
+  gap: 2.5rem; 
 
   @media (max-width: 75rem) {
     grid-template-columns: 1fr 1fr;
@@ -17,7 +17,7 @@ export const Grid = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 30.1875rem; /* 483px */
+  height: 30.1875rem; 
   overflow: hidden;
 
   @media (max-width: 64rem) {
@@ -35,7 +35,7 @@ export const ImageWrapper = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 3.75rem; /* 60px */
+  margin-top: 3.75rem; 
   width: 100%;
 
   @media (max-width: 48rem) {
@@ -47,11 +47,11 @@ export const ButtonWrapper = styled.div`
 export const NavButton = styled.button`
   background: #c8a24c;
   color: #ffffff;
-  padding: 1.125rem 2.5rem; /* 18px 40px */
+  padding: 1.125rem 2.5rem; 
   border: none;
   cursor: pointer;
   font-weight: 500;
-  letter-spacing: 0.0625rem; /* 1px */
+  letter-spacing: 0.0625rem; 
   transition: 0.3s;
 
   &:disabled {

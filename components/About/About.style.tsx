@@ -9,7 +9,6 @@ export const PageWrapper = styled.div`
   background: #ffffff;
 `;
 
-/* Hero Section */
 export const HeroSection = styled.section`
   position: relative;
   width: 100%;
@@ -24,13 +23,11 @@ export const HeroSection = styled.section`
   align-items: center;
 `;
 
-/* Dark overlay like screenshot */
 export const HeroOverlay = styled.div`
   position: absolute;
   inset: 0;
 `;
 
-/* Content wrapper */
 export const HeroContent = styled.div`
   position: relative;
   padding-left: 80px;
@@ -40,7 +37,6 @@ export const HeroContent = styled.div`
   }
 `;
 
-/* ABOUT US text */
 export const Title = styled.h1`
   color: #ffffff;
   font-size: 64px;

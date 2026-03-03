@@ -8,7 +8,7 @@ const Banner = () => {
     <BannerWrapper>
       <MovingText>
         <Line />
-        <Line /> {/* duplicate for seamless looping */}
+        <Line /> 
       </MovingText>
     </BannerWrapper>
   );

@@ -3,16 +3,16 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 6.25rem 0; /* 100px */
+  padding: 6.25rem 0; 
   background: #ffffff;
 `;
 
 export const Container = styled.div`
-  max-width: 81.25rem; /* 1300px */
+  max-width: 81.25rem; 
   width: 90%;
   margin: 0 auto;
   display: flex;
-  gap: 3.75rem; /* 60px */
+  gap: 3.75rem; 
 
   @media (max-width: 1024px) {
     gap: 2.5rem;
@@ -25,7 +25,7 @@ export const Container = styled.div`
 `;
 
 export const Left = styled.div`
-  flex: 0 0 26.25rem; /* 420px */
+  flex: 0 0 26.25rem; 
 
   @media (max-width: 1024px) {
     flex: 0 0 22rem;
@@ -41,7 +41,7 @@ export const Left = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 90%;
-  height: 37.5rem; /* 600px */
+  height: 37.5rem; 
   border-radius: 1.25rem;
   overflow: hidden;
   margin-left: 0.5rem;
@@ -55,12 +55,12 @@ export const ImageWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 286px;       /* ✅ exact width */
-    height: 461px;      /* ✅ exact height */
+    width: 286px;       
+    height: 461px;     
     margin-left: 0;
 
     .profile-image {
-      object-fit: contain;   /* ✅ prevent cropping */
+      object-fit: contain;   
     }
   }
 
@@ -83,10 +83,10 @@ export const Right = styled.div`
 `;
 
 export const Label = styled.div`
-  font-size: 0.875rem; /* 14px */
-  letter-spacing: 0.125rem; /* 2px */
-  margin-bottom: 1.25rem; /* 20px */
-  padding: 0.25rem 1.5625rem; /* 4px 25px */
+  font-size: 0.875rem; 
+  letter-spacing: 0.125rem; 
+  margin-bottom: 1.25rem; 
+  padding: 0.25rem 1.5625rem; 
   position: relative;
   display: inline-block;
 
@@ -97,12 +97,12 @@ export const Label = styled.div`
   span::before {
     content: "";
     position: absolute;
-    left: -1.5625rem; /* 25px */
+    left: -1.5625rem; 
     top: 50%;
     transform: translateY(-50%);
-    width: 0.875rem; /* 14px */
+    width: 0.875rem; 
     height: 0.875rem;
-    border-left: 0.125rem solid #c8a24c; /* 2px */
+    border-left: 0.125rem solid #c8a24c; 
     border-top: 0.125rem solid #c8a24c;
   }
 
@@ -120,10 +120,10 @@ export const Label = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem; /* 48px */
+  font-size: 3rem; 
   font-weight: 400;
   line-height: 1.3;
-  margin-bottom: 1.875rem; /* 30px */
+  margin-bottom: 1.875rem; 
   color: #111;
 
   @media (max-width: 768px) {
@@ -141,11 +141,11 @@ export const Bold = styled.span`
 
 export const Paragraph = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 0.9375rem; /* 15px */
+  font-size: 0.9375rem; 
   font-weight: 300;
   line-height: 1.9;
   color: #000000;
-  margin-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem; 
   text-align: justify;
 
   @media (max-width: 768px) {

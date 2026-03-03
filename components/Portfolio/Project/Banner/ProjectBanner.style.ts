@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   background-color: #ffffff;
-  padding: 3.125rem 0; /* 50px */
+  padding: 3.125rem 0; 
 
   @media (max-width: 48rem) {
     padding: 2rem 0;
@@ -13,7 +13,7 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
-  width: 75rem; /* 1200px */
+  width: 75rem; 
   margin: 0 auto;
 
   @media (max-width: 75rem) {
@@ -24,21 +24,21 @@ export const Container = styled.div`
 export const LocationTag = styled.span`
   position: relative;
   display: inline-block;
-  font-size: 1rem; /* 16px */
-  letter-spacing: 0.125rem; /* 2px */
+  font-size: 1rem; 
+  letter-spacing: 0.125rem; 
   font-weight: 400;
   color: #111;
-  margin-bottom: 1.875rem; /* 30px */
-  padding: 0 1.25rem; /* 20px */
+  margin-bottom: 1.875rem; 
+  padding: 0 1.25rem; 
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.375rem; /* 6px */
-    width: 0.625rem; /* 10px */
+    top: 0.375rem; 
+    width: 0.625rem; 
     height: 0.625rem;
-    border-left: 0.125rem solid #c8a45a; /* 2px */
+    border-left: 0.125rem solid #c8a45a; 
     border-top: 0.125rem solid #c8a45a;
   }
 
@@ -46,7 +46,7 @@ export const LocationTag = styled.span`
     content: "";
     position: absolute;
     right: 0;
-    bottom: 0.375rem; /* 6px */
+    bottom: 0.375rem; 
     width: 0.625rem;
     height: 0.625rem;
     border-right: 0.125rem solid #c8a45a;
@@ -59,12 +59,12 @@ export const LocationTag = styled.span`
 `;
 
 export const Heading = styled.h2`
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem; 
   font-weight: 300;
   line-height: 1.3;
   color: #111;
-  margin-bottom: 1.875rem; /* 30px */
-  max-width: 56.25rem; /* 900px */
+  margin-bottom: 1.875rem; 
+  max-width: 56.25rem; 
 
   @media (max-width: 64rem) {
     font-size: 2rem;
@@ -84,11 +84,11 @@ export const Highlight = styled.span`
 `;
 
 export const Description = styled.p`
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.5; /* 24px approx */
+  font-size: 1.125rem; 
+  line-height: 1.5; 
   font-weight: 300;
   color: #555;
-  max-width: 87.5rem; /* 1400px */
+  max-width: 87.5rem; 
 
   @media (max-width: 64rem) {
     font-size: 1rem;

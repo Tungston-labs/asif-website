@@ -21,10 +21,7 @@ const AboutHome = () => {
   return (
     <Section>
 
-      {/* BACKGROUND IMAGE */}
-
       <Container>
-        {/* LEFT SIDE */}
         <LeftContent>
           <Tag $color="#000">ABOUT US</Tag>
 
@@ -59,8 +56,6 @@ const AboutHome = () => {
             />
           </BgBlueprint>
         </LeftContent>
-
-        {/* RIGHT SIDE IMAGES */}
         <RightImages>
           <ImageCard>
             <Image

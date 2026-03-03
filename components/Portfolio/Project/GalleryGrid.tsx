@@ -13,7 +13,6 @@ const IMAGES_PER_PAGE = 4;
 const GalleryGrid = ({ images }: Props) => {
   const [currentPage, setCurrentPage] = useState(0);
 
-  // Reset to first page when location changes
   useEffect(() => {
     setCurrentPage(0);
   }, [images]);
