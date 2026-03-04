@@ -86,7 +86,6 @@ export const SubText = styled.p`
   }
 `;
 
-
 export const Form = styled.form`
   h4 {
     font-family: var(--font-jost), sans-serif;
@@ -116,9 +115,14 @@ export const Input = styled.input`
   outline: none;
   border-radius: 0.3125rem; 
 
+  font-size: 16px; 
+
   &::placeholder {
     color: #888;
   }
+
+  -webkit-appearance: none;
+  appearance: none;
 `;
 
 export const Select = styled.select`
@@ -131,8 +135,12 @@ export const Select = styled.select`
   font-weight: 300;
   outline: none;
   border-radius: 0.3125rem;
-`;
 
+  font-size: 16px; 
+
+  -webkit-appearance: none;
+  appearance: none;
+`;
 export const Button = styled.button`
   margin-top: 1.875rem; 
   padding: 1rem 2.5rem; 
