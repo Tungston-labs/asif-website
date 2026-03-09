@@ -51,16 +51,16 @@ const Footer = () => {
 
           <SocialIcons>
              
-            <IconBox
+            {/* <IconBox
 
             >
               <Image src="/images/facebook.svg" alt="facebook" width={18} height={18} />
-            </IconBox>
+            </IconBox> */}
 
             
-            <IconBox>
+            {/* <IconBox>
               <Image src="/images/linkedin.svg" alt="linkedin" width={18} height={18} />
-            </IconBox>
+            </IconBox> */}
 
              
             <IconBox
