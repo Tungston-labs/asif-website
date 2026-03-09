@@ -54,9 +54,9 @@ export const projects = [
     description:
       "Luxury villa projects designed with spacious interiors and contemporary architectural detailing.Blending contemporary elegance with practical comfort, our residential and commercial architecture house design and modern architectural home designs projects reflect the expertise and refined vision of experienced best house architects.",
     images: [
-      "/images/projects/payyanur/payyanur1.jpg",
-      "/images/projects/payyanur/payyanur2.jpg",
-      "/images/projects/payyanur/payyanur3.jpg",
+      "/images/ERNAKULAM/EKM-1.jpg",
+      "/images/ERNAKULAM/EKM-1.jpg",
+      "/images/ERNAKULAM/EKM-1.jpg",
     ],
   },
   {
