@@ -35,7 +35,7 @@ const LeftGallery = () => {
             src={src}
             alt={`Gallery ${i}`}
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             priority={i === 0}
           />
         </GalleryImage>

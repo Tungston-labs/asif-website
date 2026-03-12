@@ -1,15 +1,5 @@
 export const projects = [
-  {
-    id: 1,
-    location: "ERNAKULAM",
-    title: "Ernakulam Projects",
-    description:
-      "Modern residential and commercial architectural projects designed with contemporary aesthetics and functional living spaces.",
-    images: [
-      "/images/ERNAKULAM/EKM-1.jpg",
-      "/images/ERNAKULAM/EKM-2.jpg",
-    ],
-  },
+  
   {
     id: 2,
     location: "ALUVA",

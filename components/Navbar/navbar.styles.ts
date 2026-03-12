@@ -19,7 +19,7 @@ export const CenterMenu = styled.div`
   justify-content: center;
 
   flex: 1;
-  max-width: 56.25rem; 
+  max-width: 40.25rem; 
 
   margin: 0 auto;
 `;

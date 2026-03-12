@@ -25,7 +25,6 @@ export const Section = styled.section`
 
 export const HeaderWrapper = styled.div`
   text-align: center;
-  max-width: 900px;
   margin: 0 auto 3rem;
 
   @media (max-width: 768px) {
@@ -35,7 +34,7 @@ export const HeaderWrapper = styled.div`
 
 export const GridSection = styled.div`
   position: relative;
-  padding: 3rem 0;
+  padding: 2rem 0;
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-size: 1px;
@@ -86,8 +85,7 @@ export const GridSection = styled.div`
 `;
 
 export const HeaderGrid = styled.div`
-  text-align: center;
-  max-width: 70%;
+  max-width: 90%;
   width: 90%;
   margin: 0 2rem 2rem 0;
 
@@ -108,7 +106,7 @@ export const Title = styled.h2`
   font-size: 2.2rem;
   font-weight: 300;
 
-  strong { font-weight: 700; }
+  strong { font-weight: 500; }
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
@@ -122,6 +120,10 @@ export const Title = styled.h2`
 export const Description = styled.p`
   margin-top: 1rem;
   color: #666;
+  max-width: 65rem;
+    margin-left: 8%;
+
+  text-align: center;
 
   @media (max-width: 480px) {
     font-size: 0.95rem;
@@ -133,50 +135,49 @@ export const TabsWrapper = styled.div`
   margin-bottom: 3rem;
   margin-left: 5%;
   flex-wrap: wrap;
+  border: 1px solid #0000001A;
 
   @media (max-width: 768px) {
     margin-left: 0;
-    justify-content: center;
-    gap: 0.5rem;
   }
 `;
-
 export const Tab = styled.button<{ $active?: boolean }>`
+  flex: 1 1 auto;   /* allows responsive wrapping */
+
   background: ${({ $active }) =>
     $active ? "rgba(215, 174, 91, 1)" : "transparent"};
 
   color: ${({ $active }) => ($active ? "#fff" : "#333")};
 
-  border: 1px solid #ddd;
-  padding: 0.6rem 2.9rem;
+  border: 0;
+  padding: 1rem 1.5rem;
   border-radius: 0.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(215, 174, 91, 0.3);
+    background: rgba(215, 174, 91, 1);
   }
 
   @media (max-width: 768px) {
-    padding: 0.5rem 1.5rem;
+    flex: 1 1 45%;   /* 2 tabs per row */
   }
 
   @media (max-width: 480px) {
-    width: 100%;
+    flex: 1 1 100%;  /* 1 tab per row */
   }
 `;
 
 export const Grid = styled.div`
   display: flex;
   gap: 2rem;
-  margin-left: 5%;
   overflow-x: auto;
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  padding-left: calc((100% - 80%) / 2);
+  padding-left: calc((100% - 90%) / 2);
   padding-right: calc((100% - 80%) / 2);
 
   scrollbar-width: none;
@@ -230,7 +231,7 @@ export const LocationTitle = styled.h2`
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 12px;
-
+  margin-left: 15%;
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
@@ -244,6 +245,7 @@ export const LocationDescription = styled.p`
   max-width: 80%;
   margin-left: 15%;
   font-size: 1rem;
+
   line-height: 1.6;
   opacity: 0.8;
 
@@ -255,7 +257,7 @@ export const LocationDescription = styled.p`
 
 export const PortButton = styled.button`
   display: block;
-  margin: 2rem auto 0;
+  margin: 2rem auto 0 ;
 
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -263,11 +265,32 @@ export const PortButton = styled.button`
   line-height: 1.5rem;
   text-transform: uppercase;
 
-  padding: 0.75rem 1.75rem;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
   cursor: pointer;
 
+  color: #000;
+  position: relative;
+
+  /* Yellow underline */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: rgba(215, 174, 91, 1);
+  }
+
+  &:hover {
+    color: rgba(215, 174, 91, 1);
+  }
+
   @media (max-width: 480px) {
-    width: 90%;
+    width: auto;
   }
 `;
 

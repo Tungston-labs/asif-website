@@ -2,19 +2,12 @@ import styled ,{keyframes}from "styled-components";
 
 export const SideNavWrapper = styled.div`
   position: absolute;
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 2rem;
+  top: 8rem;
 
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-
-  z-index: 5;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  gap: 2rem;
 `;
 
 export const NavItem = styled.div`

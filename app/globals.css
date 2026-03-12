@@ -46,12 +46,12 @@
   }
   @media (min-width: 1536px) {
     html {
-      font-size: 18px;
+      font-size: 24px;
     }
   }
   @media (min-width: 2560px) {
     html {
-      font-size: 28px;
+      font-size: 32px;
     }
   }
   @media (min-width: 3840px) {

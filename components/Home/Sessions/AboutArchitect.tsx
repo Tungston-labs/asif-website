@@ -2,10 +2,7 @@
 
 import {
   Section,
-  Container,
-  LeftWrapper,
   CenterWrapper,
-  RightWrapper,
   DarkSection,
   SideImage,
 } from "./AboutArchitect.styled";
@@ -13,40 +10,34 @@ import {
 import LeftGallery from "./LeftGallery";
 import AboutContent from "./AboutContent";
 import SocialLinks from "./SocialLinks";
-import PortfolioCircle from "./PortfolioCircle";
 import SideNav from "./SideSession";
 import Image from "next/image";
 
 const AboutArchitect = () => {
   return (
-    <Section>
-      <DarkSection>
-        <SideNav />
+    <>
+      <Section>
+        <SideNav/>
 
-        <Container>
-          <LeftWrapper>
-            <LeftGallery />
-          </LeftWrapper>
-
+        <DarkSection>
+           <SideImage>
+    <Image
+      src="/images/about/about-me.svg"
+      alt="decor"
+      fill
+      priority
+    />
+  </SideImage>
+          <LeftGallery />
           <CenterWrapper>
-            <SideImage>
-              <Image
-                src="/images/about/about-me.svg"
-                alt="Architect"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </SideImage>
-
             <AboutContent />
           </CenterWrapper>
+                <SocialLinks/>
 
-          <SocialLinks />
-        </Container>
+        </DarkSection>
 
-        <PortfolioCircle />
-      </DarkSection>
-    </Section>
+      </Section>
+    </>
   );
 };
 

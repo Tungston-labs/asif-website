@@ -5,9 +5,10 @@ import {
   Description,
   TalkButton,
   ContentWrapper,
-  SideImage,
-  PortfolioText
+  PortfolioText,
+  PortfolioSection
 } from "./AboutArchitect.styled";
+import PortfolioCircle from "./PortfolioCircle";
 
 const AboutContent = () => {
   return (
@@ -36,8 +37,10 @@ const AboutContent = () => {
       <TalkButton href="/contact#enquiry">
         LET'S TALK
       </TalkButton>
-
+     <PortfolioSection>
       <PortfolioText>Portfolio</PortfolioText>
+      <PortfolioCircle/>
+      </PortfolioSection>
     </ContentWrapper>
   );
 };

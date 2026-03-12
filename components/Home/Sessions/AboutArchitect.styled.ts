@@ -6,7 +6,8 @@ export const Section = styled.section`
   width: 100%;
   background: #000;
   color: #fff;
-  padding: 2rem 4rem;
+  margin-top: 2rem;
+  padding: 4rem 4rem;
   overflow: visible;
 
   @media (max-width: 768px) {
@@ -16,16 +17,18 @@ export const Section = styled.section`
 
 export const DarkSection = styled.section`
   position: relative;
-  width: 99%;
+  width: 100%;
+  display: flex;
   background: linear-gradient(
     145deg,
     rgb(7, 6, 6) 70%,
     rgba(192, 153, 73, 1) 150%
   );
-  margin-top: -4rem;
-  padding: 6rem 0;
-  min-height: 48rem;
+  margin-top: -2rem;
+  min-height: 40rem;
   z-index: 2;
+  transform: translateY(-5rem); /* move upward */
+
   
   @media (max-width: 768px) {
     background: linear-gradient(
@@ -36,39 +39,41 @@ export const DarkSection = styled.section`
   }
 
 `;
-
-
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 0.3fr 0.9fr 1.2fr;
-  gap: 3rem;
-  align-items: center;
-
-  max-width: 1400px;
-  margin: 0 auto;
+export const GalleryWrapper = styled.div`
   position: relative;
+  width: 25%;
+  height: 52rem;
+  margin-left: 8rem;
+
+  transform: translateY(-2rem); /* move upward */
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
+    width: 16rem;
+    height: 42rem;
+    transform: translateY(-5rem);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    width: 100%;
+    height: 32rem;
+    transform: translateY(-2rem);
+    margin-left: 0;
   }
 `;
 
-export const LeftWrapper = styled.div`
-  position: relative;
-
-  @media (max-width: 768px) {
-    order: 3;
-  }
+export const GalleryImage = styled.div<{ $active: boolean }>`
+  position: absolute;
+  inset: 0;
+  margin-top: -8;
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  transition: opacity 0.8s ease;
+  animation: ${({ $active }) => ($active ? fadeZoom : "none")} 6s ease-in-out;
 `;
 
 export const CenterWrapper = styled.div`
-  max-width: 38rem;
-
+flex: 1;
+  max-width: 32rem;
+  margin-top: 4rem;
   @media (max-width: 1024px) {
     max-width: 100%;
   }
@@ -89,31 +94,6 @@ const fadeZoom = keyframes`
   100% { opacity: 0; transform: scale(1.06); }
 `;
 
-export const GalleryWrapper = styled.div`
-  position: relative;
-  width: 18rem;
-  height: 52rem;
-  margin-top: -8rem;
-
-  @media (max-width: 1024px) {
-    width: 16rem;
-    height: 42rem;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 32rem;
-    margin-top: 0;
-  }
-`;
-
-export const GalleryImage = styled.div<{ $active: boolean }>`
-  position: absolute;
-  inset: 0;
-  opacity: ${({ $active }) => ($active ? 1 : 0)};
-  transition: opacity 0.8s ease;
-  animation: ${({ $active }) => ($active ? fadeZoom : "none")} 6s ease-in-out;
-`;
 
 export const ExperienceBox = styled.div`
   position: absolute;
@@ -128,7 +108,7 @@ export const ExperienceBox = styled.div`
 `;
 
 export const ExperienceText = styled.h3`
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   letter-spacing: 0.1rem;
 `;
 
@@ -187,6 +167,7 @@ export const TalkButton = styled(Link)`
   margin-top: 2rem;
   background: #d7ae5b;
   border: none;
+  border-radius: 0.5rem;
   padding: 0.9rem 2rem;
   color: #fff;
   cursor: pointer;
@@ -204,7 +185,6 @@ export const PortfolioText = styled.h1`
   font-weight: 900;
   font-size: 8.33rem;
   letter-spacing: 0.5rem;
-  margin-top: 2.5rem;
   white-space: nowrap;
   color: transparent;
   -webkit-text-stroke: 1px rgba(236, 227, 227, 0.27);
@@ -216,53 +196,47 @@ export const PortfolioText = styled.h1`
   }
 `;
 
-
 export const SideImage = styled.div`
   position: absolute;
-  right: calc(50% - 50%);
-  top: 17.8%;
-  transform: translateY(-50%);
-  width: 20rem;
-  height: 20rem;
-  overflow: hidden;
+  top: 0;
+  right: 0;
+
+  width: 17rem;
+  height: 16rem;
+
   z-index: 3;
   pointer-events: none;
 
   img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media (max-width: 1024px) {
-    position: relative;
-    transform: none;
-    right: auto;
-    top: auto;
-    margin: 0 auto 3rem auto;
+    width: 14rem;
+    height: 14rem;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    max-width: 22rem;
-    height: 22rem;
-    order: 1;
+    display: none;
   }
 `;
 
 
 export const SocialWrapper = styled.div`
   position: absolute;
-  right: -3.5rem;   
-  top: 50%;
+  right: 3%;              /* stick to right edge of DarkSection */
+  top: 50%;              /* middle vertically */
   transform: translateY(-50%);
-  
+
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
   align-items: center;
+
   z-index: 5;
 
   svg {
-    font-size: 0.9rem;
+    font-size: 1.9rem;
     color: #ffffff;
     cursor: pointer;
     transition: 0.3s ease;
@@ -273,30 +247,22 @@ export const SocialWrapper = styled.div`
     transform: translateY(-2px);
   }
 
-  @media (max-width: 1024px) {
-    right: -2.5rem;
-  }
-
   @media (max-width: 768px) {
-    right: -1rem;
-    top: 1.5rem;
-    transform: none;
+    right: 0.5rem;
   }
 `;
 
 export const CircleButton = styled.div`
-  position: absolute;
-  right: 13rem;
-  bottom: 7.5rem;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  top: 2;
+  border-radius: 70%;
   background: #d7ae5b;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
+  flex-shrink: 0;
   @media (max-width: 1024px) {
     right: 4rem;
   }
@@ -308,13 +274,18 @@ export const CircleButton = styled.div`
     bottom: auto;
   }
 `;
-
+export const PortfolioSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+`;
 export const CircleInside = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background: #070707;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 `;

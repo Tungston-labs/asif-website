@@ -4,7 +4,6 @@ import { TabsWrapper, Tab } from "./Projects.styled";
 import { useState } from "react";
 
 const locations = [
-  "ERNAKULAM",
   "PAYYANUR",
   "KOTTAYAM",
   "KAKKANAD",
@@ -12,7 +11,7 @@ const locations = [
   "MALAPPURAM",
   "TIRUR",
   "ALAPPUZHA",
-  "IRITTY",
+  "IRITTY"
 ];
 
 interface Props {
