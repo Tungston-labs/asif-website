@@ -10,8 +10,9 @@ export const Section = styled.section`
   padding: 4rem 4rem;
   overflow: visible;
 
+
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 `;
 
@@ -31,11 +32,14 @@ export const DarkSection = styled.section`
 
   
   @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem 0;
+    transform: none;
     background: linear-gradient(
-    145deg,
-    rgb(7, 6, 6) 70%,
-    rgb(6, 6, 6) 150%
-  );
+      145deg,
+      rgb(7, 6, 6) 70%,
+      rgb(6, 6, 6) 150%
+    );
   }
 
 `;
@@ -53,11 +57,12 @@ export const GalleryWrapper = styled.div`
     transform: translateY(-5rem);
   }
 
+
   @media (max-width: 768px) {
-    width: 100%;
-    height: 32rem;
-    transform: translateY(-2rem);
-    margin-left: 0;
+    width: 90%;
+    height: 28rem;
+    margin: 0 auto 2rem auto;
+    transform: none;
   }
 `;
 
@@ -79,7 +84,9 @@ flex: 1;
   }
 
   @media (max-width: 768px) {
-    order: 2;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
   }
 `;
 
@@ -102,8 +109,11 @@ export const ExperienceBox = styled.div`
   color: #fff;
 
   @media (max-width: 768px) {
-    bottom: 2rem;
-    left: 2rem;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    margin-top: 20rem;
   }
 `;
 
@@ -190,9 +200,15 @@ export const PortfolioText = styled.h1`
   -webkit-text-stroke: 1px rgba(236, 227, 227, 0.27);
   opacity: 0.7;
 
+
+  @media (max-width: 1024px) {
+    font-size: 6rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
+    white-space: normal;
   }
 `;
 
@@ -216,8 +232,17 @@ export const SideImage = styled.div`
     height: 14rem;
   }
 
+  /* MOBILE FIX */
   @media (max-width: 768px) {
-    display: none;
+    position: relative;   /* stop absolute positioning */
+    margin: 2rem auto 0 auto;
+    right: auto;
+    bottom: 0;
+    transform: none;
+
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.8;
   }
 `;
 
@@ -248,7 +273,13 @@ export const SocialWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    right: 0.5rem;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 2rem;
   }
 `;
 
@@ -269,7 +300,6 @@ export const CircleButton = styled.div`
 
   @media (max-width: 768px) {
     position: relative;
-    margin: 3rem auto 0 auto;
     right: auto;
     bottom: auto;
   }
@@ -278,6 +308,10 @@ export const PortfolioSection = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const CircleInside = styled.div`
   width: 3rem;

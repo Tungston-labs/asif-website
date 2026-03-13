@@ -22,11 +22,11 @@ import {
 
 
 const desktopImages = [
-  "/images/home/home1.svg",
-  "/images/home/home2.svg",
-  "/images/home/home3.svg",
-  "/images/home/home4.svg",
-  "/images/home/home5.svg",
+  "/images/home/slider1.svg",
+  "/images/home/slider2.svg",
+  "/images/home/slider3.svg",
+  "/images/home/slider5.svg",
+
 ];
 
 
@@ -42,7 +42,9 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-
+useEffect(() => {
+  setCurrent(0);
+}, [isMobile]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -65,7 +67,9 @@ const Hero = () => {
   }, [isMobile]);
 
   const activeImages = isMobile ? mobileImages : desktopImages;
+const imageSrc = activeImages[current];
 
+if (!imageSrc) return null;
   return (
     <>
       <Navbar />
@@ -94,17 +98,15 @@ const Hero = () => {
           </ButtonGroup>
 
           <ImageWrapper>
-            {activeImages.map((img, index) => (
-              <SliderImage key={index} $active={index === current}>
-                <Image
-                  src={img}
-                  alt="Hero"
-                  fill
-                  priority
-                  style={{ objectFit: "cover" }}
-                />
-              </SliderImage>
-            ))}
+      <SliderImage $active>
+<Image
+  src={imageSrc}
+  alt="Slider"
+  fill
+  priority
+  style={{ objectFit: "contain" }}
+/>
+</SliderImage>
 
             <FloatingNote>
               <ArrowImage src="/images/home/arrow.svg" alt="arrow" />

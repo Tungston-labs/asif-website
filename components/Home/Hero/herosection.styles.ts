@@ -1,25 +1,25 @@
 import styled, { keyframes } from "styled-components";
 
 export const HeroSection = styled.section`
-  width: 100%;
+ width: 100%;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
   text-align: center;
-`;
 
+`;
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 62.5rem; 
-  margin-top: 0.625rem;
-  margin-left: calc(50% - 50vw);
+  aspect-ratio: 20 / 10.9;
+  margin-left: calc(50% - 50%);
   overflow: hidden;
+  background: #fff;
 
-  
   @media (max-width: 48rem) {
-    height: 236px;
+    aspect-ratio: 16 / 10;
     margin-left: 0;
   }
 `;
@@ -27,12 +27,15 @@ export const ImageWrapper = styled.div`
 export const SliderImage = styled.div<{ $active: boolean }>`
   position: absolute;
   inset: 0;
+  display: flex;
+ 
 
   opacity: ${({ $active }) => ($active ? 1 : 0)};
+  z-index: ${({ $active }) => ($active ? 2 : 1)};
   transition: opacity 1s ease-in-out;
 
   img {
-    object-fit: cover;
+    object-fit: contain;
   }
 `;
 

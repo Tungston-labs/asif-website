@@ -88,10 +88,10 @@ export const QuoteButton = styled.button`
 
 export const RightImage = styled.div`
   width: 100%;
-
+margin-top: -10rem;
   img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
   }
 `;
