@@ -42,9 +42,9 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-useEffect(() => {
-  setCurrent(0);
-}, [isMobile]);
+  useEffect(() => {
+    setCurrent(0);
+  }, [isMobile]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -67,9 +67,9 @@ useEffect(() => {
   }, [isMobile]);
 
   const activeImages = isMobile ? mobileImages : desktopImages;
-const imageSrc = activeImages[current];
+  const imageSrc = activeImages[current];
 
-if (!imageSrc) return null;
+  if (!imageSrc) return null;
   return (
     <>
       <Navbar />
@@ -98,15 +98,15 @@ if (!imageSrc) return null;
           </ButtonGroup>
 
           <ImageWrapper>
-      <SliderImage $active>
-<Image
-  src={imageSrc}
-  alt="Slider"
-  fill
-  priority
-  style={{ objectFit: "contain" }}
-/>
-</SliderImage>
+            <SliderImage $active>
+              <Image
+                src={imageSrc}
+                alt="Slider"
+                fill
+                priority
+                style={{ objectFit: "contain" }}
+              />
+            </SliderImage>
 
             <FloatingNote>
               <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
