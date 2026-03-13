@@ -45,15 +45,16 @@ export const DarkSection = styled.section`
 `;
 export const GalleryWrapper = styled.div`
   position: relative;
-  width: 25%;
+  width: 20%;
   height: 52rem;
-  margin-left: 8rem;
-
+  margin-left: 2rem;
+  
   transform: translateY(-2rem); /* move upward */
 
   @media (max-width: 1024px) {
-    width: 16rem;
+    width: 20%;
     height: 42rem;
+    margin-top: 2rem;
     transform: translateY(-5rem);
   }
 
@@ -61,6 +62,7 @@ export const GalleryWrapper = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     height: 28rem;
+      order: 1;
     margin: 0 auto 2rem auto;
     transform: none;
   }
@@ -77,15 +79,18 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
 
 export const CenterWrapper = styled.div`
 flex: 1;
-  max-width: 32rem;
+  max-width: 36rem;
   margin-top: 4rem;
+  margin-left: 2rem;
   @media (max-width: 1024px) {
-    max-width: 100%;
+    max-width: 36rem;
   }
 
   @media (max-width: 768px) {
     max-width: 90%;
     margin: 0 auto;
+      order: 2;
+
     text-align: center;
   }
 `;
@@ -107,7 +112,10 @@ export const ExperienceBox = styled.div`
   bottom: 4rem;
   left: 4rem;
   color: #fff;
-
+  @media (max-width: 1024px) {
+    max-width: 36rem;
+    bottom: 1rem;
+  }
   @media (max-width: 768px) {
     position: relative;
     bottom: auto;
@@ -211,7 +219,6 @@ export const PortfolioText = styled.h1`
     white-space: normal;
   }
 `;
-
 export const SideImage = styled.div`
   position: absolute;
   top: 0;
@@ -232,17 +239,17 @@ export const SideImage = styled.div`
     height: 14rem;
   }
 
-  /* MOBILE FIX */
   @media (max-width: 768px) {
-    position: relative;   /* stop absolute positioning */
-    margin: 2rem auto 0 auto;
-    right: auto;
-    bottom: 0;
-    transform: none;
+    position: relative;
+    order: 4;
 
+    margin: 3rem auto 0 auto;
     width: 8rem;
     height: 8rem;
-    opacity: 0.8;
+
+    right: auto;
+    top: auto;
+    transform: none;
   }
 `;
 
@@ -278,6 +285,8 @@ export const SocialWrapper = styled.div`
     justify-content: center;
     top: auto;
     right: auto;
+      order: 1;
+
     transform: none;
     margin-top: 2rem;
   }
