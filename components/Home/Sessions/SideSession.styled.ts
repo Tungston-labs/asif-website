@@ -1,4 +1,4 @@
-import styled ,{keyframes}from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const SideNavWrapper = styled.div`
   position: absolute;
@@ -8,6 +8,8 @@ export const SideNavWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+    @media (max-width: 1024px) {
+top: 6rem; }
 `;
 
 export const NavItem = styled.div`
