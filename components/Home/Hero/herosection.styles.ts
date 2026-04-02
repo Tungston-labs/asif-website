@@ -23,14 +23,19 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const SliderImage = styled.div<{ $active: boolean; $index: number; $current: number }>`
+export const SliderImage = styled.div<{ $active: boolean }>`
   position: absolute;
   inset: 0;
 
-  transform: ${({ $index, $current }) =>
-    `translateX(${($index - $current) * 100}%)`};
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  transform: ${({ $active }) =>
+    $active ? "scale(1)" : "scale(1.05)"};
 
-  transition: transform 0.8s ease-in-out;
+  transition: 
+    opacity 1s ease-in-out,
+    transform 5s ease-in-out;
+
+  z-index: ${({ $active }) => ($active ? 2 : 1)};
 `;
 
 const floatFadeMove = keyframes`
