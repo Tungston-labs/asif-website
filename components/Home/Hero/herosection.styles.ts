@@ -14,7 +14,6 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   aspect-ratio: 20 / 10.7;
-  margin-left: calc(50% - 50%);
   overflow: hidden;
   background: #fff;
 
@@ -24,19 +23,14 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const SliderImage = styled.div<{ $active: boolean }>`
+export const SliderImage = styled.div<{ $active: boolean; $index: number; $current: number }>`
   position: absolute;
   inset: 0;
-  display: flex;
- 
 
-  opacity: ${({ $active }) => ($active ? 1 : 0)};
-  z-index: ${({ $active }) => ($active ? 2 : 1)};
-  transition: opacity 1s ease-in-out;
+  transform: ${({ $index, $current }) =>
+    `translateX(${($index - $current) * 100}%)`};
 
-  img {
-    object-fit: contain;
-  }
+  transition: transform 0.8s ease-in-out;
 `;
 
 const floatFadeMove = keyframes`

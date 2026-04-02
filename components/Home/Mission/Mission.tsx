@@ -11,6 +11,7 @@ import {
   Description,
   Divider,
 } from "./Mission.styles";
+import { BackgroundBall } from "../Testimonials/Testimonials.style";
 
 const missionData = [
   {
@@ -36,7 +37,9 @@ const missionData = [
 const Mission = () => {
   return (
     <Section>
+      
       <Container>
+        <BackgroundBall/>
         <CardsWrapper>
           {missionData.map((item, index) => (
             <Card key={index}>
@@ -56,6 +59,7 @@ const Mission = () => {
             </Card>
           ))}
         </CardsWrapper>
+        
       </Container>
     </Section>
   );

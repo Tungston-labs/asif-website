@@ -7,7 +7,7 @@ export const Section = styled.section`
   overflow: hidden;
   background: #000;
 
-  &::before {
+  /* &::before {
     content: "";
     position: absolute;
     top: -12.5rem;
@@ -21,7 +21,7 @@ export const Section = styled.section`
     );
     pointer-events: none;
     z-index: 0;
-  }
+  } */
 
   @media (max-width: 1024px) {
     padding: 4rem 2.5rem;

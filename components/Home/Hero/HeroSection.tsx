@@ -98,15 +98,22 @@ const Hero = () => {
           </ButtonGroup>
 
           <ImageWrapper>
-            <SliderImage $active>
-              <Image
-                src={imageSrc}
-                alt="Slider"
-                fill
-                priority
-                style={{ objectFit: "contain" }}
-              />
-            </SliderImage>
+           {activeImages.map((img, index) => (
+  <SliderImage
+    key={index}
+    $active={index === current}
+    $index={index}
+    $current={current}
+  >
+    <Image
+      src={img}
+      alt="Slider"
+      fill
+      priority
+      style={{ objectFit: "cover" }}
+    />
+  </SliderImage>
+))}
 
             <FloatingNote>
               <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
