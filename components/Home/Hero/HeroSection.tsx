@@ -102,8 +102,6 @@ const Hero = () => {
   <SliderImage
     key={index}
     $active={index === current}
-    $index={index}
-    $current={current}
   >
     <Image
       src={img}
