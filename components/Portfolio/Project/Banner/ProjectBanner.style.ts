@@ -5,15 +5,16 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   background-color: #ffffff;
-  padding: 3.125rem 0; 
-
+  padding: 6rem 5rem 0 5rem; 
+ @media (max-width: 1024px) {
+  padding: 6rem 2rem 0 2rem; 
+    }
   @media (max-width: 48rem) {
-    padding: 2rem 0;
-  }
+  padding: 6rem 3rem 0 3rem; 
+    }
 `;
 
 export const Container = styled.div`
-  width: 75rem; 
   margin: 0 auto;
 
   @media (max-width: 75rem) {
@@ -28,7 +29,7 @@ export const LocationTag = styled.span`
   letter-spacing: 0.125rem; 
   font-weight: 400;
   color: #111;
-  margin-bottom: 1.875rem; 
+  margin-bottom: 0.5rem; 
   padding: 0 1.25rem; 
 
   &::before {
@@ -61,9 +62,9 @@ export const LocationTag = styled.span`
 export const Heading = styled.h2`
   font-size: 2.25rem; 
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1;
   color: #111;
-  margin-bottom: 1.875rem; 
+  margin-bottom: 0.5rem; 
   max-width: 56.25rem; 
 
   @media (max-width: 64rem) {
@@ -88,7 +89,7 @@ export const Description = styled.p`
   line-height: 1.5; 
   font-weight: 300;
   color: #555;
-  max-width: 87.5rem; 
+  max-width: 47.5rem; 
 
   @media (max-width: 64rem) {
     font-size: 1rem;

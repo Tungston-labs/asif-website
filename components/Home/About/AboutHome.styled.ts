@@ -50,7 +50,7 @@ export const LeftContent = styled.div`
 
 export const Title = styled.h2`
   margin-top: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.35;
   font-weight: 300;
   color: #111;
@@ -97,10 +97,11 @@ export const ReadMoreButton = styled(Link)`
   background: #d7ae5b;
   color: #fff;
   border: none;
-  padding: 0.9rem 1.8rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 0.25rem;
   font-weight: 500;
   cursor: pointer;
+  margin-bottom: 8rem;
   letter-spacing: 0.05rem;
   transition: 0.3s ease;
   text-decoration: none;   
@@ -142,8 +143,7 @@ export const RightImages = styled.div`
 export const ImageCard = styled.div<{ $offset?: boolean }>`
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-
+  gap: 0.2rem;
   ${({ $offset }) =>
     $offset &&
     `
@@ -185,17 +185,17 @@ export const ImageTitle = styled.h4`
 `;
 
 export const ImageSubtitle = styled.p`
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #777;
 `;
 
 export const BgBlueprint = styled.div`
   position: absolute;
-  bottom: -2rem;
+  bottom: -0.10rem;
   left: 0;
   width: 28rem;
   height: 18rem;
-  opacity: 0.7;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 

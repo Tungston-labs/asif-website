@@ -17,9 +17,10 @@ const AboutArchitect = () => {
   return (
     <>
       <Section>
-        <SideNav/>
 
         <DarkSection>
+                  <SideNav/>
+
            <SideImage>
     <Image
       src="/images/about/about-me.svg"

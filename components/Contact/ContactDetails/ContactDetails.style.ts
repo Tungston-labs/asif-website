@@ -25,7 +25,7 @@ export const Heading = styled.h2`
   font-size: 3.0625rem; 
   font-weight: 300;
   line-height: 1.3;
-  margin: 0 auto 5rem;
+  margin-bottom: 0.5rem;  
   color: #000;
 
   @media (max-width: 64rem) {
@@ -48,8 +48,9 @@ export const Description = styled.p`
   font-weight: 300;
   line-height: 1.5rem; 
   max-width: 62.5rem; 
-  margin: -2.5rem auto 4.375rem; 
+  margin-left: 4rem;
   color: #000000;
+  margin-bottom: 2rem;
   text-transform: capitalize;
 
   @media (max-width: 48rem) {
@@ -129,7 +130,7 @@ export const Label = styled.div`
   font-size: 0.9375rem; 
   font-weight: 400;
   letter-spacing: 0.0625rem; 
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   padding: 0.25rem 1.5625rem; 
   position: relative;
   display: inline-block;

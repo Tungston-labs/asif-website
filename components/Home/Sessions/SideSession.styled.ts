@@ -3,13 +3,13 @@ import styled, { keyframes } from "styled-components";
 export const SideNavWrapper = styled.div`
   position: absolute;
   left: 2rem;
-  top: 8rem;
+  top: 7rem;
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
     @media (max-width: 1024px) {
-top: 6rem; }
+top: 4rem; }
 `;
 
 export const NavItem = styled.div`

@@ -17,7 +17,7 @@ const Portfolio: React.FC = () => {
             <HeroSection>
                 <HeroOverlay />
                 <HeroContent>
-                    <Title>Portfolio</Title>
+                    <Title>OUR PORTFOLIO</Title>
                 </HeroContent>
             </HeroSection>
         </PageWrapper>

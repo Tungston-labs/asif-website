@@ -44,7 +44,7 @@ export const HeroContent = styled.div`
   padding-left: 5rem; 
 
   @media (max-width: 64rem) {
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
 
   @media (max-width: 48rem) {
@@ -58,7 +58,7 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 4rem; 
+  font-size: 3rem; 
   font-weight: 500;
   letter-spacing: 0.125rem; 
   margin: 0;

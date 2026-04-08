@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   background: #f6f6f6;
+  
+
 `;
 
 export const ContentWrapper = styled.div`
@@ -17,7 +19,8 @@ export const ContentWrapper = styled.div`
 
 export const LeftContent = styled.div`
   max-width: 80%;
-    padding: 2rem 5%;
+    padding: 6rem 5rem;
+
 
 `;
 
@@ -88,7 +91,7 @@ export const QuoteButton = styled.button`
 
 export const RightImage = styled.div`
   width: 100%;
-margin-top: -10rem;
+margin-top: -20rem;
   img {
     width: 100%;
     object-fit: cover;

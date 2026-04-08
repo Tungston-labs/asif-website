@@ -4,6 +4,10 @@ export const Container = styled.section`
   width: 100%;
   padding: 0.625rem 0 6.25rem; 
   background: #ffffff;
+  @media(max-width:1024px){
+
+  padding: 0.625rem 2rem; 
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,6 +22,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 64rem) {
     gap: 2rem;
+    
   }
 
   @media (max-width: 48rem) {

@@ -6,7 +6,7 @@ export const Grid = styled.div`
   gap: 2.5rem; 
 
   @media (max-width: 75rem) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 23.6875rem 32.3125rem;
   }
 
   @media (max-width: 48rem) {
@@ -21,7 +21,7 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 
   @media (max-width: 64rem) {
-    height: 26rem;
+    height: 29.80rem;
   }
 
   @media (max-width: 48rem) {

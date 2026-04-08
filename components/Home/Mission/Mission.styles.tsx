@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  padding: 5rem 3.75rem;
+  padding: 4rem 3.75rem;
   position: relative;
   overflow: hidden;
   background: #000;
@@ -34,7 +34,6 @@ export const Section = styled.section`
 
 export const Container = styled.div`
   max-width: 87.5rem;
-  margin: 0 auto;
   position: relative;
   z-index: 1;
 `;
@@ -57,7 +56,7 @@ export const CardsWrapper = styled.div`
 
 export const Card = styled.div`
   border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-  padding: 2.5rem 2.1875rem;
+  padding: 1rem 2.1875rem;
   color: #fff;
   background: transparent;
   transition: 0.35s ease;
@@ -93,7 +92,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.375rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
 
@@ -107,8 +106,9 @@ export const Title = styled.h3`
 `;
 
 export const Description = styled.p`
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   line-height: 1.7;
+  margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.75);
 
   @media (max-width: 768px) {
@@ -119,6 +119,6 @@ export const Description = styled.p`
 export const Divider = styled.div`
   width: 3.125rem;
   height: 0.125rem;
+  margin-bottom: 1.2rem;
   background: rgba(255, 255, 255, 0.5);
-  margin-top: auto;
 `;

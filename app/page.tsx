@@ -7,6 +7,7 @@ import AboutArchitect from "@/components/Home/Sessions";
 import Banner from "@/components/About/Banner/Banner";
 import Testimonials from "@/components/Home/Testimonials/Testimonials";
 import WhatWeDo from "@/components/Home/WhatWeDo";
+import Image from "next/image";
 
 export default function Home() {
   return <>
@@ -15,6 +16,8 @@ export default function Home() {
     <AboutHome />
     <AboutArchitect />
     <Banner />
+        <Image alt="decor" src="/images/home/bulb.png" width={100} height={200} style={{marginLeft:"7rem"}} className="decor-image"/>
+
     <ProjectsSection />
     <section id="testimonials">
       <Testimonials />

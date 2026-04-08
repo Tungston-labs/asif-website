@@ -57,12 +57,12 @@
   }
   @media (min-width: 3840px) {
     html {
-      font-size: 40px;
+      font-size: 32px;
     }
   }
   @media (min-width: 5120px) {
     html {
-      font-size: 56px;
+      font-size: 42px;
     }
     body {
       max-width: 5120px;

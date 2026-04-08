@@ -4,6 +4,7 @@ export const HeroSection = styled.section`
  width: 100%;
   justify-content: center;
   overflow: hidden;
+  margin-top: 2.5rem;
 `;
 
 export const Container = styled.div`
@@ -133,7 +134,7 @@ export const FloatingText = styled.p`
   }
 `;
 export const Title = styled.h1`
-  font-size: 4rem; 
+  font-size: 3rem; 
   font-weight: 300;
   letter-spacing: 0.125rem; 
   color: #111;
@@ -180,7 +181,9 @@ export const PrimaryButton = styled.button`
   &:active,
   &:visited {
     text-decoration: none;
-    color: #fff;
+    color: #000;
+    background-color: white;
+    border: 1px solid #D7AE5B;
   }
 `;
 
@@ -202,6 +205,8 @@ export const SecondaryButton = styled.button`
   &:active,
   &:visited {
     text-decoration: none;
-    color: #fff;           
+     color: #000;
+    background-color: white;
+    border: 1px solid #000;          
   }
 `;

@@ -34,7 +34,7 @@ const scrollAnimation = keyframes`
 export const Section = styled.section`
   position: relative;
   background: #0c0c0c;
-  padding: 7.5rem 5rem;
+  padding: 6rem 5rem;
   overflow: hidden;
   color: white;
   font-family: 'Jost', sans-serif;
@@ -82,7 +82,7 @@ export const BackgroundBall = styled.div`
 export const Header = styled.div`
   position: relative;
   z-index: 2;
-  margin-bottom: 4.5rem;
+  margin-bottom: 1.5rem;
   max-width: 50rem;
 
   @media (max-width: 768px) {
@@ -91,7 +91,7 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
 
   span {
@@ -99,7 +99,7 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
   }
 
   @media (max-width: 480px) {
@@ -108,7 +108,6 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  margin-top: 1rem;
   color: #bfbfbf;
   font-size: 1.1rem;
 
@@ -125,7 +124,7 @@ export const SliderWrapper = styled.div`
 
 export const SliderTrack = styled.div`
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   width: max-content;
   animation: ${scrollAnimation} 30s linear infinite;
 
@@ -136,8 +135,8 @@ export const SliderTrack = styled.div`
 
 export const Card = styled.div`
   width: 40rem;
-  min-height: 20rem;
-  padding: 2.5rem;
+  height: 18rem;
+  padding: 1rem;
   flex-shrink: 0;
 
   border: 1px solid rgba(220, 216, 216, 0.2);
@@ -169,7 +168,7 @@ export const Card = styled.div`
 
 export const Quote = styled.div`
   display: flex;
-  gap: 1.2rem;
+  gap: 0.2rem;
   margin-bottom: 2rem;
 `;
 
@@ -189,9 +188,9 @@ export const QuoteShape = styled.div`
 export const Content = styled.p`
   font-size: 1.1rem;
   font-weight: 300;
-  line-height: 1.8rem;
+  line-height: 1.3rem;
   color: #d4d4d4;
-  margin: 1.5rem 0;
+  margin: 0.2rem 0;
 
   @media (max-width: 480px) {
     font-size: 1rem;
@@ -228,7 +227,7 @@ export const AuthorInfo = styled.div`
 export const Label = styled.div`
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.3rem 1.5rem;
   position: relative;
   display: inline-block;

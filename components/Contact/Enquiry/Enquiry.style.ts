@@ -7,7 +7,7 @@ export const Section = styled.section`
   justify-content: center;
   background: #000;
 
-  @media (max-width: 64rem) {
+  @media (max-width: 1024px) {
     padding: 0 2rem;
   }
 
@@ -18,7 +18,7 @@ export const Section = styled.section`
 `;
 
 export const LeftContainer = styled.div`
-  width: 52.6875rem;   
+  width: 62.6875rem;   
   height: 41.625rem;   
   padding: 5rem 5.625rem; 
   position: relative;
@@ -31,14 +31,18 @@ export const LeftContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+@media (max-width: 2624px) and (min-width: 1900px) {
+  width: 58.6875rem;   
+  height: 41.625rem;
+  padding: 4rem 3rem;
+}
 
-  @media (max-width: 75rem) {
+  @media (max-width: 1024px) {
     width: 100%;
-    height: auto;
     padding: 4rem 3rem;
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     padding: 3rem 2rem;
   }
 `;
@@ -52,13 +56,19 @@ export const RightContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (max-width: 75rem) {
+@media (max-width: 2624px) and (min-width: 1900px) {
+  width: 55.6875rem;   
+  height: 41.625rem;
+  padding: 4rem 3rem;
+}
+
+  @media (max-width: 1024px) {
     width: 100%;
-    height: 25rem;
+    padding: 4rem 3rem;
   }
 
-  @media (max-width: 48rem) {
-    height: 18rem;
+  @media (max-width: 768px) {
+    padding: 3rem 2rem;
   }
 `;
 
@@ -78,7 +88,6 @@ export const SubText = styled.p`
   font-size: 1rem; 
   font-weight: 300;
   line-height: 1.8;
-  margin-bottom: 2.5rem; 
   color: #ccc;
 
   @media (max-width: 48rem) {

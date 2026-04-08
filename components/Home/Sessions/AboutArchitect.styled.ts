@@ -7,7 +7,7 @@ export const Section = styled.section`
   background: #000;
   color: #fff;
   margin-top: 2rem;
-  padding: 4rem 4rem;
+  padding: 0 4rem;
   overflow: visible;
 
 
@@ -20,42 +20,42 @@ export const DarkSection = styled.section`
   position: relative;
   width: 100%;
   display: flex;
-  background: linear-gradient(
-    145deg,
-    rgb(7, 6, 6) 70%,
-    rgba(192, 153, 73, 1) 150%
-  );
-  margin-top: -2rem;
-  min-height: 40rem;
+background: linear-gradient(
+  -240deg,
+  #171717 65%,
+  rgba(196, 144, 42, 0.25) 100%
+);
+  margin-top: -4rem;
+  min-height: 10rem;
+  padding: 0 4rem;
   z-index: 2;
-  transform: translateY(-5rem); /* move upward */
+  transform: translateY(-2rem);
 
-  
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 2rem 0;
     transform: none;
     background: linear-gradient(
       145deg,
-      rgb(7, 6, 6) 70%,
-      rgb(6, 6, 6) 150%
+      #171717 0%,
+      #C09949 100%
     );
   }
-
 `;
 export const GalleryWrapper = styled.div`
   position: relative;
   width: 20%;
-  height: 52rem;
+  max-height: 54rem;
   margin-left: 2rem;
-  
-  transform: translateY(-2rem); /* move upward */
+  margin-top: 10rem;
+
+  transform: translateY(-14rem); /* move upward */
 
   @media (max-width: 1024px) {
     width: 20%;
-    height: 42rem;
-    margin-top: 2rem;
-    transform: translateY(-5rem);
+  max-height: 48rem;
+    margin-top: 8rem;
+    transform: translateY(-12rem);
   }
 
 
@@ -70,20 +70,59 @@ export const GalleryWrapper = styled.div`
 
 export const GalleryImage = styled.div<{ $active: boolean }>`
   position: absolute;
+  height: 50rem;
   inset: 0;
-  margin-top: -8;
   opacity: ${({ $active }) => ($active ? 1 : 0)};
   transition: opacity 0.8s ease;
   animation: ${({ $active }) => ($active ? fadeZoom : "none")} 6s ease-in-out;
+  @media (max-width: 2624px) and (min-width: 2325px) {
+  height: 46rem;
+  }
+      @media (max-width: 2324px) and (min-width: 2025px) {
+  height: 46rem;
+  }
+      @media (max-width: 2024px) and (min-width: 1825px) {
+  height: 48rem;
+  }
+
+@media (max-width: 1824px) and (min-width: 1525px) {
+  height: 50rem;   
+}
+  @media (max-width: 1524px) and (min-width: 1025px) {
+  height: 49rem;
+  }
+    @media (max-width: 1024px) and (min-width: 768px) {
+  height: 46rem;
+  }
+
 `;
 
 export const CenterWrapper = styled.div`
 flex: 1;
-  max-width: 36rem;
-  margin-top: 4rem;
+  max-width: 46rem;
+  margin-top: 6rem;
   margin-left: 2rem;
-  @media (max-width: 1024px) {
+     @media (max-width: 2624px) and (min-width: 2325px) {
+    max-width: 45rem;
+  }
+      @media (max-width: 2324px) and (min-width: 2025px) {
+    max-width: 43rem;
+  }
+      @media (max-width: 2024px) and (min-width: 1825px) {
+    max-width: 42rem;
+  }
+
+  @media (max-width: 1824px) and (min-width: 1525px) {
     max-width: 36rem;
+  }
+
+  @media (max-width: 1524px) {
+    max-width: 36rem;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 38rem;
+ 
   }
 
   @media (max-width: 768px) {
@@ -108,25 +147,28 @@ const fadeZoom = keyframes`
 
 
 export const ExperienceBox = styled.div`
-  position: absolute;
-  bottom: 4rem;
-  left: 4rem;
+  position: relative;
+  bottom: -42rem;
+  left: 2rem;
   color: #fff;
   @media (max-width: 1024px) {
     max-width: 36rem;
-    bottom: 1rem;
+  bottom: -40rem;
+      left:2rem;
+
   }
   @media (max-width: 768px) {
     position: relative;
     bottom: auto;
-    left: auto;
+    left: 2.5rem;
     text-align: center;
     margin-top: 20rem;
   }
 `;
 
 export const ExperienceText = styled.h3`
-  font-size: 2.4rem;
+  font-size: 2rem;
+  width: 70%;
   letter-spacing: 0.1rem;
 `;
 
@@ -182,7 +224,7 @@ export const Description = styled.p`
 `;
 
 export const TalkButton = styled(Link)`
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: #d7ae5b;
   border: none;
   border-radius: 0.5rem;
@@ -194,6 +236,13 @@ export const TalkButton = styled(Link)`
 
   &:visited {
     color: #fff;          
+  }
+    @media (max-width: 1024px) {
+  padding: 0.6rem 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1.2rem;
   }
 `;
 
@@ -235,8 +284,8 @@ export const SideImage = styled.div`
   }
 
   @media (max-width: 1024px) {
-    width: 14rem;
-    height: 14rem;
+    width: 13.9rem;
+    height: 12.9rem;
   }
 
   @media (max-width: 768px) {
@@ -293,8 +342,8 @@ export const SocialWrapper = styled.div`
 `;
 
 export const CircleButton = styled.div`
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   top: 2;
   border-radius: 70%;
   background: #d7ae5b;
@@ -305,6 +354,8 @@ export const CircleButton = styled.div`
   flex-shrink: 0;
   @media (max-width: 1024px) {
     right: 4rem;
+      width: 4rem;
+  height: 4rem;
   }
 
   @media (max-width: 768px) {

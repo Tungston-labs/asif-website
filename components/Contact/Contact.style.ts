@@ -36,7 +36,7 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 4rem; 
+  font-size: 3rem; 
   font-weight: 500;
   letter-spacing: 0.125rem;  
   margin: 0;
@@ -54,7 +54,7 @@ export const Title = styled.h1`
 
 export const Section = styled.section`
   width: 100%;
-  padding: 6.25rem 5rem;
+  padding: 6rem 5rem;
   background: #f4f4f4;
   text-align: center;
 `;
@@ -65,7 +65,6 @@ export const Heading = styled.h2`
   font-weight: 300;
   line-height: 1.3;
   max-width: none;
-  margin: 0 auto 5rem;
   color: #000;
 `;
 
@@ -75,8 +74,8 @@ export const Description = styled.p`
   font-weight: 300;
   line-height: 1.5rem;
   max-width: 62.5rem;
-  margin: -2.5rem auto 4.375rem;
-  color: #000000;
+  margin-top: 2rem;
+      color: #000000;
   text-transform: capitalize;
 `;
 

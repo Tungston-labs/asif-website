@@ -7,11 +7,11 @@ const zoomAnimation = keyframes`
 `;
 
 export const Section = styled.section`
-  padding: 6rem 4rem;
+  padding: 0 4rem;
   background: #f7f7f7;
 
   @media (max-width: 1024px) {
-    padding: 5rem 3rem;
+    padding: 0 3rem;
   }
 
   @media (max-width: 768px) {
@@ -25,7 +25,7 @@ export const Section = styled.section`
 
 export const HeaderWrapper = styled.div`
   text-align: center;
-  margin: 0 auto 3rem;
+  margin: -3rem auto 3rem;
 
   @media (max-width: 768px) {
     margin-bottom: 2rem;
@@ -121,7 +121,7 @@ export const Description = styled.p`
   margin-top: 1rem;
   color: #666;
   max-width: 65rem;
-    margin-left: 8%;
+    margin-left: 12%;
 
   text-align: center;
 
@@ -227,7 +227,7 @@ export const Card = styled.div`
 `;
 
 export const LocationTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 12px;
@@ -257,7 +257,7 @@ export const LocationDescription = styled.p`
 
 export const PortButton = styled.button`
   display: block;
-  margin: 2rem auto 0 ;
+  margin: 2rem auto 4rem ;
 
   font-family: "Jost", sans-serif;
   font-weight: 400;

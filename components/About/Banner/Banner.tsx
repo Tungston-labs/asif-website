@@ -10,6 +10,7 @@ const Banner = () => {
         <Line />
         <Line /> 
       </MovingText>
+      
     </BannerWrapper>
   );
 };

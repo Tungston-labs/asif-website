@@ -35,7 +35,7 @@ const AboutContent = () => {
       </Description>
 
       <TalkButton href="/contact#enquiry">
-        LET'S TALK
+        LET`S TALK
       </TalkButton>
      <PortfolioSection>
       <PortfolioText>Portfolio</PortfolioText>

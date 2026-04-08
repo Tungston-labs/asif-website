@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 5rem;
   background: #fff;
   margin-top: 1.5rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   position: relative;
   z-index:1000; 
@@ -19,7 +19,7 @@ export const CenterMenu = styled.div`
   justify-content: center;
 
   flex: 1;
-  max-width: 52.25rem; 
+  max-width: 47.25rem; 
 
   margin: 0 auto;
 `;

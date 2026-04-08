@@ -37,18 +37,18 @@ const Navbar = () => {
       <CenterMenu>
         <Menu $open={menuOpen}>
              <MenuItem>
-            <Link href="/">Home</Link>
+            <Link href="/">HOME</Link>
           </MenuItem>
           <MenuItem>
-            <Link href="/about">About Our Company</Link>
-          </MenuItem>
-
-          <MenuItem>
-            <Link href="/portfolio">Our Portfolio</Link>
+            <Link href="/about">ABOUT OUR COMPANY</Link>
           </MenuItem>
 
           <MenuItem>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/portfolio">OUR PORTFOLIO</Link>
+          </MenuItem>
+
+          <MenuItem>
+            <Link href="/contact">CONTACT US</Link>
           </MenuItem>
         </Menu>
       </CenterMenu>
