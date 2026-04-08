@@ -60,6 +60,7 @@ export const Menu = styled.ul<{ $open: boolean }>`
     flex-direction: column;
     background: #fff;
     padding: 1.25rem 0; 
+    background: ${({ $open }) => ($open ? "#D7AE5B" : "#fff")};
     border-top: 0.0625rem solid #eee; 
 
     display: ${({ $open }) => ($open ? "flex" : "none")};
@@ -73,10 +74,7 @@ export const RightSection = styled.div`
 `;
 
 export const MenuItem = styled.li`
-  a,
-  a:link,
-  a:visited,
-  a:active {
+  a {
     text-decoration: none;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.dark};
@@ -85,6 +83,32 @@ export const MenuItem = styled.li`
 
   a:hover {
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  /* 🔥 Mobile phone button style */
+  &.mobile-call {
+    display: none;
+  }
+
+  @media (max-width: 48rem) {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+
+    &.mobile-call {
+      display: block;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #D7AE5B;
+        padding: 0.6rem 1rem;
+        border-radius: 0.375rem;
+        color: #000;
+        font-weight: 600;
+      }
+    }
   }
 `;
 
@@ -104,8 +128,8 @@ export const Button = styled.a`
     transform: translateY(-0.125rem); 
   }
 
-  @media (max-width: 48rem) {
-    margin-top: 0.625rem; 
+   @media (max-width: 48rem) {
+    display: none;   /* 🔥 hide from top */
   }
 `;
 

@@ -9,7 +9,7 @@ export const Section = styled.section`
   background: #f6f6f6;
   overflow: hidden;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px)and (min-width: 758px) {
     padding: 5rem 3rem;
   }
 
@@ -121,6 +121,7 @@ export const ReadMoreButton = styled(Link)`
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-bottom: 2rem;
   }
 `;
 

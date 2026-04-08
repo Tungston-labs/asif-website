@@ -10,6 +10,9 @@ export const SideNavWrapper = styled.div`
   gap: 2rem;
     @media (max-width: 1024px) {
 top: 4rem; }
+@media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.div`

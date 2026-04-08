@@ -35,11 +35,7 @@ background: linear-gradient(
     flex-direction: column;
     padding: 2rem 0;
     transform: none;
-    background: linear-gradient(
-      145deg,
-      #171717 0%,
-      #C09949 100%
-    );
+    background-color: #000 ;
   }
 `;
 export const GalleryWrapper = styled.div`
@@ -52,7 +48,7 @@ export const GalleryWrapper = styled.div`
   transform: translateY(-14rem); /* move upward */
 
   @media (max-width: 1024px) {
-    width: 20%;
+    width: 40%;
   max-height: 48rem;
     margin-top: 8rem;
     transform: translateY(-12rem);
@@ -60,8 +56,8 @@ export const GalleryWrapper = styled.div`
 
 
   @media (max-width: 768px) {
-    width: 90%;
-    height: 28rem;
+    width: 100%;
+    height: 18rem;
       order: 1;
     margin: 0 auto 2rem auto;
     transform: none;
@@ -93,6 +89,10 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
   }
     @media (max-width: 1024px) and (min-width: 768px) {
   height: 46rem;
+  }
+    @media (max-width: 768px) {
+     height: 22rem;
+
   }
 
 `;
@@ -158,11 +158,11 @@ export const ExperienceBox = styled.div`
 
   }
   @media (max-width: 768px) {
-    position: relative;
+    position: absolute;
     bottom: auto;
-    left: 2.5rem;
+    left: 8.5rem;
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 6rem;
   }
 `;
 
@@ -170,10 +170,17 @@ export const ExperienceText = styled.h3`
   font-size: 2rem;
   width: 70%;
   letter-spacing: 0.1rem;
+   @media (max-width: 768px) {
+  font-size: 0.8rem;
+
+  }
 `;
 
 export const ContentWrapper = styled.div`
   margin-top: 0.5rem;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const Tag = styled.span<{ $color?: string }>`
@@ -293,8 +300,8 @@ export const SideImage = styled.div`
     order: 4;
 
     margin: 3rem auto 0 auto;
-    width: 8rem;
-    height: 8rem;
+    width: 20rem;
+    height: 20rem;
 
     right: auto;
     top: auto;
@@ -332,12 +339,11 @@ export const SocialWrapper = styled.div`
     position: relative;
     flex-direction: row;
     justify-content: center;
-    top: auto;
+    margin-top: 4rem;
     right: auto;
       order: 1;
 
     transform: none;
-    margin-top: 2rem;
   }
 `;
 

@@ -20,7 +20,11 @@ export const ContentWrapper = styled.div`
 export const LeftContent = styled.div`
   max-width: 80%;
     padding: 6rem 5rem;
+ @media (max-width: 992px) {
+  max-width: 100%;
+      padding: 4rem 2rem;
 
+  }
 
 `;
 
@@ -96,5 +100,10 @@ margin-top: -20rem;
     width: 100%;
     object-fit: cover;
     display: block;
+  }
+  @media (max-width: 992px) {
+  margin-top: -5rem;
+
+
   }
 `;

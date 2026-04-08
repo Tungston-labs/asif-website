@@ -50,6 +50,11 @@ const Navbar = () => {
           <MenuItem>
             <Link href="/contact">CONTACT US</Link>
           </MenuItem>
+            <MenuItem className="mobile-call">
+    <a href="tel:+919876543210">
+      <FaPhoneAlt /> +91 98765 43210
+    </a>
+  </MenuItem>
         </Menu>
       </CenterMenu>
 

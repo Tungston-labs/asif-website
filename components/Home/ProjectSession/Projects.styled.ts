@@ -8,7 +8,6 @@ const zoomAnimation = keyframes`
 
 export const Section = styled.section`
   padding: 0 4rem;
-  background: #f7f7f7;
 
   @media (max-width: 1024px) {
     padding: 0 3rem;
