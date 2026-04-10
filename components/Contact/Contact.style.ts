@@ -36,7 +36,7 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 3rem; 
+  font-size: 4rem; 
   font-weight: 500;
   letter-spacing: 0.125rem;  
   margin: 0;

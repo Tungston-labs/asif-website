@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const Section = styled.section`
   width: 100%;
@@ -20,6 +21,7 @@ export const ContentWrapper = styled.div`
 export const LeftContent = styled.div`
   max-width: 80%;
     padding: 6rem 5rem;
+      z-index: 2; 
  @media (max-width: 992px) {
   max-width: 100%;
       padding: 4rem 2rem;
@@ -76,20 +78,26 @@ export const FeatureText = styled.p`
   line-height: 1.7;
 `;
 
-export const QuoteButton = styled.button`
+
+export const QuoteButton = styled(Link)`
   margin-top: 2rem;
   padding: 14px 28px;
   background: #c9a45c;
-  border: none;
   color: white;
+font-weight: 500;
   font-family: Jost;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
+  border: none;
   transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 
   &:hover {
-    background: #b8934e;
+    border: 1px solid #c9a45c;
+    background: #fff;
+    color: #000;
   }
 `;
 

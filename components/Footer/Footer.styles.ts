@@ -29,6 +29,11 @@ export const TopSection = styled.div`
   align-items: center;
 
   @media (max-width: 992px) {
+    flex-direction: row;
+    align-items: flex-start;   
+    gap: 2.5rem;
+  }
+    @media (max-width: 620px) {
     flex-direction: column;
     align-items: flex-start;   
     gap: 2.5rem;
@@ -139,13 +144,13 @@ export const BottomNav = styled.div`
 
 
   @media (max-width: 768px) {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: nowrap;        
     gap: 1rem;                
     overflow-x: auto;         
     
     a {
-      font-size: 0.75rem;     
+      font-size: 1rem;     
     }
   }
 `;

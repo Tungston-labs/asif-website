@@ -1,16 +1,15 @@
+import Image from "next/image";
 import styled from "styled-components";
-import Link from "next/link";
-
 
 export const Section = styled.section`
   position: relative;
   width: 100%;
-  padding: 6rem 6rem ;
+  padding: 6rem 6rem;
   background: #f6f6f6;
   overflow: hidden;
 
-  @media (max-width: 1024px)and (min-width: 758px) {
-    padding: 5rem 3rem;
+  @media (max-width: 1024px) and (min-width: 758px) {
+    padding: 3rem 3rem;
   }
 
   @media (max-width: 768px) {
@@ -73,7 +72,7 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 480px) {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 `;
 
@@ -86,42 +85,40 @@ export const Description = styled.p`
 
   @media (max-width: 768px) {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
+  }
+   @media (max-width: 1024px) {
+    max-width: 100%;
+    font-size: 1.2rem;
   }
 `;
 
-export const ReadMoreButton = styled(Link)`
+export const StyledLink = styled.a`
   margin-top: 2rem;
-  background: #d7ae5b;
+  background-color: #d7ae5b;
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 0.25rem;
   font-weight: 500;
   cursor: pointer;
+  font-family: var(--font-jost), sans-serif;
   margin-bottom: 8rem;
   letter-spacing: 0.05rem;
   transition: 0.3s ease;
-  text-decoration: none;   
+  text-decoration: none;
   display: inline-block;
+  font-size: 0.8rem;
 
   &:hover {
-    transform: translateY(-0.2rem);
+    color: #000;
+    background-color: white;
+    border: 1px solid #d7ae5b;
   }
+    @media (max-width: 768px) {
+    font-size: 1.9rem;
+    line-height: 1.4;
+      margin-bottom: 2rem;
 
-  &:visited {
-    color: #fff;           
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    max-width: 16rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-bottom: 2rem;
   }
 `;
 
@@ -132,6 +129,7 @@ export const RightImages = styled.div`
 
   @media (max-width: 1024px) {
     gap: 1.5rem;
+    
   }
 
   @media (max-width: 768px) {
@@ -162,13 +160,13 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 22rem;    
+    max-width: 39rem;
   }
 
   @media (max-width: 768px) {
     img {
       width: 100%;
-      height: 25rem;    
+      height: 25rem;
       object-fit: cover;
     }
   }
@@ -188,11 +186,14 @@ export const ImageTitle = styled.h4`
 export const ImageSubtitle = styled.p`
   font-size: 0.75rem;
   color: #777;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const BgBlueprint = styled.div`
   position: absolute;
-  bottom: -0.10rem;
+  bottom: -0.1rem;
   left: 0;
   width: 28rem;
   height: 18rem;
@@ -213,3 +214,4 @@ export const BgBlueprint = styled.div`
     display: none;
   }
 `;
+

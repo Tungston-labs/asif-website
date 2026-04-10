@@ -3,22 +3,25 @@ import styled, { keyframes } from "styled-components";
 export const SideNavWrapper = styled.div`
   position: absolute;
   left: 2rem;
-  top: 7rem;
+  top: 8rem;
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
-    @media (max-width: 1024px) {
-top: 4rem; }
+
+@media (max-width: 1024px) {
+ left: 5rem;
+top: 5rem;   }
 @media (max-width: 768px) {
-    display: none;
-  }
+top: 5rem; 
+  display: none;
+ }
 `;
 
 export const NavItem = styled.div`
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 100%;
 
   color: rgba(253, 253, 253, 1);
@@ -33,6 +36,8 @@ export const NavItem = styled.div`
   &:hover {
     color: rgba(215, 174, 91, 1);
   }
+  @media (max-width: 1024px) {
+font-size: 12px;  }
 `;
 export const Divider = styled.div`
   position: absolute;

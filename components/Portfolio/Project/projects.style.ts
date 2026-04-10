@@ -11,8 +11,8 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  width: 81.25rem; 
-  margin: 0 auto;
+  width: 100%; 
+  margin: 0 5rem;
   display: flex;
   gap: 3.75rem; 
 

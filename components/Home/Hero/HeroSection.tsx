@@ -84,7 +84,7 @@ const Hero = () => {
 
           <Subtitle>
             We design thoughtful spaces that reflect your lifestyle as a
-            professional architecture firm
+            professional architecture firm.
           </Subtitle>
 
           <ButtonGroup>

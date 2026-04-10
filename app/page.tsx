@@ -8,16 +8,22 @@ import Banner from "@/components/About/Banner/Banner";
 import Testimonials from "@/components/Home/Testimonials/Testimonials";
 import WhatWeDo from "@/components/Home/WhatWeDo";
 import Image from "next/image";
+import { DecorImage } from "@/components/Home/Hero/herosection.styles";
 
 export default function Home() {
+  
   return <>
     <Hero />
     <Mission />
     <AboutHome />
     <AboutArchitect />
     <Banner />
-        <Image alt="decor" src="/images/home/bulb.png" width={100} height={200} style={{marginLeft:"7rem"}} className="decor-image"/>
-
+<DecorImage
+  alt="decor"
+  src="/images/home/bulb.png"
+  width={100}
+  height={200}
+/>
     <ProjectsSection />
     <section id="testimonials">
       <Testimonials />

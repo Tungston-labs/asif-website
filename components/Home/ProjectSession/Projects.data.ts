@@ -56,8 +56,9 @@ export const projects = [
     description:
       "Elegant residential homes combining modern lifestyle requirements with timeless architectural design.",
     images: [
-      "/images/projects/payyanur/payyanur1.jpg",
-      "/images/projects/payyanur/payyanur2.jpg",
+     "/images/BANGLORE/BNGLR-1.jpg",
+      "/images/BANGLORE/BNGLR-2.jpg",
+      "/images/ERNAKULAM/EKM-1.jpg",
     ],
   },
   {

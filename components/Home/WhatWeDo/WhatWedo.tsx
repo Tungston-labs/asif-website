@@ -21,7 +21,6 @@ export default function WhatWeDo() {
       <ContentWrapper>
         <LeftContent>
           <Tag $color="#000">WHAT WE DO</Tag>
-
           <Title>
             TRANSFORM <span>YOUR SPACE INNOVATIVE</span>
             <br />
@@ -29,7 +28,6 @@ export default function WhatWeDo() {
             <br />
             <span>LUXURIOUS</span> LIFESTYLE
           </Title>
-
           <Description>
             We bring creativity and precision together to craft interiors that
             blend style, comfort, and functionality seamlessly. Every space is
@@ -37,7 +35,6 @@ export default function WhatWeDo() {
             architectural home plans to reflect your lifestyle while ensuring
             efficiency, elegance, and timeless appeal.
           </Description>
-
           <FeatureList>
             <FeatureItem>
               <FeatureTitle>✔ MATERIAL & FINISH SELECTION</FeatureTitle>
@@ -55,8 +52,7 @@ export default function WhatWeDo() {
               </FeatureText>
             </FeatureItem>
           </FeatureList>
-
-          <QuoteButton>GET A QUOTE</QuoteButton>
+          <QuoteButton href="/contact">GET A QUOTE</QuoteButton>
         </LeftContent>
 
         <RightImage>

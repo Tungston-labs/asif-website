@@ -97,7 +97,7 @@ export const CardHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 1.25rem; 
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.25rem;
 `;
 
 export const IconWrapper = styled.div`
@@ -122,6 +122,7 @@ export const CardText = styled.p`
   font-family: var(--font-jost), sans-serif;
   font-size: 0.9375rem; 
   font-weight: 300;
+  margin-left: 4rem;
   line-height: 1.9;
   color: #333;
 `;
@@ -130,8 +131,6 @@ export const Label = styled.div`
   font-size: 0.9375rem; 
   font-weight: 400;
   letter-spacing: 0.0625rem; 
-  margin-bottom: 0.5rem;
-  padding: 0.25rem 1.5625rem; 
   position: relative;
   display: inline-block;
 

@@ -6,12 +6,12 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   background: #000;
-
+  
   @media (max-width: 1024px) {
     padding: 0 2rem;
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
   }
@@ -44,6 +44,8 @@ export const LeftContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 3rem 2rem;
+     height: 61.625rem;
+
   }
 `;
 
@@ -78,7 +80,7 @@ export const Title = styled.h2`
   font-weight: 400;
   margin-bottom: 1.25rem; 
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     font-size: 1.75rem;
   }
 `;
@@ -90,8 +92,8 @@ export const SubText = styled.p`
   line-height: 1.8;
   color: #ccc;
 
-  @media (max-width: 48rem) {
-    font-size: 0.9375rem;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
   }
 `;
 

@@ -7,12 +7,12 @@ import {
   LeftContent,
   Title,
   Description,
-  ReadMoreButton,
   RightImages,
   ImageCard,
   ImageTitle,
   ImageSubtitle,
   BgBlueprint,
+  StyledLink,
 } from "./AboutHome.styled";
 import { Tag } from "../Sessions/AboutArchitect.styled";
 import Link from "next/link";
@@ -45,9 +45,9 @@ const AboutHome = () => {
             and a strong commitment to quality and excellence.
           </Description>
 
-          <ReadMoreButton href="/about">
-            READ MORE
-          </ReadMoreButton>
+<StyledLink href="/about">
+  READ MORE
+</StyledLink>
           <BgBlueprint>
             <Image
               src="/images/about/about-back.svg"

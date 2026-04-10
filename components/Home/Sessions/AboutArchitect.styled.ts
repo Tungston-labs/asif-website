@@ -56,11 +56,7 @@ export const GalleryWrapper = styled.div`
 
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 18rem;
-      order: 1;
-    margin: 0 auto 2rem auto;
-    transform: none;
+display: none;
   }
 `;
 
@@ -152,17 +148,17 @@ export const ExperienceBox = styled.div`
   left: 2rem;
   color: #fff;
   @media (max-width: 1024px) {
-    max-width: 36rem;
   bottom: -40rem;
-      left:2rem;
+      left:8rem;
 
   }
   @media (max-width: 768px) {
     position: absolute;
-    bottom: auto;
-    left: 8.5rem;
+    bottom: 0rem;
+    left: 9.5rem;
     text-align: center;
     margin-top: 6rem;
+ 
   }
 `;
 
@@ -232,17 +228,22 @@ export const Description = styled.p`
 
 export const TalkButton = styled(Link)`
   margin-top: 1rem;
-  background: #d7ae5b;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.9rem 2rem;
+   background-color: #d7ae5b;
   color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: var(--font-jost), sans-serif;
   cursor: pointer;
   text-decoration: none;   
   display: inline-block;
 
-  &:visited {
-    color: #fff;          
+   &:hover {
+    color: #000;
+    background-color: white;
+    border: 1px solid #d7ae5b;
   }
     @media (max-width: 1024px) {
   padding: 0.6rem 1.5rem;

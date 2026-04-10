@@ -118,14 +118,17 @@ export const Button = styled.a`
   gap: 0.5rem; 
   background: #D7AE5B;
   color: #000;
-  padding: 0.75rem 1.125rem; 
+  padding: 0.55rem 1.125rem; 
   border-radius: 0.375rem; 
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
 
   &:hover {
-    transform: translateY(-0.125rem); 
+    transform: translateY(-0.125rem);
+    border: 1px solid #D7AE5B;
+    background: #fff;
+    color: #000;
   }
 
    @media (max-width: 48rem) {

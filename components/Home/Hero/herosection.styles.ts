@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
 export const HeroSection = styled.section`
@@ -133,6 +134,13 @@ export const FloatingText = styled.p`
     line-height: 1.1;
   }
 `;
+
+export const DecorImage = styled(Image)`
+  margin-left: 7rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }`
 export const Title = styled.h1`
   font-size: 3rem; 
   font-weight: 300;
@@ -146,6 +154,8 @@ export const Title = styled.h1`
 
   @media (max-width: 48rem) {
     font-size: 2.25rem; 
+    max-width: 90%;
+    margin: 1.25rem auto 0;
   }
 `;
 
@@ -153,6 +163,11 @@ export const Subtitle = styled.p`
   margin-top: 1.25rem; 
   font-size: 1rem; 
   color: #666;
+    @media (max-width: 768px) {
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: 1.25rem auto 0;
+  }
 `;
 
 export const ButtonGroup = styled.div`

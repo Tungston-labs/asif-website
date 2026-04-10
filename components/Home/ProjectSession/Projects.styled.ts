@@ -8,7 +8,7 @@ const zoomAnimation = keyframes`
 
 export const Section = styled.section`
   padding: 0 4rem;
-
+  
   @media (max-width: 1024px) {
     padding: 0 3rem;
   }
@@ -124,8 +124,12 @@ export const Description = styled.p`
 
   text-align: center;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 0.95rem;
+        margin-left: 2%;
+          max-width: 45rem;
+
+
   }
 `;
 
@@ -135,7 +139,11 @@ export const TabsWrapper = styled.div`
   margin-left: 5%;
   flex-wrap: wrap;
   border: 1px solid #0000001A;
-
+  @media (max-width: 1024px) {
+      flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-left: 0;
+  }
   @media (max-width: 768px) {
     margin-left: 0;
   }
@@ -250,7 +258,7 @@ export const LocationDescription = styled.p`
 
   @media (max-width: 768px) {
     max-width: 100%;
-    margin-left: 0;
+    margin-left: 2%;
   }
 `;
 
