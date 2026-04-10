@@ -12,7 +12,7 @@ export const PageWrapper = styled.div`
 export const HeroSection = styled.section`
   position: relative;
   width: 100%;
-  height: 480px; 
+  height: 21.875rem; 
   background-image: url("/images/about-hero.svg"); 
 
   background-size: cover;
@@ -39,7 +39,7 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 64px;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 2px;
   margin: 0;

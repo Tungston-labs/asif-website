@@ -92,10 +92,10 @@ export const Header = styled.div`
 
 export const Title = styled.h2`
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 200;
 
   span {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   @media (max-width: 768px) {
@@ -157,6 +157,7 @@ export const Card = styled.div`
   @media (max-width: 768px) {
     width: 26rem;
     padding: 2rem;
+      height: 24rem;
   }
 
   @media (max-width: 480px) {
@@ -168,13 +169,13 @@ export const Card = styled.div`
 
 export const Quote = styled.div`
   display: flex;
-  gap: 0.2rem;
+  gap: 0.6rem;
   margin-bottom: 2rem;
 `;
 
 export const QuoteShape = styled.div`
-  width: 2rem;
-  height: 3.5rem;
+  width: 1.5rem;
+  height: 2.9rem;
   background: #caa24d;
 
   clip-path: polygon(
@@ -193,7 +194,7 @@ export const Content = styled.p`
   margin: 0.2rem 0;
 
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
   }
 `;

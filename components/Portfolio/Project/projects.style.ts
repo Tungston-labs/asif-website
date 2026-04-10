@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  padding: 0.625rem 0 6.25rem; 
+  padding: 2rem 0 6.25rem; 
   background: #ffffff;
   @media(max-width:1024px){
 
-  padding: 0.625rem 2rem; 
+  padding: 0.625rem 0; 
   }
 `;
 
@@ -25,8 +25,9 @@ export const Wrapper = styled.div`
     
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     flex-direction: column;
+    max-width: 22rem;
     gap: 2.5rem;
   }
 `;

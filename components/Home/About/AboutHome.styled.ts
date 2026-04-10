@@ -98,7 +98,7 @@ export const StyledLink = styled.a`
   background-color: #d7ae5b;
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 14px 28px;
   font-weight: 500;
   cursor: pointer;
   font-family: var(--font-jost), sans-serif;
@@ -115,9 +115,10 @@ export const StyledLink = styled.a`
     border: 1px solid #d7ae5b;
   }
     @media (max-width: 768px) {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
+    padding: 8px 14px;
     line-height: 1.4;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
 
   }
 `;
@@ -146,7 +147,7 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
   ${({ $offset }) =>
     $offset &&
     `
-      margin-top: -3rem;
+      margin-top: -2.5rem;
     `}
 
   img {

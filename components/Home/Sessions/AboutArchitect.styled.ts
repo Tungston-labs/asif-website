@@ -231,11 +231,11 @@ export const TalkButton = styled(Link)`
    background-color: #d7ae5b;
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  cursor: pointer;
-  font-family: var(--font-jost), sans-serif;
+  padding: 14px 28px;
+ font-weight: 500;
+  font-family: Jost;
+  font-size: 14px;
+  letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;   
   display: inline-block;
@@ -249,8 +249,12 @@ export const TalkButton = styled(Link)`
   padding: 0.6rem 1.5rem;
   }
 
-  @media (max-width: 768px) {
-    padding: 0.5rem 1.2rem;
+ @media (max-width: 768px) {
+    font-size: 1.4rem;
+    padding: 8px 14px;
+    line-height: 1.4;
+      margin-bottom: 1rem;
+
   }
 `;
 
@@ -271,9 +275,7 @@ export const PortfolioText = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 3rem;
-    text-align: center;
-    white-space: normal;
+ display: none;
   }
 `;
 export const SideImage = styled.div`
@@ -366,9 +368,7 @@ export const CircleButton = styled.div`
   }
 
   @media (max-width: 768px) {
-    position: relative;
-    right: auto;
-    bottom: auto;
+  display:none;
   }
 `;
 export const PortfolioSection = styled.div`

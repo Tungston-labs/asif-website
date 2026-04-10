@@ -11,7 +11,7 @@ export const PageWrapper = styled.div`
 export const HeroSection = styled.section`
   position: relative;
   width: 100%;
-  height: 30rem; 
+  height: 21.875rem; 
   background-image: url("/images/Contact-bg.svg");
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@ export const HeroContent = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: 4rem; 
+  font-size: 3rem; 
   font-weight: 500;
   letter-spacing: 0.125rem;  
   margin: 0;

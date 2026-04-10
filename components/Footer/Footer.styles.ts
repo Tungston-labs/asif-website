@@ -82,8 +82,8 @@ export const Label = styled.p`
 `;
 
 export const Value = styled.p`
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: 0%.875rem;
+  font-weight: 400;
   margin-top: 0.25rem;
 `;
 
@@ -146,11 +146,13 @@ export const BottomNav = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     flex-wrap: nowrap;        
-    gap: 1rem;                
+    gap: 1rem;
+                
     overflow-x: auto;         
     
     a {
-      font-size: 1rem;     
+       font-size: 0.8rem;
+
     }
   }
 `;

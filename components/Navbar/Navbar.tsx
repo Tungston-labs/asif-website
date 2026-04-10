@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
+import {  FaBars, FaTimes } from "react-icons/fa";
+import { LuPhoneCall } from "react-icons/lu";
 
 import {
   NavbarContainer,
@@ -15,13 +16,14 @@ import {
   CenterMenu,
   RightSection,
 } from "./navbar.styles";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <NavbarContainer>
-
       <Logo>
         <Link href="/">
           <Image
@@ -36,39 +38,55 @@ const Navbar = () => {
 
       <CenterMenu>
         <Menu $open={menuOpen}>
-             <MenuItem>
-            <Link href="/">HOME</Link>
+          <MenuItem>
+            <Link className={pathname === "/" ? "active" : ""} href="/">
+              HOME
+            </Link>
           </MenuItem>
           <MenuItem>
-            <Link href="/about">ABOUT OUR COMPANY</Link>
+            <Link
+              className={pathname === "/about" ? "active" : ""}
+              href="/about"
+            >
+              ABOUT OUR COMPANY
+            </Link>
           </MenuItem>
 
           <MenuItem>
-            <Link href="/portfolio">OUR PORTFOLIO</Link>
+            <Link
+              className={pathname === "/portfolio" ? "active" : ""}
+              href="/portfolio"
+            >
+              OUR PORTFOLIO
+            </Link>
           </MenuItem>
 
-          <MenuItem>
-            <Link href="/contact">CONTACT US</Link>
+          <MenuItem className={pathname === "/contact" ? "active" : ""}>
+            <Link
+              className={pathname === "/contact" ? "active" : ""}
+              href="/contact"
+            >
+              CONTACT US
+            </Link>
           </MenuItem>
-            <MenuItem className="mobile-call">
-    <a href="tel:+919876543210">
-      <FaPhoneAlt /> +91 98765 43210
-    </a>
-  </MenuItem>
+          <MenuItem className="mobile-call">
+            <a href="tel:+919876543210">
+              <LuPhoneCall /> Call +91 98765 43210
+            </a>
+          </MenuItem>
         </Menu>
       </CenterMenu>
 
       <RightSection>
         <Button href="tel:+919876543210">
-          <FaPhoneAlt />
-          +91 98765 43210
+          <LuPhoneCall />
+        Call: +91 98765 43210
         </Button>
 
         <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </HamburgerIcon>
       </RightSection>
-
     </NavbarContainer>
   );
 };

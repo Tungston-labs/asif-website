@@ -200,6 +200,9 @@ export const PrimaryButton = styled.button`
     background-color: white;
     border: 1px solid #D7AE5B;
   }
+   @media (max-width: 768px) {
+   display: none;
+  }
 `;
 
 export const SecondaryButton = styled.button`

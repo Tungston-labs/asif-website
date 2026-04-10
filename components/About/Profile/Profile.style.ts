@@ -120,7 +120,7 @@ export const Label = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem; 
+  font-size: 2.5rem; 
   font-weight: 400;
   line-height: 1.3;
   margin-bottom: 1.875rem; 

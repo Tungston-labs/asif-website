@@ -25,7 +25,7 @@ export const Heading = styled.h2`
   font-size: 2.4375rem; 
   font-weight: 300;
   line-height: 1.3;
-  margin: 0 auto 5rem; 
+  margin: 0 auto 1rem; 
   color: #000;
 
   @media (max-width: 768px) {
@@ -81,7 +81,7 @@ export const IconCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5625rem; 
+  margin-bottom: 0.5625rem; 
 
   @media (max-width: 480px) {
     width: 4.5rem;
@@ -99,7 +99,6 @@ export const CardTitle = styled.h3`
   font-family: var(--font-jost), sans-serif;
   font-size: 1.375rem; 
   font-weight: 400;
-  margin-bottom: 1.25rem; 
 
   @media (max-width: 480px) {
     font-size: 1.2rem;
@@ -110,8 +109,9 @@ export const CardText = styled.p`
   font-family: var(--font-jost), sans-serif;
   font-size: 0.9375rem; 
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.4;
   color: #333;
+  margin-top: 0.2rem;
 `;
 
 export const Label = styled.div`

@@ -2,7 +2,7 @@
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 28.6875rem 32.3125rem; 
+  grid-template-columns: 23.6875rem 32.3125rem; 
   gap: 2.5rem; 
 
   @media (max-width: 75rem) {

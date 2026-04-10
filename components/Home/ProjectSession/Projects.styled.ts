@@ -28,6 +28,7 @@ export const HeaderWrapper = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 2rem;
+    margin-top: 0.5rem;
   }
 `;
 
@@ -149,12 +150,11 @@ export const TabsWrapper = styled.div`
   }
 `;
 export const Tab = styled.button<{ $active?: boolean }>`
-  flex: 1 1 auto;   /* allows responsive wrapping */
+  flex: 1 1 auto;
 
-  background: ${({ $active }) =>
-    $active ? "rgba(215, 174, 91, 1)" : "transparent"};
+  background: transparent;
 
-  color: ${({ $active }) => ($active ? "#fff" : "#333")};
+  color: ${({ $active }) => ($active ? "#D7AE5B" : "#333")};
 
   border: 0;
   padding: 1rem 1.5rem;
@@ -164,14 +164,15 @@ export const Tab = styled.button<{ $active?: boolean }>`
 
   &:hover {
     background: rgba(215, 174, 91, 1);
+    color: #fff; 
   }
 
   @media (max-width: 768px) {
-    flex: 1 1 45%;   /* 2 tabs per row */
+    flex: 1 1 45%;
   }
 
   @media (max-width: 480px) {
-    flex: 1 1 100%;  /* 1 tab per row */
+    flex: 1 1 100%;
   }
 `;
 
@@ -240,11 +241,15 @@ export const LocationTitle = styled.h2`
   margin-bottom: 12px;
   margin-left: 15%;
   @media (max-width: 768px) {
+      margin-left: 2%;
+
     font-size: 1.6rem;
   }
 
   @media (max-width: 480px) {
     font-size: 1.3rem;
+      margin-left: 2%;
+
   }
 `;
 

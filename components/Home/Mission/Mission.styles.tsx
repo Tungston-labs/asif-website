@@ -33,7 +33,8 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
-  max-width: 87.5rem;
+  max-width: 98%;
+  margin-left: 1rem;
   position: relative;
   z-index: 1;
 `;
@@ -92,7 +93,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
 
@@ -106,13 +107,13 @@ export const Title = styled.h3`
 `;
 
 export const Description = styled.p`
-  font-size: 0.75rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.3;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.75);
-
+  font-weight: 400;
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 `;
 

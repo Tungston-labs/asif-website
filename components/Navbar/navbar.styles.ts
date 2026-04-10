@@ -19,14 +19,14 @@ export const CenterMenu = styled.div`
   justify-content: center;
 
   flex: 1;
-  max-width: 47.25rem; 
+  max-width: 40.25rem; 
 
-  margin: 0 auto;
+  
 `;
 
 export const NavContent = styled.div`
   display: flex;
-  gap: 5rem;
+  gap: 1.25rem;
   justify-content: space-between;
 `;
 
@@ -70,22 +70,37 @@ export const Menu = styled.ul<{ $open: boolean }>`
 export const RightSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.25rem; 
+  gap: .25rem;
+  margin:0 2rem 0 2rem;
 `;
 
 export const MenuItem = styled.li`
   a {
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.dark};
     transition: color 0.3s ease;
   }
 
+  /* hover */
   a:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: #D7AE5B;
   }
 
-  /* 🔥 Mobile phone button style */
+  /* ✅ Active only for desktop */
+  @media (min-width: 769px) {
+    a.active {
+      color: #D7AE5B;
+    }
+  }
+
+  @media (max-width: 768px) {
+    a.active {
+      color: ${({ theme }) => theme.colors.dark};
+    }
+  }
+
   &.mobile-call {
     display: none;
   }
@@ -117,10 +132,10 @@ export const Button = styled.a`
   align-items: center;
   gap: 0.5rem; 
   background: #D7AE5B;
-  color: #000;
-  padding: 0.55rem 1.125rem; 
+  color: #fff;
+  padding: 0.55rem 0.8rem; 
   border-radius: 0.375rem; 
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   transition: 0.3s;
 
