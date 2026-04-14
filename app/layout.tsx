@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Jost,Caveat, Manrope } from "next/font/google";
+import { Jost, Caveat, Manrope } from "next/font/google";
 import StyledComponentsRegistry from "../lib/styled-registry";
 
 import Providers from "@/providers/providers";
@@ -8,6 +8,9 @@ import Providers from "@/providers/providers";
 export const metadata: Metadata = {
   title: "ASIF WEBSITE",
   description: "VISIONARY ARCHITECT DESIGNED FOR THE WAY YOU LIVE",
+  icons: {
+    icon: "/images/logofav.svg",
+  },
 };
 
 const jost = Jost({
@@ -31,12 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jost.className} ${caveat.variable} ${manrope.variable}`}>
-    <body>
+    <html
+      lang="en"
+      className={`${jost.className} ${caveat.variable} ${manrope.variable}`}
+    >
+      <body>
         <StyledComponentsRegistry>
-          <Providers>
-            {children}
-          </Providers>
+          <Providers>{children}</Providers>
         </StyledComponentsRegistry>
       </body>
     </html>
