@@ -20,7 +20,6 @@ import Link from "next/link";
 const AboutHome = () => {
   return (
     <Section>
-
       <Container>
         <LeftContent>
           <Tag $color="#000">ABOUT US</Tag>
@@ -38,22 +37,16 @@ const AboutHome = () => {
           <Description>
             Led by Asif Ahmed, our firm delivers thoughtfully designed
             residential and commercial architecture house design and
-            architectural home plans projects that combine technical
-            precision with contemporary aesthetics. From concept
-            development to final execution, every house building design
-            plan is handled with detailed planning, structural expertise,
-            and a strong commitment to quality and excellence.
+            architectural home plans projects that combine technical precision
+            with contemporary aesthetics. From concept development to final
+            execution, every house building design plan is handled with detailed
+            planning, structural expertise, and a strong commitment to quality
+            and excellence.
           </Description>
 
-<StyledLink href="/about">
-  READ MORE
-</StyledLink>
+          <StyledLink href="/about">READ MORE</StyledLink>
           <BgBlueprint>
-            <Image
-              src="/images/about/about-back.svg"
-              alt="Blueprint"
-              fill
-            />
+            <Image src="/images/about/about-back.svg" alt="Blueprint" fill />
           </BgBlueprint>
         </LeftContent>
         <RightImages>
@@ -78,9 +71,7 @@ const AboutHome = () => {
               height={800}
             />
             <ImageTitle>CLIENT-CENTRIC APPROACH</ImageTitle>
-            <ImageSubtitle>
-              Your vision guides our process.
-            </ImageSubtitle>
+            <ImageSubtitle>Your vision guides our process.</ImageSubtitle>
           </ImageCard>
         </RightImages>
       </Container>

@@ -14,7 +14,7 @@ const Banner = () => {
   return (
     <Section>
       <Container>
-        <LocationTag>BANGALORE</LocationTag>
+        <LocationTag>OUR PORTFOLIO</LocationTag>
 
         <Heading>
           Explore Our <Highlight>Latest Projects</Highlight>, <br />

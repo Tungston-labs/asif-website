@@ -224,6 +224,14 @@ export const Description = styled.p`
   margin-top: 1.5rem;
   line-height: 1.8;
   color: #bbb;
+
+  @media (max-width: 1024px) {
+    text-align: left;     
+  }
+
+  @media (max-width: 768px) {
+    text-align: left;      
+  }
 `;
 
 export const TalkButton = styled(Link)`

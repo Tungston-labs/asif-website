@@ -4,13 +4,11 @@ import Link from "next/link";
 export const Section = styled.section`
   width: 100%;
   background: #f6f6f6;
-  
-
 `;
 
 export const ContentWrapper = styled.div`
   display: grid;
-  
+
   align-items: center;
 
   @media (max-width: 992px) {
@@ -20,30 +18,24 @@ export const ContentWrapper = styled.div`
 
 export const LeftContent = styled.div`
   max-width: 80%;
-    padding: 6rem 5rem;
-      z-index: 2; 
- @media (max-width: 992px) {
-  max-width: 100%;
-      padding: 4rem 2rem;
-
+  padding: 6rem 5rem;
+  z-index: 2;
+  @media (max-width: 992px) {
+    max-width: 100%;
+    padding: 4rem 2rem;
   }
-
 `;
 
 export const Title = styled.h2`
   font-family: Jost;
-  font-size: 42px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem); /* 🔥 perfect scaling */
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #111;
   margin-bottom: 1.5rem;
 
   span {
     font-weight: 600;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 32px;
   }
 `;
 
@@ -78,13 +70,12 @@ export const FeatureText = styled.p`
   line-height: 1.7;
 `;
 
-
 export const QuoteButton = styled(Link)`
   margin-top: 2rem;
   padding: 14px 28px;
   background: #c9a45c;
   color: white;
-font-weight: 500;
+  font-weight: 500;
   font-family: Jost;
   font-size: 14px;
   letter-spacing: 1px;
@@ -103,15 +94,13 @@ font-weight: 500;
 
 export const RightImage = styled.div`
   width: 100%;
-margin-top: -20rem;
+  margin-top: -20rem;
   img {
     width: 100%;
     object-fit: cover;
     display: block;
   }
   @media (max-width: 992px) {
-  margin-top: -5rem;
-
-
+    margin-top: -5rem;
   }
 `;

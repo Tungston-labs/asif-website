@@ -20,15 +20,12 @@ import {
   ArrowImage,
 } from "./herosection.styles";
 
-
 const desktopImages = [
   "/images/home/slider1.svg",
   "/images/home/slider2.svg",
   "/images/home/slider3.svg",
   "/images/home/slider5.svg",
-
 ];
-
 
 const mobileImages = [
   "/images/home/home1-mobile.svg",
@@ -55,7 +52,6 @@ const Hero = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -98,20 +94,21 @@ const Hero = () => {
           </ButtonGroup>
 
           <ImageWrapper>
-           {activeImages.map((img, index) => (
-  <SliderImage
-    key={index}
-    $active={index === current}
-  >
-    <Image
-      src={img}
-      alt="Slider"
-      fill
-      priority
-      style={{ objectFit: "cover" }}
-    />
-  </SliderImage>
-))}
+            {activeImages.map((img, index) => (
+              <SliderImage key={index} $active={index === current}>
+                <Image
+                  src={img}
+                  alt="Slider"
+                  fill
+                  priority
+                  style={{
+                    objectFit: "cover",
+                    width: "100%",
+                    height: "100%" 
+                  }}
+                />
+              </SliderImage>
+            ))}
 
             <FloatingNote>
               <ArrowImage src="/images/home/arrow.svg" alt="arrow" />

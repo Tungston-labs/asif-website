@@ -86,8 +86,10 @@ export const Description = styled.p`
   @media (max-width: 768px) {
     max-width: 100%;
     font-size: 1.2rem;
+    text-align: left; 
   }
-   @media (max-width: 1024px) {
+
+  @media (max-width: 1024px) {
     max-width: 100%;
     font-size: 1.2rem;
   }
@@ -114,12 +116,11 @@ export const StyledLink = styled.a`
     background-color: white;
     border: 1px solid #d7ae5b;
   }
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1.4rem;
     padding: 8px 14px;
     line-height: 1.4;
-      margin-bottom: 1rem;
-
+    margin-bottom: 1rem;
   }
 `;
 
@@ -130,7 +131,6 @@ export const RightImages = styled.div`
 
   @media (max-width: 1024px) {
     gap: 1.5rem;
-    
   }
 
   @media (max-width: 768px) {
@@ -215,4 +215,3 @@ export const BgBlueprint = styled.div`
     display: none;
   }
 `;
-
