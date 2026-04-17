@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {  FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { LuPhoneCall } from "react-icons/lu";
 
 import {
@@ -80,7 +80,7 @@ const Navbar = () => {
       <RightSection>
         <Button href="tel:+919876543210">
           <LuPhoneCall />
-        Call: +91 98765 43210
+          Call: +91 98765 43210
         </Button>
 
         <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
@@ -92,3 +92,22 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

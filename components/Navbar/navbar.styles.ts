@@ -11,7 +11,7 @@ export const NavbarContainer = styled.nav`
   justify-content: space-evenly;
 
   position: relative;
-  z-index:1000; 
+  z-index: 1000;
 `;
 
 export const CenterMenu = styled.div`
@@ -19,9 +19,7 @@ export const CenterMenu = styled.div`
   justify-content: center;
 
   flex: 1;
-  max-width: 40.25rem; 
-
-  
+  max-width: 40.25rem;
 `;
 
 export const NavContent = styled.div`
@@ -52,16 +50,16 @@ export const Menu = styled.ul<{ $open: boolean }>`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 48rem) { 
+  @media (max-width: 48rem) {
     position: absolute;
-    top: 4.375rem; 
+    top: 4.375rem;
     left: 0;
     width: 100%;
     flex-direction: column;
     background: #fff;
-    padding: 1.25rem 0; 
+    padding: 1.25rem 0;
     background: ${({ $open }) => ($open ? "#D7AE5B" : "#fff")};
-    border-top: 0.0625rem solid #eee; 
+    border-top: 0.0625rem solid #eee;
 
     display: ${({ $open }) => ($open ? "flex" : "none")};
   }
@@ -70,8 +68,8 @@ export const Menu = styled.ul<{ $open: boolean }>`
 export const RightSection = styled.div`
   display: flex;
   align-items: center;
-  gap: .25rem;
-  margin:0 2rem 0 2rem;
+  gap: 0.25rem;
+  margin: 0 2rem 0 2rem;
 `;
 
 export const MenuItem = styled.li`
@@ -85,13 +83,13 @@ export const MenuItem = styled.li`
 
   /* hover */
   a:hover {
-    color: #D7AE5B;
+    color: #d7ae5b;
   }
 
   /* ✅ Active only for desktop */
   @media (min-width: 769px) {
     a.active {
-      color: #D7AE5B;
+      color: #d7ae5b;
     }
   }
 
@@ -117,7 +115,7 @@ export const MenuItem = styled.li`
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: #D7AE5B;
+        background: #d7ae5b;
         padding: 0.6rem 1rem;
         border-radius: 0.375rem;
         color: #000;
@@ -130,30 +128,30 @@ export const MenuItem = styled.li`
 export const Button = styled.a`
   display: flex;
   align-items: center;
-  gap: 0.5rem; 
-  background: #D7AE5B;
+  gap: 0.5rem;
+  background: #d7ae5b;
   color: #fff;
-  padding: 0.55rem 0.8rem; 
-  border-radius: 0.375rem; 
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.375rem;
   font-weight: 500;
   text-decoration: none;
   transition: 0.3s;
 
   &:hover {
     transform: translateY(-0.125rem);
-    border: 1px solid #D7AE5B;
+    border: 1px solid #d7ae5b;
     background: #fff;
     color: #000;
   }
 
-   @media (max-width: 48rem) {
-    display: none;   /* 🔥 hide from top */
+  @media (max-width: 48rem) {
+    display: none; 
   }
 `;
 
 export const HamburgerIcon = styled.div`
   display: none;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   cursor: pointer;
 
   @media (max-width: 48rem) {
