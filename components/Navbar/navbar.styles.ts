@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+/* ✅ FIX: ADD THIS */
+interface MenuProps {
+  $open?: boolean;
+}
+
 export const NavbarContainer = styled.nav`
   width: 100%;
   padding: 0.8rem 5rem;
@@ -32,7 +37,8 @@ export const Logo = styled.div`
   }
 `;
 
-export const Menu = styled.ul`
+/* ✅ FIXED HERE */
+export const Menu = styled.ul<MenuProps>`
   list-style: none;
   display: flex;
   align-items: center;
@@ -43,7 +49,7 @@ export const Menu = styled.ul`
   padding: 0;
 
   @media (max-width: 48rem) {
-    position: fixed; /* ✅ FULL SCREEN */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -56,11 +62,12 @@ export const Menu = styled.ul`
     background: #d7ae5b;
     padding: 6rem 2rem 2rem;
 
+    /* ✅ THIS NOW WORKS */
     display: ${({ $open }) => ($open ? "flex" : "none")};
+
     z-index: 999;
   }
 
-  /* ✅ MOBILE HEADER */
   .mobile-header {
     position: absolute;
     top: 0;
@@ -119,7 +126,7 @@ export const MenuItem = styled.li`
 
   @media (max-width: 48rem) {
     width: 100%;
-    text-align: left; /* ✅ FIXED */
+    text-align: left;
     padding: 1.2rem 0;
 
     a {
