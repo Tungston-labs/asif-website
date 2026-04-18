@@ -1,5 +1,10 @@
 import styled, { keyframes } from "styled-components";
 
+/* ✅ FIX: TYPE ADDED */
+interface TabProps {
+  $active?: boolean;
+}
+
 const zoomAnimation = keyframes`
   0% { transform: scale(1); }
   50% { transform: scale(1.08); }
@@ -13,13 +18,13 @@ export const Section = styled.section`
     padding: 0 3rem;
   }
 
-  /* ✅ PERFECT EQUAL TOP & BOTTOM SPACE */
+  /* ✅ EQUAL TOP & BOTTOM SPACE */
   @media (max-width: 768px) {
-    padding: 3rem 1.2rem 3rem;
+    padding: 3rem 1.2rem;
   }
 
   @media (max-width: 480px) {
-    padding: 2.5rem 1rem 2.5rem;
+    padding: 2.5rem 1rem;
   }
 `;
 
@@ -29,14 +34,14 @@ export const HeaderWrapper = styled.div`
 
   @media (max-width: 768px) {
     text-align: left;
-    margin: 0 0 2rem; /* ✅ removed uneven top */
+    margin: 0 0 2rem;
     padding: 0;
   }
 `;
 
 export const GridSection = styled.div`
   position: relative;
-  padding: 2rem 0 2rem; /* ✅ balanced */
+  padding: 2rem 0;
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-size: 1px;
@@ -71,7 +76,7 @@ export const GridSection = styled.div`
   @media (max-width: 768px) {
     --grid-start: 0;
     --grid-width: 100%;
-    padding: 1.5rem 0 2rem; /* ✅ equal vertical feel */
+    padding: 2rem 0;
   }
 `;
 
@@ -171,9 +176,9 @@ export const Grid = styled.div`
     display: none;
   }
 
-  /* ✅ FIXED PERFECT CENTER ALIGNMENT */
+  /* ✅ PERFECT CENTER FIX */
   @media (max-width: 768px) {
-    padding: 0 1.2rem; /* SAME as Section */
+    padding: 0 1.2rem;
     scroll-padding-left: 1.2rem;
     scroll-padding-right: 1.2rem;
   }
@@ -199,10 +204,9 @@ export const Card = styled.div`
     height: 420px;
   }
 
-  /* ✅ TRUE CENTER FIX */
+  /* ✅ PERFECT CENTER (NO LEFT GAP) */
   @media (max-width: 768px) {
-    flex: 0 0 calc(100% - 2.4rem); /* equal left & right */
-    margin: 0;
+    flex: 0 0 calc(100% - 2.4rem);
     height: 280px;
   }
 
@@ -234,8 +238,8 @@ export const LocationDescription = styled.p`
 export const PortButton = styled.button`
   display: block;
 
-  /* ✅ PERFECT TOP & BOTTOM BALANCE */
-  margin: 3rem auto 3rem;
+  /* ✅ EQUAL TOP & BOTTOM SPACE */
+  margin: 3rem auto;
 
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -255,11 +259,11 @@ export const PortButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    margin: 2.5rem auto 2.5rem;
+    margin: 2.5rem auto;
   }
 
   @media (max-width: 480px) {
-    margin: 2rem auto 2rem;
+    margin: 2rem auto;
   }
 `;
 
