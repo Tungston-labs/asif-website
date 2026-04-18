@@ -1,3 +1,6 @@
+
+
+
 "use client";
 import styled from "styled-components";
 
@@ -13,6 +16,7 @@ export const Section = styled.section`
 
   @media (max-width: 48rem) { 
     padding: 4rem 2rem;
+    text-align: left; /* ✅ FIX */
   }
 
   @media (max-width: 30rem) { 
@@ -34,7 +38,8 @@ export const Heading = styled.h2`
 
   @media (max-width: 48rem) {
     font-size: 2.125rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: left; /* ✅ FIX */
   }
 
   @media (max-width: 30rem) {
@@ -54,7 +59,7 @@ export const Description = styled.p`
   text-transform: capitalize;
 
   @media (max-width: 48rem) {
-    margin: 1rem auto 3rem;
+    margin: 1rem 0 2rem; /* ✅ FIX (remove left shift) */
     font-size: 0.9375rem;
   }
 `;
@@ -74,7 +79,7 @@ export const CardWrapper = styled.div`
 
   @media (max-width: 48rem) {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -125,6 +130,11 @@ export const CardText = styled.p`
   margin-left: 4rem;
   line-height: 1.9;
   color: #333;
+
+  @media (max-width: 48rem) {
+    margin-left: 0; /* ✅ FIX */
+    margin-top: 0.5rem;
+  }
 `;
 
 export const Label = styled.div`
@@ -134,8 +144,13 @@ export const Label = styled.div`
   position: relative;
   display: inline-block;
 
+  @media (max-width: 48rem) {
+    display: inline-block;
+  }
+
   span {
     position: relative;
+    padding: 0 0.5rem; /* ✅ FIX */
   }
 
   span::before {
@@ -148,6 +163,11 @@ export const Label = styled.div`
     height: 0.875rem;
     border-left: 0.125rem solid #c8a24c; 
     border-top: 0.125rem solid #c8a24c;
+
+    @media (max-width: 48rem) {
+      left: 0;
+      transform: translate(-100%, -50%); /* ✅ FIX */
+    }
   }
 
   span::after {
@@ -160,5 +180,10 @@ export const Label = styled.div`
     height: 0.875rem;
     border-right: 0.125rem solid #c8a24c;
     border-bottom: 0.125rem solid #c8a24c;
+
+    @media (max-width: 48rem) {
+      right: 0;
+      transform: translate(100%, -50%); /* ✅ FIX */
+    }
   }
 `;
