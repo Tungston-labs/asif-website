@@ -43,7 +43,7 @@ export const LeftContent = styled.div`
   z-index: 2;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 

@@ -10,7 +10,6 @@ export const Section = styled.section`
   padding: 0 4rem;
   overflow: visible;
 
-
   @media (max-width: 768px) {
     padding: 2rem 1.5rem;
   }
@@ -20,11 +19,11 @@ export const DarkSection = styled.section`
   position: relative;
   width: 100%;
   display: flex;
-background: linear-gradient(
-  -240deg,
-  #171717 65%,
-  rgba(196, 144, 42, 0.25) 100%
-);
+  background: linear-gradient(
+    -240deg,
+    #171717 65%,
+    rgba(196, 144, 42, 0.25) 100%
+  );
   margin-top: -4rem;
   min-height: 10rem;
   padding: 0 4rem;
@@ -35,7 +34,7 @@ background: linear-gradient(
     flex-direction: column;
     padding: 2rem 0;
     transform: none;
-    background-color: #000 ;
+    background-color: #000;
   }
 `;
 export const GalleryWrapper = styled.div`
@@ -49,14 +48,13 @@ export const GalleryWrapper = styled.div`
 
   @media (max-width: 1024px) {
     width: 40%;
-  max-height: 48rem;
+    max-height: 48rem;
     margin-top: 8rem;
     transform: translateY(-12rem);
   }
 
-
   @media (max-width: 768px) {
-display: none;
+    display: none;
   }
 `;
 
@@ -68,43 +66,41 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
   transition: opacity 0.8s ease;
   animation: ${({ $active }) => ($active ? fadeZoom : "none")} 6s ease-in-out;
   @media (max-width: 2624px) and (min-width: 2325px) {
-  height: 46rem;
+    height: 46rem;
   }
-      @media (max-width: 2324px) and (min-width: 2025px) {
-  height: 46rem;
+  @media (max-width: 2324px) and (min-width: 2025px) {
+    height: 46rem;
   }
-      @media (max-width: 2024px) and (min-width: 1825px) {
-  height: 48rem;
+  @media (max-width: 2024px) and (min-width: 1825px) {
+    height: 48rem;
   }
 
-@media (max-width: 1824px) and (min-width: 1525px) {
-  height: 50rem;   
-}
+  @media (max-width: 1824px) and (min-width: 1525px) {
+    height: 50rem;
+  }
   @media (max-width: 1524px) and (min-width: 1025px) {
-  height: 49rem;
+    height: 49rem;
   }
-    @media (max-width: 1024px) and (min-width: 768px) {
-  height: 46rem;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    height: 46rem;
   }
-    @media (max-width: 768px) {
-     height: 22rem;
-
+  @media (max-width: 768px) {
+    height: 22rem;
   }
-
 `;
 
 export const CenterWrapper = styled.div`
-flex: 1;
+  flex: 1;
   max-width: 46rem;
   margin-top: 6rem;
   margin-left: 2rem;
-     @media (max-width: 2624px) and (min-width: 2325px) {
+  @media (max-width: 2624px) and (min-width: 2325px) {
     max-width: 45rem;
   }
-      @media (max-width: 2324px) and (min-width: 2025px) {
+  @media (max-width: 2324px) and (min-width: 2025px) {
     max-width: 43rem;
   }
-      @media (max-width: 2024px) and (min-width: 1825px) {
+  @media (max-width: 2024px) and (min-width: 1825px) {
     max-width: 42rem;
   }
 
@@ -118,15 +114,14 @@ flex: 1;
 
   @media (max-width: 1024px) {
     max-width: 38rem;
- 
   }
 
   @media (max-width: 768px) {
     max-width: 90%;
     margin: 0 auto;
-      order: 2;
+    order: 2;
 
-    text-align: center;
+    text-align: left;
   }
 `;
 
@@ -141,16 +136,14 @@ const fadeZoom = keyframes`
   100% { opacity: 0; transform: scale(1.06); }
 `;
 
-
 export const ExperienceBox = styled.div`
   position: relative;
   bottom: -42rem;
   left: 2rem;
   color: #fff;
   @media (max-width: 1024px) {
-  bottom: -40rem;
-      left:8rem;
-
+    bottom: -40rem;
+    left: 8rem;
   }
   @media (max-width: 768px) {
     position: absolute;
@@ -158,7 +151,6 @@ export const ExperienceBox = styled.div`
     left: 9.5rem;
     text-align: center;
     margin-top: 6rem;
- 
   }
 `;
 
@@ -166,9 +158,8 @@ export const ExperienceText = styled.h3`
   font-size: 2rem;
   width: 70%;
   letter-spacing: 0.1rem;
-   @media (max-width: 768px) {
-  font-size: 0.8rem;
-
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -226,46 +217,44 @@ export const Description = styled.p`
   color: #bbb;
 
   @media (max-width: 1024px) {
-    text-align: left;     
+    text-align: left;
   }
 
   @media (max-width: 768px) {
-    text-align: left;      
+    text-align: left;
   }
 `;
 
 export const TalkButton = styled(Link)`
   margin-top: 1rem;
-   background-color: #d7ae5b;
+  background-color: #d7ae5b;
   color: #fff;
   border: none;
   padding: 14px 28px;
- font-weight: 500;
+  font-weight: 500;
   font-family: Jost;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
-  text-decoration: none;   
+  text-decoration: none;
   display: inline-block;
 
-   &:hover {
+  &:hover {
     color: #000;
     background-color: white;
     border: 1px solid #d7ae5b;
   }
-    @media (max-width: 1024px) {
-  padding: 0.6rem 1.5rem;
+  @media (max-width: 1024px) {
+    padding: 0.6rem 1.5rem;
   }
 
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1.4rem;
     padding: 8px 14px;
     line-height: 1.4;
-      margin-bottom: 1rem;
-
+    margin-bottom: 1rem;
   }
 `;
-
 
 export const PortfolioText = styled.h1`
   font-family: "Manrope";
@@ -277,15 +266,15 @@ export const PortfolioText = styled.h1`
   -webkit-text-stroke: 1px rgba(236, 227, 227, 0.27);
   opacity: 0.7;
 
-
   @media (max-width: 1024px) {
     font-size: 6rem;
   }
 
   @media (max-width: 768px) {
- display: none;
+    display: none;
   }
 `;
+
 export const SideImage = styled.div`
   position: absolute;
   top: 0;
@@ -320,11 +309,10 @@ export const SideImage = styled.div`
   }
 `;
 
-
 export const SocialWrapper = styled.div`
   position: absolute;
-  right: 3%;              /* stick to right edge of DarkSection */
-  top: 50%;              /* middle vertically */
+  right: 3%; /* stick to right edge of DarkSection */
+  top: 50%; /* middle vertically */
   transform: translateY(-50%);
 
   display: flex;
@@ -349,11 +337,11 @@ export const SocialWrapper = styled.div`
   @media (max-width: 768px) {
     position: relative;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 4rem;
     right: auto;
-      order: 1;
-
+    order: 1;
     transform: none;
   }
 `;
@@ -371,12 +359,12 @@ export const CircleButton = styled.div`
   flex-shrink: 0;
   @media (max-width: 1024px) {
     right: 4rem;
-      width: 4rem;
-  height: 4rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   @media (max-width: 768px) {
-  display:none;
+    display: none;
   }
 `;
 export const PortfolioSection = styled.div`
