@@ -142,8 +142,9 @@ export const TabsWrapper = styled.div`
   }
 `;
 
-export const Tab = styled.button`
+export const Tab = styled.button<TabProps>`
   flex: 0 0 auto;
+
   background: ${({ $active }) => ($active ? "#D7AE5B" : "#f5f5f5")};
   border: 1px solid #ddd;
   padding: 0.6rem 1.2rem;
