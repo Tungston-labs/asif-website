@@ -13,7 +13,7 @@ const zoomAnimation = keyframes`
 
 export const Section = styled.section`
   padding: 0 4rem;
-  
+
   @media (max-width: 1024px) {
     padding: 0 3rem;
   }
@@ -59,8 +59,12 @@ export const GridSection = styled.div`
     pointer-events: none;
   }
 
-  &::before { top: 0; }
-  &::after { bottom: 0; }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
 
   .v-line {
     position: absolute;
@@ -69,9 +73,17 @@ export const GridSection = styled.div`
     background: var(--border-color);
   }
 
-  .v-left { left: var(--grid-start); top: 0; }
-  .v-right { right: var(--grid-start); top: 0; }
-  .v-bottom { bottom: 0; }
+  .v-left {
+    left: var(--grid-start);
+    top: 0;
+  }
+  .v-right {
+    right: var(--grid-start);
+    top: 0;
+  }
+  .v-bottom {
+    bottom: 0;
+  }
 
   @media (max-width: 768px) {
     --grid-start: 0;
@@ -135,7 +147,7 @@ export const TabsWrapper = styled.div`
   margin-bottom: 2rem;
   margin-left: 5%;
   flex-wrap: wrap;
-  border: 1px solid #0000001A;
+  border: 1px solid #0000001a;
   gap: 0.5rem;
 
   @media (max-width: 768px) {
@@ -157,7 +169,7 @@ export const Tab = styled.button<TabProps>`
   white-space: nowrap;
 
   &:hover {
-    background: #D7AE5B;
+    background: #d7ae5b;
   }
 `;
 
@@ -238,7 +250,6 @@ export const LocationDescription = styled.p`
 export const PortButton = styled.button`
   display: block;
 
-  /* ✅ EQUAL TOP & BOTTOM SPACE */
   margin: 3rem auto;
 
   font-size: 1.2rem;
@@ -249,11 +260,16 @@ export const PortButton = styled.button`
 
   position: relative;
 
+  /* ✅ IMPORTANT FIX */
+  width: fit-content; /* shrink to text width */
+  text-align: center;
+
   &::after {
     content: "";
     position: absolute;
+    left: 0;
     bottom: -6px;
-    width: 100%;
+    width: 100%; /* now matches text width perfectly */
     height: 2px;
     background: #d7ae5b;
   }
