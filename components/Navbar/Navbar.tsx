@@ -38,11 +38,26 @@ const Navbar = () => {
 
       <CenterMenu>
         <Menu $open={menuOpen}>
+
+          {/* ✅ MOBILE HEADER (NEW) */}
+          {menuOpen && (
+            <div className="mobile-header">
+              <Image
+                src="/images/logo.svg"
+                alt="logo"
+                width={120}
+                height={40}
+              />
+              <FaTimes onClick={() => setMenuOpen(false)} />
+            </div>
+          )}
+
           <MenuItem>
             <Link className={pathname === "/" ? "active" : ""} href="/">
               HOME
             </Link>
           </MenuItem>
+
           <MenuItem>
             <Link
               className={pathname === "/about" ? "active" : ""}
@@ -61,7 +76,7 @@ const Navbar = () => {
             </Link>
           </MenuItem>
 
-          <MenuItem className={pathname === "/contact" ? "active" : ""}>
+          <MenuItem>
             <Link
               className={pathname === "/contact" ? "active" : ""}
               href="/contact"
@@ -69,6 +84,7 @@ const Navbar = () => {
               CONTACT US
             </Link>
           </MenuItem>
+
           <MenuItem className="mobile-call">
             <a href="tel:+919876543210">
               <LuPhoneCall /> Call +91 98765 43210
@@ -92,9 +108,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
 
 
 

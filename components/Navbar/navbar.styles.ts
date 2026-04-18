@@ -17,15 +17,8 @@ export const NavbarContainer = styled.nav`
 export const CenterMenu = styled.div`
   display: flex;
   justify-content: center;
-
   flex: 1;
   max-width: 40.25rem;
-`;
-
-export const NavContent = styled.div`
-  display: flex;
-  gap: 1.25rem;
-  justify-content: space-between;
 `;
 
 export const Logo = styled.div`
@@ -39,29 +32,52 @@ export const Logo = styled.div`
   }
 `;
 
-export const Menu = styled.ul<{ $open: boolean }>`
+export const Menu = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   width: 100%;
-
   margin: 0;
   padding: 0;
 
   @media (max-width: 48rem) {
-    position: absolute;
-    top: 4.375rem;
+    position: fixed; /* ✅ FULL SCREEN */
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
+
     flex-direction: column;
-    background: #fff;
-    padding: 1.25rem 0;
-    background: ${({ $open }) => ($open ? "#D7AE5B" : "#fff")};
-    border-top: 0.0625rem solid #eee;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    background: #d7ae5b;
+    padding: 6rem 2rem 2rem;
 
     display: ${({ $open }) => ($open ? "flex" : "none")};
+    z-index: 999;
+  }
+
+  /* ✅ MOBILE HEADER */
+  .mobile-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f2f2f2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.5rem;
+
+    svg {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -69,7 +85,7 @@ export const RightSection = styled.div`
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  margin: 0 2rem 0 2rem;
+  margin: 0 2rem;
 `;
 
 export const MenuItem = styled.li`
@@ -81,12 +97,10 @@ export const MenuItem = styled.li`
     transition: color 0.3s ease;
   }
 
-  /* hover */
   a:hover {
     color: #d7ae5b;
   }
 
-  /* ✅ Active only for desktop */
   @media (min-width: 769px) {
     a.active {
       color: #d7ae5b;
@@ -105,8 +119,12 @@ export const MenuItem = styled.li`
 
   @media (max-width: 48rem) {
     width: 100%;
-    text-align: center;
-    padding: 0.75rem 0;
+    text-align: left; /* ✅ FIXED */
+    padding: 1.2rem 0;
+
+    a {
+      font-size: 1.1rem;
+    }
 
     &.mobile-call {
       display: block;
@@ -145,7 +163,7 @@ export const Button = styled.a`
   }
 
   @media (max-width: 48rem) {
-    display: none; 
+    display: none;
   }
 `;
 

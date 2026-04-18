@@ -13,12 +13,13 @@ export const Section = styled.section`
     padding: 0 3rem;
   }
 
+  /* ✅ PERFECT EQUAL TOP & BOTTOM SPACE */
   @media (max-width: 768px) {
-    padding: 4rem 2rem;
+    padding: 3rem 1.2rem 3rem;
   }
 
   @media (max-width: 480px) {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem 2.5rem;
   }
 `;
 
@@ -27,14 +28,15 @@ export const HeaderWrapper = styled.div`
   margin: -3rem auto 3rem;
 
   @media (max-width: 768px) {
-    margin-bottom: 2rem;
-    margin-top: 0.5rem;
+    text-align: left;
+    margin: 0 0 2rem; /* ✅ removed uneven top */
+    padding: 0;
   }
 `;
 
 export const GridSection = styled.div`
   position: relative;
-  padding: 2rem 0;
+  padding: 2rem 0 2rem; /* ✅ balanced */
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-size: 1px;
@@ -60,27 +62,16 @@ export const GridSection = styled.div`
     width: var(--border-size);
     height: 15rem;
     background: var(--border-color);
-    pointer-events: none;
   }
 
-  .v-left {
-    left: var(--grid-start);
-    top: 0;
-  }
-
-  .v-right {
-    right: var(--grid-start);
-    top: 0;
-  }
-
-  .v-bottom {
-    top: auto;
-    bottom: 0;
-  }
+  .v-left { left: var(--grid-start); top: 0; }
+  .v-right { right: var(--grid-start); top: 0; }
+  .v-bottom { bottom: 0; }
 
   @media (max-width: 768px) {
-    --grid-start: 5%;
-    --grid-width: 90%;
+    --grid-start: 0;
+    --grid-width: 100%;
+    padding: 1.5rem 0 2rem; /* ✅ equal vertical feel */
   }
 `;
 
@@ -105,15 +96,18 @@ export const Title = styled.h2`
   margin-top: 1rem;
   font-size: 2.2rem;
   font-weight: 300;
+  line-height: 1.4;
 
-  strong { font-weight: 500; }
+  strong {
+    font-weight: 500;
+  }
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 `;
 
@@ -121,66 +115,50 @@ export const Description = styled.p`
   margin-top: 1rem;
   color: #666;
   max-width: 65rem;
-    margin-left: 12%;
-
+  margin-left: 12%;
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 0.95rem;
-        margin-left: 2%;
-          max-width: 45rem;
-
-
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
   }
 `;
 
 export const TabsWrapper = styled.div`
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   margin-left: 5%;
   flex-wrap: wrap;
   border: 1px solid #0000001A;
-  @media (max-width: 1024px) {
-      flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-left: 0;
-  }
+  gap: 0.5rem;
+
   @media (max-width: 768px) {
     margin-left: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    border: none;
   }
 `;
-export const Tab = styled.button<{ $active?: boolean }>`
-  flex: 1 1 auto;
 
-  background: transparent;
-
-  color: ${({ $active }) => ($active ? "#D7AE5B" : "#333")};
-
-  border: 0;
-  padding: 1rem 1.5rem;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+export const Tab = styled.button`
+  flex: 0 0 auto;
+  background: ${({ $active }) => ($active ? "#D7AE5B" : "#f5f5f5")};
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
 
   &:hover {
-    background: rgba(215, 174, 91, 1);
-    color: #fff; 
-  }
-
-  @media (max-width: 768px) {
-    flex: 1 1 45%;
-  }
-
-  @media (max-width: 480px) {
-    flex: 1 1 100%;
+    background: #D7AE5B;
   }
 `;
 
 export const Grid = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   overflow-x: auto;
-  overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -188,16 +166,15 @@ export const Grid = styled.div`
   padding-left: calc((100% - 90%) / 2);
   padding-right: calc((100% - 80%) / 2);
 
-  scrollbar-width: none;
-
   &::-webkit-scrollbar {
     display: none;
   }
 
+  /* ✅ FIXED PERFECT CENTER ALIGNMENT */
   @media (max-width: 768px) {
-    margin-left: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1.2rem; /* SAME as Section */
+    scroll-padding-left: 1.2rem;
+    scroll-padding-right: 1.2rem;
   }
 `;
 
@@ -208,11 +185,9 @@ export const Card = styled.div`
   overflow: hidden;
 
   border-radius: 0.3rem;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
-  box-shadow: 10px 4px 10px 10px rgba(0, 0, 0, 0.45);
-  cursor: pointer;
-  transition: transform 0.35s ease;
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.45);
 
   &:hover {
     transform: scale(1.03);
@@ -223,93 +198,73 @@ export const Card = styled.div`
     height: 420px;
   }
 
+  /* ✅ TRUE CENTER FIX */
   @media (max-width: 768px) {
-    flex: 0 0 500px;
-    height: 350px;
+    flex: 0 0 calc(100% - 2.4rem); /* equal left & right */
+    margin: 0;
+    height: 280px;
   }
 
   @media (max-width: 480px) {
-    flex: 0 0 90%;
-    height: 300px;
+    flex: 0 0 calc(100% - 2rem);
+    height: 250px;
   }
 `;
 
 export const LocationTitle = styled.h2`
   font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
   margin-left: 15%;
+
   @media (max-width: 768px) {
-      margin-left: 2%;
-
-    font-size: 1.6rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.3rem;
-      margin-left: 2%;
-
+    margin-left: 0;
   }
 `;
 
 export const LocationDescription = styled.p`
   max-width: 80%;
   margin-left: 15%;
-  font-size: 1rem;
-
-  line-height: 1.6;
-  opacity: 0.8;
 
   @media (max-width: 768px) {
     max-width: 100%;
-    margin-left: 2%;
+    margin-left: 0;
   }
 `;
 
 export const PortButton = styled.button`
   display: block;
-  margin: 2rem auto 4rem ;
 
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
+  /* ✅ PERFECT TOP & BOTTOM BALANCE */
+  margin: 3rem auto 3rem;
+
   font-size: 1.2rem;
-  line-height: 1.5rem;
   text-transform: uppercase;
-
   background: none;
   border: none;
-  outline: none;
-  padding: 0;
   cursor: pointer;
 
-  color: #000;
   position: relative;
 
-  /* Yellow underline */
   &::after {
     content: "";
     position: absolute;
-    left: 0;
     bottom: -6px;
     width: 100%;
     height: 2px;
-    background: rgba(215, 174, 91, 1);
+    background: #d7ae5b;
   }
 
-  &:hover {
-    color: rgba(215, 174, 91, 1);
+  @media (max-width: 768px) {
+    margin: 2.5rem auto 2.5rem;
   }
 
   @media (max-width: 480px) {
-    width: auto;
+    margin: 2rem auto 2rem;
   }
 `;
 
 export const CardImage = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
   overflow: hidden;
 
   img {

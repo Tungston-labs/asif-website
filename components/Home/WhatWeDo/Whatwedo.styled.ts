@@ -28,7 +28,7 @@ export const LeftContent = styled.div`
 
 export const Title = styled.h2`
   font-family: Jost;
-  font-size: clamp(1.8rem, 3vw, 2.8rem); /* 🔥 perfect scaling */
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 400;
   line-height: 1.25;
   color: #111;
@@ -36,6 +36,17 @@ export const Title = styled.h2`
 
   span {
     font-weight: 600;
+  }
+
+  /* ✅ PERFECT MOBILE FIX */
+  @media (max-width: 768px) {
+    font-size: 1.6rem;   /* reduced size */
+    line-height: 1.3;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;   /* smaller phones */
+    line-height: 1.3;
   }
 `;
 
