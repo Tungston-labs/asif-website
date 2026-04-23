@@ -86,7 +86,7 @@ const Navbar = () => {
           </MenuItem>
 
           <MenuItem className="mobile-call">
-            <a href="tel:+919876543210">
+            <a href="tel:+91 9895076226">
               <LuPhoneCall /> Call : 9895076226
             </a>
           </MenuItem>
@@ -94,9 +94,9 @@ const Navbar = () => {
       </CenterMenu>
 
       <RightSection>
-        <Button href="tel:+919876543210">
+        <Button href="tel:+91 9895076226">
           <LuPhoneCall />
-          Call: 9895076226
+          Call: +91 9895076226
         </Button>
 
         <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
