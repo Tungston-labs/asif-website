@@ -20,9 +20,7 @@ interface Props {
 }
 
 const ProjectsGrid = ({ location }: Props) => {
-  const filteredProjects = projects.filter(
-    (p) => p.location === location
-  );
+  const filteredProjects = projects.filter((p) => p.location === location);
   const router = useRouter();
   const description = filteredProjects[0]?.description;
 
@@ -52,9 +50,7 @@ const ProjectsGrid = ({ location }: Props) => {
     const walk = (x - startX) * 1.5;
     gridRef.current.scrollLeft = scrollLeft - walk;
   };
-  const project = projects.find(
-    (p) => p.location === location
-  );
+  const project = projects.find((p) => p.location === location);
 
   if (!project) return null;
   return (
@@ -64,9 +60,7 @@ const ProjectsGrid = ({ location }: Props) => {
         <div className="v-line v-left v-bottom" />
         <HeaderGrid>
           <LocationTitle>{project.location}</LocationTitle>
-          <LocationDescription>
-            {project.description}
-          </LocationDescription>
+          <LocationDescription>{project.description}</LocationDescription>
         </HeaderGrid>
         <Grid
           ref={gridRef}
@@ -76,11 +70,7 @@ const ProjectsGrid = ({ location }: Props) => {
           onMouseMove={handleMouseMove}
         >
           {project.images.map((image, index) => (
-            <ProjectCard
-              key={index}
-              image={image}
-              title={project.title}
-            />
+            <ProjectCard key={index} image={image} title={project.title} />
           ))}
         </Grid>
 

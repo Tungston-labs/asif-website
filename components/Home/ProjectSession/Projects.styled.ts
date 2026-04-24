@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-/* ✅ FIX: TYPE ADDED */
 interface TabProps {
   $active?: boolean;
 }
@@ -18,7 +17,6 @@ export const Section = styled.section`
     padding: 0 3rem;
   }
 
-  /* ✅ EQUAL TOP & BOTTOM SPACE */
   @media (max-width: 768px) {
     padding: 3rem 1.2rem;
   }
@@ -260,7 +258,6 @@ export const PortButton = styled.button`
 
   position: relative;
 
-  /* ✅ IMPORTANT FIX */
   width: fit-content; /* shrink to text width */
   text-align: center;
 

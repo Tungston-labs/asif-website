@@ -1,30 +1,30 @@
 export const projects = [
-  
+
   {
     id: 2,
-    location: "ALUVA",
-    title: "Aluva Projects",
+    location: "PAYYANUR",
+    title: "Payyanur Projects",
     description:
-      "Premium housing projects focused on comfort, natural lighting, and efficient spatial planning.",
+      "Luxury villa projects designed with spacious interiors and contemporary architectural detailing.Blending contemporary elegance with practical comfort, our residential and commercial architecture house design and modern architectural home designs projects reflect the expertise and refined vision of experienced best house architects.",
     images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
+      "/images/Payyanur1.png",
+      "/images/Payyanur2.png",
     ],
   },
+  
   {
     id: 3,
-    location: "BANGALORE",
+    location: "ALUVA",
     title: "Bangalore Projects",
     description:
       "Urban architectural designs blending modern construction techniques with elegant minimalist concepts.",
     images: [
-      "/images/BANGLORE/BNGLR-1.jpg",
-      "/images/BANGLORE/BNGLR-2.jpg",
-      "/images/BANGLORE/BNGLR-3.jpg",
+      "/images/Aluva1.png",
+      "/images/Aluva2.png",
+      "/images/Aluva3.png",
     ],
   },
+  
   {
     id: 4,
     location: "KANNUR",
@@ -32,35 +32,25 @@ export const projects = [
     description:
       "Residential projects crafted with regional design influences and modern construction standards.",
     images: [
-      "/images/KANNUR/Kannur-1.png",
-      "/images/KANNUR/Kannur-2.png",
-      "/images/KANNUR/Kannur-3.png",
+      "/images/Kannur1.png",
+      "/images/Kannur2.png",
+      "/images/Kannur3.png",
     ],
   },
-  {
-    id: 5,
-    location: "PAYYANUR",
-    title: "Payyanur Projects",
-    description:
-      "Luxury villa projects designed with spacious interiors and contemporary architectural detailing.Blending contemporary elegance with practical comfort, our residential and commercial architecture house design and modern architectural home designs projects reflect the expertise and refined vision of experienced best house architects.",
-    images: [
-      "/images/ERNAKULAM/EKM-1.jpg",
-      "/images/ERNAKULAM/EKM-1.jpg",
-      "/images/ERNAKULAM/EKM-1.jpg",
-    ],
-  },
+   
   {
     id: 6,
-    location: "KOTTAYAM",
+    location: "BANGLORE",
     title: "Kottayam Projects",
     description:
       "Elegant residential homes combining modern lifestyle requirements with timeless architectural design.",
     images: [
-     "/images/BANGLORE/BNGLR-1.jpg",
-      "/images/BANGLORE/BNGLR-2.jpg",
-      "/images/ERNAKULAM/EKM-1.jpg",
+      "/images/bnglr1.png",
+      "/images/bnglr2.png",
+      "/images/bnglr3.png",
     ],
   },
+  
   {
     id: 7,
     location: "KAKKANAD",
@@ -74,6 +64,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+  
   {
     id: 8,
     location: "MANNARKAD",
@@ -87,6 +78,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+  
   {
     id: 9,
     location: "MALAPPURAM",
@@ -100,6 +92,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+  
   {
     id: 10,
     location: "TIRUR",
@@ -113,6 +106,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+  
   {
     id: 11,
     location: "ALAPPUZHA",
@@ -126,6 +120,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+  
   {
     id: 12,
     location: "IRITTY",
@@ -139,6 +134,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+
   {
     id: 13,
     location: "VADAKARA",
@@ -152,6 +148,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+
   {
     id: 14,
     location: "KOOTHATTUKULAM",
@@ -165,6 +162,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+
   {
     id: 15,
     location: "ERUMELI",
@@ -178,6 +176,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+
   {
     id: 16,
     location: "ERNAKULAM",
@@ -185,10 +184,9 @@ export const projects = [
     description:
       "Urban residential developments designed for efficient layouts and contemporary city lifestyles.",
     images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
+      "/images/Ekm1.png",
+      "/images/Ekm1.png",
     ],
   },
+
 ];

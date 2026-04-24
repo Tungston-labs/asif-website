@@ -38,7 +38,6 @@ const Navbar = () => {
 
       <CenterMenu>
         <Menu $open={menuOpen}>
-
           {/* ✅ MOBILE HEADER (NEW) */}
           {menuOpen && (
             <div className="mobile-header">
@@ -108,19 +107,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
