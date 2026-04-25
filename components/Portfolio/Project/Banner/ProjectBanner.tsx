@@ -22,10 +22,10 @@ const Banner = () => {
         </Heading>
 
         <Description>
-          In Bangalore’s fast-growing metropolitan environment, we provide
-          innovative solutions through our professional architecture company.
-          Our modern residential architects and architectural design firm focus
-          on sustainability, spatial efficiency, and contemporary living.
+          A blend of contemporary elegance and comfort, this living room design
+          showcases the expertise of experienced residential architects,
+          combining sleek furniture with thoughtful spatial planning by
+          professional architecture firms.
         </Description>
       </Container>
     </Section>

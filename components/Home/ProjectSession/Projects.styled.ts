@@ -142,45 +142,61 @@ export const Description = styled.p`
 
 export const TabsWrapper = styled.div`
   display: flex;
-  margin-bottom: 2rem;
-  margin-left: 5%;
-  flex-wrap: wrap;
-  border: 1px solid #0000001a;
   gap: 0.5rem;
+  margin-bottom: 2rem;
 
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto 2rem; /* ✅ centers properly instead of margin-left */
+
+  border: 1px solid #0000001a;
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    max-width: 54rem;
+  }
+
+  /* Mobile */
   @media (max-width: 768px) {
-    margin-left: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 0.5rem 0;
+  width: 100%;
+  max-width: 35rem;
+      padding: 0.5rem 1rem;
     border: none;
+    overflow-x: auto; /* ✅ important for tabs */
+  }
+
+  /* Small mobile */
+  @media (max-width: 480px) {
+    padding: 0.5rem;
   }
 `;
 
 export const Tab = styled.button<TabProps>`
   flex: 0 0 auto;
 
-  background: ${({ $active }) => ($active ? "#D7AE5B" : "#f5f5f5")};
+  background: #fff; /* ✅ fixed, no conditional */
+  color: ${({ $active }) => ($active ? "#d7ae5b" : "#000")};
+
   border: 1px solid #ddd;
   padding: 0.6rem 1.2rem;
   font-size: 0.85rem;
   white-space: nowrap;
 
+  transition: all 0.2s ease;
+
   &:hover {
     background: #d7ae5b;
-  }
-`;
-
+  };`
 export const Grid = styled.div`
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-
+  
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  padding-left: calc((100% - 90%) / 2);
-  padding-right: calc((100% - 80%) / 2);
+  padding-left: calc((100% - 50%) / 2);
+  padding-right: calc((100% - 50%) / 2);
 
   &::-webkit-scrollbar {
     display: none;
