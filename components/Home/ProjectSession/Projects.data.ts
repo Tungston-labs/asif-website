@@ -57,7 +57,7 @@ export const projects = [
   
   {
     id: 7,
-    location: "KAKKANAD",
+    location: "VENNALA",
     title: "Kakkanad Projects",
     description:
       "Contemporary residential developments tailored for urban living and smart space utilization.",

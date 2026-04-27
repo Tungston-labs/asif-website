@@ -7,7 +7,7 @@ interface MenuProps {
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  padding: 0.8rem 5rem;
+  padding: 0.8rem 2rem;
   background: #fff;
   margin-top: 1.5rem;
 
@@ -141,7 +141,7 @@ export const MenuItem = styled.li`
         align-items: center;
         gap: 0.5rem;
         background: #d7ae5b;
-        padding: 0.6rem 1rem;
+        
         border-radius: 0.375rem;
         color: #000;
         font-weight: 600;

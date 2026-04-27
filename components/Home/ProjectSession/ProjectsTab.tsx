@@ -6,7 +6,7 @@ import { useState } from "react";
 const locations = [
   "PAYYANUR",
   "KOTTAYAM",
-  "KAKKANAD",
+  "VENNALA",
   "MANNARKAD",
   "KANNUR",
   "TIRUR",

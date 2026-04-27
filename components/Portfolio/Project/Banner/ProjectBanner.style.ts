@@ -9,8 +9,9 @@ export const Section = styled.section`
  @media (max-width: 1024px) {
   padding: 6rem 2rem 0 2rem; 
     }
-  @media (max-width: 48rem) {
-  padding: 6rem 3rem 0 3rem; 
+  @media (max-width: 768px) {
+  padding: 6rem 2rem 0 3rem;
+  margin-left: 0.5rem;
     }
 `;
 
@@ -29,7 +30,7 @@ export const LocationTag = styled.span`
   letter-spacing: 0.125rem; 
   font-weight: 400;
   color: #111;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 1.5rem; 
   padding: 0 1.25rem; 
 
   &::before {
@@ -64,7 +65,7 @@ export const Heading = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   color: #111;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 1.5rem; 
   max-width: 56.25rem; 
 
   @media (max-width: 64rem) {

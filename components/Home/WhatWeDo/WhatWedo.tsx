@@ -52,7 +52,7 @@ export default function WhatWeDo() {
               </FeatureText>
             </FeatureItem>
           </FeatureList>
-          <QuoteButton href="/contact">GET A QUOTE</QuoteButton>
+          <QuoteButton href="/contact"> GET A QUOTE</QuoteButton>
         </LeftContent>
 
         <RightImage>

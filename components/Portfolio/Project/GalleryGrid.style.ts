@@ -14,6 +14,7 @@ export const Grid = styled.div`
   @media (max-width: 48rem) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    
   }
 `;
 

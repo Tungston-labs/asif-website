@@ -32,13 +32,12 @@ export const Title = styled.h2`
   font-weight: 400;
   line-height: 1.25;
   color: #111;
-  margin-bottom: 1.5rem;
+  margin-top: 1.6rem;
 
   span {
     font-weight: 600;
   }
 
-  /* ✅ PERFECT MOBILE FIX */
   @media (max-width: 768px) {
     font-size: 1.6rem;   /* reduced size */
     line-height: 1.3;
@@ -87,9 +86,9 @@ export const QuoteButton = styled(Link)`
   background: #c9a45c;
   color: white;
   font-weight: 500;
-  font-family: Jost;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
@@ -100,6 +99,12 @@ export const QuoteButton = styled(Link)`
     border: 1px solid #c9a45c;
     background: #fff;
     color: #000;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    padding: 8px 14px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
   }
 `;
 

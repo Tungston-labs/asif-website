@@ -232,8 +232,8 @@ export const TalkButton = styled(Link)`
   border: none;
   padding: 14px 28px;
   font-weight: 500;
-  font-family: Jost;
-  font-size: 14px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;
@@ -340,6 +340,7 @@ export const SocialWrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 4rem;
+    margin-left: 1.3rem;
     right: auto;
     order: 1;
     transform: none;

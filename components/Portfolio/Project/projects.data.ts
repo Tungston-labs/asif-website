@@ -53,14 +53,14 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "KAKKANAD",
+    location: "VENNALA",
     images: [
-      "/images/Kakkanad1.jpeg",
-      "/images/Kakkanad2.jpeg",
-      "/images/Kakkanad5.jpeg",
-      "/images/Kakkanad4.jpeg",
-      "/images/Kakkanad3.jpeg",
-      "/images/Kakkanad6.jpeg",
+      "/images/vennala1.jpeg",
+      "/images/vennala2.jpeg",
+      "/images/vennala3.jpeg",
+      "/images/vennala4.jpeg",
+      "/images/vennala5.jpeg",
+      "/images/vennala6.jpeg",
     ],
   },
   {
@@ -78,7 +78,13 @@ export const projectsData: ProjectData[] = [
   },
   {
     location: "TIRUR",
-    images: [],
+    images: [
+      "/images/tirur1.jpeg",
+      "/images/tirur2.jpeg",
+      "/images/tirur3.jpeg",
+      "/images/tirur4.jpeg",
+      "/images/tirur5.jpeg",
+    ],
   },
   {
     location: "ALAPPUZHA",
@@ -153,9 +159,9 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "KALOOR",
+  location: "VARAPUZHA",
     images: [
-           "/images/Kaloor1.jpeg",
+      "/images/Kaloor1.jpeg",
       "/images/Kaloor2.jpeg",
       "/images/Kaloor3.jpeg",
       "/images/Kaloor4.jpeg",

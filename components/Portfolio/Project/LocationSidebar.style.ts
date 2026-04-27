@@ -5,15 +5,16 @@ export const Sidebar = styled.div`
   background: #ffffff;
   border: 0.0625rem solid #1b1b1b33;
   
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     width: 100%;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none;  
+    scrollbar-width: none;
+    margin-left: -0.2rem;  
   }
 
-  @media (max-width: 48rem)::-webkit-scrollbar {
+  @media (max-width: 768px)::-webkit-scrollbar {
     display: none;  
   }
 `;
