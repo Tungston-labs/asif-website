@@ -15,13 +15,14 @@ import {
   IconBox,
   Divider,
   BottomNav,
+  Copyright,
+  CompanyLogo,
 } from "./Footer.styles";
 
 const Footer = () => {
   return (
     <FooterContainer>
       <TopSection>
-        
         <Left>
           <InfoItem>
             <Image src="/images/phone.svg" alt="phone" width={22} height={22} />
@@ -40,54 +41,58 @@ const Footer = () => {
           </InfoItem>
         </Left>
 
-        
         <Center>
-          <Image
-            src="/images/logo2.svg"
-            alt="Logo"
-            width={120}
-            height={80}
-          />
+          <Image src="/images/logo2.svg" alt="Logo" width={120} height={80} />
 
           <SocialIcons>
-             
             {/* <IconBox
 
             >
               <Image src="/images/facebook.svg" alt="facebook" width={18} height={18} />
             </IconBox> */}
 
-            
             {/* <IconBox>
               <Image src="/images/linkedin.svg" alt="linkedin" width={18} height={18} />
             </IconBox> */}
 
-             
             <IconBox
               as="a"
               href="https://www.facebook.com/share/1JsGiUxt3S/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/images/twitter.svg" alt="twitter" width={18} height={18} />
+              <Image
+                src="/images/twitter.svg"
+                alt="twitter"
+                width={18}
+                height={18}
+              />
             </IconBox>
 
-             
             <IconBox
               as="a"
               href="https://www.instagram.com/architect_asif_ahmed?igsh=NzhtaWlkczQ2anNs"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/images/instagram.svg" alt="instagram" width={18} height={18} />
+              <Image
+                src="/images/instagram.svg"
+                alt="instagram"
+                width={18}
+                height={18}
+              />
             </IconBox>
           </SocialIcons>
         </Center>
 
-         
         <Right>
           <InfoItem>
-            <Image src="/images/location.svg" alt="location" width={22} height={22} />
+            <Image
+              src="/images/location.svg"
+              alt="location"
+              width={22}
+              height={22}
+            />
             <div>
               <Label>OUR LOCATIONS</Label>
               <Value>Oberon mall, NH Bypass, Kochi</Value>
@@ -112,6 +117,18 @@ const Footer = () => {
         <Link href="/portfolio">OUR PORTFOLIO</Link>
         <Link href="/contact">CONTACT US</Link>
       </BottomNav>
+
+      <Copyright>
+        © Copyright 2026, ArchitectAsif. Designed by Tungston Labs.
+        <CompanyLogo>
+          <Image
+            src="/images/tungston-logo.svg" 
+            alt="Tungston Labs"
+            width={100}
+            height={30}
+          />
+        </CompanyLogo>
+      </Copyright>
     </FooterContainer>
   );
 };

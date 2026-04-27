@@ -26,14 +26,37 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "KANNUR",
+    location: "KANNUR - PALLIKUNNU",
     images: [
-      "/images/KANNUR/Kannur-1.png",
-      "/images/KANNUR/Kannur-2.png",
-      "/images/KANNUR/Kannur-3.png",
-      "/images/KANNUR/Kannur-3.png",
+      "/images/pallikunn1.jpeg",
+      "/images/pallikunn2.jpeg",
+      "/images/pallikunn4.jpeg",
+      "/images/pallikunn5.jpeg",
+      "/images/pallikunn6.jpeg",
+      "/images/pallikunn7.jpeg",
+      "/images/pallikunn8.jpeg",
+      "/images/pallikunn9.jpeg",
+      "/images/pallikunn10.png",
+      "/images/pallikunn3.jpeg",
+      "/images/pallikunn11.jpeg",
     ],
   },
+
+  {
+    location: "KANNUR - CHERUKUNNU",
+    images: [
+      "/images/cherukunnu1.jpeg",
+      "/images/cherukunnu2.jpeg",
+      "/images/cherukunnu3.jpeg",
+      "/images/cherukunnu4.jpeg",
+      "/images/cherukunnu5.jpeg",
+      "/images/cherukunnu6.jpeg",
+      "/images/cherukunnu7.jpeg",
+      "/images/cherukunnu8.jpeg",
+      "/images/cherukunnu9.jpeg",
+    ],
+  },
+
   {
     location: "PAYYANUR",
     images: [
@@ -74,7 +97,17 @@ export const projectsData: ProjectData[] = [
   },
   {
     location: "MALAPPURAM",
-    images: [],
+    images: [
+      "/images/malappuram1.jpeg",
+      "/images/malappuram2.jpeg",
+      "/images/malappuram3.jpeg",
+      "/images/malappuram4.jpeg",
+      "/images/malappuram5.jpeg",
+      "/images/malappuram6.jpeg",
+      "/images/malappuram7.jpeg",
+      "/images/malappuram8.jpeg",
+      "/images/malappuram9.jpeg",
+    ],
   },
   {
     location: "TIRUR",
@@ -106,38 +139,8 @@ export const projectsData: ProjectData[] = [
       "/images/Alappy-15.jpeg",
     ],
   },
-  {
-    location: "IRITTY",
-    images: [
-      "/images/iritty1.jpeg",
-      "/images/iritty2.jpeg",
-      "/images/iritty3.jpeg",
-      "/images/iritty4.jpeg",
-      "/images/iritty5.jpeg",
-      "/images/iritty6.jpeg",
-      "/images/iritty7.jpeg",
-      "/images/iritty8.jpeg",
-      "/images/iritty9.jpeg",
-      "/images/iritty10.jpeg",
-      "/images/iritty11.jpeg",
-      "/images/iritty12.jpeg",
-      "/images/iritty13.jpeg",
-      "/images/iritty14.jpeg",
-      "/images/iritty15.jpeg",
-      "/images/iritty16.jpeg",
-      "/images/iritty17.jpeg",
-      "/images/iritty18.jpeg",
-      "/images/iritty19.jpeg",
-      "/images/iritty20.jpeg",
-      "/images/iritty21.jpeg",
-    ],
-  },
-  {
-    location: "VADAKARA",
-    images: [
-      
-    ],
-  },
+  
+
   {
     location: "KOOTHATTUKULAM",
     images: [
@@ -150,22 +153,33 @@ export const projectsData: ProjectData[] = [
       "/images/koothattukulam7.jpeg",
       "/images/koothattukulam8.jpeg",
       "/images/koothattukulam9.jpeg",
-    ]
-  },
-  {
-    location: "ERUMELI",
-    images: [
- 
     ],
   },
+
   {
-  location: "VARAPUZHA",
+    location: "VARAPUZHA",
     images: [
       "/images/Kaloor1.jpeg",
       "/images/Kaloor2.jpeg",
       "/images/Kaloor3.jpeg",
       "/images/Kaloor4.jpeg",
       "/images/Kaloor5.jpeg",
+    ],
+  },
+
+  {
+    location: "PALAKKAD",
+    images: [
+      "/images/palakkad1.jpeg",
+      "/images/palakkad2.jpeg",
+      "/images/palakkad3.jpeg",
+      "/images/palakkad4.jpeg",
+      "/images/palakkad5.jpeg",
+      "/images/palakkad6.jpeg",
+      "/images/palakkad7.jpeg",
+      "/images/palakkad8.jpeg",
+      "/images/palakkad9.jpeg",
+      "/images/palakkad10.jpeg",
     ],
   },
 ];

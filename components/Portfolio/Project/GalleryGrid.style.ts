@@ -8,6 +8,13 @@ export const Grid = styled.div`
   /* ✅ Tablet */
   @media (max-width: 75rem) {
     grid-template-columns: 1fr 1fr;
+      grid-template-columns: 23.6875rem 32.3125rem;
+
+  }
+    @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+      grid-template-columns: 23.6875rem 32.3125rem;
+
   }
 
   /* ✅ Mobile */

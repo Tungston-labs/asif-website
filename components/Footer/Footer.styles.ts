@@ -30,12 +30,12 @@ export const TopSection = styled.div`
 
   @media (max-width: 992px) {
     flex-direction: row;
-    align-items: flex-start;   
+    align-items: flex-start;
     gap: 2.5rem;
   }
-    @media (max-width: 620px) {
+  @media (max-width: 620px) {
     flex-direction: column;
-    align-items: flex-start;   
+    align-items: flex-start;
     gap: 2.5rem;
   }
 `;
@@ -49,7 +49,7 @@ export const Left = styled.div`
 export const Center = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   
+  align-items: flex-start;
   gap: 1.5rem;
 
   @media (min-width: 993px) {
@@ -70,7 +70,7 @@ export const InfoItem = styled.div`
   gap: 1rem;
 
   @media (max-width: 768px) {
-    justify-content: flex-start;  
+    justify-content: flex-start;
     text-align: left;
   }
 `;
@@ -97,7 +97,7 @@ export const SocialIcons = styled.div`
   }
 
   @media (max-width: 992px) {
-    justify-content: flex-start;  
+    justify-content: flex-start;
   }
 `;
 
@@ -142,17 +142,62 @@ export const BottomNav = styled.div`
     opacity: 0.7;
   }
 
-
   @media (max-width: 768px) {
     justify-content: center;
-    flex-wrap: nowrap;        
+    flex-wrap: nowrap;
     gap: 1rem;
-                
-    overflow-x: auto;         
-    
-    a {
-       font-size: 0.8rem;
 
+    overflow-x: auto;
+
+    a {
+      font-size: 0.8rem;
     }
+  }
+`;
+
+export const Copyright = styled.p`
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  opacity: 0.7;
+  line-height: 1.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+`;
+
+export const CompanyLogo = styled.span`
+  // 👈 FIXED (div → span)
+  width: 3rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+
+  display: inline-flex; // 👈 important for proper alignment
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    width: 4rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 3.5rem;
   }
 `;

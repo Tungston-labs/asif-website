@@ -86,7 +86,7 @@ export const Description = styled.p`
   @media (max-width: 768px) {
     max-width: 100%;
     font-size: 1.2rem;
-    text-align: left; 
+    text-align: left;
   }
 
   @media (max-width: 1024px) {
@@ -136,7 +136,7 @@ export const RightImages = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    
   }
 `;
 
@@ -149,28 +149,36 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
     `
       margin-top: -2.5rem;
     `}
-
+@media (max-width: 768px) {
+    ${({ $offset }) =>
+      $offset &&
+      `
+        margin-left: 2rem;   
+      `}
+}
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 
-  @media (max-width: 768px) {
-    margin-top: 0;
-    align-items: center;
-    text-align: center;
+@media (max-width: 768px) {
+  margin-top: 0;
+  align-items: center;
+  text-align: center;   // better alignment
+  width: 100%;
+  max-width: 22rem;     // consistent width for both cards
+}
+
+@media (max-width: 768px) {
+  img {
     width: 100%;
-    max-width: 39rem;
+    max-width: 22rem;
+    display: block;
   }
 
-  @media (max-width: 768px) {
-    img {
-      width: 100%;
-      height: 25rem;
-      object-fit: cover;
-    }
-  }
+}
+
 `;
 
 export const ImageTitle = styled.h4`
@@ -178,9 +186,12 @@ export const ImageTitle = styled.h4`
   font-weight: 600;
   letter-spacing: 0.05rem;
   color: #111;
+   margin-top: 1rem;
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    margin-top: 2rem;
+    text-align: left;
   }
 `;
 

@@ -11,7 +11,8 @@ const locations = [
   "KANNUR",
   "TIRUR",
   "ALAPPUZHA",
-  "IRITTY"
+  'MALAPPURAM',
+  "PALAKKAD",
   
 ];
 interface Props {

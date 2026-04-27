@@ -11,15 +11,18 @@ export const Section = styled.section`
     }
   @media (max-width: 768px) {
   padding: 6rem 2rem 0 3rem;
-  margin-left: 0.5rem;
     }
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
 
-  @media (max-width: 75rem) {
+  @media (max-width: 1024px) {
     width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+    margin-left: -.5rem;
   }
 `;
 

@@ -1,5 +1,4 @@
 export const projects = [
-
   {
     id: 2,
     location: "PAYYANUR",
@@ -7,13 +6,13 @@ export const projects = [
     description:
       " In Payyanur, our approach is rooted in simplicity and purposeful planning. We design homes that respond thoughtfully to the local climate, cultural context, and everyday living needs.",
     images: [
-    "/images/pynr1.png",
+      "/images/pynr1.png",
       "/images/pynr2.png",
       "/images/pynr3.png",
       "/images/pynr4.png",
     ],
   },
-  
+
   {
     id: 3,
     location: "KOTTAYAM",
@@ -27,20 +26,7 @@ export const projects = [
       "/images/Kottayam10.jpeg",
     ],
   },
-  
-  {
-    id: 4,
-    location: "KANNUR",
-    title: "Kannur Projects",
-    description:
-      "Architecture in Kannur balances tradition with modern planning. Our experienced architecture studio delivers residential and commercial projects guided by thoughtful design, strong structure, and long-term usability.",
-    images: [
-      "/images/Kannur1.png",
-      "/images/Kannur2.png",
-      "/images/Kannur3.png",
-    ],
-  },
-   
+
   {
     id: 6,
     location: "MANNARKAD",
@@ -48,13 +34,13 @@ export const projects = [
     description:
       "Architecture in Mannarkad balances tradition with modern planning. Our experienced architecture studio delivers residential and commercial projects guided by thoughtful design, strong structure, and long-term usability.",
     images: [
-     "/images/Mannarkad1.jpeg",
+      "/images/Mannarkad1.jpeg",
       "/images/Mannarkad4.jpeg",
       "/images/Mannarkad3.jpeg",
       "/images/Mannarkad2.jpeg",
     ],
   },
-  
+
   {
     id: 7,
     location: "VENNALA",
@@ -70,7 +56,7 @@ export const projects = [
       "/images/Kakkanad6.jpeg",
     ],
   },
-  
+
   {
     id: 8,
     location: "MANNARKAD",
@@ -84,7 +70,7 @@ export const projects = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
-  
+
   {
     id: 9,
     location: "KANNUR",
@@ -92,13 +78,19 @@ export const projects = [
     description:
       "Modern architectural residences emphasizing durability, ventilation, and contemporary style.",
     images: [
-      "/images/KANNUR/Kannur-1.png",
-      "/images/KANNUR/Kannur-2.png",
-      "/images/KANNUR/Kannur-3.png",
-      "/images/KANNUR/Kannur-3.png",
+      "/images/pallikunn1.jpeg",
+      "/images/pallikunn2.jpeg",
+      "/images/pallikunn4.jpeg",
+      "/images/pallikunn5.jpeg",
+      "/images/pallikunn6.jpeg",
+      "/images/cherukunnu1.jpeg",
+      "/images/cherukunnu2.jpeg",
+      "/images/cherukunnu3.jpeg",
+      "/images/cherukunnu4.jpeg",
+      "/images/cherukunnu5.jpeg",
     ],
   },
-  
+
   {
     id: 10,
     location: "TIRUR",
@@ -106,13 +98,13 @@ export const projects = [
     description:
       "Thoughtfully designed homes combining modern architecture with comfortable family living.",
     images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
+      "/images/tirur1.jpeg",
+      "/images/tirur2.jpeg",
+      "/images/tirur3.jpeg",
+      "/images/tirur4.jpeg",
     ],
   },
-  
+
   {
     id: 11,
     location: "ALAPPUZHA",
@@ -120,7 +112,7 @@ export const projects = [
     description:
       "Residential projects inspired by coastal living with open layouts and natural ventilation.",
     images: [
-        "/images/Alappy-1.jpeg",
+      "/images/Alappy-1.jpeg",
       "/images/Alappy-2.jpeg",
       "/images/Alappy-3.jpeg",
       "/images/Alappy-4.jpeg",
@@ -137,51 +129,6 @@ export const projects = [
       "/images/Alappy-15.jpeg",
     ],
   },
-  
-  {
-    id: 12,
-    location: "IRITTY",
-    title: "Iritty Projects",
-    description:
-      "Modern residential constructions designed for comfort, sustainability, and long-term durability.",
-    images: [
-           "/images/iritty1.jpeg",
-      "/images/iritty2.jpeg",
-      "/images/iritty3.jpeg",
-      "/images/iritty4.jpeg",
-      "/images/iritty5.jpeg",
-      "/images/iritty6.jpeg",
-      "/images/iritty7.jpeg",
-      "/images/iritty8.jpeg",
-      "/images/iritty9.jpeg",
-      "/images/iritty10.jpeg",
-      "/images/iritty11.jpeg",
-      "/images/iritty12.jpeg",
-      "/images/iritty13.jpeg",
-      "/images/iritty14.jpeg",
-      "/images/iritty15.jpeg",
-      "/images/iritty16.jpeg",
-      "/images/iritty17.jpeg",
-      "/images/iritty18.jpeg",
-      "/images/iritty19.jpeg",
-      "/images/iritty20.jpeg",
-      "/images/iritty21.jpeg",
-    ],
-  },
-
-  {
-    id: 13,
-    location: "VADAKARA",
-    title: "Vadakara Projects",
-    description:
-      "Elegant home designs balancing modern aesthetics with practical everyday living.",
-    images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
-    ],
-  },
 
   {
     id: 14,
@@ -190,24 +137,41 @@ export const projects = [
     description:
       "Custom-designed residential spaces focused on functionality, comfort, and architectural excellence.",
     images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
+      "/images/koothattukulam1.jpeg",
+      "/images/koothattukulam2.jpeg",
+      "/images/koothattukulam3.jpeg",
+      "/images/koothattukulam4.jpeg",
+      "/images/koothattukulam5.jpeg",
     ],
   },
 
   {
-    id: 15,
-    location: "ERUMELI",
-    title: "Erumeli Projects",
+    id: 20,
+    location: "MALAPPURAM",
+    title: "Koothattukulam Projects",
     description:
-      "Residential architecture combining traditional inspirations with modern construction methods.",
+      "Custom-designed residential spaces focused on functionality, comfort, and architectural excellence.",
     images: [
-      "/images/ALUVA/aluva1.jpg",
-      "/images/ALUVA/aluva2.jpg",
-      "/images/ALUVA/aluva3.jpg",
-      "/images/ALUVA/aluva4.jpg",
+      "/images/malappuram1.jpeg",
+      "/images/malappuram2.jpeg",
+      "/images/malappuram3.jpeg",
+      "/images/malappuram4.jpeg",
+      "/images/malappuram5.jpeg",
+    ],
+  },
+
+  {
+    id: 20,
+    location: "PALAKKAD",
+    title: "Koothattukulam Projects",
+    description:
+      "Modern homes designed with efficient layouts, natural lighting, and a focus on comfortable urban living.",
+    images: [
+      "/images/palakkad1.jpeg",
+      "/images/palakkad2.jpeg",
+      "/images/palakkad3.jpeg",
+      "/images/palakkad4.jpeg",
+      "/images/palakkad5.jpeg",
     ],
   },
 
@@ -217,10 +181,6 @@ export const projects = [
     title: "Ernakulam Projects",
     description:
       "As a major urban center, Ernakulam demands smart and efficient architectural planning. Our architecture firm delivers refined residential and commercial spaces designed by experienced residential architects and commercial architects, combining modern aesthetics with practical functionality.",
-    images: [
-      "/images/Ekm1.png",
-      "/images/Ekm1.png",
-    ],
+    images: ["/images/Ekm1.png", "/images/Ekm1.png"],
   },
-
 ];

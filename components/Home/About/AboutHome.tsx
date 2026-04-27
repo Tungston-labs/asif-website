@@ -67,7 +67,7 @@ const AboutHome = () => {
             <Image
               src="/images/about/Rectangle2.svg"
               alt="Client"
-              width={600}
+              width={500}
               height={800}
             />
             <ImageTitle>CLIENT-CENTRIC APPROACH</ImageTitle>

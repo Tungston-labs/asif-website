@@ -4,7 +4,11 @@ export const Container = styled.section`
   width: 100%;
   padding: 2rem 0 6.25rem; 
   background: #ffffff;
+  margin-left: 2rem;
+    @media (max-width: 600px) {
+  margin-left:-1.5rem;
 
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -21,11 +25,13 @@ export const Wrapper = styled.div`
     gap: 2rem;
     
   }
-
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width:22rem
+  }
   @media (max-width: 768px) {
     flex-direction: column;
-    max-width: 20rem;
     gap: 2.5rem;
-    margin-left: 5rem;
   }
 `;
