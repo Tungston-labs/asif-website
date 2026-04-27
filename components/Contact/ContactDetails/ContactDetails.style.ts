@@ -1,35 +1,32 @@
-
-
-
 "use client";
 import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  padding: 6.25rem 5rem; 
+  padding: 6.25rem 5rem;
   background: #f4f4f4;
   text-align: center;
 
-  @media (max-width: 64rem) { 
+  @media (max-width: 64rem) {
     padding: 5rem 3rem;
   }
 
-  @media (max-width: 48rem) { 
+  @media (max-width: 48rem) {
     padding: 4rem 2rem;
     text-align: left; /* ✅ FIX */
   }
 
-  @media (max-width: 30rem) { 
+  @media (max-width: 30rem) {
     padding: 3rem 1.5rem;
   }
 `;
 
 export const Heading = styled.h2`
   font-family: var(--font-jost), sans-serif;
-  font-size: 3.0625rem; 
+  font-size: 3.0625rem;
   font-weight: 300;
   line-height: 1.3;
-  margin-bottom: 0.5rem;  
+  margin-bottom: 0.5rem;
   color: #000;
 
   @media (max-width: 64rem) {
@@ -51,8 +48,8 @@ export const Description = styled.p`
   font-family: var(--font-jost), sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  line-height: 1.5rem; 
-  max-width: 62.5rem; 
+  line-height: 1.5rem;
+  max-width: 62.5rem;
   margin-left: 4rem;
   color: #000000;
   margin-bottom: 2rem;
@@ -71,7 +68,7 @@ export const Bold = styled.span`
 export const CardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 2.5rem; 
+  gap: 2.5rem;
 
   @media (max-width: 64rem) {
     gap: 2rem;
@@ -85,8 +82,8 @@ export const CardWrapper = styled.div`
 
 export const Card = styled.div`
   flex: 1;
-  border: 0.0625rem solid #000; 
-  padding: 3.125rem 2.5rem; 
+  border: 0.0625rem solid #000;
+  padding: 3.125rem 2.5rem;
   text-align: left;
 
   @media (max-width: 64rem) {
@@ -101,12 +98,12 @@ export const Card = styled.div`
 export const CardHeader = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.25rem; 
+  gap: 1.25rem;
   margin-bottom: 0.25rem;
 `;
 
 export const IconWrapper = styled.div`
-  width: 2.625rem; 
+  width: 2.625rem;
   height: 2.625rem;
   position: relative;
   flex-shrink: 0;
@@ -125,7 +122,7 @@ export const CardTitle = styled.h3`
 
 export const CardText = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 0.9375rem; 
+  font-size: 0.9375rem;
   font-weight: 300;
   margin-left: 4rem;
   line-height: 1.9;
@@ -138,52 +135,73 @@ export const CardText = styled.p`
 `;
 
 export const Label = styled.div`
-  font-size: 0.9375rem; 
+  font-size: 0.9375rem;
   font-weight: 400;
-  letter-spacing: 0.0625rem; 
+  letter-spacing: 0.0625rem;
   position: relative;
   display: inline-block;
-
-  @media (max-width: 48rem) {
-    display: inline-block;
-  }
+  text-align: center;
 
   span {
     position: relative;
-    padding: 0 0.5rem; /* ✅ FIX */
+    padding: 0 0.75rem;
   }
 
-  span::before {
-    content: "";
-    position: absolute;
-    left: -1.5625rem; 
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0.875rem; 
-    height: 0.875rem;
-    border-left: 0.125rem solid #c8a24c; 
-    border-top: 0.125rem solid #c8a24c;
-
-    @media (max-width: 48rem) {
-      left: 0;
-      transform: translate(-100%, -50%); /* ✅ FIX */
-    }
-  }
-
+  span::before,
   span::after {
     content: "";
     position: absolute;
-    right: -1.5625rem;
     top: 50%;
     transform: translateY(-50%);
     width: 0.875rem;
     height: 0.875rem;
+  }
+
+  span::before {
+    left: -1.5rem;
+    border-left: 0.125rem solid #c8a24c;
+    border-top: 0.125rem solid #c8a24c;
+  }
+
+  span::after {
+    right: -1.5rem;
     border-right: 0.125rem solid #c8a24c;
     border-bottom: 0.125rem solid #c8a24c;
+  }
 
-    @media (max-width: 48rem) {
-      right: 0;
-      transform: translate(100%, -50%); /* ✅ FIX */
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+
+    span {
+      padding: 0 0.5rem;
+    }
+
+    span::before {
+      left: -1.2rem;
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+
+    span::after {
+      right: -1.2rem;
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+
+    span::before {
+      left: -1rem;
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+
+    span::after {
+      right: -1rem;
+      width: 0.6rem;
+      height: 0.6rem;
     }
   }
 `;
