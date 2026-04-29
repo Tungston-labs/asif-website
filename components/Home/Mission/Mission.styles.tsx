@@ -77,8 +77,29 @@ export const Card = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  width: 6.25rem;
-  height: 6.25rem;
+  width: fit-content;   /* important */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  &::after {
+    content: "";
+    width: 7rem; 
+    height: 2rem;
+    margin-left: 2rem;
+    margin-top: -0.8rem;
+
+background: linear-gradient(
+  to right,
+  rgba(255, 255, 255, 0.15) 0%,
+  rgba(255, 255, 255, 0.08) 40%,
+  rgba(255, 255, 255, 0.02) 80%,
+  transparent 100%
+);
+
+    border-radius: 2px;
+  }
 
   @media (max-width: 768px) {
     width: 5rem;
@@ -86,7 +107,6 @@ export const IconWrapper = styled.div`
   }
 
   img {
-    
     height: 100%;
     object-fit: contain;
   }
