@@ -118,17 +118,24 @@ const Footer = () => {
         <Link href="/contact">CONTACT US</Link>
       </BottomNav>
 
-      <Copyright>
-        © Copyright 2026, ArchitectAsif. Designed by Tungston Labs.
-        <CompanyLogo>
-          <Image
-            src="/images/tungston-logo.svg" 
-            alt="Tungston Labs"
-            width={100}
-            height={30}
-          />
-        </CompanyLogo>
-      </Copyright>
+   <Copyright>
+  © Copyright 2026, ArchitectAsif. Designed by Tungston Labs.
+
+  <CompanyLogo>
+    <a
+      href="https://tungstonlabs.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/images/tungston-logo.svg"
+        alt="Tungston Labs"
+        width={100}
+        height={30}
+      />
+    </a>
+  </CompanyLogo>
+</Copyright>
     </FooterContainer>
   );
 };
