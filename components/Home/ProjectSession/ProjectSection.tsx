@@ -8,7 +8,7 @@ import { Section } from "./Projects.styled";
 
 const ProjectsSection = () => {
   const [activeLocation, setActiveLocation] =
-    useState("PAYYANUR");
+    useState("KOTTAYAM");
 
   return (
     <Section>

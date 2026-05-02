@@ -102,8 +102,8 @@ export const QuoteButton = styled(Link)`
     color: #000;
   }
   @media (max-width: 768px) {
-    font-size: 1.4rem;
-    padding: 8px 14px;
+    font-size: 0.75rem;
+    padding: 6px 8px;
     line-height: 1.4;
     margin-bottom: 1rem;
   }

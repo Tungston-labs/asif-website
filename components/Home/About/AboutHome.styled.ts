@@ -117,10 +117,10 @@ export const StyledLink = styled.a`
     border: 1px solid #d7ae5b;
   }
   @media (max-width: 768px) {
-    font-size: 1.4rem;
-    padding: 6px 10px;
+    font-size: 0%.75rem;
+    padding: 6px 8px;
     line-height: 1.4;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 

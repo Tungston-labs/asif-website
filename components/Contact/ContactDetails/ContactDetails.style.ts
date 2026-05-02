@@ -137,7 +137,7 @@ export const CardText = styled.p`
 export const Label = styled.div`
   font-size: 0.9375rem;
   font-weight: 400;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 0.0325rem;
   position: relative;
   display: inline-block;
   text-align: center;
@@ -193,13 +193,15 @@ export const Label = styled.div`
     font-size: 0.75rem;
 
     span::before {
-      left: -1rem;
+      left: -0.1rem;
       width: 0.6rem;
       height: 0.6rem;
     }
-
+     span {
+      padding: 0 0.7rem;
+    }
     span::after {
-      right: -1rem;
+      right: -0.5rem;
       width: 0.6rem;
       height: 0.6rem;
     }
