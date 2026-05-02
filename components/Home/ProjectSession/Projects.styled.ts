@@ -28,13 +28,13 @@ export const Section = styled.section`
 
 export const HeaderWrapper = styled.div`
   text-align: center;
-  margin: -4rem auto 2rem;
+  margin: -6rem auto 2rem;
  @media (max-width: 1024px) {
       margin: -4rem auto 2rem;
 
   }
   @media (max-width: 768px) {
-    text-align: left;
+    text-align: center;
     margin: 0 0 2rem;
     padding: 0;
   }
@@ -42,60 +42,80 @@ export const HeaderWrapper = styled.div`
 
 export const GridSection = styled.div`
   position: relative;
-  padding: 2rem 0;
+  isolation: isolate;
+  padding: 2rem 0 10px;
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-size: 1px;
-  --grid-start: 10%;
-  --grid-width: 94.1%;
+  --grid-start: 6rem;
+  --grid-right-extension: 4rem;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
+    top: 0;
     left: var(--grid-start);
-    width: var(--grid-width);
+    right: calc(var(--grid-right-extension) * -1);
     height: var(--border-size);
     background: var(--border-color);
     pointer-events: none;
-  }
-
-  &::before {
-    top: 0;
-  }
-  &::after {
-    bottom: 0;
+    z-index: 0;
   }
 
   .v-line {
     position: absolute;
     width: var(--border-size);
-    height: 15rem;
+    top: 0;
+    bottom: 0;
     background: var(--border-color);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .v-left {
     left: var(--grid-start);
-    top: 0;
   }
   .v-right {
-    right: var(--grid-start);
-    top: 0;
-  }
-  .v-bottom {
-    bottom: var(--grid-start);
-    height: 15rem;
-
+    right: calc(var(--grid-right-extension) * -1);
   }
 
-  @media (max-width: 768px) {
-    --grid-start: 0;
-    --grid-width: 100%;
-    padding: 2rem 0;
+  .bottom-line {
+    position: absolute;
+    left: var(--grid-start);
+    right: calc(var(--grid-right-extension) * -1);
+    bottom: 4.5px;
+    height: var(--border-size);
+    background: var(--border-color);
+    pointer-events: none;
+    z-index: 0;
   }
+
+@media (max-width: 1020px) {
+  --grid-right-extension: 3rem;
+
+  &::before,
+  .v-line,
+  .bottom-line {
+    display: none;   /* ✅ hide all lines */
+  }
+}
+
+@media (max-width: 768px) {
+  --grid-start: 0;
+  --grid-right-extension: 0;
+  padding: 2rem 0 10px;
+
+  &::before,
+  .v-line,
+  .bottom-line {
+    display: none;   /* ✅ ensure hidden */
+  }
+}
 `;
 
 export const HeaderGrid = styled.div`
+  position: relative;
+  z-index: 1;
   max-width: 90%;
   width: 90%;
   margin: 0 2rem 2rem 0;
@@ -139,8 +159,10 @@ export const Description = styled.p`
   text-align: center;
 
   @media (max-width: 768px) {
-    text-align: left;
-    margin-left: 0;
+    text-align: center;
+    margin-left: 20;
+        margin-right: 2rem;
+
     max-width: 100%;
   }
 `;
@@ -152,8 +174,7 @@ export const TabsWrapper = styled.div`
 
   width: 100%;
   max-width: 56rem;
-  margin: 0 auto 2rem; /* ✅ centers properly instead of margin-left */
-
+  margin-left:7%;
   border: 1px solid #0000001a;
 
   /* Tablet */
@@ -164,10 +185,10 @@ export const TabsWrapper = styled.div`
   /* Mobile */
   @media (max-width: 768px) {
   width: 100%;
-  max-width: 35rem;
+  max-width: 75rem;
       padding: 0.5rem 1rem;
     border: none;
-    overflow-x: auto; /* ✅ important for tabs */
+    overflow-x: auto;
   }
 
   /* Small mobile */
@@ -193,6 +214,8 @@ export const Tab = styled.button<TabProps>`
     background: #d7ae5b;
   };`
 export const Grid = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -268,16 +291,16 @@ export const LocationDescription = styled.p`
 
 export const PortButton = styled.button`
   display: block;
+  position: relative;
+  z-index: 3;
 
-  margin: 3rem auto;
+  margin: 3rem auto 0;
 
   font-size: 1.2rem;
   text-transform: uppercase;
   background: none;
   border: none;
   cursor: pointer;
-
-  position: relative;
 
   width: fit-content; /* shrink to text width */
   text-align: center;
@@ -290,14 +313,15 @@ export const PortButton = styled.button`
     width: 100%; /* now matches text width perfectly */
     height: 2px;
     background: #d7ae5b;
+    z-index: 1;
   }
 
   @media (max-width: 768px) {
-    margin: 2.5rem auto;
+    margin: 2.5rem auto 0;
   }
 
   @media (max-width: 480px) {
-    margin: 2rem auto;
+    margin: 2rem auto 0;
   }
 `;
 

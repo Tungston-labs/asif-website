@@ -12,7 +12,7 @@ export const Sidebar = styled.div`
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
-    margin-left: -0.rem;  
+    margin-left: 0;  
   }
 
   @media (max-width: 768px)::-webkit-scrollbar {

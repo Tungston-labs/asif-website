@@ -57,7 +57,7 @@ const ProjectsGrid = ({ location }: Props) => {
     <>
       <GridSection>
         <div className="v-line v-left" />
-        <div className="v-line v-left v-bottom" />
+        <div className="v-line v-right" />
         <HeaderGrid>
           <LocationTitle>{project.location}</LocationTitle>
           <LocationDescription>{project.description}</LocationDescription>
@@ -77,6 +77,7 @@ const ProjectsGrid = ({ location }: Props) => {
         <PortButton onClick={() => router.push("/portfolio")}>
           See full portfolio
         </PortButton>
+        <div className="bottom-line" />
       </GridSection>
     </>
   );

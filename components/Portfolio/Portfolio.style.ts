@@ -70,7 +70,6 @@ export const Title = styled.h1`
 
   @media (max-width: 48rem) {
     font-size: 2.25rem; 
-
   }
 
   @media (max-width: 30rem) {

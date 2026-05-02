@@ -25,13 +25,13 @@ const AboutHome = () => {
           <Tag $color="#000">ABOUT US</Tag>
 
           <Title>
-            <strong>ARCHITECTURE</strong> IS NOT
-            <br />
-            JUST ABOUT SHELTER. IT IS
-            <br />
+            <strong>ARCHITECTURE</strong> IS NOT JUST ABOUT
+           
+              SHELTER. IT IS
+            
             ABOUT CREATING A STAGE
-            <br />
-            <span>FOR YOUR LEGACY.</span>
+            
+            <span> FOR YOUR LEGACY.</span>
           </Title>
 
           <Description>

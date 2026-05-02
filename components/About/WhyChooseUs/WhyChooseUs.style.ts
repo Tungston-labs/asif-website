@@ -61,7 +61,7 @@ export const Card = styled.div`
   flex: 1;
   border: 0.0625rem solid #000; 
   border-radius: 0.9375rem; 
-  padding: 3.125rem 2.5rem; 
+  padding: 2.125rem 2.5rem; 
   text-align: left;
 
   @media (max-width: 768px) {

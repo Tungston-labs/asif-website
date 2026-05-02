@@ -35,7 +35,7 @@ const Profile = () => {
 
           <Title>
             Crafting Spaces That <Bold>Reflect Passion</Bold>,
-            <br />
+            
             Precision, and <Bold>Timeless Design</Bold>
           </Title>
 

@@ -36,21 +36,28 @@ export const Section = styled.section`
   background: #0c0c0c;
   padding: 6rem 5rem;
   overflow: hidden;
+  margin-top: 5rem;
   color: white;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Jostto ', sans-serif;
 
   @media (max-width: 1024px) {
     padding: 6rem 3rem;
+      margin-top: 2rem;
+
   }
 
   @media (max-width: 768px) {
-    padding: 5rem 1.5rem;
+    padding: 5rem 2rem;
+      margin-top: 2rem;
+
   }
 
   @media (max-width: 480px) {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
+      margin-top: 1rem;
+
   }
-`;
+`
 
 /* ================= BACKGROUND BALL ================= */
 

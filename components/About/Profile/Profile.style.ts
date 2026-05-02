@@ -78,7 +78,7 @@ export const Right = styled.div`
   flex: 1;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 
@@ -123,7 +123,7 @@ export const Title = styled.h1`
   font-size: 2.5rem; 
   font-weight: 400;
   line-height: 1.3;
-  margin-bottom: 1.875rem; 
+  margin-bottom: 1.25rem; 
   color: #111;
 
   @media (max-width: 768px) {

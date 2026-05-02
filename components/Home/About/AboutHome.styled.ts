@@ -67,12 +67,12 @@ export const Title = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.9rem;
+    font-size: 1.94rem;
     line-height: 1.4;
   }
 
   @media (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -118,7 +118,7 @@ export const StyledLink = styled.a`
   }
   @media (max-width: 768px) {
     font-size: 1.4rem;
-    padding: 8px 14px;
+    padding: 6px 10px;
     line-height: 1.4;
     margin-bottom: 1rem;
   }
@@ -149,6 +149,7 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
     `
       margin-top: -2.5rem;
     `}
+    
 @media (max-width: 768px) {
     ${({ $offset }) =>
       $offset &&
@@ -165,10 +166,11 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
 
 @media (max-width: 768px) {
   margin-top: 0;
-  align-items: center;
-  text-align: center;   // better alignment
+  align-items: flex-start;
+  text-align: flex-start;   // better alignment
   width: 100%;
-  max-width: 22rem;     // consistent width for both cards
+  max-width: 22rem;
+  margin-left: 0.1rem;     // consistent width for both cards
 }
 
 @media (max-width: 768px) {
