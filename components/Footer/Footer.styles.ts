@@ -145,8 +145,8 @@ export const BottomNav = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 1rem;
-
+    gap: 0.5rem;
+    font-size: 0.5rem;
     overflow-x: auto;
 
     a {
