@@ -219,7 +219,7 @@ export const Grid = styled.div`
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.45);
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 

@@ -18,7 +18,7 @@ export const projects = [
     location: "KOTTAYAM",
     title: "Kottayam Projects",
     description:
-      "Blending riverside charm with urban comfort, our projects in Aluva focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
+      "Blending riverside charm with urban comfort, our projects in kottayam focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
     images: [
       "/images/Kottayam1.jpeg",
       "/images/Kottayam8.jpeg",
