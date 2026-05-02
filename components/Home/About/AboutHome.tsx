@@ -69,6 +69,7 @@ const AboutHome = () => {
               alt="Client"
               width={500}
               height={800}
+              style={{"marginTop":"-1.3rem"}}
             />
             <ImageTitle>CLIENT-CENTRIC APPROACH</ImageTitle>
             <ImageSubtitle>Your vision guides our process.</ImageSubtitle>

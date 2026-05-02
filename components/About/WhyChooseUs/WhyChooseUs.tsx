@@ -47,9 +47,7 @@ const WhyChooseUs = () => {
 
                     <CardTitle>Thoughtful Design</CardTitle>
                     <CardText>
-                        Every space is carefully planned using modern architecture house
-                        plans and architectural floor plan drawings, ensuring functional,
-                        elegant, and inspiring environments.
+                       Every space is carefully planned using modern architecture house plans and architectural floor plan drawings, ensuring functional, elegant, and inspiring environments that reflect your lifestyle and personality.
                     </CardText>
                 </Card>
 
@@ -66,8 +64,7 @@ const WhyChooseUs = () => {
 
                     <CardTitle>Client-Focused Approach</CardTitle>
                     <CardText>
-                        By listening and understanding your lifestyle and needs, we create
-                        spaces that feel truly personal and thoughtful.
+                       By listening and understanding your lifestyle and needs, we create spaces that feel truly personal, fostering trust through a clear and Thoughtful Architect plans for house process.
                     </CardText>
                 </Card>
 
@@ -84,8 +81,7 @@ const WhyChooseUs = () => {
 
                     <CardTitle>Timeless Aesthetics</CardTitle>
                     <CardText>
-                        We move beyond trends to create architectural home designs that
-                        stay relevant, timeless, and true to our philosophy.
+                        We move beyond trends to create modern architectural home designs and architectural design home plans that stay relevant, timeless, and true to our design philosophy.
                     </CardText>
                 </Card>
             </CardWrapper>

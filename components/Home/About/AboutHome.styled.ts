@@ -153,7 +153,8 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
     ${({ $offset }) =>
       $offset &&
       `
-        margin-left: 2rem;   
+        margin-left: 2rem;
+           
       `}
 }
   img {
@@ -190,7 +191,7 @@ export const ImageTitle = styled.h4`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: left;
   }
 `;
@@ -200,6 +201,8 @@ export const ImageSubtitle = styled.p`
   color: #777;
   @media (max-width: 768px) {
     font-size: 1rem;
+        margin-bottom:1rem;
+
   }
 `;
 

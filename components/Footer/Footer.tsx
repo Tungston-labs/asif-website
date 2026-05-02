@@ -94,7 +94,7 @@ const Footer = () => {
               height={22}
             />
             <div>
-              <Label>OUR LOCATIONS</Label>
+              <Label>OUR LOCATION</Label>
               <Value>Oberon mall, NH Bypass, Kochi</Value>
             </div>
           </InfoItem>

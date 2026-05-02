@@ -28,8 +28,11 @@ export const Section = styled.section`
 
 export const HeaderWrapper = styled.div`
   text-align: center;
-  margin: -3rem auto 3rem;
+  margin: -4rem auto 2rem;
+ @media (max-width: 1024px) {
+      margin: -4rem auto 2rem;
 
+  }
   @media (max-width: 768px) {
     text-align: left;
     margin: 0 0 2rem;
@@ -80,7 +83,9 @@ export const GridSection = styled.div`
     top: 0;
   }
   .v-bottom {
-    bottom: 0;
+    bottom: var(--grid-start);
+    height: 15rem;
+
   }
 
   @media (max-width: 768px) {

@@ -129,7 +129,7 @@ export const CardText = styled.p`
   color: #333;
 
   @media (max-width: 48rem) {
-    margin-left: 0; /* ✅ FIX */
+    margin-left: 10; /* ✅ FIX */
     margin-top: 0.5rem;
   }
 `;

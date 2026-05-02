@@ -39,16 +39,15 @@ export default function WhatWeDo() {
             <FeatureItem>
               <FeatureTitle>✔ MATERIAL & FINISH SELECTION</FeatureTitle>
               <FeatureText>
-                Carefully curated materials, textures, and color palettes,
-                selected to match your vision.
+                Carefully curated materials, textures, and color palettes, selected to match your vision, delivered with the <br></br>
+                expertise of professional best house architects and interior designers.
               </FeatureText>
             </FeatureItem>
 
             <FeatureItem>
               <FeatureTitle>✔ CUSTOM FURNITURE & DETAILING</FeatureTitle>
               <FeatureText>
-                Bespoke furniture and refined detailing crafted to fit your
-                space perfectly.
+                Bespoke furniture and refined detailing crafted to fit your space perfectly. Balanced lighting and tailored house<br></br> building design plan solutions enhance both mood and functionality, creating a home that truly feels yours.
               </FeatureText>
             </FeatureItem>
           </FeatureList>

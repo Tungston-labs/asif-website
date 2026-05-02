@@ -28,7 +28,7 @@ export const Section = styled.section`
   }
 
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.8rem;
   }
 `;
 

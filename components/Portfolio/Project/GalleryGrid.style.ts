@@ -28,11 +28,11 @@ export const Grid = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 30.1875rem;
+  height: 30.7875rem;
   overflow: hidden;
 
   @media (max-width: 64rem) {
-    height: 26rem;
+    height: 30.7875rem;
   }
 
   @media (max-width: 48rem) {
@@ -40,7 +40,7 @@ export const ImageWrapper = styled.div`
   }
 
   @media (max-width: 30rem) {
-    height: 18rem;
+    height: 30rem;
   }
 `;
 

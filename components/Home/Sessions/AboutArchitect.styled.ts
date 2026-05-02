@@ -339,7 +339,7 @@ export const SocialWrapper = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-left: 1.3rem;
     right: auto;
     order: 1;

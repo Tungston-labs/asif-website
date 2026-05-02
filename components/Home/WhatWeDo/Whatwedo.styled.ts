@@ -17,7 +17,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const LeftContent = styled.div`
-  max-width: 80%;
+  max-width: 83%;
   padding: 6rem 5rem;
   z-index: 2;
   @media (max-width: 992px) {
@@ -52,15 +52,16 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-family: Jost;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.4;
   color: #666;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 export const FeatureList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 `;
 
 export const FeatureItem = styled.div``;
