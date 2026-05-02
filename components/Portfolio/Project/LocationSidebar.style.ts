@@ -4,8 +4,8 @@ export const Sidebar = styled.div`
   width: 17.5rem;  
   background: #ffffff;
   border: 0.0625rem solid #1b1b1b33;
-    height: fit-content;
-
+  height: fit-content;
+  margin-left: -0.8rem;
   @media (max-width: 768px) {
     width: 100%;
     display: flex;
