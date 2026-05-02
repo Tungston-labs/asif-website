@@ -117,8 +117,8 @@ export const StyledLink = styled.a`
     border: 1px solid #d7ae5b;
   }
   @media (max-width: 768px) {
-    font-size: 0%.75rem;
-    padding: 6px 8px;
+    font-size: 1rem;
+    padding: 10px 14px;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
