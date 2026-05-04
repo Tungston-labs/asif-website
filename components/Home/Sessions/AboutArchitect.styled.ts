@@ -340,7 +340,7 @@ export const SocialWrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 2rem;
-    margin-left: 1.3rem;
+    margin-left: 3.3rem;
     right: auto;
     order: 1;
     transform: none;

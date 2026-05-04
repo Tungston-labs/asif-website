@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 100%;
-  padding: 2rem 0 6.25rem; 
+   width: 100%;
+  padding: 2rem 2rem 6.25rem;
   background: #ffffff;
-  margin-left: 2rem;
     @media (max-width: 600px) {
   margin-left:-1.5rem;
 

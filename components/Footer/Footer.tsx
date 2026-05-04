@@ -42,8 +42,9 @@ const Footer = () => {
         </Left>
 
         <Center>
-          <Image src="/images/logo2.svg" alt="Logo" width={120} height={80} />
-
+          <Link href="/">
+            <Image src="/images/logo2.svg" alt="Logo" width={120} height={80} />
+          </Link>
           <SocialIcons>
             {/* <IconBox
 
@@ -118,24 +119,24 @@ const Footer = () => {
         <Link href="/contact">CONTACT US</Link>
       </BottomNav>
 
-   <Copyright>
-  © Copyright 2026, ArchitectAsif. Designed by Tungston Labs.
+      <Copyright>
+        © Copyright 2026, ArchitectAsif. Designed by Tungston Labs.
 
-  <CompanyLogo>
-    <a
-      href="https://tungstonlabs.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Image
-        src="/images/tungston-logo.svg"
-        alt="Tungston Labs"
-        width={100}
-        height={30}
-      />
-    </a>
-  </CompanyLogo>
-</Copyright>
+        <CompanyLogo>
+          <a
+            href="https://tungstonlabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/images/tungston-logo.svg"
+              alt="Tungston Labs"
+              width={100}
+              height={30}
+            />
+          </a>
+        </CompanyLogo>
+      </Copyright>
     </FooterContainer>
   );
 };
