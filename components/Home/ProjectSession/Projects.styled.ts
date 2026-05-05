@@ -66,7 +66,7 @@ export const GridSection = styled.div`
     position: absolute;
     width: var(--border-size);
     top: 0;
-    bottom: 0;
+bottom: 4.5px;  
     background: var(--border-color);
     pointer-events: none;
     z-index: 0;

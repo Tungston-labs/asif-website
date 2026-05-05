@@ -4,6 +4,10 @@ export const Container = styled.section`
    width: 100%;
   padding: 2rem 2rem 6.25rem;
   background: #ffffff;
+    @media (min-width: 768px)and  (max-width: 1023px) {
+  padding: 2rem 4rem 6.25rem;
+
+  }
     @media (max-width: 768px) {
   margin-left:-3.3rem;
 

@@ -90,6 +90,7 @@ export const Header = styled.div`
   position: relative;
   z-index: 2;
   margin-bottom: 1.5rem;
+  
   max-width: 50rem;
 
   @media (max-width: 768px) {
@@ -100,7 +101,7 @@ export const Header = styled.div`
 export const Title = styled.h2`
   font-size: 2rem;
   font-weight: 200;
-
+  margin-top: 0.75rem;
   span {
     font-weight: 400;
   }
@@ -117,6 +118,7 @@ export const Title = styled.h2`
 export const Subtitle = styled.p`
   color: #bfbfbf;
   font-size: 1.1rem;
+    margin-top: 0.5rem;
 
   @media (max-width: 480px) {
     font-size: 1rem;
