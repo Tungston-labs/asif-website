@@ -37,9 +37,8 @@ const missionData = [
 const Mission = () => {
   return (
     <Section>
-      
       <Container>
-        <BackgroundBall/>
+        <BackgroundBall />
         <CardsWrapper>
           {missionData.map((item, index) => (
             <Card key={index}>
@@ -60,7 +59,6 @@ const Mission = () => {
             </Card>
           ))}
         </CardsWrapper>
-        
       </Container>
     </Section>
   );

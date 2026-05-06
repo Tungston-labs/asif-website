@@ -263,7 +263,7 @@ export const PortfolioText = styled.h1`
   letter-spacing: 0.5rem;
   white-space: nowrap;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(236, 227, 227, 0.27);
+  -webkit-text-stroke: 1px rgba(227, 236, 229, 0.86);
   opacity: 0.7;
 
   @media (max-width: 1024px) {
