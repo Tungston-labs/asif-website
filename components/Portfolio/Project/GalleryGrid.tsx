@@ -2,69 +2,52 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Grid, ImageWrapper, ButtonWrapper, NavButton } from "./GalleryGrid.style";
+import {
+  Container,
+  InnerWrapper,
+  MainImageWrapper,
+  ThumbnailRow,
+  Thumbnail,
+} from "./GalleryGrid.style";
 
-type Props = {
-  images: string[];
-};
-
-const IMAGES_PER_PAGE = 4;
-
-const GalleryGrid = ({ images }: Props) => {
-  const [currentPage, setCurrentPage] = useState(0);
+const GalleryGrid = ({ images }) => {
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   useEffect(() => {
-    setCurrentPage(0);
+    setSelectedImage(images[0]);
   }, [images]);
 
-  const totalPages = Math.ceil(images.length / IMAGES_PER_PAGE);
-
-  const startIndex = currentPage * IMAGES_PER_PAGE;
-  const currentImages = images.slice(
-    startIndex,
-    startIndex + IMAGES_PER_PAGE
-  );
-
-  const handleNext = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage((prev) => prev + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentPage > 0) {
-      setCurrentPage((prev) => prev - 1);
-    }
-  };
-
   return (
-    <div>
-      <Grid>
-        {currentImages.map((img, index) => (
-          <ImageWrapper key={index}>
-            <Image
-              src={img}
-              alt="Project Image"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </ImageWrapper>
-        ))}
-      </Grid>
+    <Container>
+      <InnerWrapper>
+        <MainImageWrapper>
+          <Image
+            src={selectedImage}
+            alt="Main Project Image"
+            fill
+            priority
+            style={{ objectFit: "cover" }}
+          />
+        </MainImageWrapper>
 
-      <ButtonWrapper>
-        <NavButton onClick={handlePrevious} disabled={currentPage === 0}>
-          ‹ PREVIOUS
-        </NavButton>
-
-        <NavButton
-          onClick={handleNext}
-          disabled={currentPage === totalPages - 1}
-        >
-          NEXT ›
-        </NavButton>
-      </ButtonWrapper>
-    </div>
+        <ThumbnailRow>
+          {images.map((img, index) => (
+            <Thumbnail
+              key={index}
+              onClick={() => setSelectedImage(img)}
+              $active={selectedImage === img}
+            >
+              <Image
+                src={img}
+                alt="Thumbnail"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Thumbnail>
+          ))}
+        </ThumbnailRow>
+      </InnerWrapper>
+    </Container>
   );
 };
 
