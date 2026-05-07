@@ -8,6 +8,7 @@ export const projectsData: ProjectData[] = [
     location: "ERNAKULAM",
     images: ["/images/ERNAKULAM/EKM-1.jpg", "/images/ERNAKULAM/EKM-2.jpg"],
   },
+
   {
     location: "ALUVA",
     images: [
@@ -17,6 +18,7 @@ export const projectsData: ProjectData[] = [
       "/images/ALUVA/aluva4.jpg",
     ],
   },
+
   {
     location: "BANGALORE",
     images: [
@@ -25,6 +27,7 @@ export const projectsData: ProjectData[] = [
       "/images/BANGLORE/BNGLR-3.jpg",
     ],
   },
+
   {
     location: "KANNUR - PALLIKUNNU",
     images: [
@@ -109,6 +112,7 @@ export const projectsData: ProjectData[] = [
       "/images/malappuram9.jpeg",
     ],
   },
+
   {
     location: "TIRUR",
     images: [
@@ -119,6 +123,7 @@ export const projectsData: ProjectData[] = [
       "/images/tirur5.jpeg",
     ],
   },
+
   {
     location: "ALAPPUZHA",
     images: [
@@ -139,7 +144,6 @@ export const projectsData: ProjectData[] = [
       "/images/Alappy-15.jpeg",
     ],
   },
-  
 
   {
     location: "KOOTHATTUKULAM",
@@ -168,6 +172,17 @@ export const projectsData: ProjectData[] = [
   },
 
   {
+    location: "KALOOR",
+    images: [
+      "/images/KaloorA1.jpeg",
+      "/images/KaloorA2.jpeg",
+      "/images/KaloorA3.jpeg",
+      "/images/KaloorA4.jpeg",
+      "/images/KaloorA5.jpeg",
+    ],
+  },
+
+  {
     location: "PALAKKAD",
     images: [
       "/images/palakkad1.jpeg",
@@ -182,4 +197,5 @@ export const projectsData: ProjectData[] = [
       "/images/palakkad10.jpeg",
     ],
   },
+  
 ];
