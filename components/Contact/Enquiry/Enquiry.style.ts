@@ -9,6 +9,9 @@ export const Section = styled.section`
   
   @media (max-width: 1024px) {
     padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+
   }
 
   @media (max-width: 768px) {
@@ -38,9 +41,9 @@ export const LeftContainer = styled.div`
 }
 
   @media (max-width: 1024px) {
+
     width: 100%;
     padding: 4rem 1rem;
-      max-width: 36.6875rem;   
   height: 41.625rem; 
   }
 

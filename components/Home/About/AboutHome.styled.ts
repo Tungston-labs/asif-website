@@ -29,7 +29,8 @@ export const Container = styled.div`
   align-items: center;
 
   @media (max-width: 1024px) {
-    gap: 3rem;
+    grid-template-columns: 1fr; /* ✅ stack */
+    gap: 2.5rem;
   }
 
   @media (max-width: 768px) {
@@ -42,6 +43,9 @@ export const LeftContent = styled.div`
   position: relative;
   z-index: 2;
 
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -130,7 +134,9 @@ export const RightImages = styled.div`
   align-items: flex-start;
 
   @media (max-width: 1024px) {
-    gap: 1.5rem;
+    order: -1; 
+    margin-top: 4rem;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
