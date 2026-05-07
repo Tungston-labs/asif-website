@@ -58,6 +58,7 @@ export const projectsData: ProjectData[] = [
       "/images/pynr4.png",
     ],
   },
+  
   {
     location: "KOTTAYAM",
     images: [
@@ -188,5 +189,5 @@ export const projectsData: ProjectData[] = [
       "/images/BANGLORE/BNGLR-1.jpg",
       "/images/BANGLORE/BNGLR-3.jpg",
     ],
-  },
+  },                               
 ];
