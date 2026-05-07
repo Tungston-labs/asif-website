@@ -201,6 +201,11 @@ export const ImageTitle = styled.h4`
 export const ImageSubtitle = styled.p`
   font-size: 0.75rem;
   color: #777;
+    @media (max-width: 1024px) {
+    font-size: 0.85rem;
+        margin-bottom:1rem;
+
+  }
   @media (max-width: 768px) {
     font-size: 1rem;
         margin-bottom:1rem;

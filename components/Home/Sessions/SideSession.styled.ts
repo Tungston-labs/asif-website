@@ -8,14 +8,18 @@ export const SideNavWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
-@media (max-width: 1024px) {
- left: 5rem;
-top: 5rem;   }
-@media (max-width: 768px) {
-top: 5rem; 
-  display: none;
- }
+  @media (max-width: 1304px) {
+    left: 2rem;
+    top: 4rem;
+  }
+  @media (max-width: 1024px) {
+    left: 2rem;
+    top: 5rem;
+  }
+  @media (max-width: 768px) {
+    top: 5rem;
+    display: none;
+  }
 `;
 
 export const NavItem = styled.div`
@@ -36,8 +40,12 @@ export const NavItem = styled.div`
   &:hover {
     color: rgba(215, 174, 91, 1);
   }
+  @media (max-width: 1324px) {
+    font-size: 14px;
+  }
   @media (max-width: 1024px) {
-font-size: 12px;  }
+    font-size: 12px;
+  }
 `;
 export const Divider = styled.div`
   position: absolute;

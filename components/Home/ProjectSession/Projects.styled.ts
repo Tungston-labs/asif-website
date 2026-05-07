@@ -90,15 +90,6 @@ bottom: 4.5px;
     z-index: 0;
   }
 
-@media (max-width: 1020px) {
-  --grid-right-extension: 3rem;
-
-  &::before,
-  .v-line,
-  .bottom-line {
-    display: none;   /* ✅ hide all lines */
-  }
-}
 
 @media (max-width: 768px) {
   --grid-start: 0;
@@ -179,13 +170,15 @@ export const TabsWrapper = styled.div`
 
   /* Tablet */
   @media (max-width: 1024px) {
-    max-width: 54rem;
+    max-width: 50rem;
+        overflow-x: auto;
+
   }
 
   /* Mobile */
   @media (max-width: 768px) {
   width: 100%;
-  max-width: 75rem;
+  max-width: 22rem;
       padding: 0.5rem 1rem;
     border: none;
     overflow-x: auto;

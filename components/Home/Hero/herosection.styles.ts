@@ -148,7 +148,9 @@ export const FloatingText = styled.p`
 
 export const DecorImage = styled(Image)`
   margin-left: 7rem;
-
+ @media (max-width: 1024px) {
+  margin-left: 4rem;
+  }
   @media (max-width: 768px) {
     display: none;
   }
