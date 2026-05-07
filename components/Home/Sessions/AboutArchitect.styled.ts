@@ -225,7 +225,7 @@ export const Description = styled.p`
   
   @media (max-width: 1024px) {
     text-align: left;
-      line-height: 1.4;
+      line-height: 1.6;
       font-size: 0.85rem;
       max-width: 25rem;
 
@@ -277,6 +277,11 @@ export const PortfolioText = styled.h1`
   -webkit-text-stroke: 1px rgba(227, 236, 229, 0.86);
   opacity: 0.7;
 
+  @media (max-width: 1300px) {
+    font-size: 6rem;
+      margin-left:1rem;
+
+  }
   @media (max-width: 1024px) {
     font-size: 4rem;
       margin-left:1rem;
