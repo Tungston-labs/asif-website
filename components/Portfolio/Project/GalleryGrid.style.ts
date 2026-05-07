@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
-/* ✅ RIGHT SECTION */
 export const Container = styled.div`
   width: 100%;
 `;
 
-/* ✅ FLEXIBLE WIDTH CONTROL */
 export const InnerWrapper = styled.div`
   width: 100%;
-  max-width: 1200px; /* base */
+  max-width: 1200px;
 
-  /* 🔥 responsive scaling */
   @media (min-width: 1400px) {
     max-width: 1300px;
   }
@@ -20,62 +17,69 @@ export const InnerWrapper = styled.div`
   }
 `;
 
-/* ✅ MAIN IMAGE (RESPONSIVE SIZE INSTEAD OF 125%) */
 export const MainImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 700px; /* base height */
+  height: 65vh; /* ✅ FIT SCREEN HEIGHT */
   overflow: hidden;
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 0 25px rgba(0, 0, 0, 0.12),
+    0 15px 40px rgba(0, 0, 0, 0.18),
+    0 -10px 30px rgba(0, 0, 0, 0.08);
 
-  /* 🔥 large screens (your current 125% feel) */
   @media (min-width: 1400px) {
-    height: 850px;
+    height: 70vh;
   }
 
   @media (min-width: 1600px) {
-    height: 950px;
+    height: 75vh;
   }
 
-  /* tablet */
   @media (max-width: 1024px) {
-    height: 500px;
+    height: 55vh;
   }
 
-  /* mobile */
   @media (max-width: 768px) {
-    height: 350px;
+    height: 45vh;
   }
 
   @media (max-width: 480px) {
-    height: 250px;
+    height: 32vh;
   }
 `;
 
-/* ✅ THUMBNAILS */
 export const ThumbnailRow = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1rem;
 
-  gap: 1.5rem;
-  margin-top: 2rem;
+  /* ✅ MOVE GALLERY UP */
+  margin-top: 1rem;
 
   overflow-x: auto;
-  flex-wrap: nowrap;
+  overflow-y: hidden;
 
+  flex-wrap: nowrap;
   scroll-behavior: smooth;
 
+  padding: 0 10px 10px 10px;
+
+  width: 100%;
+  min-width: 0;
+
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-/* ✅ THUMBNAIL */
 export const Thumbnail = styled.div`
   position: relative;
+  width: 80px;
   min-width: 80px;
   height: 80px;
 
@@ -85,6 +89,7 @@ export const Thumbnail = styled.div`
 
   border: 2px solid transparent;
   transition: all 0.3s ease;
+
   flex-shrink: 0;
 
   ${(props) =>
@@ -99,6 +104,7 @@ export const Thumbnail = styled.div`
   }
 
   @media (max-width: 480px) {
+    width: 65px;
     min-width: 65px;
     height: 65px;
   }

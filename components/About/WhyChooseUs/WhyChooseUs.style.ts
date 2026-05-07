@@ -107,7 +107,7 @@ export const CardTitle = styled.h3`
 
 export const CardText = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 0.9375rem; 
+  font-size: 1.2rem; 
   font-weight: 300;
   line-height: 1.4;
   color: #333;
