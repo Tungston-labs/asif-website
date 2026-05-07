@@ -115,6 +115,10 @@ export const CardTitle = styled.h3`
   font-size: 1.375rem;
   font-weight: 400;
   margin: 0;
+  @media (max-width: 1024px) {
+      font-size: 1rem;
+
+  }      
 `;
 
 export const CardText = styled.p`

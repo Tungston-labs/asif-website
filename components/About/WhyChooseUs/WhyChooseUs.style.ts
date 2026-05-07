@@ -27,7 +27,10 @@ export const Heading = styled.h2`
   line-height: 1.3;
   margin: 0 auto 1rem; 
   color: #000;
-
+  @media (max-width: 1024px) {
+    font-size: 2rem;
+  margin: 0 auto 1rem; 
+  }
   @media (max-width: 768px) {
     font-size: 2rem;
     margin-bottom: 3rem;

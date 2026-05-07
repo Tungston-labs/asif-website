@@ -30,7 +30,7 @@ export const HeaderWrapper = styled.div`
   text-align: center;
   margin: -6rem auto 2rem;
  @media (max-width: 1024px) {
-      margin: -4rem auto 2rem;
+      margin: -2rem auto 2rem;
 
   }
   @media (max-width: 768px) {
@@ -152,7 +152,7 @@ export const Description = styled.p`
   @media (max-width: 768px) {
     text-align: center;
     margin-left: 20;
-        margin-right: 2rem;
+    margin-right: 2rem;
 
     max-width: 100%;
   }
@@ -209,28 +209,43 @@ export const Tab = styled.button<TabProps>`
 export const Grid = styled.div`
   position: relative;
   z-index: 1;
+
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
-  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.45);
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 
-  padding-left: calc((100% - 50%) / 2);
+  overflow-x: auto;
+  overflow-y: hidden;
+
   padding-right: calc((100% - 50%) / 2);
+
+  cursor: grab;
+
+  user-select: none;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  scroll-behavior: auto;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  /* ✅ PERFECT CENTER FIX */
+  &.dragging {
+    cursor: grabbing;
+  }
+
+  img {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+  }
+
   @media (max-width: 768px) {
     padding: 0 1.2rem;
-    scroll-padding-left: 1.2rem;
-    scroll-padding-right: 1.2rem;
   }
 `;
-
 export const Card = styled.div`
   flex: 0 0 800px;
   height: 476px;

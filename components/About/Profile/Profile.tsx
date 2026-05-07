@@ -47,11 +47,7 @@ const Profile = () => {
             creating spaces that elevate lifestyles, inspire communities,
             and stand the test of time. We deliver thoughtfully designed
             architecture house design and architectural home plans that
-            transform every project into a purposeful and functional space.
-          </Paragraph>
-
-          <Paragraph>
-            Founded in 2005 in Cochin, the practice was established by Asif Ahmed,
+            transform every project into a purposeful and functional space. Founded in 2005 in Cochin, the practice was established by Asif Ahmed,
             a Civil Engineering professional with a Diploma from Noorul Islam
             College of Engineering & Technology, followed by a Bachelor of
             Architecture (B.Arch) from MES College, Kuttippuram. With a

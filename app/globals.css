@@ -9,6 +9,7 @@
   body{
       font-family: var(--font-jost);
   }
+
   :root {
     --primary-color: #7774f4;
     --primary-bg-color: #ffffff;

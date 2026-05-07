@@ -76,13 +76,13 @@ export const InfoItem = styled.div`
 `;
 
 export const Label = styled.p`
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   letter-spacing: 0.0625rem;
   opacity: 0.7;
 `;
 
 export const Value = styled.p`
-  font-size: 0%.875rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-top: 0.25rem;
 `;
@@ -92,13 +92,13 @@ export const SocialIcons = styled.div`
   gap: 1rem;
   margin-top: 0.5rem;
 
-  @media (min-width: 993px) {
+  @media (max-width: 1024px) {
     justify-content: center;
+    display: flex;
+    margin-left: 1rem;
   }
 
-  @media (max-width: 992px) {
-    justify-content: flex-start;
-  }
+
 `;
 
 export const IconBox = styled.div`
@@ -158,7 +158,7 @@ export const BottomNav = styled.div`
 export const Copyright = styled.p`
   text-align: center;
   margin-top: 1.5rem;
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   opacity: 0.7;
   line-height: 1.5;
 
