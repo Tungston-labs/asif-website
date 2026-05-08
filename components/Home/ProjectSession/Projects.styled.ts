@@ -92,14 +92,32 @@ bottom: 4.5px;
 
 
 @media (max-width: 768px) {
-  --grid-start: 0;
-  --grid-right-extension: 0;
-  padding: 2rem 0 10px;
+  padding: 2rem 1.2rem 10px;
 
-  &::before,
-  .v-line,
+  &::before {
+    left: 0;
+    right: 0;
+    display: block;
+  }
+
   .bottom-line {
-    display: none;   /* ✅ ensure hidden */
+    left: 0;
+    right: 0;
+    display: block;
+  }
+
+  .v-line {
+    display: block;
+    top: 0;
+    bottom: 4.5px;
+  }
+
+  .v-left {
+    left: 0;
+  }
+
+  .v-right {
+    display: none;
   }
 }
 `;
