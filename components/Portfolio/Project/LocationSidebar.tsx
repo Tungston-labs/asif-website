@@ -1,5 +1,12 @@
+"use client";
+
 import React from "react";
-import { Sidebar, Title, LocationItem } from "./LocationSidebar.style";
+import {
+  Sidebar,
+  Title,
+  LocationItem,
+  ScrollWrapper,
+} from "./LocationSidebar.style";
 
 type Props = {
   locations: string[];
@@ -11,15 +18,20 @@ const LocationSidebar = ({ locations, selected, onSelect }: Props) => {
   return (
     <Sidebar>
       <Title>LOCATIONS</Title>
-      {locations.map((location) => (
-        <LocationItem
-          key={location}
-           $active={selected === location}
-          onClick={() => onSelect(location)}
-        >
-          {location}
-        </LocationItem>
-      ))}
+
+      <ScrollWrapper>
+        {locations.map((location) => (
+          <LocationItem
+            key={location}
+            type="button"
+            $active={selected === location}
+            aria-current={selected === location ? "true" : undefined}
+            onClick={() => onSelect(location)}
+          >
+            {location}
+          </LocationItem>
+        ))}
+      </ScrollWrapper>
     </Sidebar>
   );
 };

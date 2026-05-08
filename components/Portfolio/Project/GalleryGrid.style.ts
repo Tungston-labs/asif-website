@@ -1,88 +1,125 @@
 import styled from "styled-components";
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 23.6875rem 32.3125rem;
-  gap: 2.5rem;
-
-  /* ✅ Tablet */
-  @media (max-width: 75rem) {
-    grid-template-columns: 1fr 1fr;
-      grid-template-columns: 23.6875rem 32.3125rem;
-
-  }
-    @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-      grid-template-columns: 23.6875rem 32.3125rem;
-
-  }
-
-  /* ✅ Mobile */
-  @media (max-width: 48rem) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    
-  }
+export const Container = styled.div`
+  width: 100%;
+  min-width: 0;
 `;
 
-export const ImageWrapper = styled.div`
+export const InnerWrapper = styled.div`
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+`;
+
+export const MainImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 30.7875rem;
+  height: clamp(22.5rem, 42vw, 42.5rem);
+  min-height: 22.5rem;
   overflow: hidden;
 
-  @media (max-width: 64rem) {
-    height: 30.7875rem;
+  box-shadow:
+    0 0 25px rgba(0, 0, 0, 0.12),
+    0 15px 40px rgba(0, 0, 0, 0.18),
+    0 -10px 30px rgba(0, 0, 0, 0.08);
+
+  img {
+    object-fit: cover;
+    object-position: center;
   }
 
-  @media (max-width: 48rem) {
-    height: 22rem;
+  @media (min-width: 1600px) {
+    height: clamp(32.5rem, 31vw, 45rem);
   }
 
-  @media (max-width: 30rem) {
-    height: 30rem;
+  @media (min-width: 2200px) {
+    height: clamp(34rem, 28vw, 48rem);
+  }
+
+  @media (min-width: 2800px) {
+    height: clamp(35rem, 25vw, 50rem);
+  }
+
+  @media (max-width: 1024px) {
+    height: clamp(22.5rem, 58vw, 38.75rem);
+  }
+
+  @media (max-width: 768px) {
+    height: clamp(18.75rem, 64vw, 30rem);
+    min-height: 18.75rem;
+  }
+
+  @media (max-width: 480px) {
+    height: clamp(15rem, 70vw, 21.25rem);
+    min-height: 15rem;
   }
 `;
 
-export const ButtonWrapper = styled.div`
+export const ThumbnailRow = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-top: 3.75rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
 
-  
-  margin-bottom: 3.75rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+
+  padding: 0 0.125rem 0.625rem;
 
   width: 100%;
+  min-width: 0;
 
-  @media (max-width: 48rem) {
-    flex-direction: column;
-    gap: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #c8a24c #f2f2f2;
+  -webkit-overflow-scrolling: touch;
 
-    margin-top: 2.5rem;
-    margin-bottom: 3rem; 
+  &::-webkit-scrollbar {
+    height: 0.375rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c8a24c;
+    border-radius: 10px;
   }
 `;
 
-export const NavButton = styled.button`
-  background: #c8a24c;
-  color: #ffffff;
-  padding: 1.125rem 2.5rem;
-  border: none;
+export const Thumbnail = styled.div<{ $active: boolean }>`
+  position: relative;
+  width: 5rem;
+  min-width: 5rem;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
   cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 0.0625rem;
-  transition: 0.3s;
 
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+
+  ${(props) =>
+    props.$active &&
+    `
+    border: 2px solid #c8a24c;
+    transform: scale(1.05);
+  `}
+
+  &:hover {
+    transform: scale(1.05);
   }
 
-  &:hover:not(:disabled) {
-    opacity: 0.9;
-  }
-
-  @media (max-width: 48rem) {
-    width: 100%;
+  @media (max-width: 480px) {
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
   }
 `;
