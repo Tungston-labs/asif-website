@@ -1,40 +1,79 @@
 import styled from "styled-components";
 
 export const Sidebar = styled.div`
+  position: sticky;
+  top: 6rem;
   width: 17.5rem;
-  background: #ffffff;
-  border: 0.0625rem solid #1b1b1b33;
-  height: fit-content;
-  margin-left: -0.8rem;
+  max-width: 17.5rem;
+  flex-shrink: 0;
+  height: calc(clamp(22.5rem, 42vw, 42.5rem) + 6.625rem);
+  min-height: 0;
+  max-height: calc(clamp(22.5rem, 42vw, 42.5rem) + 6.625rem);
   overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #1b1b1b33;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1200px) {
+    width: 15.625rem;
+    max-width: 15.625rem;
+  }
+
+  @media (min-width: 1600px) {
+    height: calc(clamp(32.5rem, 31vw, 45rem) + 6.625rem);
+    max-height: calc(clamp(32.5rem, 31vw, 45rem) + 6.625rem);
+  }
+
+  @media (min-width: 2200px) {
+    height: calc(clamp(34rem, 28vw, 48rem) + 6.625rem);
+    max-height: calc(clamp(34rem, 28vw, 48rem) + 6.625rem);
+  }
+
+  @media (min-width: 2800px) {
+    height: calc(clamp(35rem, 25vw, 50rem) + 6.625rem);
+    max-height: calc(clamp(35rem, 25vw, 50rem) + 6.625rem);
+  }
 
   @media (max-width: 1024px) {
+    position: relative;
+    top: auto;
     width: 100%;
-    margin-left: 0;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    align-self: auto;
+    display: flex;
+    flex-direction: row;
   }
 `;
 
 export const Title = styled.div`
   padding: 1.25rem;
   font-weight: 600;
-  border-bottom: 0.0625rem solid #ddd;
+  border-bottom: 1px solid #ddd;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
 
-export const ScrollWrapper = styled.div<{ $showMore: boolean }>`
-  max-height: ${({ $showMore }) =>
-    $showMore ? "28rem" : "auto"};
-
-  overflow-y: ${({ $showMore }) =>
-    $showMore ? "auto" : "hidden"};
-
+export const ScrollWrapper = styled.div`
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: thin;
+  scrollbar-color: #c8a24c #f2f2f2;
 
   &::-webkit-scrollbar {
-    width: 5px;
+    width: 0.375rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2f2f2;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -42,81 +81,68 @@ export const ScrollWrapper = styled.div<{ $showMore: boolean }>`
     border-radius: 10px;
   }
 
-  /* ✅ TABLET + MOBILE RESPONSIVE */
   @media (max-width: 1024px) {
     display: flex;
+    flex: 0 1 auto;
+    width: 100%;
+    max-height: none;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    scrollbar-width: none;
-    width: 100%;
-    
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
-      display: none;
+      height: 0.375rem;
+      width: auto;
     }
   }
 `;
 
-export const LocationItem = styled.div<{ $active: boolean }>`
+export const LocationItem = styled.button<{ $active: boolean }>`
+  width: 100%;
   padding: 1.125rem 1.25rem;
-  border-bottom: 0.0625rem solid #eee;
+  border: 0;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
+  font: inherit;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  text-align: left;
   transition: 0.3s;
 
-  background: ${({ $active }) =>
-    ($active ? "#c8a24c" : "#fff")};
-
-  color: ${({ $active }) =>
-    ($active ? "#fff" : "#000")};
+  background: ${({ $active }) => ($active ? "#c8a24c" : "#fff")};
+  color: ${({ $active }) => ($active ? "#fff" : "#000")};
 
   &:hover {
     background: #c8a24c;
     color: #fff;
   }
 
-  /* ✅ TABLET + MOBILE */
+  &:focus-visible {
+    outline: 2px solid #c8a24c;
+    outline-offset: -2px;
+  }
+
   @media (max-width: 1024px) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    border-bottom: none;
-    border-right: 0.0625rem solid #eee;
-
-    min-width: 9rem;
     height: 3.5rem;
-
-    text-align: center;
+    width: auto;
+    min-width: max-content;
     flex-shrink: 0;
-
-    font-size: 0.95rem;
-    padding: 0 1rem;
+    padding: 0 1.125rem;
+    border-bottom: none;
+    border-right: 1px solid #eee;
+    overflow-wrap: normal;
+    text-align: center;
+    font-size: 0.9375rem;
   }
 
   @media (max-width: 480px) {
-    min-width: 8rem;
-    height: 3.2rem;
-    font-size: 0.85rem;
-  }
-`;
-
-export const ViewMoreButton = styled.button`
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  background: #f8f8f8;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-
-  &:hover {
-    background: #c8a24c;
-    color: #fff;
-  }
-
-  /* ✅ HIDE ONLY ON MOBILE */
-  @media (max-width: 768px) {
-    display: none;
+    height: 3.25rem;
+    padding: 0 0.875rem;
+    font-size: 0.8125rem;
   }
 `;

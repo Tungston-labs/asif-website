@@ -10,12 +10,20 @@ import {
   Thumbnail,
 } from "./GalleryGrid.style";
 
-const GalleryGrid = ({ images }) => {
+type Props = {
+  images: string[];
+};
+
+const GalleryGrid = ({ images }: Props) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   useEffect(() => {
     setSelectedImage(images[0]);
   }, [images]);
+
+  if (!selectedImage) {
+    return null;
+  }
 
   return (
     <Container>
@@ -26,6 +34,7 @@ const GalleryGrid = ({ images }) => {
             alt="Main Project Image"
             fill
             priority
+            sizes="(max-width: 1024px) 100vw, 1112px"
             style={{ objectFit: "cover" }}
           />
         </MainImageWrapper>
@@ -41,6 +50,7 @@ const GalleryGrid = ({ images }) => {
                 src={img}
                 alt="Thumbnail"
                 fill
+                sizes="80px"
                 style={{ objectFit: "cover" }}
               />
             </Thumbnail>

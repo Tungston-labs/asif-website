@@ -2,25 +2,20 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  min-width: 0;
 `;
 
 export const InnerWrapper = styled.div`
   width: 100%;
-  max-width: 1200px;
-
-  @media (min-width: 1400px) {
-    max-width: 1300px;
-  }
-
-  @media (min-width: 1600px) {
-    max-width: 1400px;
-  }
+  max-width: none;
+  min-width: 0;
 `;
 
 export const MainImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 65vh; /* ✅ FIT SCREEN HEIGHT */
+  height: clamp(22.5rem, 42vw, 42.5rem);
+  min-height: 22.5rem;
   overflow: hidden;
 
   box-shadow:
@@ -28,24 +23,35 @@ export const MainImageWrapper = styled.div`
     0 15px 40px rgba(0, 0, 0, 0.18),
     0 -10px 30px rgba(0, 0, 0, 0.08);
 
-  @media (min-width: 1400px) {
-    height: 70vh;
+  img {
+    object-fit: cover;
+    object-position: center;
   }
 
   @media (min-width: 1600px) {
-    height: 75vh;
+    height: clamp(32.5rem, 31vw, 45rem);
+  }
+
+  @media (min-width: 2200px) {
+    height: clamp(34rem, 28vw, 48rem);
+  }
+
+  @media (min-width: 2800px) {
+    height: clamp(35rem, 25vw, 50rem);
   }
 
   @media (max-width: 1024px) {
-    height: 55vh;
+    height: clamp(22.5rem, 58vw, 38.75rem);
   }
 
   @media (max-width: 768px) {
-    height: 45vh;
+    height: clamp(18.75rem, 64vw, 30rem);
+    min-height: 18.75rem;
   }
 
   @media (max-width: 480px) {
-    height: 32vh;
+    height: clamp(15rem, 70vw, 21.25rem);
+    min-height: 15rem;
   }
 `;
 
@@ -53,37 +59,45 @@ export const ThumbnailRow = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 
-  /* ✅ MOVE GALLERY UP */
   margin-top: 1rem;
-
   overflow-x: auto;
   overflow-y: hidden;
 
   flex-wrap: nowrap;
   scroll-behavior: smooth;
 
-  padding: 0 10px 10px 10px;
+  padding: 0 0.125rem 0.625rem;
 
   width: 100%;
   min-width: 0;
 
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #c8a24c #f2f2f2;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
-    display: none;
+    height: 0.375rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c8a24c;
+    border-radius: 10px;
   }
 `;
 
-export const Thumbnail = styled.div`
+export const Thumbnail = styled.div<{ $active: boolean }>`
   position: relative;
-  width: 80px;
-  min-width: 80px;
-  height: 80px;
+  width: 5rem;
+  min-width: 5rem;
+  height: 5rem;
 
-  border-radius: 12px;
+  border-radius: 0.5rem;
   overflow: hidden;
   cursor: pointer;
 
@@ -104,8 +118,8 @@ export const Thumbnail = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 65px;
-    min-width: 65px;
-    height: 65px;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
   }
 `;
