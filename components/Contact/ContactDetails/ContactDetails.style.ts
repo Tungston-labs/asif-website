@@ -70,8 +70,10 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   gap: 2.5rem;
 
-  @media (max-width: 64rem) {
-    gap: 2rem;
+  @media (max-width: 1024px) {
+justify-content: center;
+  flex-direction: column;
+display:flex;
   }
 
   @media (max-width: 48rem) {
@@ -115,8 +117,8 @@ export const CardTitle = styled.h3`
   font-weight: 400;
   margin: 0;
 
-  @media (max-width: 48rem) {
-    font-size: 1.125rem;
+  @media (max-width: 1024px) {
+    font-size: 1rem;
   }
 `;
 

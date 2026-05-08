@@ -17,6 +17,8 @@ export const NavbarContainer = styled.nav`
 
   position: relative;
   z-index: 1000;
+  @media (max-width: 1024px) {
+  padding: 0.8rem 1rem;  }
 `;
 
 export const CenterMenu = styled.div`
@@ -107,7 +109,9 @@ export const MenuItem = styled.li`
   a:hover {
     color: #d7ae5b;
   }
-
+  @media (max-width: 1024px) {
+    font-size: 0.86rem;
+  }
   @media (min-width: 769px) {
     a.active {
       color: #d7ae5b;
@@ -141,7 +145,7 @@ export const MenuItem = styled.li`
         align-items: center;
         gap: 0.5rem;
         background: #d7ae5b;
-        
+
         border-radius: 0.375rem;
         color: #000;
         font-weight: 600;

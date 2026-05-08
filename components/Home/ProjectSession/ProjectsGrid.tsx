@@ -5,14 +5,12 @@ import { projects } from "./Projects.data";
 import ProjectCard from "./ProjectsCard";
 import {
   Grid,
-  HeaderWrapper,
   LocationTitle,
   LocationDescription,
   PortButton,
   HeaderGrid,
   GridSection,
 } from "./Projects.styled";
-import { Button } from "@/components/Navbar/navbar.styles";
 import { useRouter } from "next/navigation";
 
 interface Props {
@@ -26,30 +24,65 @@ const ProjectsGrid = ({ location }: Props) => {
 
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+const isDragging = useRef(false);
+const startX = useRef(0);
+const startScrollLeft = useRef(0);
+const velocity = useRef(0);
+const animationFrame = useRef<number | null>(null);
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!gridRef.current) return;
+const handleMouseDown = (e: React.MouseEvent) => {
+  if (!gridRef.current) return;
 
-    setIsDown(true);
-    setStartX(e.pageX - gridRef.current.offsetLeft);
-    setScrollLeft(gridRef.current.scrollLeft);
-  };
+  isDragging.current = true;
 
-  const handleMouseLeave = () => setIsDown(false);
-  const handleMouseUp = () => setIsDown(false);
+  gridRef.current.classList.add("dragging");
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDown || !gridRef.current) return;
+  startX.current = e.clientX;
+  startScrollLeft.current = gridRef.current.scrollLeft;
 
-    e.preventDefault();
+  velocity.current = 0;
 
-    const x = e.pageX - gridRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    gridRef.current.scrollLeft = scrollLeft - walk;
-  };
+  if (animationFrame.current) {
+    cancelAnimationFrame(animationFrame.current);
+  }
+};
+
+const handleMouseMove = (e: React.MouseEvent) => {
+  if (!isDragging.current || !gridRef.current) return;
+
+  e.preventDefault();
+
+  const dx = e.clientX - startX.current;
+
+  velocity.current = dx;
+
+  gridRef.current.scrollLeft =
+    startScrollLeft.current - dx;
+};
+
+const momentumScroll = () => {
+  if (!gridRef.current) return;
+
+  velocity.current *= 0.92;
+
+  gridRef.current.scrollLeft -= velocity.current;
+
+  if (Math.abs(velocity.current) > 0.5) {
+    animationFrame.current =
+      requestAnimationFrame(momentumScroll);
+  }
+};
+
+const stopDragging = () => {
+  if (!gridRef.current) return;
+
+  isDragging.current = false;
+
+  gridRef.current.classList.remove("dragging");
+
+  animationFrame.current =
+    requestAnimationFrame(momentumScroll);
+};
   const project = projects.find((p) => p.location === location);
 
   if (!project) return null;
@@ -63,12 +96,12 @@ const ProjectsGrid = ({ location }: Props) => {
           <LocationDescription>{project.description}</LocationDescription>
         </HeaderGrid>
         <Grid
-          ref={gridRef}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
-        >
+  ref={gridRef}
+  onMouseDown={handleMouseDown}
+  onMouseMove={handleMouseMove}
+  onMouseUp={stopDragging}
+  onMouseLeave={stopDragging}
+>
           {project.images.map((image, index) => (
             <ProjectCard key={index} image={image} title={project.title} />
           ))}

@@ -9,6 +9,9 @@ export const Section = styled.section`
   
   @media (max-width: 1024px) {
     padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+
   }
 
   @media (max-width: 768px) {
@@ -38,8 +41,10 @@ export const LeftContainer = styled.div`
 }
 
   @media (max-width: 1024px) {
+
     width: 100%;
-    padding: 4rem 3rem;
+    padding: 4rem 1rem;
+  height: 41.625rem; 
   }
 
   @media (max-width: 768px) {
@@ -134,6 +139,11 @@ export const Input = styled.input`
 
   -webkit-appearance: none;
   appearance: none;
+   @media (max-width: 1024px) {
+    width: 100%;
+      font-size: 14px; 
+
+  }
 `;
 
 export const Select = styled.select`
@@ -152,6 +162,7 @@ export const Select = styled.select`
   -webkit-appearance: none;
   appearance: none;
 `;
+
 export const Button = styled.button`
   margin-top: 1.875rem; 
   padding: 1rem 2.5rem; 
@@ -165,7 +176,8 @@ export const Button = styled.button`
   cursor: pointer;
   width: fit-content;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 1024px) {
     width: 100%;
   }
+  
 `;

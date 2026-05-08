@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 6.25rem 0; 
+  padding: 3.25rem 0; 
   background: #ffffff;
 `;
 
@@ -14,10 +14,10 @@ export const Container = styled.div`
   display: flex;
   gap: 3.75rem; 
 
+ 
   @media (max-width: 1024px) {
-    gap: 2.5rem;
+    display: block; 
   }
-
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -27,8 +27,11 @@ export const Container = styled.div`
 export const Left = styled.div`
   flex: 0 0 26.25rem; 
 
-  @media (max-width: 1024px) {
-    flex: 0 0 22rem;
+   @media (max-width: 1024px) {
+    float: left;
+    width: 22rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 768px) {
@@ -77,6 +80,9 @@ export const ImageWrapper = styled.div`
 export const Right = styled.div`
   flex: 1;
 
+  @media (max-width: 1024px) {
+    display: block;
+  }
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -148,7 +154,9 @@ export const Paragraph = styled.p`
   color: #000000;
   margin-bottom: 1.25rem; 
   text-align: justify;
-
+@media (max-width: 1024px) {
+  font-size: 1rem; 
+  }
   @media (max-width: 768px) {
     text-align: justify;
   }

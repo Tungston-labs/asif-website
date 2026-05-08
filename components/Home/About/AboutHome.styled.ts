@@ -29,7 +29,8 @@ export const Container = styled.div`
   align-items: center;
 
   @media (max-width: 1024px) {
-    gap: 3rem;
+    grid-template-columns: 1fr; /* ✅ stack */
+    gap: 2.5rem;
   }
 
   @media (max-width: 768px) {
@@ -42,6 +43,9 @@ export const LeftContent = styled.div`
   position: relative;
   z-index: 2;
 
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -130,7 +134,9 @@ export const RightImages = styled.div`
   align-items: flex-start;
 
   @media (max-width: 1024px) {
-    gap: 1.5rem;
+    order: -1; 
+    margin-top: 4rem;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
@@ -201,6 +207,11 @@ export const ImageTitle = styled.h4`
 export const ImageSubtitle = styled.p`
   font-size: 0.75rem;
   color: #777;
+    @media (max-width: 1024px) {
+    font-size: 0.85rem;
+        margin-bottom:1rem;
+
+  }
   @media (max-width: 768px) {
     font-size: 1rem;
         margin-bottom:1rem;

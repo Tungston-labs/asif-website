@@ -29,7 +29,10 @@ export const DarkSection = styled.section`
   padding: 0 4rem;
   z-index: 2;
   transform: translateY(-2rem);
+  @media (max-width: 1024px) {
+      padding: 0 2rem;
 
+  }
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 2rem 0;
@@ -47,8 +50,8 @@ export const GalleryWrapper = styled.div`
   transform: translateY(-14rem); /* move upward */
 
   @media (max-width: 1024px) {
-    width: 40%;
-    max-height: 48rem;
+    width: 25%;
+    max-height: 3rem;
     margin-top: 8rem;
     transform: translateY(-12rem);
   }
@@ -82,7 +85,7 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
     height: 49rem;
   }
   @media (max-width: 1024px) and (min-width: 768px) {
-    height: 46rem;
+    height: 39rem;
   }
   @media (max-width: 768px) {
     height: 22rem;
@@ -142,8 +145,8 @@ export const ExperienceBox = styled.div`
   left: 2rem;
   color: #fff;
   @media (max-width: 1024px) {
-    bottom: -40rem;
-    left: 8rem;
+    bottom: -34rem;
+    left: 2rem;
   }
   @media (max-width: 768px) {
     position: absolute;
@@ -156,15 +159,17 @@ export const ExperienceBox = styled.div`
 
 export const ExperienceText = styled.h3`
   font-size: 2rem;
-  width: 70%;
   letter-spacing: 0.1rem;
+
+   @media (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
   @media (max-width: 768px) {
     font-size: 0.8rem;
   }
 `;
 
 export const ContentWrapper = styled.div`
-  margin-top: 0.5rem;
   @media (max-width: 768px) {
     margin-top: 1rem;
   }
@@ -174,9 +179,9 @@ export const Tag = styled.span<{ $color?: string }>`
   position: relative;
   display: inline-block;
   color: ${({ $color }) => $color || "#fff"};
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15rem;
-  padding: 0 1.8rem;
+  padding: 0 1rem;
 
   &::before {
     content: "";
@@ -205,19 +210,25 @@ export const Name = styled.h2`
   margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 300;
-
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;    
+  }
   strong {
     font-weight: 700;
   }
 `;
 
 export const Description = styled.p`
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   line-height: 1.8;
   color: #bbb;
-
+  
   @media (max-width: 1024px) {
     text-align: left;
+      line-height: 1.6;
+      font-size: 0.85rem;
+      max-width: 25rem;
+
   }
 
   @media (max-width: 768px) {
@@ -266,8 +277,15 @@ export const PortfolioText = styled.h1`
   -webkit-text-stroke: 1px rgba(227, 236, 229, 0.86);
   opacity: 0.7;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
     font-size: 6rem;
+      margin-left:1rem;
+
+  }
+  @media (max-width: 1024px) {
+    font-size: 4rem;
+      margin-left:1rem;
+
   }
 
   @media (max-width: 768px) {
@@ -292,7 +310,9 @@ export const SideImage = styled.div`
 
   @media (max-width: 1024px) {
     width: 13.9rem;
-    height: 12.9rem;
+    height: 10.9rem;
+    right: -1rem;
+    top: -0.2rem;
   }
 
   @media (max-width: 768px) {
@@ -333,7 +353,13 @@ export const SocialWrapper = styled.div`
     color: #d7ae5b;
     transform: translateY(-2px);
   }
+  @media (max-width: 1024px) {
+ 
 
+    margin-top: 2rem;
+    margin-left: 3.3rem;
+   
+  }
   @media (max-width: 768px) {
     position: relative;
     flex-direction: row;
@@ -372,7 +398,9 @@ export const PortfolioSection = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-
+@media (max-width: 1024px) {
+  gap: 0.2rem;
+  }
   @media (max-width: 768px) {
     flex-direction: column;
   }

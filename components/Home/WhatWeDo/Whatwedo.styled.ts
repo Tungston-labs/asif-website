@@ -51,7 +51,7 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   font-family: Jost;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
   color: #666;
   margin-top: 1rem;
