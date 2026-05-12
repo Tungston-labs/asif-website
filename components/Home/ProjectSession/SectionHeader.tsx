@@ -4,7 +4,7 @@ import { HeaderWrapper, Title, Description } from "./Projects.styled";
 const SectionHeader = () => {
   return (
     <HeaderWrapper>
-      <Tag $color="#000">OUR PROJECTS</Tag>
+      <Tag $color="#000000">OUR PROJECTS</Tag>
 
       <Title>
         EXPLORE OUR <strong>LATEST PROJECTS</strong>, <br />

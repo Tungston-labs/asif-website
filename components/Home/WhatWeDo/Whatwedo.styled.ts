@@ -28,14 +28,14 @@ export const LeftContent = styled.div`
 
 export const Title = styled.h2`
   font-family: Jost;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
+  font-size: 2.25rem;
+  font-weight: 300;
   line-height: 1.25;
   color: #111;
   margin-top: 1.6rem;
 
   span {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   @media (max-width: 768px) {
@@ -51,9 +51,10 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   font-family: Jost;
-  font-size: 15px;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 1.4;
-  color: #666;
+  color: #000000;
   margin-top: 1rem;
   margin-bottom: 1rem;
 `;
@@ -68,16 +69,17 @@ export const FeatureItem = styled.div``;
 
 export const FeatureTitle = styled.h4`
   font-family: Jost;
-  font-size: 16px;
-  font-weight: 500;
-  color: #111;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
   margin-bottom: 0.4rem;
 `;
 
 export const FeatureText = styled.p`
   font-family: Jost;
-  font-size: 15px;
-  color: #666;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
   line-height: 1.7;
 `;
 
@@ -99,7 +101,7 @@ export const QuoteButton = styled(Link)`
   &:hover {
     border: 1px solid #c9a45c;
     background: #fff;
-    color: #000;
+    color: #000000;
   }
   @media (max-width: 768px) {
    font-size: 1rem;

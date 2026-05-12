@@ -127,10 +127,15 @@ export const Label = styled.div`
 
 export const Title = styled.h1`
   font-size: 2.5rem; 
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.3;
   margin-bottom: 1.25rem; 
   color: #111;
+  
+  span {
+    font-weight: 500;
+  }
+
 
   @media (max-width: 768px) {
     font-size: 2.2rem;
@@ -148,7 +153,7 @@ export const Bold = styled.span`
 
 export const Paragraph = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 0.9375rem; 
+  font-size: 1rem; 
   font-weight: 300;
   line-height: 1.9;
   color: #000000;

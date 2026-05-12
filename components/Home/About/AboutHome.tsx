@@ -22,7 +22,7 @@ const AboutHome = () => {
     <Section>
       <Container>
         <LeftContent>
-          <Tag $color="#000">ABOUT US</Tag>
+          <Tag $color="#000000">ABOUT US</Tag>
 
           <Title>
             <strong>ARCHITECTURE</strong> IS NOT JUST ABOUT

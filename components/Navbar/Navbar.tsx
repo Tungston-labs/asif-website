@@ -38,7 +38,6 @@ const Navbar = () => {
 
       <CenterMenu>
         <Menu $open={menuOpen}>
-        
           {menuOpen && (
             <div className="mobile-header">
               <Image

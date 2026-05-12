@@ -43,7 +43,7 @@ export const LocationTag = styled.span`
   display: inline-block;
   padding: 0 1.25rem;
   margin-bottom: 1.5rem;
-  color: #111;
+  color: #000000;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.125rem;
@@ -77,11 +77,15 @@ export const LocationTag = styled.span`
 
 export const Heading = styled.h2`
   max-width: 56.25rem;
-  margin-bottom: 1.5rem;
-  color: #111;
+  margin-bottom: 2.25rem;
+  color: #000000;
   font-size: 2.25rem;
   font-weight: 300;
   line-height: 1.2;
+
+  span{
+    font-weight: 500;
+  }
 
   @media (max-width: 1024px) {
     font-size: 2rem;
@@ -102,8 +106,8 @@ export const Highlight = styled.span`
 
 export const Description = styled.p`
   max-width: 75.5rem;
-  color: #555;
-  font-size: 1.125rem;
+  color: #000000;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.6;
 

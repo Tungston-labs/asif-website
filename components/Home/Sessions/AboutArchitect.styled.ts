@@ -30,8 +30,7 @@ export const DarkSection = styled.section`
   z-index: 2;
   transform: translateY(-2rem);
   @media (max-width: 1024px) {
-      padding: 0 2rem;
-
+    padding: 0 2rem;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -161,7 +160,7 @@ export const ExperienceText = styled.h3`
   font-size: 2rem;
   letter-spacing: 0.1rem;
 
-   @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
     font-size: 1.5rem;
   }
   @media (max-width: 768px) {
@@ -178,7 +177,7 @@ export const ContentWrapper = styled.div`
 export const Tag = styled.span<{ $color?: string }>`
   position: relative;
   display: inline-block;
-  color: ${({ $color }) => $color || "#fff"};
+  color: ${({ $color }) => $color || "#FFFFFF"};
   font-size: 0.85rem;
   letter-spacing: 0.15rem;
   padding: 0 1rem;
@@ -208,27 +207,28 @@ export const Tag = styled.span<{ $color?: string }>`
 
 export const Name = styled.h2`
   margin-top: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 300;
   @media (max-width: 1024px) {
-    font-size: 1.8rem;    
+    font-size: 1.8rem;
   }
   strong {
-    font-weight: 700;
+    font-weight: 500;
   }
 `;
 
 export const Description = styled.p`
   margin-top: 0.5rem;
   line-height: 1.8;
-  color: #bbb;
-  
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 300;
+
   @media (max-width: 1024px) {
     text-align: left;
-      line-height: 1.6;
-      font-size: 0.85rem;
-      max-width: 25rem;
-
+    line-height: 1.6;
+    font-size: 0.85rem;
+    max-width: 25rem;
   }
 
   @media (max-width: 768px) {
@@ -239,7 +239,7 @@ export const Description = styled.p`
 export const TalkButton = styled(Link)`
   margin-top: 1rem;
   background-color: #d7ae5b;
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 14px 28px;
   font-weight: 500;
@@ -260,7 +260,7 @@ export const TalkButton = styled(Link)`
   }
 
   @media (max-width: 768px) {
-     font-size: 1rem;
+    font-size: 1rem;
     padding: 10px 14px;
     line-height: 1.4;
     margin-bottom: 1rem;
@@ -279,13 +279,11 @@ export const PortfolioText = styled.h1`
 
   @media (max-width: 1300px) {
     font-size: 6rem;
-      margin-left:1rem;
-
+    margin-left: 1rem;
   }
   @media (max-width: 1024px) {
     font-size: 4rem;
-      margin-left:1rem;
-
+    margin-left: 1rem;
   }
 
   @media (max-width: 768px) {
@@ -354,19 +352,14 @@ export const SocialWrapper = styled.div`
     transform: translateY(-2px);
   }
   @media (max-width: 1024px) {
- 
-
     margin-top: 2rem;
-    margin-left: 3.3rem;
-   
+    margin-left: 0.5rem;
   }
   @media (max-width: 768px) {
     position: relative;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 2rem;
-    margin-left: 3.3rem;
     right: auto;
     order: 1;
     transform: none;
@@ -398,8 +391,8 @@ export const PortfolioSection = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-@media (max-width: 1024px) {
-  gap: 0.2rem;
+  @media (max-width: 1024px) {
+    gap: 0.2rem;
   }
   @media (max-width: 768px) {
     flex-direction: column;

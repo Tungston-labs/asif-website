@@ -53,17 +53,17 @@ export const LeftContent = styled.div`
 
 export const Title = styled.h2`
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.35;
   font-weight: 300;
-  color: #111;
+  color: #000000;
 
   strong {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   span {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   @media (max-width: 1024px) {
@@ -83,8 +83,9 @@ export const Title = styled.h2`
 export const Description = styled.p`
   margin-top: 1.5rem;
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.8;
-  color: #666;
+  color: #000000;
   max-width: 32rem;
 
   @media (max-width: 768px) {

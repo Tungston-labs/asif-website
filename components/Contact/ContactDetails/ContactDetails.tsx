@@ -24,7 +24,7 @@ const ContactDetails = () => {
 
       <Heading>
         <>
-          Keep In <Bold> Touch </Bold> With Us
+          KEEP IN <span> TOUCH </span> WITH US
         </>
       </Heading>
       <Description>

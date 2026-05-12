@@ -73,7 +73,7 @@ export default function Testimonials() {
         </Subtitle>
       </Header>
 
-      <SliderWrapper>
+      {/* <SliderWrapper>
         <SliderTrack>
           {[...testimonialsData, ...testimonialsData].map((item, index) => (
             <Card key={index}>
@@ -93,7 +93,7 @@ export default function Testimonials() {
             </Card>
           ))}
         </SliderTrack>
-      </SliderWrapper>
+      </SliderWrapper> */}
     </Section>
   );
 }

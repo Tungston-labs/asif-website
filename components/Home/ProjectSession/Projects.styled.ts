@@ -29,9 +29,8 @@ export const Section = styled.section`
 export const HeaderWrapper = styled.div`
   text-align: center;
   margin: -6rem auto 2rem;
- @media (max-width: 1024px) {
-      margin: -2rem auto 2rem;
-
+  @media (max-width: 1024px) {
+    margin: -2rem auto 2rem;
   }
   @media (max-width: 768px) {
     text-align: center;
@@ -66,7 +65,7 @@ export const GridSection = styled.div`
     position: absolute;
     width: var(--border-size);
     top: 0;
-bottom: 4.5px;  
+    bottom: 4.5px;
     background: var(--border-color);
     pointer-events: none;
     z-index: 0;
@@ -90,36 +89,35 @@ bottom: 4.5px;
     z-index: 0;
   }
 
+  @media (max-width: 768px) {
+    padding: 2rem 1.2rem 10px;
 
-@media (max-width: 768px) {
-  padding: 2rem 1.2rem 10px;
+    &::before {
+      left: 0;
+      right: 0;
+      display: block;
+    }
 
-  &::before {
-    left: 0;
-    right: 0;
-    display: block;
+    .bottom-line {
+      left: 0;
+      right: 0;
+      display: block;
+    }
+
+    .v-line {
+      display: block;
+      top: 0;
+      bottom: 4.5px;
+    }
+
+    .v-left {
+      left: 0;
+    }
+
+    .v-right {
+      display: none;
+    }
   }
-
-  .bottom-line {
-    left: 0;
-    right: 0;
-    display: block;
-  }
-
-  .v-line {
-    display: block;
-    top: 0;
-    bottom: 4.5px;
-  }
-
-  .v-left {
-    left: 0;
-  }
-
-  .v-right {
-    display: none;
-  }
-}
 `;
 
 export const HeaderGrid = styled.div`
@@ -143,9 +141,10 @@ export const Tag = styled.span`
 
 export const Title = styled.h2`
   margin-top: 1rem;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   font-weight: 300;
   line-height: 1.4;
+  color: #000000;
 
   strong {
     font-weight: 500;
@@ -162,10 +161,12 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   margin-top: 1rem;
-  color: #666;
+  color: #000000;
   max-width: 65rem;
   margin-left: 12%;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -178,43 +179,43 @@ export const Description = styled.p`
 
 export const TabsWrapper = styled.div`
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
 
-  width: 100%;
-  max-width: 56rem;
-  margin-left:7%;
-  border: 1px solid #0000001a;
+  margin-bottom: 2rem;
+  margin-left: 15%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0rem;
+  max-width: fit-content;
 
   /* Tablet */
   @media (max-width: 1024px) {
     max-width: 50rem;
-        overflow-x: auto;
-
+    overflow-x: auto;
+    margin-left: 20%;
   }
 
   /* Mobile */
   @media (max-width: 768px) {
-  width: 100%;
-  max-width: 22rem;
-      padding: 0.5rem 1rem;
-    border: none;
+    width: 100%;
+    max-width: 39rem;
+    padding: 0.5rem 1rem;
     overflow-x: auto;
+    margin-left: 15%;
   }
 
   /* Small mobile */
   @media (max-width: 480px) {
     padding: 0.5rem;
+    margin-left: 2%;
   }
 `;
 
 export const Tab = styled.button<TabProps>`
   flex: 0 0 auto;
 
-  background: #fff; /* ✅ fixed, no conditional */
-  color: ${({ $active }) => ($active ? "#d7ae5b" : "#000")};
+  background: ${({ $active }) => ($active ? "#D7AE5B" : "#fff")};
+  color: ${({ $active }) => ($active ? "#030303" : "#000")};
 
-  border: 1px solid #ddd;
+  border: none; /* ✅ Removed separate box border */
   padding: 0.6rem 1.2rem;
   font-size: 0.85rem;
   white-space: nowrap;
@@ -223,7 +224,8 @@ export const Tab = styled.button<TabProps>`
 
   &:hover {
     background: #d7ae5b;
-  };`
+  }
+`;
 export const Grid = styled.div`
   position: relative;
   z-index: 1;
@@ -284,7 +286,6 @@ export const Card = styled.div`
     height: 420px;
   }
 
-  /* ✅ PERFECT CENTER (NO LEFT GAP) */
   @media (max-width: 768px) {
     flex: 0 0 calc(100% - 2.4rem);
     height: 280px;
@@ -299,6 +300,7 @@ export const Card = styled.div`
 export const LocationTitle = styled.h2`
   font-size: 1.5rem;
   margin-left: 15%;
+  font-weight: 400;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -308,6 +310,8 @@ export const LocationTitle = styled.h2`
 export const LocationDescription = styled.p`
   max-width: 80%;
   margin-left: 15%;
+  font-size: 1rem;
+  font-weight: 300;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -319,9 +323,7 @@ export const PortButton = styled.button`
   display: block;
   position: relative;
   z-index: 3;
-
   margin: 3rem auto 0;
-
   font-size: 1.2rem;
   text-transform: uppercase;
   background: none;

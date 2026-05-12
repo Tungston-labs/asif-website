@@ -1,7 +1,5 @@
-'use client'
+"use client";
 import styled, { keyframes } from "styled-components";
-
-/* ================= FLOAT BALL ================= */
 
 const floatAnimation = keyframes`
   0% {
@@ -38,26 +36,23 @@ export const Section = styled.section`
   overflow: hidden;
   margin-top: 5rem;
   color: white;
-  font-family: 'Jostto ', sans-serif;
+  font-family: "Jostto ", sans-serif;
 
   @media (max-width: 1024px) {
     padding: 6rem 3rem;
-      margin-top: 2rem;
-
+    margin-top: 2rem;
   }
 
   @media (max-width: 768px) {
     padding: 5rem 2rem;
-      margin-top: 2rem;
-
+    margin-top: 2rem;
   }
 
   @media (max-width: 480px) {
     padding: 4rem 2rem;
-      margin-top: 1rem;
-
+    margin-top: 1rem;
   }
-`
+`;
 
 /* ================= BACKGROUND BALL ================= */
 
@@ -68,7 +63,12 @@ export const BackgroundBall = styled.div`
   width: 31rem;
   height: 31rem;
   border-radius: 50%;
-  background: radial-gradient(circle, #FF833B 10%, rgba(255,140,0,0.1) 50%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    #ff833b 10%,
+    rgba(255, 140, 0, 0.1) 50%,
+    transparent 70%
+  );
   filter: blur(7.5rem);
   animation: ${floatAnimation} 18s ease-in-out infinite;
   z-index: 0;
@@ -90,7 +90,7 @@ export const Header = styled.div`
   position: relative;
   z-index: 2;
   margin-bottom: 1.5rem;
-  
+
   max-width: 50rem;
 
   @media (max-width: 768px) {
@@ -99,11 +99,13 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2rem;
-  font-weight: 200;
+  font-size: 2.25rem;
+  font-weight: 300;
   margin-top: 0.75rem;
+  font-family: "Jost", sans-serif;
+
   span {
-    font-weight: 400;
+    font-weight: 500;
   }
 
   @media (max-width: 768px) {
@@ -116,9 +118,9 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  color: #bfbfbf;
-  font-size: 1.1rem;
-    margin-top: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 
   @media (max-width: 480px) {
     font-size: 1rem;
@@ -166,7 +168,7 @@ export const Card = styled.div`
   @media (max-width: 768px) {
     width: 26rem;
     padding: 2rem;
-      height: 24rem;
+    height: 24rem;
   }
 
   @media (max-width: 480px) {
@@ -187,12 +189,7 @@ export const QuoteShape = styled.div`
   height: 2.9rem;
   background: #caa24d;
 
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 50%,
-    0 100%
-  );
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 `;
 
 export const Content = styled.p`
