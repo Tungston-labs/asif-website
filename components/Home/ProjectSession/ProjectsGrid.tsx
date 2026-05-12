@@ -24,65 +24,62 @@ const ProjectsGrid = ({ location }: Props) => {
 
   const gridRef = useRef<HTMLDivElement>(null);
 
-const isDragging = useRef(false);
-const startX = useRef(0);
-const startScrollLeft = useRef(0);
-const velocity = useRef(0);
-const animationFrame = useRef<number | null>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startScrollLeft = useRef(0);
+  const velocity = useRef(0);
+  const animationFrame = useRef<number | null>(null);
 
-const handleMouseDown = (e: React.MouseEvent) => {
-  if (!gridRef.current) return;
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!gridRef.current) return;
 
-  isDragging.current = true;
+    isDragging.current = true;
 
-  gridRef.current.classList.add("dragging");
+    gridRef.current.classList.add("dragging");
 
-  startX.current = e.clientX;
-  startScrollLeft.current = gridRef.current.scrollLeft;
+    startX.current = e.clientX;
+    startScrollLeft.current = gridRef.current.scrollLeft;
 
-  velocity.current = 0;
+    velocity.current = 0;
 
-  if (animationFrame.current) {
-    cancelAnimationFrame(animationFrame.current);
-  }
-};
+    if (animationFrame.current) {
+      cancelAnimationFrame(animationFrame.current);
+    }
+  };
 
-const handleMouseMove = (e: React.MouseEvent) => {
-  if (!isDragging.current || !gridRef.current) return;
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !gridRef.current) return;
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const dx = e.clientX - startX.current;
+    const dx = e.clientX - startX.current;
 
-  velocity.current = dx;
+    velocity.current = dx;
 
-  gridRef.current.scrollLeft =
-    startScrollLeft.current - dx;
-};
+    gridRef.current.scrollLeft = startScrollLeft.current - dx;
+  };
 
-const momentumScroll = () => {
-  if (!gridRef.current) return;
+  const momentumScroll = () => {
+    if (!gridRef.current) return;
 
-  velocity.current *= 0.92;
+    velocity.current *= 0.92;
 
-  gridRef.current.scrollLeft -= velocity.current;
+    gridRef.current.scrollLeft -= velocity.current;
 
-  if (Math.abs(velocity.current) > 0.5) {
-    animationFrame.current =
-      requestAnimationFrame(momentumScroll);
-  }
-};
+    if (Math.abs(velocity.current) > 0.5) {
+      animationFrame.current = requestAnimationFrame(momentumScroll);
+    }
+  };
 
-const stopDragging = () => {
-  if (!gridRef.current) return;
+  const stopDragging = () => {
+    if (!gridRef.current) return;
 
-  isDragging.current = false;
+    isDragging.current = false;
 
-  gridRef.current.classList.remove("dragging");
+    gridRef.current.classList.remove("dragging");
 
-  animationFrame.current =
-    requestAnimationFrame(momentumScroll);
-};
+    animationFrame.current = requestAnimationFrame(momentumScroll);
+  };
   const project = projects.find((p) => p.location === location);
 
   if (!project) return null;
@@ -96,14 +93,18 @@ const stopDragging = () => {
           <LocationDescription>{project.description}</LocationDescription>
         </HeaderGrid>
         <Grid
-  ref={gridRef}
-  onMouseDown={handleMouseDown}
-  onMouseMove={handleMouseMove}
-  onMouseUp={stopDragging}
-  onMouseLeave={stopDragging}
->
+          ref={gridRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={stopDragging}
+          onMouseLeave={stopDragging}
+        >
           {project.images.map((image, index) => (
-            <ProjectCard key={index} image={image} title={project.title} />
+            <ProjectCard
+              key={index}
+              image={image || ""}
+              title={project.title}
+            />
           ))}
         </Grid>
 
