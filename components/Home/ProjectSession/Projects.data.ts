@@ -4,7 +4,7 @@ export const projects = [
     location: "PAYYANUR",
     title: "Payyanur Projects",
     description:
-      " In Payyanur, our approach is rooted in simplicity and purposeful planning. We design homes that respond thoughtfully to the local climate, cultural context, and everyday living needs.",
+      "",
     images: [
       "/images/pynr3.png",
       "/images/pynr2.png",
@@ -187,7 +187,7 @@ export const projects = [
       "As a major urban center, Ernakulam demands smart and efficient architectural planning. Our architecture firm delivers refined residential and commercial spaces designed by experienced residential architects and commercial architects, combining modern aesthetics with practical functionality.",
     images: ["/images/Ekm1.png", "/images/Ekm1.png"],
   },
-  
+
   {
     id: 13,
     location: "ALUVA",
