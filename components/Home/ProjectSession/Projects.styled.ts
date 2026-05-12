@@ -4,132 +4,48 @@ interface TabProps {
   $active?: boolean;
 }
 
-const zoomAnimation = keyframes`
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+const scrollLoop = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 `;
 
 export const Section = styled.section`
-  padding: 0 4rem;
-
-  @media (max-width: 1024px) {
-    padding: 0 3rem;
-  }
+  
+  overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 3rem 1.2rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem 3rem;
   }
 `;
 
 export const HeaderWrapper = styled.div`
   text-align: center;
   margin: -6rem auto 2rem;
+
   @media (max-width: 1024px) {
     margin: -2rem auto 2rem;
   }
+
   @media (max-width: 768px) {
-    text-align: center;
-    margin: 0 0 2rem;
-    padding: 0;
+    margin: 0 auto 2rem;
   }
 `;
 
 export const GridSection = styled.div`
   position: relative;
-  isolation: isolate;
-  padding: 2rem 0 10px;
-
-  --border-color: rgba(0, 0, 0, 0.3);
-  --border-size: 1px;
-  --grid-start: 6rem;
-  --grid-right-extension: 4rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: var(--grid-start);
-    right: calc(var(--grid-right-extension) * -1);
-    height: var(--border-size);
-    background: var(--border-color);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .v-line {
-    position: absolute;
-    width: var(--border-size);
-    top: 0;
-    bottom: 4.5px;
-    background: var(--border-color);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .v-left {
-    left: var(--grid-start);
-  }
-  .v-right {
-    right: calc(var(--grid-right-extension) * -1);
-  }
-
-  .bottom-line {
-    position: absolute;
-    left: var(--grid-start);
-    right: calc(var(--grid-right-extension) * -1);
-    bottom: 4.5px;
-    height: var(--border-size);
-    background: var(--border-color);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  @media (max-width: 768px) {
-    padding: 2rem 1.2rem 10px;
-
-    &::before {
-      left: 0;
-      right: 0;
-      display: block;
-    }
-
-    .bottom-line {
-      left: 0;
-      right: 0;
-      display: block;
-    }
-
-    .v-line {
-      display: block;
-      top: 0;
-      bottom: 4.5px;
-    }
-
-    .v-left {
-      left: 0;
-    }
-
-    .v-right {
-      display: none;
-    }
-  }
+  padding-top: 1rem;
 `;
 
 export const HeaderGrid = styled.div`
-  position: relative;
-  z-index: 1;
-  max-width: 90%;
-  width: 90%;
-  margin: 0 2rem 2rem 0;
+  margin-bottom: 2rem;
 
   @media (max-width: 768px) {
-    max-width: 100%;
-    margin: 0 auto 2rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -169,43 +85,29 @@ export const Description = styled.p`
   font-weight: 300;
 
   @media (max-width: 768px) {
-    text-align: center;
-    margin-left: 20;
-    margin-right: 2rem;
-
+    margin-left: 0;
+    margin-right: 0;
     max-width: 100%;
   }
 `;
 
 export const TabsWrapper = styled.div`
   display: flex;
-
   margin-bottom: 2rem;
   margin-left: 15%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0rem;
-  max-width: fit-content;
+  width: fit-content;
+  overflow-x: auto;
 
-  /* Tablet */
-  @media (max-width: 1024px) {
-    max-width: 50rem;
-    overflow-x: auto;
-    margin-left: 20%;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
+    margin-left: 0;
     width: 100%;
-    max-width: 39rem;
-    padding: 0rem;
-    overflow-x: auto;
-    margin-left: 15%;
-  }
-
-  /* Small mobile */
-  @media (max-width: 480px) {
-    padding: 0rem;
-    margin-left: 2%;
   }
 `;
 
@@ -223,108 +125,73 @@ export const Tab = styled.button<TabProps>`
   outline: none;
 
   padding: 0.8rem 1.4rem;
-  min-height: 48px;
 
   font-size: 0.85rem;
   line-height: 1;
 
   white-space: nowrap;
 
-  transition: all 0.2s ease;
+  transition: 0.3s ease;
 
   &:hover {
     background: #d7ae5b;
   }
 
   @media (max-width: 768px) {
+    font-size: 0.78rem;
     padding: 0.75rem 1rem;
-    min-height: 44px;
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0.7rem 0.9rem;
-    min-height: 42px;
-    font-size: 0.75rem;
   }
 `;
-
 
 export const Grid = styled.div`
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  z-index: 1;
+`;
 
+export const SliderTrack = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 14px;
+  width: max-content;
 
-  overflow-x: auto;
-  overflow-y: hidden;
+  animation: ${scrollLoop} 28s linear infinite;
 
-  padding-right: calc((100% - 50%) / 2);
-
-  cursor: grab;
-
-  user-select: none;
-
-  scrollbar-width: none;
-
-  -webkit-overflow-scrolling: touch;
-
-  scroll-behavior: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &.dragging {
-    cursor: grabbing;
-  }
-
-  img {
-    pointer-events: none;
-    user-drag: none;
-    -webkit-user-drag: none;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 1.2rem;
+  &:hover {
+    animation-play-state: paused;
   }
 `;
+
 export const Card = styled.div`
-  flex: 0 0 800px;
-  height: 476px;
+  flex: 0 0 520px;
+  height: 295px;
   position: relative;
   overflow: hidden;
 
-  border-radius: 0.3rem;
-  scroll-snap-align: start;
+  border-radius: 0;
 
-  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.45);
-
-  &:hover {
-    transform: scale(1.03);
-  }
+  box-shadow: none;
 
   @media (max-width: 1024px) {
-    flex: 0 0 650px;
-    height: 420px;
-  }
-
-  @media (max-width: 768px) {
-    flex: 0 0 calc(100% - 2.4rem);
+    flex: 0 0 480px;
     height: 280px;
   }
 
+  @media (max-width: 768px) {
+    flex: 0 0 88vw;
+    height: 240px;
+  }
+
   @media (max-width: 480px) {
-    flex: 0 0 calc(100% - 2rem);
-    height: 250px;
+    flex: 0 0 92vw;
+    height: 220px;
   }
 `;
 
 export const LocationTitle = styled.h2`
-  font-size: 1.5rem;
-  margin-left: 15%;
+  font-size: 1.4rem;
   font-weight: 400;
+  margin-left: 15%;
+  margin-bottom: 0.6rem;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -336,6 +203,7 @@ export const LocationDescription = styled.p`
   margin-left: 15%;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 1.7;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -344,36 +212,36 @@ export const LocationDescription = styled.p`
 `;
 
 export const PortButton = styled.button`
-  display: block;
-  position: relative;
-  z-index: 3;
-  margin: 3rem auto 0;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  background: none;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2.5rem auto 0;
+
+  width: 182px;
+  height: 44px;
+
+  background: transparent;
+  border: 1px solid #6f6f6f;
+
+  color: #111;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+
   cursor: pointer;
 
-  width: fit-content; 
-  text-align: center;
+  transition: 0.3s ease;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%; 
-    height: 2px;
-    background: #d7ae5b;
-    z-index: 1;
+  &:hover {
+    background: #111;
+    color: #fff;
   }
 
   @media (max-width: 768px) {
-    margin: 2.5rem auto 0;
-  }
-
-  @media (max-width: 480px) {
-    margin: 2rem auto 0;
+    width: 170px;
+    height: 42px;
+    font-size: 0.78rem;
   }
 `;
 
@@ -386,10 +254,6 @@ export const CardImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-
-  ${Card}:hover & img {
-    transform: scale(1.08);
+    transition: none;
   }
 `;
