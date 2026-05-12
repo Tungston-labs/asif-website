@@ -197,14 +197,14 @@ export const TabsWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     max-width: 39rem;
-    padding: 0.5rem 1rem;
+    padding: 0rem;
     overflow-x: auto;
     margin-left: 15%;
   }
 
   /* Small mobile */
   @media (max-width: 480px) {
-    padding: 0.5rem;
+    padding: 0rem;
     margin-left: 2%;
   }
 `;
@@ -212,12 +212,22 @@ export const TabsWrapper = styled.div`
 export const Tab = styled.button<TabProps>`
   flex: 0 0 auto;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: ${({ $active }) => ($active ? "#D7AE5B" : "#fff")};
   color: ${({ $active }) => ($active ? "#030303" : "#000")};
 
-  border: none; /* ✅ Removed separate box border */
-  padding: 0.6rem 1.2rem;
+  border: none;
+  outline: none;
+
+  padding: 0.8rem 1.4rem;
+  min-height: 48px;
+
   font-size: 0.85rem;
+  line-height: 1;
+
   white-space: nowrap;
 
   transition: all 0.2s ease;
@@ -225,7 +235,21 @@ export const Tab = styled.button<TabProps>`
   &:hover {
     background: #d7ae5b;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.7rem 0.9rem;
+    min-height: 42px;
+    font-size: 0.75rem;
+  }
 `;
+
+
 export const Grid = styled.div`
   position: relative;
   z-index: 1;
@@ -330,7 +354,7 @@ export const PortButton = styled.button`
   border: none;
   cursor: pointer;
 
-  width: fit-content; /* shrink to text width */
+  width: fit-content; 
   text-align: center;
 
   &::after {
@@ -338,7 +362,7 @@ export const PortButton = styled.button`
     position: absolute;
     left: 0;
     bottom: -6px;
-    width: 100%; /* now matches text width perfectly */
+    width: 100%; 
     height: 2px;
     background: #d7ae5b;
     z-index: 1;

@@ -187,6 +187,7 @@ export const projects = [
       "As a major urban center, Ernakulam demands smart and efficient architectural planning. Our architecture firm delivers refined residential and commercial spaces designed by experienced residential architects and commercial architects, combining modern aesthetics with practical functionality.",
     images: ["/images/Ekm1.png", "/images/Ekm1.png"],
   },
+  
   {
     id: 13,
     location: "ALUVA",
