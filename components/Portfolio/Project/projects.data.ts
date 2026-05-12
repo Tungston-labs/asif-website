@@ -148,22 +148,22 @@ export const projectsData: ProjectData[] = [
   {
     location: "VARAPUZHA",
     images: [
-      "/images/Kaloor4.jpeg",
-      "/images/Kaloor3.jpeg",
-      "/images/Kaloor2.jpeg",
-      "/images/Kaloor1.jpeg",
-      "/images/Kaloor5.jpeg",
+      "/images/varappuzha1.jpeg",
+      "/images/varappuzha3.jpeg",
+      "/images/varappuzha2.jpeg",
+      "/images/varappuzha4.jpeg",
+      "/images/varappuzha5.jpeg",
     ],
   },
 
   {
     location: "KALOOR",
     images: [
-      "/images/KaloorA2.jpeg",
-      "/images/KaloorA1.jpeg",
-      "/images/KaloorA3.jpeg",
-      "/images/KaloorA4.jpeg",
-      "/images/KaloorA5.jpeg",
+      "/images/kaloorA2.jpeg",
+      "/images/kaloorA1.jpeg",
+      "/images/kaloorA3.jpeg",
+      "/images/kaloorA4.jpeg",
+      "/images/kaloorA5.jpeg",
     ],
   },
 

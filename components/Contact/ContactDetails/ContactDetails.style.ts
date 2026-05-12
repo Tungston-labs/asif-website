@@ -23,11 +23,16 @@ export const Section = styled.section`
 
 export const Heading = styled.h2`
   font-family: var(--font-jost), sans-serif;
-  font-size: 3.0625rem;
+  font-size: 2.25rem;
   font-weight: 300;
   line-height: 1.3;
-  margin-bottom: 0.5rem;
+  margin-top: 0.9rem;
+  margin-bottom: 1.3rem;
   color: #000;
+
+  span{
+    font-weight: 500;
+  }
 
   @media (max-width: 64rem) {
     font-size: 2.5rem;
@@ -50,7 +55,7 @@ export const Description = styled.p`
   font-weight: 300;
   line-height: 1.5rem;
   max-width: 62.5rem;
-  margin-left: 4rem;
+  margin-left: 11rem;
   color: #000000;
   margin-bottom: 2rem;
   text-transform: capitalize;
@@ -113,8 +118,8 @@ export const IconWrapper = styled.div`
 
 export const CardTitle = styled.h3`
   font-family: var(--font-jost), sans-serif;
-  font-size: 1.375rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 500;
   margin: 0;
 
   @media (max-width: 1024px) {
@@ -124,7 +129,7 @@ export const CardTitle = styled.h3`
 
 export const CardText = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 300;
   margin-left: 4rem;
   line-height: 1.9;

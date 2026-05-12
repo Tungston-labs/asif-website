@@ -81,8 +81,8 @@ export const RightContainer = styled.div`
 
 export const Title = styled.h2`
   font-family: var(--font-jost), sans-serif;
-  font-size: 2.375rem; 
-  font-weight: 400;
+  font-size: 1.5 rem; 
+  font-weight: 500;
   margin-bottom: 1.25rem; 
 
   @media (max-width: 768px) {
@@ -106,6 +106,8 @@ export const Form = styled.form`
   h4 {
     font-family: var(--font-jost), sans-serif;
     font-weight: 400;
+    font-size: 1rem;
+    color: #FFFFFF;
     margin: 1.875rem 0 1.25rem; 
   }
 `;
@@ -128,10 +130,10 @@ export const Input = styled.input`
   color: #fff;
   font-family: var(--font-jost), sans-serif;
   font-weight: 300;
+  font-size: 1rem;
   outline: none;
   border-radius: 0.3125rem; 
 
-  font-size: 16px; 
 
   &::placeholder {
     color: #888;

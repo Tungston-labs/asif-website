@@ -17,8 +17,8 @@ const Banner = () => {
         <LocationTag>OUR PORTFOLIO</LocationTag>
 
         <Heading>
-          Explore Our <Highlight>Latest Projects</Highlight>, <br />
-          Where <Highlight>Innovation</Highlight> Meets Luxury
+          EXPLORE OUR <span>LATEST PROJECTS</span>, <br />
+          WHERE <span>INNOVATION</span> MEETS LUXURY
         </Heading>
 
         <Description>

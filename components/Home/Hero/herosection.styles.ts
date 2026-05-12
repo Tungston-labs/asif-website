@@ -158,10 +158,10 @@ export const DecorImage = styled(Image)`
   }
 `;
 export const Title = styled.h1`
-  font-size: clamp(2rem, 5vw, 3rem); /* 🔥 responsive scaling */
+  font-size: clamp(2rem, 5vw, 3rem); 
   font-weight: 300;
   letter-spacing: 0.08rem;
-  color: #111;
+  color: #000000;
   line-height: 1.25;
 
   span {
@@ -178,7 +178,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   margin-top: 1rem;
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: #666;
+  color: #000000;
   max-width: 32rem;
   margin-left: auto;
   margin-right: auto;
@@ -209,7 +209,7 @@ export const PrimaryButton = styled.button`
   font-size: 0.8rem;
 
   &:hover {
-    color: #000;
+    color: #000000;
     background-color: white;
     border: 1px solid #d7ae5b;
   }
@@ -220,7 +220,7 @@ export const PrimaryButton = styled.button`
 `;
 
 export const SecondaryButton = styled.button`
-  background: #000;
+  background: #000000;
   color: #fff;
   border-radius: 0.3rem;
   border: none;
@@ -231,8 +231,8 @@ export const SecondaryButton = styled.button`
   font-size: 0.8rem;
 
   &:hover {
-    color: #000;
+    color: #000000;
     background-color: white;
-    border: 1px solid #000;
+    border: 1px solid #000000;
   }
 `;
