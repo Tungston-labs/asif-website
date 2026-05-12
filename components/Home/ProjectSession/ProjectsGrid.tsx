@@ -103,7 +103,7 @@ const ProjectsGrid = ({ location }: Props) => {
             <ProjectCard
               key={index}
               image={image || ""}
-              title={project.title}
+              title={project.title || ""}
             />
           ))}
         </Grid>
