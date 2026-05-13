@@ -5,11 +5,11 @@ interface TabProps {
 }
 
 const scrollLoop = keyframes`
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
+  to {
     transform: translateX(-50%);
   }
 `;
@@ -132,8 +132,10 @@ export const Tab = styled.button<TabProps>`
 
   transition: 0.3s ease;
 
-  &:hover {
-    background: #d7ae5b;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #d7ae5b;
+    }
   }
 
   @media (max-width: 768px) {
@@ -151,9 +153,15 @@ export const Grid = styled.div`
 export const SliderTrack = styled.div`
   display: flex;
   gap: 14px;
-  width: max-content;
 
-  animation: ${scrollLoop} 28s linear infinite;
+  flex-wrap: nowrap;
+
+  width: fit-content;
+
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+
+  animation: ${scrollLoop} 20s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -161,27 +169,28 @@ export const SliderTrack = styled.div`
 `;
 
 export const Card = styled.div`
-  flex: 0 0 520px;
+  flex: 0 0 auto;
+
+  width: 520px;
   height: 295px;
+
   position: relative;
   overflow: hidden;
 
-  border-radius: 0;
-
-  box-shadow: none;
+  contain: layout paint;
 
   @media (max-width: 1024px) {
-    flex: 0 0 480px;
+    width: 480px;
     height: 280px;
   }
 
   @media (max-width: 768px) {
-    flex: 0 0 88vw;
+    width: 88vw;
     height: 240px;
   }
 
   @media (max-width: 480px) {
-    flex: 0 0 92vw;
+    width: 92vw;
     height: 220px;
   }
 `;
@@ -249,10 +258,22 @@ export const CardImage = styled.div`
   height: 100%;
   overflow: hidden;
 
+  transform: translateZ(0);
+  will-change: transform;
+
   img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+    display: block;
+
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+
+    will-change: transform;
+
     transition: none;
   }
 `;

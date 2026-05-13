@@ -28,6 +28,7 @@ const manrope = Manrope({
   weight: ["400", "500", "600"],
   variable: "--font-manrope",
 });
+
 export default function RootLayout({
   children,
 }: {
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${jost.className} ${caveat.variable} ${manrope.variable}`}
     >
       <body>

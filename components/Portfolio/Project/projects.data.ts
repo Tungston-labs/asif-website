@@ -89,7 +89,7 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "MALAPPURAM",
+    location: "PUTHANATHANI",
     images: [
       "/images/malappuram4.jpeg",
       "/images/malappuram6.jpeg",

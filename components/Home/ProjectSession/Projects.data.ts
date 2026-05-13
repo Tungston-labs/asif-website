@@ -143,7 +143,7 @@ export const projects = [
 
   {
     id: 10,
-    location: "MALAPPURAM",
+    location: "PUTHANATHANI",
     title: "Koothattukulam Projects",
     description:
       "Custom-designed residential spaces focused on functionality, comfort, and architectural excellence.",

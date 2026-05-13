@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { projects } from "./Projects.data";
 import ProjectCard from "./ProjectsCard";
 import {
@@ -20,11 +21,16 @@ interface Props {
 const ProjectsGrid = ({ location }: Props) => {
   const router = useRouter();
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const project = projects.find((p) => p.location === location);
 
-  if (!project) return null;
+  if (!project || !mounted) return null;
 
-  // duplicate images for seamless infinite loop
   const loopImages = [...project.images, ...project.images];
 
   return (
