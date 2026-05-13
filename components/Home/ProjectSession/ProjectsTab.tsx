@@ -11,7 +11,7 @@ const locations = [
   "KANNUR",
   "TIRUR",
   "ALAPPUZHA",
-  "MALAPPURAM",
+  "PUTHANATHANI",
   "PALAKKAD",
   
 ];
