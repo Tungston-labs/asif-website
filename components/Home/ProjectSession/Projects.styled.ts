@@ -15,7 +15,6 @@ const scrollLoop = keyframes`
 `;
 
 export const Section = styled.section`
-  
   overflow: hidden;
 
   @media (max-width: 768px) {
