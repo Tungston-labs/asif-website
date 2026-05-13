@@ -48,6 +48,7 @@ export const projects = [
     description:
       "Contemporary residential developments tailored for urban living and smart space utilization.",
     images: [
+      "/images/vennala7.jpeg",
       "/images/vennala1.jpeg",
       "/images/vennala2.jpeg",
       "/images/vennala6.jpeg",

@@ -71,6 +71,7 @@ export const projectsData: ProjectData[] = [
   {
     location: "VENNALA",
     images: [
+      "/images/vennala7.jpeg",
       "/images/vennala1.jpeg",
       "/images/vennala2.jpeg",
       "/images/vennala6.jpeg",
