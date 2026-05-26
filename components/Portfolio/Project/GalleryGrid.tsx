@@ -28,14 +28,24 @@ const GalleryGrid = ({ images }: Props) => {
   return (
     <Container>
       <InnerWrapper>
+
         <MainImageWrapper>
           <Image
             src={selectedImage}
             alt="Main Project Image"
-            fill
+            width={1200}
+            height={1200}
             priority
-            sizes="(max-width: 1024px) 100vw, 1112px"
-            style={{ objectFit: "cover" }}
+            draggable={false}
+            sizes="100vw"
+            style={{
+              width: "auto",
+              height: "auto",
+              maxWidth: "100%",
+              maxHeight: "100%",
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
           />
         </MainImageWrapper>
 

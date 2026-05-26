@@ -3,55 +3,45 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   min-width: 0;
+
+    overflow: hidden;
+
 `;
 
 export const InnerWrapper = styled.div`
   width: 100%;
   max-width: none;
   min-width: 0;
+    overflow: hidden;
+
 `;
 
 export const MainImageWrapper = styled.div`
-  position: relative;
   width: 100%;
-  height: clamp(22.5rem, 42vw, 42.5rem);
-  min-height: 22.5rem;
+  height: 700px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   overflow: hidden;
 
-  box-shadow:
-    0 0 25px rgba(0, 0, 0, 0.12),
-    0 15px 40px rgba(0, 0, 0, 0.18),
-    0 -10px 30px rgba(0, 0, 0, 0.08);
+  background: #fff;
 
-  img {
-    object-fit: cover;
-    object-position: center;
-  }
+  border-radius: 12px;
 
-  @media (min-width: 1600px) {
-    height: clamp(32.5rem, 31vw, 45rem);
-  }
-
-  @media (min-width: 2200px) {
-    height: clamp(34rem, 28vw, 48rem);
-  }
-
-  @media (min-width: 2800px) {
-    height: clamp(35rem, 25vw, 50rem);
-  }
+  position: relative;
 
   @media (max-width: 1024px) {
-    height: clamp(22.5rem, 58vw, 38.75rem);
+    height: 500px;
   }
 
   @media (max-width: 768px) {
-    height: clamp(18.75rem, 64vw, 30rem);
-    min-height: 18.75rem;
+    height: 400px;
   }
 
   @media (max-width: 480px) {
-    height: clamp(15rem, 70vw, 21.25rem);
-    min-height: 15rem;
+    height: 300px;
   }
 `;
 
@@ -70,7 +60,7 @@ export const ThumbnailRow = styled.div`
 
   padding: 0 0.125rem 0.625rem;
 
-  width: 100%;
+max-width: 100%;
   min-width: 0;
 
   scrollbar-width: thin;
