@@ -41,7 +41,7 @@ export const MainImageWrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    height: 300px;
+    height: 200px;
   }
 `;
 
