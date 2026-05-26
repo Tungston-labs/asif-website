@@ -142,4 +142,53 @@ export const projectsData: ProjectData[] = [
       "/images/BANGLORE/BNGLR-3.jpg",
     ],
   },
+  {
+    location: "LOCCATION - 1",
+    images: [
+      "/images/LOCATION1.1.jpeg",
+      "/images/LOCATION1.2.jpeg",
+      "/images/LOCATION1.3.jpeg",
+    ],
+  },
+  {
+    location: "LOCCATION - 2",
+    images: [
+      "/images/LOCATION2.1.jpeg",
+      "/images/LOCATION2.2.jpeg",
+    ],
+  },
+  {
+    location: "LOCCATION - 3",
+    images: [
+      "/images/LOCATION3.1.jpeg",
+      "/images/LOCATION3.2.jpeg",
+    ],
+  },
+  {
+    location: "LOCCATION - 4",
+    images: [
+      "/images/LOCATION4.1.jpeg",
+      "/images/LOCATION4.2.jpeg",
+      "/images/LOCATION4.3.jpeg",
+    ],
+  },
+  {
+    location: "LOCCATION - 5",
+    images: [
+      "/images/LOCATION5.5.jpeg",
+      "/images/LOCATION5.4.jpeg",
+      "/images/LOCATION5.3.jpeg",
+      "/images/LOCATION5.1.jpeg",
+      "/images/LOCATION5.2.jpeg",
+      
+    ],
+  },
+  {
+    location: "LOCCATION - 6",
+    images: [
+       "/images/LOCATION6.3.jpeg",
+      "/images/LOCATION6.1.jpeg",
+      "/images/LOCATION6.2.jpeg",
+    ],
+  },
 ];
