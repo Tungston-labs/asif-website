@@ -18,8 +18,9 @@ export const InnerWrapper = styled.div`
 `;
 
 export const MainImageWrapper = styled.div`
-  width: 100%;
+  width: 94%;
   min-width: 0;
+  margin-left: 2rem;
   height: var(--main-image-height);
   display: flex;
   justify-content: center;
