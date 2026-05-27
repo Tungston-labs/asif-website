@@ -57,16 +57,16 @@ export const projectsData: ProjectData[] = [
       "/images/vennala1.jpeg",
       "/images/vennala6.jpeg",
       "/images/vennala4.jpeg",
-      "/images/vennala5.jpeg",
+      "/images/vennalaaa5.jpeg",
     ],
   },
 
   {
     location: "MANNARKAD",
     images: [
-      "/images/Mannarkad4.jpeg",
       "/images/Mannarkad3.jpeg",
       "/images/Mannarkad2.jpeg",
+      "/images/Mannarkad4.jpeg",
     ],
   },
 
@@ -109,12 +109,10 @@ export const projectsData: ProjectData[] = [
     location: "KOOTHATTUKULAM",
     images: [
       "/images/koothattukulam7.jpeg",
+      "/images/koothattukulammmm4.jpeg",
       "/images/koothattukulam2.jpeg",
-      "/images/koothattukulam4.jpeg",
-      "/images/koothattukulam8.jpeg",
       "/images/koothattukulam6.jpeg",
       "/images/koothattukulam3.jpeg",
-      "/images/koothattukulam9.jpeg",
     ],
   },
 
@@ -131,9 +129,9 @@ export const projectsData: ProjectData[] = [
   {
     location: "BANGALORE",
     images: [
-      "/images/BANGLORE/BNGLR-2.jpg",
-      "/images/BANGLORE/BNGLR-1.jpg",
+      "/images/bnglrrr1.jpeg",
       "/images/BANGLORE/BNGLR-3.jpg",
+      "/images/BANGLORE/BNGLR-2.jpg",
     ],
   },
   {
@@ -146,11 +144,11 @@ export const projectsData: ProjectData[] = [
   },
   {
     location: "LOCATION - 2",
-    images: ["/images/LOCATION2.1.jpeg", "/images/LOCATION2.2.jpeg"],
+    images: ["/images/LOCATION2.2.jpeg", "/images/LOCATION2.1.jpeg"],
   },
   {
     location: "LOCATION - 3",
-    images: ["/images/LOCATION3.1.jpeg", "/images/LOCATION3.2.jpeg"],
+    images: ["/images/LOCATION3.2.jpeg", "/images/LOCATION3.1.jpeg"],
   },
   {
     location: "LOCATION - 4",
