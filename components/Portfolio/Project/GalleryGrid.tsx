@@ -14,9 +14,13 @@ import {
 
 type Props = {
   images: string[];
+  selectedLocation: string;
 };
 
-const GalleryGrid = ({ images }: Props) => {
+const GalleryGrid = ({
+  images,
+  selectedLocation,
+}: Props) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   useEffect(() => {
@@ -42,10 +46,12 @@ const GalleryGrid = ({ images }: Props) => {
         </MainImageWrapper>
 
         <ThumbnailRow>
-          <ThumbnailTrack>
+          <ThumbnailTrack
+            $isAll={selectedLocation === "ALL"}
+          >
             {images.map((img, index) => (
               <Thumbnail
-                key={index}
+                key={img}
                 type="button"
                 onClick={() => setSelectedImage(img)}
                 $active={selectedImage === img}
