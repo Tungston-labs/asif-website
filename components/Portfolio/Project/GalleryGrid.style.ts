@@ -11,6 +11,7 @@ export const InnerWrapper = styled.div`
   width: 100%;
   max-width: none;
   min-width: 0;
+  margin-left: 2rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -18,9 +19,8 @@ export const InnerWrapper = styled.div`
 `;
 
 export const MainImageWrapper = styled.div`
-  width: 94%;
+  width: 100%;
   min-width: 0;
-  margin-left: 2rem;
   height: var(--main-image-height);
   display: flex;
   justify-content: center;
@@ -63,7 +63,6 @@ export const ThumbnailTrack = styled.div<{
   justify-content: ${({ $isAll }) =>
     $isAll ? "flex-start" : "center"};
   gap: 16px;
-  margin-left: 2rem;
   @media (max-width: 1200px) {
     gap: 12px;
   }
