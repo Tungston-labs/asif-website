@@ -3,40 +3,21 @@ import styled from "styled-components";
 export const Sidebar = styled.div`
   position: sticky;
   top: 6rem;
-  width: 17.5rem;
-  max-width: 17.5rem;
+  width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
   flex-shrink: 0;
-  height: calc(clamp(22.5rem, 42vw, 42.5rem) + 6.625rem);
+  height: var(--portfolio-panel-height);
   min-height: 0;
-  max-height: calc(clamp(22.5rem, 42vw, 42.5rem) + 6.625rem);
+  max-height: var(--portfolio-panel-height);
   overflow: hidden;
+  margin-left: 2rem;
   background: #ffffff;
   border: 1px solid #1b1b1b33;
   z-index: 2;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1200px) {
-    width: 15.625rem;
-    max-width: 15.625rem;
-  }
-
-  @media (min-width: 1600px) {
-    height: calc(clamp(32.5rem, 31vw, 45rem) + 6.625rem);
-    max-height: calc(clamp(32.5rem, 31vw, 45rem) + 6.625rem);
-  }
-
-  @media (min-width: 2200px) {
-    height: calc(clamp(34rem, 28vw, 48rem) + 6.625rem);
-    max-height: calc(clamp(34rem, 28vw, 48rem) + 6.625rem);
-  }
-
-  @media (min-width: 2800px) {
-    height: calc(clamp(35rem, 25vw, 50rem) + 6.625rem);
-    max-height: calc(clamp(35rem, 25vw, 50rem) + 6.625rem);
-  }
-
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     position: relative;
     top: auto;
     width: 100%;
@@ -55,7 +36,7 @@ export const Title = styled.div`
   font-weight: 600;
   border-bottom: 1px solid #ddd;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 `;
@@ -81,7 +62,7 @@ export const ScrollWrapper = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: flex;
     flex: 0 1 auto;
     width: 100%;
@@ -124,7 +105,7 @@ export const LocationItem = styled.button<{ $active: boolean }>`
     outline-offset: -2px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: inline-flex;
     align-items: center;
     justify-content: center;

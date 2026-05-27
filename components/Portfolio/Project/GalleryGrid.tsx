@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import {
   Container,
   InnerWrapper,
+  MainImage,
   MainImageWrapper,
-  ThumbnailRow,
   Thumbnail,
+  ThumbnailImage,
+  ThumbnailRow,
+  ThumbnailTrack,
 } from "./GalleryGrid.style";
 
 type Props = {
@@ -28,43 +30,37 @@ const GalleryGrid = ({ images }: Props) => {
   return (
     <Container>
       <InnerWrapper>
-
         <MainImageWrapper>
-          <Image
+          <MainImage
             src={selectedImage}
             alt="Main Project Image"
-            width={1200}
-            height={1200}
+            fill
             priority
             draggable={false}
             sizes="100vw"
-            style={{
-              width: "auto",
-              height: "auto",
-              maxWidth: "100%",
-              maxHeight: "100%",
-              objectFit: "contain",
-              objectPosition: "center",
-            }}
           />
         </MainImageWrapper>
 
         <ThumbnailRow>
-          {images.map((img, index) => (
-            <Thumbnail
-              key={index}
-              onClick={() => setSelectedImage(img)}
-              $active={selectedImage === img}
-            >
-              <Image
-                src={img}
-                alt="Thumbnail"
-                fill
-                sizes="80px"
-                style={{ objectFit: "cover" }}
-              />
-            </Thumbnail>
-          ))}
+          <ThumbnailTrack>
+            {images.map((img, index) => (
+              <Thumbnail
+                key={index}
+                type="button"
+                onClick={() => setSelectedImage(img)}
+                $active={selectedImage === img}
+                aria-label={`Show project image ${index + 1}`}
+                aria-pressed={selectedImage === img}
+              >
+                <ThumbnailImage
+                  src={img}
+                  alt="Thumbnail"
+                  fill
+                  sizes="80px"
+                />
+              </Thumbnail>
+            ))}
+          </ThumbnailTrack>
         </ThumbnailRow>
       </InnerWrapper>
     </Container>
