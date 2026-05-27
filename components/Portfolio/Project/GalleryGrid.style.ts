@@ -16,10 +16,13 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--gallery-gap);
+  @media (max-width: 1023px) {
+  margin-left: 0;
+  }
 `;
 
 export const MainImageWrapper = styled.div`
-  width: 100%;
+  width: 94%;
   min-width: 0;
   height: var(--main-image-height);
   display: flex;
