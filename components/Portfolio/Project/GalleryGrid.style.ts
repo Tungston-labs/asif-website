@@ -54,11 +54,14 @@ export const ThumbnailRow = styled.div`
   scrollbar-color: #c8a24c #f2f2f2;
 `;
 
-export const ThumbnailTrack = styled.div`
+export const ThumbnailTrack = styled.div<{
+  $isAll: boolean;
+}>`
   display: flex;
   width: max-content;
   min-width: 100%;
-  justify-content: center;
+  justify-content: ${({ $isAll }) =>
+    $isAll ? "flex-start" : "center"};
   gap: 16px;
 
   @media (max-width: 1200px) {
