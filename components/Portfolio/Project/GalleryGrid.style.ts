@@ -19,7 +19,7 @@ export const MainImageWrapper = styled.div`
   height: 700px;
 
   display: flex;
-  align-items: center;
+  
   justify-content: center;
 
   overflow: hidden;
@@ -32,7 +32,12 @@ export const MainImageWrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; /* removes extra bottom gap */
+    display: block;
+  }
+
+  /* FIX ONLY FOR 1440px LAPTOP */
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    height: 520px;
   }
 
   @media (max-width: 1024px) {
@@ -53,7 +58,7 @@ export const ThumbnailRow = styled.div`
   align-items: center;
   gap: 16px;
 
-  margin-top: 16px; /* SAME FIXED GAP */
+  margin-top: 16px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -65,20 +70,11 @@ export const ThumbnailRow = styled.div`
   scrollbar-width: thin;
   scrollbar-color: #c8a24c #f2f2f2;
 
-  &::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f2f2f2;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #c8a24c;
-    border-radius: 10px;
+  /* FIX ONLY FOR 1440px LAPTOP */
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    margin-top: 10px;
   }
 `;
-
 
 export const Thumbnail = styled.div<{ $active: boolean }>`
   position: relative;
