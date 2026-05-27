@@ -61,7 +61,7 @@ const Navbar = () => {
               className={pathname === "/about" ? "active" : ""}
               href="/about"
             >
-              ABOUT OUR COMPANY
+              ABOUT US
             </Link>
           </MenuItem>
 

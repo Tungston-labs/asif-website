@@ -4,11 +4,8 @@ export type ProjectData = {
 };
 
 export const projectsData: ProjectData[] = [
-  {
-    location: "ERNAKULAM",
-    images: ["/images/ERNAKULAM/EKM-2.jpg", "/images/ERNAKULAM/EKM-1.jpg"],
-  },
-  {
+
+{
     location: "ALUVA",
     images: [
       "/images/ALUVA/aluva4.jpg",
@@ -17,6 +14,12 @@ export const projectsData: ProjectData[] = [
       "/images/ALUVA/aluva3.jpg",
     ],
   },
+
+  {
+    location: "ERNAKULAM",
+    images: ["/images/ERNAKULAM/EKM-2.jpg", "/images/ERNAKULAM/EKM-1.jpg"],
+  },
+  
 
   {
     location: "KANNUR - PALLIKUNNU",
