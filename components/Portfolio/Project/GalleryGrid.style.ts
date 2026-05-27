@@ -25,7 +25,6 @@ export const MainImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
   background: #fff;
   border-radius: 12px;
@@ -64,7 +63,7 @@ export const ThumbnailTrack = styled.div<{
   justify-content: ${({ $isAll }) =>
     $isAll ? "flex-start" : "center"};
   gap: 16px;
-
+  margin-left: 2rem;
   @media (max-width: 1200px) {
     gap: 12px;
   }
