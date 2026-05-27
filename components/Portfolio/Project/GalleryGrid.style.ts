@@ -82,7 +82,9 @@ export const Thumbnail = styled.button<{ $active: boolean }>`
   appearance: none;
   background: #fff;
   border: 2px solid transparent;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
   flex-shrink: 0;
 
   ${(props) =>
