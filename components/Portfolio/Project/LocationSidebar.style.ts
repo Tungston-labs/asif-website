@@ -21,6 +21,7 @@ export const Sidebar = styled.div`
     position: relative;
     top: auto;
     width: 100%;
+    margin-left: 0;
     max-width: 100%;
     height: auto;
     max-height: none;

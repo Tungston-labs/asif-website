@@ -114,7 +114,7 @@ const Footer = () => {
 
       <BottomNav>
         <Link href="/">HOME</Link>
-        <Link href="/about">ABOUT OUR COMPANY</Link>
+        <Link href="/about">ABOUT US</Link>
         <Link href="/portfolio">OUR PORTFOLIO</Link>
         <Link href="/contact">CONTACT US</Link>
       </BottomNav>
