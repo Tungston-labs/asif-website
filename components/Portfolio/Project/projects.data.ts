@@ -6,11 +6,7 @@ export type ProjectData = {
 export const projectsData: ProjectData[] = [
   {
     location: "ERNAKULAM",
-    images: [
-
-      "/images/ERNAKULAM/EKM-2.jpg", 
-      "/images/ERNAKULAM/EKM-1.jpg"
-    ],
+    images: ["/images/ERNAKULAM/EKM-2.jpg", "/images/ERNAKULAM/EKM-1.jpg"],
   },
   {
     location: "ALUVA",
@@ -25,12 +21,12 @@ export const projectsData: ProjectData[] = [
   {
     location: "KANNUR - PALLIKUNNU",
     images: [
+      "/images/pallikunn5.jpeg",
       "/images/pallikunn8.jpeg",
       "/images/pallikunn10.png",
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",
       "/images/pallikunn4.jpeg",
-      "/images/pallikunn5.jpeg",
     ],
   },
 
@@ -43,10 +39,8 @@ export const projectsData: ProjectData[] = [
       "/images/cherukunnu7.jpeg",
       "/images/cherukunnu8.jpeg",
       "/images/cherukunnu6.jpeg",
-
     ],
   },
-
 
   {
     location: "KOTTAYAM",
@@ -60,8 +54,10 @@ export const projectsData: ProjectData[] = [
   {
     location: "VENNALA",
     images: [
-      "/images/vennala7.jpeg",
-
+      "/images/vennala1.jpeg",
+      "/images/vennala6.jpeg",
+      "/images/vennala4.jpeg",
+      "/images/vennala5.jpeg",
     ],
   },
 
@@ -122,7 +118,6 @@ export const projectsData: ProjectData[] = [
     ],
   },
 
-
   {
     location: "PALAKKAD",
     images: [
@@ -130,7 +125,6 @@ export const projectsData: ProjectData[] = [
       "/images/palakkad2.jpeg",
       "/images/palakkad3.jpeg",
       "/images/palakkad4.jpeg",
-
     ],
   },
 
@@ -152,17 +146,11 @@ export const projectsData: ProjectData[] = [
   },
   {
     location: "LOCATION - 2",
-    images: [
-      "/images/LOCATION2.1.jpeg",
-      "/images/LOCATION2.2.jpeg",
-    ],
+    images: ["/images/LOCATION2.1.jpeg", "/images/LOCATION2.2.jpeg"],
   },
   {
     location: "LOCATION - 3",
-    images: [
-      "/images/LOCATION3.1.jpeg",
-      "/images/LOCATION3.2.jpeg",
-    ],
+    images: ["/images/LOCATION3.1.jpeg", "/images/LOCATION3.2.jpeg"],
   },
   {
     location: "LOCATION - 4",
@@ -180,13 +168,12 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION5.3.jpeg",
       "/images/LOCATION5.1.jpeg",
       "/images/LOCATION5.2.jpeg",
-      
     ],
   },
   {
     location: "LOCATION - 6",
     images: [
-       "/images/LOCATION6.3.jpeg",
+      "/images/LOCATION6.3.jpeg",
       "/images/LOCATION6.1.jpeg",
       "/images/LOCATION6.2.jpeg",
     ],

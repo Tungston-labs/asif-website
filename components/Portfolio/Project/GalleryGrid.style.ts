@@ -4,16 +4,14 @@ export const Container = styled.div`
   width: 100%;
   min-width: 0;
 
-    overflow: hidden;
-
+  overflow: hidden;
 `;
 
 export const InnerWrapper = styled.div`
   width: 100%;
   max-width: none;
   min-width: 0;
-    overflow: hidden;
-
+  overflow: hidden;
 `;
 
 export const MainImageWrapper = styled.div`
@@ -25,12 +23,17 @@ export const MainImageWrapper = styled.div`
   justify-content: center;
 
   overflow: hidden;
-
   background: #fff;
-
   border-radius: 12px;
 
   position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* removes extra bottom gap */
+  }
 
   @media (max-width: 1024px) {
     height: 500px;
@@ -47,28 +50,23 @@ export const MainImageWrapper = styled.div`
 
 export const ThumbnailRow = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 0.75rem;
+  gap: 16px;
 
-  margin-top: 1rem;
+  margin-top: 16px; /* SAME FIXED GAP */
+
   overflow-x: auto;
   overflow-y: hidden;
 
   flex-wrap: nowrap;
-  scroll-behavior: smooth;
 
-  padding: 0 0.125rem 0.625rem;
-
-max-width: 100%;
-  min-width: 0;
+  padding-bottom: 10px;
 
   scrollbar-width: thin;
   scrollbar-color: #c8a24c #f2f2f2;
-  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
-    height: 0.375rem;
+    height: 6px;
   }
 
   &::-webkit-scrollbar-track {
@@ -80,6 +78,7 @@ max-width: 100%;
     border-radius: 10px;
   }
 `;
+
 
 export const Thumbnail = styled.div<{ $active: boolean }>`
   position: relative;
