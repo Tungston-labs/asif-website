@@ -5,7 +5,7 @@ export type ProjectData = {
 
 export const projectsData: ProjectData[] = [
 
-{
+  {
     location: "ALUVA",
     images: [
       "/images/ALUVA/aluva4.jpg",
@@ -19,7 +19,7 @@ export const projectsData: ProjectData[] = [
     location: "ERNAKULAM",
     images: ["/images/ERNAKULAM/EKM-2.jpg", "/images/ERNAKULAM/EKM-1.jpg"],
   },
-  
+
 
   {
     location: "KANNUR - PALLIKUNNU",
@@ -102,9 +102,11 @@ export const projectsData: ProjectData[] = [
       "/images/Alappy-10.jpeg",
       "/images/Alappy-9.jpeg",
       "/images/Alappy-2.jpeg",
-      "/images/Alappy-15.jpeg",
       "/images/Alappy-11.jpeg",
       "/images/Alappy-14.jpeg",
+      "/images/LOCATION4.1.jpeg",
+      "/images/LOCATION4.2.jpeg",
+      "/images/LOCATION4.3.jpeg",
     ],
   },
 
@@ -138,7 +140,7 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "LOCATION - 1",
+    location: "KAKKANAD",
     images: [
       "/images/LOCATION1.1.jpeg",
       "/images/LOCATION1.2.jpeg",
@@ -146,23 +148,21 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "LOCATION - 2",
+    location: "WAYANAD",
     images: ["/images/LOCATION2.2.jpeg", "/images/LOCATION2.1.jpeg"],
   },
   {
-    location: "LOCATION - 3",
+    location: "CALICUT",
     images: ["/images/LOCATION3.2.jpeg", "/images/LOCATION3.1.jpeg"],
   },
+  // {
+  //   location: "LOCATION - 4",
+  //   images: [
+      
+  //   ],
+  // },
   {
-    location: "LOCATION - 4",
-    images: [
-      "/images/LOCATION4.1.jpeg",
-      "/images/LOCATION4.2.jpeg",
-      "/images/LOCATION4.3.jpeg",
-    ],
-  },
-  {
-    location: "LOCATION - 5",
+    location: "PANANGAD",
     images: [
       "/images/LOCATION5.5.jpeg",
       "/images/LOCATION5.4.jpeg",
@@ -172,7 +172,7 @@ export const projectsData: ProjectData[] = [
     ],
   },
   {
-    location: "LOCATION - 6",
+    location: "KALOOR",
     images: [
       "/images/LOCATION6.3.jpeg",
       "/images/LOCATION6.1.jpeg",
