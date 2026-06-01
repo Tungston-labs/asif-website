@@ -16,7 +16,9 @@ export const projectsData: ProjectData[] = [
 
   {
     location: "ERNAKULAM",
-    images: ["/images/ERNAKULAM/EKM-2.jpg", "/images/ERNAKULAM/EKM-1.jpg"],
+    images: [
+      "/images/ERNAKULAM/EKM-2.jpg", 
+      "/images/ERNAKULAM/EKM-1.jpg"],
   },
 
   {
@@ -136,14 +138,6 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    location: "BANGALORE",
-    images: [
-      "/images/bnglrrr1.jpeg",
-      "/images/BANGLORE/BNGLR-3.jpg",
-      "/images/BANGLORE/BNGLR-2.jpg",
-    ],
-  },
-  {
     location: "KAKKANAD",
     images: [
       "/images/LOCATION1.1.jpeg",
@@ -159,7 +153,7 @@ export const projectsData: ProjectData[] = [
     location: "CALICUT",
     images: ["/images/LOCATION3.2.jpeg", "/images/LOCATION3.1.jpeg"],
   },
-  
+
   {
     location: "PANANGAD",
     images: [
@@ -176,6 +170,14 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION6.3.jpeg",
       "/images/LOCATION6.1.jpeg",
       "/images/LOCATION6.2.jpeg",
+    ],
+  },
+  {
+    location: "BANGALORE",
+    images: [
+      "/images/bnglrrr1.jpeg",
+      "/images/BANGLORE/BNGLR-3.jpg",
+      "/images/BANGLORE/BNGLR-2.jpg",
     ],
   },
 ];
