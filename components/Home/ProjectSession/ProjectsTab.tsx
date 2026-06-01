@@ -4,15 +4,15 @@ import { TabsWrapper, Tab } from "./Projects.styled";
 import { useState } from "react";
 
 const locations = [
-  "KOTTAYAM",
-  "PAYYANUR",
+  "ALUVA",
   "VENNALA",
-  "MANNARKAD",
   "KANNUR",
   "TIRUR",
   "ALAPPUZHA",
   "PUTHANATHANI",
   "PALAKKAD",
+  "KOTTAYAM",
+  "MANNARKAD",
   
 ];
 interface Props {

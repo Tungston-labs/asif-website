@@ -1,15 +1,14 @@
 export const projects = [
   {
     id: 1,
-    location: "PAYYANUR",
-    title: "Payyanur Projects",
-    description:
-      "",
+    location: "ALUVA",
+    title: "Aluva Projects",
+    description: "",
     images: [
-      "/images/pynr3.png",
-      "/images/pynr2.png",
-      "/images/pynr1.png",
-      "/images/pynr4.png",
+      "/images/ALUVA/aluva4.jpg",
+      "/images/ALUVA/aluva2.jpg",
+      "/images/ALUVA/aluva1.jpg",
+      "/images/ALUVA/aluva3.jpg",
     ],
   },
 
@@ -48,13 +47,10 @@ export const projects = [
     description:
       "Contemporary residential developments tailored for urban living and smart space utilization.",
     images: [
-      "/images/vennala7.jpeg",
       "/images/vennala1.jpeg",
-      "/images/vennala2.jpeg",
       "/images/vennala6.jpeg",
       "/images/vennala4.jpeg",
-      "/images/vennala5.jpeg",
-      "/images/vennala3.jpeg",
+      "/images/vennalaaa5.jpeg",
     ],
   },
 
@@ -65,10 +61,9 @@ export const projects = [
     description:
       "Functional and aesthetically pleasing homes designed to harmonize with natural surroundings.",
     images: [
-      "/images/Mannarkad4.jpeg",
       "/images/Mannarkad3.jpeg",
       "/images/Mannarkad2.jpeg",
-      "/images/Mannarkad1.jpeg",
+      "/images/Mannarkad4.jpeg",
     ],
   },
 
@@ -102,8 +97,6 @@ export const projects = [
       "/images/tirur1.jpeg",
       "/images/tirur2.jpeg",
       "/images/tirur3.jpeg",
-      "/images/tirur5.jpeg",
-      "/images/tirur4.jpeg",
     ],
   },
 
@@ -118,12 +111,9 @@ export const projects = [
       "/images/Alappy-6.jpeg",
       "/images/Alappy-1.jpeg",
       "/images/Alappy-10.jpeg",
-      "/images/Alappy-9.jpeg",
-      "/images/Alappy-2.jpeg",
-      "/images/Alappy-15.jpeg",
-      "/images/Alappy-11.jpeg",
-      "/images/Alappy-12.jpeg",
-      "/images/Alappy-14.jpeg",
+      "/images/LOCATION4.1.jpeg",
+      "/images/LOCATION4.2.jpeg",
+      "/images/LOCATION4.3.jpeg",
     ],
   },
 
@@ -153,11 +143,7 @@ export const projects = [
       "/images/malappuram6.jpeg",
       "/images/malappuram7.jpeg",
       "/images/malappuram3.jpeg",
-      "/images/malappuram1.jpeg",
-      "/images/malappuram2.jpeg",
-      "/images/malappuram5.jpeg",
       "/images/malappuram8.jpeg",
-      "/images/malappuram9.jpeg",
     ],
   },
 
@@ -172,11 +158,6 @@ export const projects = [
       "/images/palakkad2.jpeg",
       "/images/palakkad3.jpeg",
       "/images/palakkad4.jpeg",
-      "/images/palakkad6.jpeg",
-      "/images/palakkad7.jpeg",
-      "/images/palakkad8.jpeg",
-      "/images/palakkad9.jpeg",
-      "/images/palakkad10.jpeg",
     ],
   },
 
