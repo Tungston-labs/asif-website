@@ -108,7 +108,7 @@ export const projectsData: ProjectData[] = [
   },
 
   {
-    location: "ALAPPUZHA-1",
+    location: "ALAPPUZHA - 1",
     images: [
       "/images/LOCATION4.1.jpeg",
       "/images/LOCATION4.2.jpeg",
