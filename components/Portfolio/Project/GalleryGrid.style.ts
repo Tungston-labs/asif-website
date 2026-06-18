@@ -7,31 +7,73 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
+// export const InnerWrapper = styled.div`
+//   width: 100%;
+//   max-width: none;
+//   min-width: 0;
+//   margin-left: 2rem;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--gallery-gap);
+//   @media (max-width: 1023px) {
+//     margin-left: 0;
+//   }
+// `;
+
 export const InnerWrapper = styled.div`
   width: 100%;
-  max-width: none;
   min-width: 0;
   margin-left: 2rem;
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
+
+  height: 100%;
+
   gap: var(--gallery-gap);
+
   @media (max-width: 1023px) {
-  margin-left: 0;
+    margin-left: 0;
   }
 `;
 
+// export const MainImageWrapper = styled.div`
+//   width: 94%;
+//   min-width: 0;
+//   height: var(--main-image-height);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
+//   background: #fff;
+//   border-radius: 12px;
+//   position: relative;
+
+//   @media (min-width: 1024px) {
+//     box-shadow: inset 0 0 0 1px #ececec;
+//   }
+// `;
+
 export const MainImageWrapper = styled.div`
+  flex: 1;
   width: 94%;
   min-width: 0;
-  height: var(--main-image-height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  background: #fff;
-  border-radius: 12px;
   position: relative;
+
+  height: var(--main-image-height);
+  min-height: 300px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 220px;
+  }
 
   @media (min-width: 1024px) {
     box-shadow: inset 0 0 0 1px #ececec;
@@ -63,8 +105,7 @@ export const ThumbnailTrack = styled.div<{
   display: flex;
   width: max-content;
   min-width: 100%;
-  justify-content: ${({ $isAll }) =>
-    $isAll ? "flex-start" : "center"};
+  justify-content: ${({ $isAll }) => ($isAll ? "flex-start" : "center")};
   gap: 16px;
   @media (max-width: 1200px) {
     gap: 12px;
@@ -113,4 +154,72 @@ export const MainImage = styled(Image)`
 
 export const ThumbnailImage = styled(Image)`
   object-fit: cover;
+`;
+
+// export const SocialWrapper = styled.div`
+//   width: 94%;
+//   margin-top: 0.5rem;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
+export const SocialWrapper = styled.div`
+  width: 94%;
+  margin-top: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Fixed height prevents layout jumping */
+  min-height: 100px;
+`;
+
+export const SocialTitle = styled.h4`
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+  color: #222;
+`;
+
+export const SocialButtons = styled.div`
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const SocialButton = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  background: white;
+  color: #222;
+
+  border: 1px solid #ddd;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: #c8a24c;
+    color: white;
+    border-color: #c8a24c;
+    transform: translateY(-2px);
+  }
 `;

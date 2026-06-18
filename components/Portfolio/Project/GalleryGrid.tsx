@@ -6,21 +6,30 @@ import {
   InnerWrapper,
   MainImage,
   MainImageWrapper,
+  SocialButton,
+  SocialButtons,
+  SocialTitle,
+  SocialWrapper,
   Thumbnail,
   ThumbnailImage,
   ThumbnailRow,
   ThumbnailTrack,
 } from "./GalleryGrid.style";
 
+import { FaYoutube, FaInstagram, FaFacebookF } from "react-icons/fa";
+
 type Props = {
   images: string[];
   selectedLocation: string;
+
+  socialLinks?: {
+    youtube?: string;
+    instagram?: string;
+    facebook?: string;
+  };
 };
 
-const GalleryGrid = ({
-  images,
-  selectedLocation,
-}: Props) => {
+const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   useEffect(() => {
@@ -46,9 +55,7 @@ const GalleryGrid = ({
         </MainImageWrapper>
 
         <ThumbnailRow>
-          <ThumbnailTrack
-            $isAll={selectedLocation === "ALL"}
-          >
+          <ThumbnailTrack $isAll={selectedLocation === "ALL"}>
             {images.map((img, index) => (
               <Thumbnail
                 key={img}
@@ -56,11 +63,10 @@ const GalleryGrid = ({
                 onClick={() => setSelectedImage(img)}
                 $active={selectedImage === img}
                 aria-label={`Show project image ${index + 1}`}
-                aria-pressed={selectedImage === img}
               >
                 <ThumbnailImage
                   src={img}
-                  alt="Thumbnail"
+                  alt={`Thumbnail ${index + 1}`}
                   fill
                   sizes="80px"
                 />
@@ -68,6 +74,51 @@ const GalleryGrid = ({
             ))}
           </ThumbnailTrack>
         </ThumbnailRow>
+
+        {selectedLocation !== "ALL" && (
+          <SocialWrapper>
+            {socialLinks && (
+              <>
+                <SocialTitle>Explore This Project</SocialTitle>
+
+                <SocialButtons>
+                  {socialLinks.youtube && (
+                    <SocialButton
+                      href={socialLinks.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaYoutube />
+                      YouTube
+                    </SocialButton>
+                  )}
+
+                  {socialLinks.instagram && (
+                    <SocialButton
+                      href={socialLinks.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram />
+                      Instagram
+                    </SocialButton>
+                  )}
+
+                  {socialLinks.facebook && (
+                    <SocialButton
+                      href={socialLinks.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookF />
+                      Facebook
+                    </SocialButton>
+                  )}
+                </SocialButtons>
+              </>
+            )}
+          </SocialWrapper>
+        )}
       </InnerWrapper>
     </Container>
   );
