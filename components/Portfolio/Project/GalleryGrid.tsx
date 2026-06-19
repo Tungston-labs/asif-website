@@ -79,7 +79,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
           <SocialWrapper>
             {socialLinks && (
               <>
-                <SocialTitle>Explore This Project</SocialTitle>
+                <SocialTitle>Explore More </SocialTitle>
 
                 <SocialButtons>
                   {socialLinks.youtube && (
