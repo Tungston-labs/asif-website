@@ -273,7 +273,7 @@ export const projectsData: ProjectData[] = [
       youtube: "https://www.youtube.com/watch?v=Io9bwJ3WcsA",
       instagram:
         "https://www.instagram.com/reel/C88dqRaI62t/?igsh=eTl1YjJvZHQ2NnJ1",
-      facebook: "https://facebook.com/xxxx",
+
     },
   },
 
@@ -289,10 +289,10 @@ export const projectsData: ProjectData[] = [
     ],
 
     socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
+
       instagram:
         "https://www.instagram.com/reel/DHArcOOPdZ0/?igsh=bzkzZm5sN3Fqd2Fj",
-      facebook: "https://facebook.com/xxxx",
+
     },
   },
 
@@ -305,11 +305,7 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Erumeli/Erumleli4.JPG",
       "/images/IPHONE SORTED LIST/Erumeli/Erumleli5.JPG",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+
   },
 
   {
@@ -320,10 +316,8 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION1.3.jpeg",
     ],
     socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
       instagram:
         "https://www.instagram.com/reel/DFRpQGJvvm6/?igsh=YzN3dWQ3NHV6d29k",
-      facebook: "https://facebook.com/xxxx",
     },
   },
 
@@ -340,7 +334,7 @@ export const projectsData: ProjectData[] = [
       youtube: "https://www.youtube.com/watch?v=IU7eQMbN2qM",
       instagram:
         "https://www.instagram.com/reel/C3wFzzEPhGM/?igsh=MTkxcjByejdnOG1wYQ%3D%3D",
-      facebook: "https://facebook.com/xxxx",
+
     },
   },
 
@@ -348,10 +342,9 @@ export const projectsData: ProjectData[] = [
     location: "CALICUT",
     images: ["/images/LOCATION3.2.jpeg", "/images/LOCATION3.1.jpeg"],
     socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
       instagram:
         "https://www.instagram.com/reel/CxFeZsUv8b4/?igsh=bW9icmtsaDNoMmY3",
-      facebook: "https://facebook.com/xxxx",
+
     },
   },
 
@@ -362,11 +355,7 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION6.1.jpeg",
       "/images/LOCATION6.2.jpeg",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+
   },
 
   {
@@ -384,7 +373,6 @@ export const projectsData: ProjectData[] = [
       youtube: "https://www.youtube.com/watch?v=6zV48D2GBE4",
       instagram:
         "https://www.instagram.com/reel/Cr5_TYVOh3y/?igsh=MW9kdHgxcWFjZ28ycQ%3D%3D",
-      facebook: "https://facebook.com/xxxx",
     },
   },
 
@@ -397,10 +385,10 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Mannarkaadu/mannarkaadu3.JPG",
     ],
     socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
+      
       instagram:
         "https://www.instagram.com/reel/C2Xs9y8vRJ0/?igsh=NDIzZ3J6dzZxYTZ6",
-      facebook: "https://facebook.com/xxxx",
+      
     },
   },
 
@@ -415,11 +403,7 @@ export const projectsData: ProjectData[] = [
       "/images/malappuram8.jpeg",
       "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani1.jpg",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+    
   },
 
   {
@@ -444,11 +428,7 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Payyanur/payannur-21.JPG",
       "/images/IPHONE SORTED LIST/Payyanur/payannur-22.JPG",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+    
   },
 
   {
@@ -462,10 +442,8 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Koothatukulam/koothatukulam5.JPG",
     ],
     socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
       instagram:
         "https://www.instagram.com/reel/C2jfZy5vvDg/?igsh=MWh1enFsYmp1eGthNg%3D%3D",
-      facebook: "https://facebook.com/xxxx",
     },
   },
 
@@ -497,11 +475,6 @@ export const projectsData: ProjectData[] = [
   {
     location: "VADAKARA - 1",
     images: ["/images/IPHONE SORTED LIST/Vadakara/vadakara1.JPG"],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
   },
 
   {
@@ -510,11 +483,7 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Kadavanthara Ernakulam/kadavanthara1.JPG",
       "/images/IPHONE SORTED LIST/Kadavanthara Ernakulam/kadavanthara2.JPG",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+    
   },
 
   {
@@ -535,11 +504,7 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Navodaya Ernakulam/navodaya10.JPG",
       "/images/IPHONE SORTED LIST/Navodaya Ernakulam/navodaya11.JPG",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+    
   },
 
   {
@@ -555,8 +520,7 @@ export const projectsData: ProjectData[] = [
     ],
     socialLinks: {
       youtube: "https://www.youtube.com/watch?v=h4FxuYPMn0M",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
+      
     },
   },
 
@@ -569,11 +533,7 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION5.1.jpeg",
       "/images/LOCATION5.2.jpeg",
     ],
-    socialLinks: {
-      youtube: "https://youtube.com/watch?v=xxxx",
-      instagram: "https://instagram.com/reel/xxxx",
-      facebook: "https://facebook.com/xxxx",
-    },
+    
   },
 
   {
