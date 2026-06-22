@@ -85,28 +85,48 @@ export const ThumbnailRow = styled.div`
   max-width: 100%;
   min-width: 0;
   min-height: var(--thumbnail-row-height);
-  box-sizing: border-box;
+
   display: flex;
   align-items: center;
-  gap: 16px;
 
   overflow-x: auto;
   overflow-y: hidden;
-  flex-wrap: nowrap;
+
   padding-bottom: var(--thumbnail-row-padding-bottom);
 
   scrollbar-width: thin;
   scrollbar-color: #c8a24c #f2f2f2;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c8a24c;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2f2f2;
+  }
 `;
 
 export const ThumbnailTrack = styled.div<{
   $isAll: boolean;
 }>`
   display: flex;
-  width: max-content;
-  min-width: 100%;
-  justify-content: ${({ $isAll }) => ($isAll ? "flex-start" : "center")};
+  flex-wrap: nowrap;
   gap: 16px;
+
+  width: max-content;
+
+  ${({ $isAll }) =>
+    !$isAll &&
+    `
+      min-width: 100%;
+      justify-content: center;
+    `}
+
   @media (max-width: 1200px) {
     gap: 12px;
   }
@@ -166,30 +186,32 @@ export const ThumbnailImage = styled(Image)`
 // `;
 
 export const SocialWrapper = styled.div`
-  width: 94%;
-  margin-top: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  /* Fixed height prevents layout jumping */
-  min-height: 100px;
-`;
+  padding: 0 10px;
 
-export const SocialTitle = styled.h4`
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-
-  color: #222;
+  @media (max-width: 768px) {
+    margin-top: 0.75rem;
+  }
 `;
 
 export const SocialButtons = styled.div`
+  width: 100%;
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    padding: 0 10px;
+  }
 `;
 
 export const SocialButton = styled.a`
@@ -198,14 +220,12 @@ export const SocialButton = styled.a`
   gap: 8px;
 
   padding: 10px 18px;
-
   border-radius: 10px;
 
-  background: white;
-  color: #222;
+  background: #ffffff;
+  border: 1px solid #a3a3a3;
 
-  border: 1px solid #ddd;
-
+  color: #000000;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -213,13 +233,20 @@ export const SocialButton = styled.a`
   transition: all 0.3s ease;
 
   svg {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   &:hover {
-    background: #c8a24c;
-    color: white;
-    border-color: #c8a24c;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px 14px;
+    font-size: 13px;
+
+    svg {
+      font-size: 18px;
+    }
   }
 `;

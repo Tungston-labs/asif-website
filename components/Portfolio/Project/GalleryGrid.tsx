@@ -8,7 +8,6 @@ import {
   MainImageWrapper,
   SocialButton,
   SocialButtons,
-  SocialTitle,
   SocialWrapper,
   Thumbnail,
   ThumbnailImage,
@@ -58,7 +57,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
           <ThumbnailTrack $isAll={selectedLocation === "ALL"}>
             {images.map((img, index) => (
               <Thumbnail
-                key={img}
+                key={`${img}-${index}`}
                 type="button"
                 onClick={() => setSelectedImage(img)}
                 $active={selectedImage === img}
@@ -79,8 +78,6 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
           <SocialWrapper>
             {socialLinks && (
               <>
-                <SocialTitle>Explore More </SocialTitle>
-
                 <SocialButtons>
                   {socialLinks.youtube && (
                     <SocialButton
@@ -88,7 +85,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaYoutube />
+                      <FaYoutube color="#FF0000" />
                       YouTube
                     </SocialButton>
                   )}
@@ -99,7 +96,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaInstagram />
+                      <FaInstagram color="#E4405F" />
                       Instagram
                     </SocialButton>
                   )}
@@ -110,7 +107,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaFacebookF />
+                      <FaFacebookF color="#1877F2" />
                       Facebook
                     </SocialButton>
                   )}

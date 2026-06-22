@@ -22,14 +22,15 @@ export const projectsData: ProjectData[] = [
   {
     location: "BANGALORE - 1",
     images: [
+      "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE9.jpeg",
+      "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE8.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE1.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE2.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE3.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE4.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE5.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE6.jpeg",
-      "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE7.jpeg",
-      "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE8.jpeg",
+      
     ],
 
     socialLinks: {
@@ -43,9 +44,9 @@ export const projectsData: ProjectData[] = [
     location: "ALUVA",
     images: [
       "/images/ALUVA/aluva4.jpg",
-      "/images/ALUVA/aluva2.jpg",
       "/images/ALUVA/aluva1.jpg",
       "/images/ALUVA/aluva3.jpg",
+      "/images/ALUVA/aluva2.jpg",
     ],
     socialLinks: {
       instagram:
@@ -73,7 +74,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Wayanad/wayanad4.JPG",
       "/images/IPHONE SORTED LIST/Wayanad/wayanad5.JPG",
       "/images/IPHONE SORTED LIST/Wayanad/wayanad6.JPG",
-      "/images/IPHONE SORTED LIST/Wayanad/wayanad7.JPG",
     ],
   },
 
@@ -96,9 +96,9 @@ export const projectsData: ProjectData[] = [
   {
     location: "KANNUR - 1",
     images: [
+      "/images/cherukunnu9.jpeg",
       "/images/cherukunnu4.jpeg",
       "/images/cherukunnu5.jpeg",
-      "/images/cherukunnu9.jpeg",
       "/images/cherukunnu7.jpeg",
       "/images/cherukunnu8.jpeg",
       "/images/cherukunnu6.jpeg",
@@ -113,12 +113,12 @@ export const projectsData: ProjectData[] = [
     location: "KANNUR - 2",
     images: [
       "/images/IPHONE SORTED LIST/Kannur Thana/thana4.JPG",
-      "/images/IPHONE SORTED LIST/Kannur Thana/thana2.JPG",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana3.JPG",
+      "/images/IPHONE SORTED LIST/Kannur Thana/thana2.JPG",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana5.jpeg",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana6.jpeg",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana7.jpeg",
-      "/images/IPHONE SORTED LIST/Kannur Thana/thana8.jpeg",
+      
     ],
   },
 
@@ -127,8 +127,6 @@ export const projectsData: ProjectData[] = [
     images: [
       // "/images/IPHONE SORTED LIST/Kannur - Grid House/kannur-gridhouse1.JPG",
       "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid1.jpeg",
-      "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid13.jpeg",
-      "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid12.jpeg",
       "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid14.jpeg",
       "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid11.jpeg",
       "/images/IPHONE SORTED LIST/KANNUR-GRID11/kannurgrid3.jpeg",
@@ -151,6 +149,7 @@ export const projectsData: ProjectData[] = [
       "/images/palakkad2.jpeg",
       "/images/palakkad3.jpeg",
       "/images/palakkad4.jpeg",
+      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY1.jpeg",
     ],
   },
 
@@ -161,17 +160,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Kollamkode Palakkad/kollamkode3.JPG",
       "/images/IPHONE SORTED LIST/Kollamkode Palakkad/kollamkode2.JPG",
       "/images/IPHONE SORTED LIST/Kollamkode Palakkad/kollamkode1.JPG",
-    ],
-  },
-
-  {
-    location: "PALAKKAD - 2 ",
-    images: [
-      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY5.jpeg",
-      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY4.jpeg",
-      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY2.jpeg",
-      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY3.jpeg",
-      "/images/IPHONE SORTED LIST/Cherupalassery Palakkad/CHERUPPALASSERY1.jpeg",
     ],
   },
 
@@ -214,14 +202,13 @@ export const projectsData: ProjectData[] = [
     location: "ALAPPUZHA - 2",
     images: [
       "/images/IPHONE SORTED LIST/Chengannur/chengannur1.JPG",
+      "/images/IPHONE SORTED LIST/Chengannur/chengannur10.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur2.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur5.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur6.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur7.JPG",
-      "/images/IPHONE SORTED LIST/Chengannur/chengannur8.JPG",
-      "/images/IPHONE SORTED LIST/Chengannur/chengannur9.JPG",
-      "/images/IPHONE SORTED LIST/Chengannur/chengannur10.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur11.JPG",
+      "/images/IPHONE SORTED LIST/Chengannur/chengannur8.JPG",
       "/images/IPHONE SORTED LIST/Chengannur/chengannur12.JPG",
     ],
 
@@ -256,16 +243,13 @@ export const projectsData: ProjectData[] = [
     location: "KOTTAYAM",
     images: [
       "/images/Kottayam6.jpeg",
-      "/images/Kottayam10.jpeg",
       "/images/Kottayam1.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam3.JPG",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam6.jpeg",
-      "/images/IPHONE SORTED LIST/Kottayam/kottayam7.jpeg",
-      "/images/IPHONE SORTED LIST/Kottayam/kottayam8.jpeg",
-      "/images/IPHONE SORTED LIST/Kottayam/kottayam9.jpeg",
-      "/images/IPHONE SORTED LIST/Kottayam/kottayam10.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam11.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam12.jpeg",
+      "/images/IPHONE SORTED LIST/Kottayam/kottayam10.jpeg",
+      "/images/IPHONE SORTED LIST/Kottayam/kottayam8.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam13.jpeg",
     ],
 
@@ -273,7 +257,6 @@ export const projectsData: ProjectData[] = [
       youtube: "https://www.youtube.com/watch?v=Io9bwJ3WcsA",
       instagram:
         "https://www.instagram.com/reel/C88dqRaI62t/?igsh=eTl1YjJvZHQ2NnJ1",
-
     },
   },
 
@@ -281,18 +264,15 @@ export const projectsData: ProjectData[] = [
     location: "VENNALA",
     images: [
       "/images/vennala1.jpeg",
-      "/images/vennala6.jpeg",
+      "/images/IPHONE SORTED LIST/Vennala Ernakulam/vennala1.JPG",
       "/images/vennala4.jpeg",
       "/images/vennalaaa5.jpeg",
-      "/images/IPHONE SORTED LIST/Vennala Ernakulam/vennala1.JPG",
       "/images/IPHONE SORTED LIST/Vennala Ernakulam/vennala3.JPG",
     ],
 
     socialLinks: {
-
       instagram:
         "https://www.instagram.com/reel/DHArcOOPdZ0/?igsh=bzkzZm5sN3Fqd2Fj",
-
     },
   },
 
@@ -305,7 +285,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Erumeli/Erumleli4.JPG",
       "/images/IPHONE SORTED LIST/Erumeli/Erumleli5.JPG",
     ],
-
   },
 
   {
@@ -328,13 +307,11 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/iritty1/iritty3.jpeg",
       "/images/IPHONE SORTED LIST/iritty1/iritty1.jpeg",
       "/images/IPHONE SORTED LIST/iritty1/iritty4.jpeg",
-      "/images/IPHONE SORTED LIST/iritty1/iritty5.jpeg",
     ],
     socialLinks: {
       youtube: "https://www.youtube.com/watch?v=IU7eQMbN2qM",
       instagram:
         "https://www.instagram.com/reel/C3wFzzEPhGM/?igsh=MTkxcjByejdnOG1wYQ%3D%3D",
-
     },
   },
 
@@ -344,7 +321,6 @@ export const projectsData: ProjectData[] = [
     socialLinks: {
       instagram:
         "https://www.instagram.com/reel/CxFeZsUv8b4/?igsh=bW9icmtsaDNoMmY3",
-
     },
   },
 
@@ -355,7 +331,6 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION6.1.jpeg",
       "/images/LOCATION6.2.jpeg",
     ],
-
   },
 
   {
@@ -364,7 +339,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha1.JPG",
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha2.JPG",
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha3.JPG",
-      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha4.JPG",
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha5.JPG",
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha6.jpeg",
       "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha7.jpeg",
@@ -385,25 +359,22 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Mannarkaadu/mannarkaadu3.JPG",
     ],
     socialLinks: {
-      
       instagram:
         "https://www.instagram.com/reel/C2Xs9y8vRJ0/?igsh=NDIzZ3J6dzZxYTZ6",
-      
     },
   },
 
   {
     location: "PUTHANATHANI",
     images: [
-      "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani4.jpg",
       "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani3.jpg",
+      "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani4.jpg",
       "/images/malappuram6.jpeg",
       "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani2.png",
       "/images/malappuram3.jpeg",
       "/images/malappuram8.jpeg",
       "/images/IPHONE SORTED LIST/Putthanatthani/puthanathani1.jpg",
     ],
-    
   },
 
   {
@@ -428,7 +399,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Payyanur/payannur-21.JPG",
       "/images/IPHONE SORTED LIST/Payyanur/payannur-22.JPG",
     ],
-    
   },
 
   {
@@ -460,10 +430,10 @@ export const projectsData: ProjectData[] = [
   {
     location: "VADAKARA ",
     images: [
+      "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box4.JPG",
+      "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box3.JPG",
       "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box1.JPG",
       "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box2.JPG",
-      "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box3.JPG",
-      "/images/IPHONE SORTED LIST/Vadakara Box House/vadakara-box4.JPG",
     ],
 
     socialLinks: {
@@ -474,7 +444,7 @@ export const projectsData: ProjectData[] = [
 
   {
     location: "VADAKARA - 1",
-    images: ["/images/IPHONE SORTED LIST/Vadakara/vadakara1.JPG"],
+    images: ["/images/IPHONE SORTED LIST/Vadakara/VADAKARA1.png"],
   },
 
   {
@@ -483,7 +453,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Kadavanthara Ernakulam/kadavanthara1.JPG",
       "/images/IPHONE SORTED LIST/Kadavanthara Ernakulam/kadavanthara2.JPG",
     ],
-    
   },
 
   {
@@ -504,23 +473,21 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Navodaya Ernakulam/navodaya10.JPG",
       "/images/IPHONE SORTED LIST/Navodaya Ernakulam/navodaya11.JPG",
     ],
-    
   },
 
   {
     location: "ELAMAKKARA",
     images: [
-      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara1.JPG",
       "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara2.JPG",
+      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara1.JPG",
+      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara6.jpeg",
+      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara7.jpeg",
       "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara3.jpeg",
       "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara4.jpeg",
       "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara5.jpeg",
-      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara6.jpeg",
-      "/images/IPHONE SORTED LIST/Elamakkara Ernakulam/Elamakkara7.jpeg",
     ],
     socialLinks: {
       youtube: "https://www.youtube.com/watch?v=h4FxuYPMn0M",
-      
     },
   },
 
@@ -533,7 +500,6 @@ export const projectsData: ProjectData[] = [
       "/images/LOCATION5.1.jpeg",
       "/images/LOCATION5.2.jpeg",
     ],
-    
   },
 
   {
