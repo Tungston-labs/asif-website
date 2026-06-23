@@ -144,36 +144,12 @@ export const Tab = styled.button<TabProps>`
   }
 `;
 
-// export const Grid = styled.div`
-//   width: 100%;
-//   overflow: hidden;
-//   position: relative;
-// `;
-
 export const Grid = styled.div`
   width: 100%;
   overflow: visible;
   position: relative;
   padding: 30px 0;
 `;
-
-// export const SliderTrack = styled.div`
-//   display: flex;
-//   gap: 14px;
-
-//   flex-wrap: nowrap;
-
-//   width: fit-content;
-
-//   transform: translate3d(0, 0, 0);
-//   will-change: transform;
-
-//   animation: ${scrollLoop} 20s linear infinite;
-
-//   &:hover {
-//     animation-play-state: paused;
-//   }
-// `;
 
 export const SliderTrack = styled.div`
   display: flex;
@@ -192,33 +168,6 @@ export const SliderTrack = styled.div`
     animation-play-state: paused;
   }
 `;
-
-// export const Card = styled.div`
-//   flex: 0 0 auto;
-
-//   width: 520px;
-//   height: 295px;
-
-//   position: relative;
-//   overflow: hidden;
-
-//   contain: layout paint;
-
-//   @media (max-width: 1024px) {
-//     width: 480px;
-//     height: 280px;
-//   }
-
-//   @media (max-width: 768px) {
-//     width: 88vw;
-//     height: 240px;
-//   }
-
-//   @media (max-width: 480px) {
-//     width: 92vw;
-//     height: 220px;
-//   }
-// `;
 
 export const Card = styled.div`
   flex: 0 0 auto;
@@ -331,31 +280,6 @@ export const PortButton = styled.button`
     font-size: 0.78rem;
   }
 `;
-
-// export const CardImage = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden;
-
-//   transform: translateZ(0);
-//   will-change: transform;
-
-//   img {
-//     width: 100%;
-//     height: 100%;
-
-//     object-fit: cover;
-//     display: block;
-
-//     transform: translateZ(0);
-
-//     backface-visibility: hidden;
-
-//     will-change: transform;
-
-//     transition: none;
-//   }
-// `;
 
 export const CardImage = styled.div`
   width: 100%;
