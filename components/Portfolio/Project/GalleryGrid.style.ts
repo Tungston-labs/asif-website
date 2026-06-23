@@ -92,7 +92,7 @@ export const ThumbnailRow = styled.div`
   overflow-x: auto;
   overflow-y: hidden;
 
-  padding-bottom: var(--thumbnail-row-padding-bottom);
+  padding: 0 24px var(--thumbnail-row-padding-bottom);
 
   scrollbar-width: thin;
   scrollbar-color: #c8a24c #f2f2f2;
@@ -119,6 +119,7 @@ export const ThumbnailTrack = styled.div<{
   gap: 16px;
 
   width: max-content;
+  padding-right: 60px;
 
   ${({ $isAll }) =>
     !$isAll &&

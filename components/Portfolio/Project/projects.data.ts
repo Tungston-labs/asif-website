@@ -30,7 +30,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE4.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE5.jpeg",
       "/images/IPHONE SORTED LIST/BANGLORE11/BANGLORE6.jpeg",
-      
     ],
 
     socialLinks: {
@@ -118,7 +117,6 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Kannur Thana/thana5.jpeg",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana6.jpeg",
       "/images/IPHONE SORTED LIST/Kannur Thana/thana7.jpeg",
-      
     ],
   },
 

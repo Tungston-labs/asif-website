@@ -144,19 +144,44 @@ export const Tab = styled.button<TabProps>`
   }
 `;
 
+// export const Grid = styled.div`
+//   width: 100%;
+//   overflow: hidden;
+//   position: relative;
+// `;
+
 export const Grid = styled.div`
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+  padding: 30px 0;
 `;
+
+// export const SliderTrack = styled.div`
+//   display: flex;
+//   gap: 14px;
+
+//   flex-wrap: nowrap;
+
+//   width: fit-content;
+
+//   transform: translate3d(0, 0, 0);
+//   will-change: transform;
+
+//   animation: ${scrollLoop} 20s linear infinite;
+
+//   &:hover {
+//     animation-play-state: paused;
+//   }
+// `;
 
 export const SliderTrack = styled.div`
   display: flex;
-  gap: 14px;
-
+  gap: 24px;
   flex-wrap: nowrap;
-
   width: fit-content;
+
+  padding: 20px 0;
 
   transform: translate3d(0, 0, 0);
   will-change: transform;
@@ -168,6 +193,33 @@ export const SliderTrack = styled.div`
   }
 `;
 
+// export const Card = styled.div`
+//   flex: 0 0 auto;
+
+//   width: 520px;
+//   height: 295px;
+
+//   position: relative;
+//   overflow: hidden;
+
+//   contain: layout paint;
+
+//   @media (max-width: 1024px) {
+//     width: 480px;
+//     height: 280px;
+//   }
+
+//   @media (max-width: 768px) {
+//     width: 88vw;
+//     height: 240px;
+//   }
+
+//   @media (max-width: 480px) {
+//     width: 92vw;
+//     height: 220px;
+//   }
+// `;
+
 export const Card = styled.div`
   flex: 0 0 auto;
 
@@ -175,9 +227,32 @@ export const Card = styled.div`
   height: 295px;
 
   position: relative;
-  overflow: hidden;
 
-  contain: layout paint;
+  border-radius: 22px;
+
+  overflow: visible;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12),
+    0 20px 45px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: translateY(-18px) scale(1.03);
+    z-index: 50;
+
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.18),
+      0 40px 80px rgba(0, 0, 0, 0.22),
+      0 0 25px rgba(215, 174, 91, 0.25);
+  }
 
   @media (max-width: 1024px) {
     width: 480px;
@@ -187,6 +262,10 @@ export const Card = styled.div`
   @media (max-width: 768px) {
     width: 88vw;
     height: 240px;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
   }
 
   @media (max-width: 480px) {
@@ -253,27 +332,77 @@ export const PortButton = styled.button`
   }
 `;
 
+// export const CardImage = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+
+//   transform: translateZ(0);
+//   will-change: transform;
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+
+//     object-fit: cover;
+//     display: block;
+
+//     transform: translateZ(0);
+
+//     backface-visibility: hidden;
+
+//     will-change: transform;
+
+//     transition: none;
+//   }
+// `;
+
 export const CardImage = styled.div`
   width: 100%;
   height: 100%;
+
   overflow: hidden;
 
-  transform: translateZ(0);
-  will-change: transform;
+  border-radius: 20px;
+
+  position: relative;
 
   img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     display: block;
 
-    transform: translateZ(0);
+    transition:
+      transform 0.7s ease,
+      filter 0.7s ease;
 
-    backface-visibility: hidden;
+    transform: scale(1);
+    filter: brightness(0.97);
+  }
 
-    will-change: transform;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-    transition: none;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.04) 45%,
+      transparent
+    );
+
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  ${Card}:hover & img {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+  }
+
+  ${Card}:hover &::after {
+    opacity: 0.4;
   }
 `;

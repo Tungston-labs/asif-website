@@ -79,11 +79,7 @@ export const projects = [
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",
       "/images/pallikunn4.jpeg",
-      "/images/cherukunnu4.jpeg",
-      "/images/cherukunnu5.jpeg",
-      "/images/cherukunnu9.jpeg",
-      "/images/cherukunnu7.jpeg",
-      "/images/cherukunnu8.jpeg",
+      
     ],
   },
 
@@ -111,9 +107,7 @@ export const projects = [
       "/images/Alappy-6.jpeg",
       "/images/Alappy-1.jpeg",
       "/images/Alappy-10.jpeg",
-      "/images/LOCATION4.1.jpeg",
-      "/images/LOCATION4.2.jpeg",
-      "/images/LOCATION4.3.jpeg",
+      
     ],
   },
 
