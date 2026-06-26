@@ -13,7 +13,7 @@ export const projectsData: ProjectData[] = [
   {
     location: "BANGALORE",
     images: [
-      "/images/bnglrrr1.jpeg",
+      "/images/BANGLORE/banglore20.png",
       "/images/BANGLORE/BNGLR-3.jpg",
       "/images/BANGLORE/BNGLR-2.jpg",
     ],

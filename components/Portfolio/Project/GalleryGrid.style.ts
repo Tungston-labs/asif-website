@@ -119,7 +119,7 @@ export const ThumbnailTrack = styled.div<{
   gap: 16px;
 
   width: max-content;
-  padding-right: 60px;
+  padding-right: 70px;
 
   ${({ $isAll }) =>
     !$isAll &&
@@ -208,6 +208,7 @@ export const SocialButtons = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  padding-right: 68px;
 
   @media (max-width: 768px) {
     gap: 10px;
