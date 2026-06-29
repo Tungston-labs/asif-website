@@ -25,6 +25,7 @@ const desktopImages = [
   "/images/home/slider2.svg",
   "/images/home/slider3.svg",
   "/images/home/slider5.svg",
+  
 ];
 
 const mobileImages = [
