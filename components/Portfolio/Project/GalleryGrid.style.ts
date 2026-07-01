@@ -97,6 +97,18 @@ export const ThumbnailRow = styled.div`
   scrollbar-width: thin;
   scrollbar-color: #c8a24c #f2f2f2;
 
+  outline: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
   &::-webkit-scrollbar {
     height: 6px;
   }
@@ -110,6 +122,7 @@ export const ThumbnailRow = styled.div`
     background: #f2f2f2;
   }
 `;
+
 
 export const ThumbnailTrack = styled.div<{
   $isAll: boolean;
