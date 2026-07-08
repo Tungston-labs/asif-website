@@ -221,6 +221,10 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Wayanad/wayanad5.JPG",
       "/images/IPHONE SORTED LIST/Wayanad/wayanad6.JPG",
     ],
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/reel/C7G2CmiPkdz/?igsh=aTJmdWprdDJwaGdv",
+    },
   },
 
   {
