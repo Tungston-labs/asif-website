@@ -3,20 +3,19 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 3.25rem 0; 
+  padding: 6rem 0;
   background: #ffffff;
 `;
 
 export const Container = styled.div`
-  max-width: 81.25rem; 
+  max-width: 81.25rem;
   width: 90%;
   margin: 0 auto;
   display: flex;
-  gap: 3.75rem; 
+  gap: 3.75rem;
 
- 
   @media (max-width: 1024px) {
-    display: block; 
+    display: block;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -25,9 +24,9 @@ export const Container = styled.div`
 `;
 
 export const Left = styled.div`
-  flex: 0 0 26.25rem; 
+  flex: 0 0 26.25rem;
 
-   @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
     float: left;
     width: 22rem;
     margin-right: 2rem;
@@ -44,7 +43,7 @@ export const Left = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 90%;
-  height: 37.5rem; 
+  height: 37.5rem;
   border-radius: 1.25rem;
   overflow: hidden;
   margin-left: 0.5rem;
@@ -58,12 +57,12 @@ export const ImageWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 286px;       
-    height: 461px;     
+    width: 286px;
+    height: 461px;
     margin-left: 0;
 
     .profile-image {
-      object-fit: contain;   
+      object-fit: contain;
     }
   }
 
@@ -89,10 +88,10 @@ export const Right = styled.div`
 `;
 
 export const Label = styled.div`
-  font-size: 0.875rem; 
-  letter-spacing: 0.125rem; 
-  margin-bottom: 1.25rem; 
-  padding: 0.25rem 1.5625rem; 
+  font-size: 0.875rem;
+  letter-spacing: 0.125rem;
+  margin-bottom: 1.25rem;
+  padding: 0.25rem 1.5625rem;
   position: relative;
   display: inline-block;
 
@@ -103,12 +102,12 @@ export const Label = styled.div`
   span::before {
     content: "";
     position: absolute;
-    left: -1.5625rem; 
+    left: -1.5625rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 0.875rem; 
+    width: 0.875rem;
     height: 0.875rem;
-    border-left: 0.125rem solid #c8a24c; 
+    border-left: 0.125rem solid #c8a24c;
     border-top: 0.125rem solid #c8a24c;
   }
 
@@ -126,20 +125,18 @@ export const Label = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.3;
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.25rem;
   color: #111;
-  
+
   span {
     font-weight: 500;
   }
 
-
   @media (max-width: 768px) {
     font-size: 2.2rem;
-     
   }
 
   @media (max-width: 480px) {
@@ -153,14 +150,14 @@ export const Bold = styled.span`
 
 export const Paragraph = styled.p`
   font-family: var(--font-jost), sans-serif;
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.9;
   color: #000000;
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.25rem;
   text-align: justify;
-@media (max-width: 1024px) {
-  font-size: 1rem; 
+  @media (max-width: 1024px) {
+    font-size: 1rem;
   }
   @media (max-width: 768px) {
     text-align: justify;

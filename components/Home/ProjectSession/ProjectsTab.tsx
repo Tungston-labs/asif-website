@@ -5,14 +5,14 @@ import { useState } from "react";
 
 const locations = [
   "KOTTAYAM",
-  "PAYYANUR",
-  "VENNALA",
+  "ALUVA",
+  "KANNUR - 1",
   "MANNARKAD",
+  "IRITTY",
+  "VARAPPUZHA",
+  "BANGLORE",
   "KANNUR",
-  "TIRUR",
-  "ALAPPUZHA",
-  "PUTHANATHANI",
-  "PALAKKAD",
+  "KOOTHATTUKULAM",
   
 ];
 interface Props {

@@ -148,17 +148,17 @@ export const FloatingText = styled.p`
 
 export const DecorImage = styled(Image)`
   margin-left: 7rem;
- @media (max-width: 1024px) {
-  margin-left: 3rem;
-  width: 4rem;
-  height: auto;
+  @media (max-width: 1024px) {
+    margin-left: 3rem;
+    width: 4rem;
+    height: auto;
   }
   @media (max-width: 768px) {
     display: none;
   }
 `;
 export const Title = styled.h1`
-  font-size: clamp(2rem, 5vw, 3rem); 
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 300;
   letter-spacing: 0.08rem;
   color: #000000;

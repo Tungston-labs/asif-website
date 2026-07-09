@@ -1,15 +1,14 @@
 export const projects = [
   {
     id: 1,
-    location: "PAYYANUR",
-    title: "Payyanur Projects",
-    description:
-      "",
+    location: "ALUVA",
+    title: "Aluva Projects",
+    description: "",
     images: [
-      "/images/pynr3.png",
-      "/images/pynr2.png",
-      "/images/pynr1.png",
-      "/images/pynr4.png",
+      "/images/ALUVA/aluva4.jpg",
+      "/images/ALUVA/aluva2.jpg",
+      "/images/ALUVA/aluva1.jpg",
+      "/images/ALUVA/aluva3.jpg",
     ],
   },
 
@@ -24,6 +23,62 @@ export const projects = [
       "/images/Kottayam10.jpeg",
       "/images/Kottayam1.jpeg",
       "/images/Kottayam8.jpeg",
+    ],
+  },
+
+  {
+    id: 2,
+    location: "KANNUR - 1",
+    title: "Kannur Projects",
+    description:
+      "A blend of contemporary elegance and comfort with urban comfort, our projects in kottayam focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
+    images: [
+      "/images/cherukunnu9.jpeg",
+      "/images/cherukunnu4.jpeg",
+      "/images/cherukunnu5.jpeg",
+      "/images/cherukunnu7.jpeg",
+      "/images/cherukunnu8.jpeg",
+      "/images/cherukunnu6.jpeg",
+    ],
+  },
+  {
+    id: 2,
+    location: "IRITTY",
+    title: "Kannur Projects",
+    description:
+      "A blend of contemporary elegance and comfort with urban comfort, our projects in kottayam focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
+    images: [
+      "/images/IPHONE SORTED LIST/iritty1/iritty1.jpeg",
+      "/images/IPHONE SORTED LIST/iritty1/iritty4.jpeg",
+      "/images/IPHONE SORTED LIST/iritty1/iritty2.jpeg",
+      
+    ],
+  },
+
+  {
+    id: 2,
+    location: "VARAPPUZHA",
+    title: "Kannur Projects",
+    description:
+      "A blend of contemporary elegance and comfort with urban comfort, our projects in kottayam focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
+    images: [
+      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha1.JPG",
+      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha5.JPG",
+      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha3.JPG",
+      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha6.jpeg",
+      "/images/IPHONE SORTED LIST/Varappuzha Ernakulam/varappuzha7.jpeg",
+    ],
+  },
+  {
+    id: 2,
+    location: "BANGLORE",
+    title: "Kannur Projects",
+    description:
+      "A blend of contemporary elegance and comfort with urban comfort, our projects in kottayam focus on open layouts and seamless spatial flow. As trusted residential architects, we design homes that reflect individual lifestyles while maintaining timeless architectural appeal.",
+    images: [
+      "/images/BANGLORE/banglore20.png",
+      "/images/BANGLORE/BNGLR-3.jpg",
+      "/images/BANGLORE/BNGLR-2.jpg",
     ],
   },
 
@@ -48,13 +103,10 @@ export const projects = [
     description:
       "Contemporary residential developments tailored for urban living and smart space utilization.",
     images: [
-      "/images/vennala7.jpeg",
       "/images/vennala1.jpeg",
-      "/images/vennala2.jpeg",
       "/images/vennala6.jpeg",
       "/images/vennala4.jpeg",
-      "/images/vennala5.jpeg",
-      "/images/vennala3.jpeg",
+      "/images/vennalaaa5.jpeg",
     ],
   },
 
@@ -65,10 +117,9 @@ export const projects = [
     description:
       "Functional and aesthetically pleasing homes designed to harmonize with natural surroundings.",
     images: [
-      "/images/Mannarkad4.jpeg",
       "/images/Mannarkad3.jpeg",
       "/images/Mannarkad2.jpeg",
-      "/images/Mannarkad1.jpeg",
+      "/images/Mannarkad4.jpeg",
     ],
   },
 
@@ -84,11 +135,21 @@ export const projects = [
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",
       "/images/pallikunn4.jpeg",
-      "/images/cherukunnu4.jpeg",
-      "/images/cherukunnu5.jpeg",
-      "/images/cherukunnu9.jpeg",
-      "/images/cherukunnu7.jpeg",
-      "/images/cherukunnu8.jpeg",
+    ],
+  },
+  {
+    id: 6,
+    location: "KOOTHATTUKULAM",
+    title: "Kannur Projects",
+    description:
+      "Modern architectural residences emphasizing durability, ventilation, and contemporary style.",
+    images: [
+      "/images/koothattukulam7.jpeg",
+      "/images/koothattukulammmm4.jpeg",
+      "/images/koothattukulam2.jpeg",
+      "/images/koothattukulam6.jpeg",
+      "/images/koothattukulam3.jpeg",
+      "/images/IPHONE SORTED LIST/Koothatukulam/koothatukulam5.JPG",
     ],
   },
 
@@ -102,8 +163,6 @@ export const projects = [
       "/images/tirur1.jpeg",
       "/images/tirur2.jpeg",
       "/images/tirur3.jpeg",
-      "/images/tirur5.jpeg",
-      "/images/tirur4.jpeg",
     ],
   },
 
@@ -118,12 +177,6 @@ export const projects = [
       "/images/Alappy-6.jpeg",
       "/images/Alappy-1.jpeg",
       "/images/Alappy-10.jpeg",
-      "/images/Alappy-9.jpeg",
-      "/images/Alappy-2.jpeg",
-      "/images/Alappy-15.jpeg",
-      "/images/Alappy-11.jpeg",
-      "/images/Alappy-12.jpeg",
-      "/images/Alappy-14.jpeg",
     ],
   },
 
@@ -153,11 +206,7 @@ export const projects = [
       "/images/malappuram6.jpeg",
       "/images/malappuram7.jpeg",
       "/images/malappuram3.jpeg",
-      "/images/malappuram1.jpeg",
-      "/images/malappuram2.jpeg",
-      "/images/malappuram5.jpeg",
       "/images/malappuram8.jpeg",
-      "/images/malappuram9.jpeg",
     ],
   },
 
@@ -172,11 +221,6 @@ export const projects = [
       "/images/palakkad2.jpeg",
       "/images/palakkad3.jpeg",
       "/images/palakkad4.jpeg",
-      "/images/palakkad6.jpeg",
-      "/images/palakkad7.jpeg",
-      "/images/palakkad8.jpeg",
-      "/images/palakkad9.jpeg",
-      "/images/palakkad10.jpeg",
     ],
   },
 

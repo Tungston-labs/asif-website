@@ -1,35 +1,96 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Container,
   InnerWrapper,
   MainImage,
   MainImageWrapper,
+  SocialButton,
+  SocialButtons,
+  SocialWrapper,
   Thumbnail,
   ThumbnailImage,
   ThumbnailRow,
   ThumbnailTrack,
 } from "./GalleryGrid.style";
 
+import { FaYoutube, FaInstagram, FaFacebookF } from "react-icons/fa";
+
 type Props = {
   images: string[];
   selectedLocation: string;
+
+  socialLinks?: {
+    youtube?: string;
+    instagram?: string;
+    facebook?: string;
+  };
 };
 
-const GalleryGrid = ({
-  images,
-  selectedLocation,
-}: Props) => {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
+  const [selectedImage, setSelectedImage] = useState(images[0] || "");
 
+  const trackRef = useRef<HTMLDivElement>(null);
+  const thumbnailRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // Reset the main image whenever the location/images change
   useEffect(() => {
-    setSelectedImage(images[0]);
-  }, [images]);
+    if (images.length > 0) {
+      setSelectedImage(images[0]);
 
-  if (!selectedImage) {
-    return null;
-  }
+      trackRef.current?.scrollTo({
+        left: 0,
+        behavior: "auto",
+      });
+    } else {
+      setSelectedImage("");
+    }
+  }, [selectedLocation, images]);
+
+  // Keep selected thumbnail visible
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const index = images.findIndex((img) => img === selectedImage);
+
+    if (index === -1) return;
+
+    const container = trackRef.current;
+    const thumb = thumbnailRefs.current[index];
+
+    if (!container || !thumb) return;
+
+    const left =
+      thumb.offsetLeft - container.clientWidth / 2 + thumb.clientWidth / 2;
+
+    container.scrollTo({
+      left,
+      behavior: "smooth",
+    });
+  }, [selectedImage, images]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const currentIndex = images.findIndex((img) => img === selectedImage);
+
+    if (currentIndex === -1) return;
+
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+
+      const nextIndex = (currentIndex + 1) % images.length;
+      setSelectedImage(images[nextIndex]);
+    }
+
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+
+      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      setSelectedImage(images[prevIndex]);
+    }
+  };
+
+  if (!selectedImage) return null;
 
   return (
     <Container>
@@ -45,22 +106,22 @@ const GalleryGrid = ({
           />
         </MainImageWrapper>
 
-        <ThumbnailRow>
-          <ThumbnailTrack
-            $isAll={selectedLocation === "ALL"}
-          >
+        <ThumbnailRow ref={trackRef} tabIndex={0} onKeyDown={handleKeyDown}>
+          <ThumbnailTrack $isAll={selectedLocation === "ALL"}>
             {images.map((img, index) => (
               <Thumbnail
-                key={img}
+                ref={(el) => {
+                  thumbnailRefs.current[index] = el;
+                }}
+                key={`${img}-${index}`}
                 type="button"
                 onClick={() => setSelectedImage(img)}
                 $active={selectedImage === img}
                 aria-label={`Show project image ${index + 1}`}
-                aria-pressed={selectedImage === img}
               >
                 <ThumbnailImage
                   src={img}
-                  alt="Thumbnail"
+                  alt={`Thumbnail ${index + 1}`}
                   fill
                   sizes="80px"
                 />
@@ -68,6 +129,47 @@ const GalleryGrid = ({
             ))}
           </ThumbnailTrack>
         </ThumbnailRow>
+
+        {selectedLocation !== "ALL" && (
+          <SocialWrapper>
+            {socialLinks && (
+              <SocialButtons>
+                {socialLinks.youtube && (
+                  <SocialButton
+                    href={socialLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaYoutube color="#FF0000" />
+                    YouTube
+                  </SocialButton>
+                )}
+
+                {socialLinks.instagram && (
+                  <SocialButton
+                    href={socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram color="#E4405F" />
+                    Instagram
+                  </SocialButton>
+                )}
+
+                {socialLinks.facebook && (
+                  <SocialButton
+                    href={socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookF color="#1877F2" />
+                    Facebook
+                  </SocialButton>
+                )}
+              </SocialButtons>
+            )}
+          </SocialWrapper>
+        )}
       </InnerWrapper>
     </Container>
   );

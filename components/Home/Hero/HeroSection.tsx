@@ -22,7 +22,7 @@ import {
 
 const desktopImages = [
   "/images/home/slider1.svg",
-  "/images/home/slider2.svg",
+  "/images/home/slider11.png",
   "/images/home/slider3.svg",
   "/images/home/slider5.svg",
 ];
