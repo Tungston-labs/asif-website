@@ -22,13 +22,11 @@ const AboutHome = () => {
       <Container>
         <LeftContent>
           <Tag $color="#000000">ABOUT US</Tag>
-
           <Title>
             <strong>ARCHITECTURE</strong> IS NOT JUST ABOUT SHELTER. IT IS ABOUT
             CREATING A STAGE
             <span> FOR YOUR LEGACY.</span>
           </Title>
-
           <Description>
             Led by Asif Ahmed, our firm delivers thoughtfully designed
             residential and commercial architecture house design and
@@ -38,8 +36,7 @@ const AboutHome = () => {
             planning, structural expertise, and a strong commitment to quality
             and excellence.
           </Description>
-
-          <StyledLink href="/about">READ MORE</StyledLink>
+          <StyledLink href="/about">View Profile</StyledLink>{" "}
           <BgBlueprint>
             <Image src="/images/about/about-back.svg" alt="Blueprint" fill />
           </BgBlueprint>
