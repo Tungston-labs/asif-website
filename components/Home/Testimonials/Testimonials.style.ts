@@ -128,7 +128,8 @@ export const Subtitle = styled.p`
 export const SliderWrapper = styled.div`
   position: relative;
   z-index: 2;
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
 `;
 
 export const SliderTrack = styled.div`
@@ -144,8 +145,8 @@ export const SliderTrack = styled.div`
 
 export const Card = styled.div`
   width: 40rem;
-  height: 18rem;
-  padding: 1rem;
+  min-height: 18rem;
+  padding: 1.5rem;
   flex-shrink: 0;
 
   border: 1px solid rgba(220, 216, 216, 0.2);
@@ -153,6 +154,7 @@ export const Card = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: 0.4s ease;
 
   &:hover {
@@ -161,18 +163,19 @@ export const Card = styled.div`
 
   @media (max-width: 1024px) {
     width: 32rem;
+    min-height: 20rem;
   }
 
   @media (max-width: 768px) {
     width: 26rem;
-    padding: 2rem;
-    height: 24rem;
+    min-height: 22rem;
+    padding: 1.5rem;
   }
 
   @media (max-width: 480px) {
-    width: 85vw;
-    min-height: auto;
-    padding: 1.5rem;
+    width: calc(100vw - 4rem);
+    min-height: 24rem;
+    padding: 1.25rem;
   }
 `;
 
@@ -186,20 +189,31 @@ export const QuoteShape = styled.div`
   width: 1.5rem;
   height: 2.9rem;
   background: #caa24d;
-
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-`;
-
-export const Content = styled.p`
-  font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.3rem;
-  color: #d4d4d4;
-  margin: 0.2rem 0;
 
   @media (max-width: 480px) {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    width: 1rem;
+    height: 2rem;
+  }
+`;
+export const Content = styled.p`
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #d4d4d4;
+  margin: 0.5rem 0 1.5rem;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 `;
 
