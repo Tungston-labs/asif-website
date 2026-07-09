@@ -35,7 +35,6 @@ const Profile = () => {
 
           <Title>
             CRAFTING SPACES THAT <span>REFLECT PASSION</span>, PRECISION, AND{" "}
-
             <span>TIMELESS DESIGN</span>
           </Title>
 
@@ -59,9 +58,9 @@ const Profile = () => {
             thoughtfully designed residential and commercial projects that
             balance aesthetics, functionality, and long-term value. Over the
             years, we have successfully completed projects across Ernakulam,
-            Wayanad, Thrissur, Kottayam, Kozhikode, Coorg, Bengaluru, Karnataka,
-            Tamil Nadu, and beyond, each reflecting our commitment to
-            architectural design home plans and innovation.
+            Wayanad, Thrissur, Kottayam, Kozhikode, Bangalore, Tamil Nadu, and
+            beyond, each reflecting our commitment to architectural design home
+            plans and innovation.
           </Paragraph>
 
           <Paragraph>

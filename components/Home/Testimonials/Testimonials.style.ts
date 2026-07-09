@@ -84,8 +84,6 @@ export const BackgroundBall = styled.div`
   }
 `;
 
-/* ================= HEADER ================= */
-
 export const Header = styled.div`
   position: relative;
   z-index: 2;
