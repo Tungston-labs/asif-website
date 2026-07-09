@@ -15,7 +15,6 @@ import {
   StyledLink,
 } from "./AboutHome.styled";
 import { Tag } from "../Sessions/AboutArchitect.styled";
-import Link from "next/link";
 
 const AboutHome = () => {
   return (

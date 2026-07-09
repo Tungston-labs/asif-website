@@ -29,7 +29,6 @@ export const projectsData: ProjectData[] = [
       "/images/pallikunn10.png",
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",
-      "/images/pallikunn4.jpeg",
     ],
   },
 
