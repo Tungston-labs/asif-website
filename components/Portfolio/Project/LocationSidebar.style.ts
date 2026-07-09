@@ -48,7 +48,7 @@ export const ScrollWrapper = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #c8a24c #f2f2f2;
+  scrollbar-color: #9d7422 #f2f2f2;
 
   &::-webkit-scrollbar {
     width: 0.375rem;
@@ -59,7 +59,7 @@ export const ScrollWrapper = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #c8a24c;
+    background: #9d7422;
     border-radius: 10px;
   }
 
@@ -93,16 +93,16 @@ export const LocationItem = styled.button<{ $active: boolean }>`
   text-align: left;
   transition: 0.3s;
 
-  background: ${({ $active }) => ($active ? "#c8a24c" : "#fff")};
+  background: ${({ $active }) => ($active ? "#9d7422" : "#fff")};
   color: ${({ $active }) => ($active ? "#fff" : "#000")};
 
   &:hover {
-    background: #c8a24c;
+    background: #9d7422;
     color: #fff;
   }
 
   &:focus-visible {
-    outline: 2px solid #c8a24c;
+    outline: 2px solid #9d7422;
     outline-offset: -2px;
   }
 

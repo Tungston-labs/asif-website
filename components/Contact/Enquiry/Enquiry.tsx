@@ -154,7 +154,7 @@ const Enquiry = () => {
         </SubText>
 
         <Form onSubmit={handleSubmit}>
-          <h4>Personal Information</h4>
+          <h3>Personal Information</h3>
 
           <Row>
             <Input
@@ -191,7 +191,7 @@ const Enquiry = () => {
             />
           </Row>
 
-          <h4>Enquiry Details</h4>
+          <h3>Enquiry Details</h3>
 
           <Row>
             <Input

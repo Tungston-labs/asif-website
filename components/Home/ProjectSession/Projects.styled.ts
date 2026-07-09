@@ -49,7 +49,7 @@ export const HeaderGrid = styled.div`
 `;
 
 export const Tag = styled.span`
-  color: #d7ae5b;
+  color: #9d7422;
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
 `;
@@ -117,8 +117,8 @@ export const Tab = styled.button<TabProps>`
   align-items: center;
   justify-content: center;
 
-  background: ${({ $active }) => ($active ? "#D7AE5B" : "#fff")};
-  color: ${({ $active }) => ($active ? "#030303" : "#000")};
+  background: ${({ $active }) => ($active ? "#9D7422" : "#fff")};
+  color: ${({ $active }) => ($active ? "#fff" : "#000")};
 
   border: none;
   outline: none;
@@ -134,7 +134,8 @@ export const Tab = styled.button<TabProps>`
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background: #d7ae5b;
+      background: #9d7422;
+      color:#fff;
     }
   }
 

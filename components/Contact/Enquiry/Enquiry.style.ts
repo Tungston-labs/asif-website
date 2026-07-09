@@ -168,7 +168,7 @@ export const Select = styled.select`
 export const Button = styled.button`
   margin-top: 1.875rem; 
   padding: 1rem 2.5rem; 
-  background: linear-gradient(90deg, #c8a24c, #d8b36a);
+  background: linear-gradient(90deg, #9d7422, #9d7422);
   border: none;
   border-radius: 0.3125rem; 
   color: #fff;

@@ -102,7 +102,7 @@ export const Description = styled.p`
 
 export const StyledLink = styled.a`
   margin-top: 2rem;
-  background-color: #d7ae5b;
+  background-color: #9d7422;
   color: #fff;
   border: none;
   padding: 14px 28px;
@@ -119,7 +119,7 @@ export const StyledLink = styled.a`
   &:hover {
     color: #000;
     background-color: white;
-    border: 1px solid #d7ae5b;
+    border: 1px solid #9d7422;
   }
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -207,7 +207,7 @@ export const ImageTitle = styled.h4`
 
 export const ImageSubtitle = styled.p`
   font-size: 0.75rem;
-  color: #777;
+  color: #111;
     @media (max-width: 1024px) {
     font-size: 0.85rem;
         margin-bottom:1rem;

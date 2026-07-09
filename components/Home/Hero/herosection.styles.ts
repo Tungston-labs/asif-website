@@ -198,7 +198,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  background: #d7ae5b;
+  background: #9d7422;
   color: #fff;
   border: none;
   border-radius: 0.3rem;
@@ -211,7 +211,7 @@ export const PrimaryButton = styled.button`
   &:hover {
     color: #000000;
     background-color: white;
-    border: 1px solid #d7ae5b;
+    border: 1px solid #9d7422;
   }
 
   @media (max-width: 48rem) {

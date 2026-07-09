@@ -61,13 +61,18 @@ export default function WhatWeDo() {
         </LeftContent>
 
         <RightImage>
-          <Image
-            src="/images/home/whatwedo.svg"
-            alt="Modern House"
-            width={900}
-            height={1000}
-            quality={80}
-          />
+        <Image
+  src="/images/home/whatwedo.svg"
+  alt="Modern House"
+  width={900}
+  height={1000}
+  quality={80}
+  sizes="(max-width: 992px) 100vw, 50vw"
+  style={{
+    width: "100%",
+    height: "auto",
+  }}
+/>
         </RightImage>
       </ContentWrapper>
     </Section>

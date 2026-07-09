@@ -61,7 +61,7 @@ export const Menu = styled.ul<MenuProps>`
     align-items: flex-start;
     justify-content: flex-start;
 
-    background: #d7ae5b;
+    background: #9d7422;
     padding: 6rem 2rem 2rem;
 
     /* ✅ THIS NOW WORKS */
@@ -108,14 +108,14 @@ export const MenuItem = styled.li`
   }
 
   a:hover {
-    color: #d7ae5b;
+    color: #9d7422;
   }
   @media (max-width: 1024px) {
     font-size: 0.86rem;
   }
   @media (min-width: 769px) {
     a.active {
-      color: #d7ae5b;
+      color: #9d7422;
     }
   }
 
@@ -145,7 +145,7 @@ export const MenuItem = styled.li`
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: #d7ae5b;
+        background: #9d7422;
 
         border-radius: 0.375rem;
         color: #000;
@@ -159,7 +159,7 @@ export const Button = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #d7ae5b;
+  background: #9d7422;
   color: #fff;
   padding: 0.55rem 0.8rem;
   border-radius: 0.375rem;
@@ -169,7 +169,7 @@ export const Button = styled.a`
 
   &:hover {
     transform: translateY(-0.125rem);
-    border: 1px solid #d7ae5b;
+    border: 1px solid #9d7422;
     background: #fff;
     color: #000;
   }
