@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Tag } from "../Sessions/AboutArchitect.styled";
 import {
   Section,
@@ -39,15 +40,20 @@ export default function WhatWeDo() {
             <FeatureItem>
               <FeatureTitle>✔ MATERIAL & FINISH SELECTION</FeatureTitle>
               <FeatureText>
-                Carefully curated materials, textures, and color palettes, selected to match your vision, delivered with the <br></br>
-                expertise of professional best house architects and interior designers.
+                Carefully curated materials, textures, and color palettes,
+                selected to match your vision, delivered with the <br></br>
+                expertise of professional best house architects and interior
+                designers.
               </FeatureText>
             </FeatureItem>
 
             <FeatureItem>
               <FeatureTitle>✔ CUSTOM FURNITURE & DETAILING</FeatureTitle>
               <FeatureText>
-                Bespoke furniture and refined detailing crafted to fit your space perfectly. Balanced lighting and tailored house<br></br> building design plan solutions enhance both mood and functionality, creating a home that truly feels yours.
+                Bespoke furniture and refined detailing crafted to fit your
+                space perfectly. Balanced lighting and tailored house<br></br>{" "}
+                building design plan solutions enhance both mood and
+                functionality, creating a home that truly feels yours.
               </FeatureText>
             </FeatureItem>
           </FeatureList>
@@ -55,7 +61,13 @@ export default function WhatWeDo() {
         </LeftContent>
 
         <RightImage>
-          <img src="/images/home/whatwedo.svg" alt="Modern House" />
+          <Image
+            src="/images/home/whatwedo.svg"
+            alt="Modern House"
+            width={900}
+            height={1000}
+            quality={80}
+          />
         </RightImage>
       </ContentWrapper>
     </Section>
