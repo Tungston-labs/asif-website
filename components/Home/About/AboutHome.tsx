@@ -44,10 +44,11 @@ const AboutHome = () => {
         <RightImages>
           <ImageCard>
             <Image
-              src="/images/about/Rectangle1.svg"
+              src="/images/optimized/about/rectangle1.webp"
               alt="Construction"
               width={500}
               height={600}
+              sizes="(max-width: 768px) 80vw, 500px"
             />
             <ImageTitle>INNOVATIVE CONSTRUCTION</ImageTitle>
             <ImageSubtitle>
@@ -57,10 +58,11 @@ const AboutHome = () => {
 
           <ImageCard $offset>
             <Image
-              src="/images/about/Rectangle2.svg"
+              src="/images/optimized/about/rectangle2.webp"
               alt="Client"
               width={500}
               height={800}
+              sizes="(max-width: 768px) 80vw, 500px"
               style={{ marginTop: "-1.3rem" }}
             />
             <ImageTitle>CLIENT-CENTRIC APPROACH</ImageTitle>
