@@ -14,7 +14,7 @@ const PortfolioCircle = () => {
       onClick={() => router.push("/portfolio")}
     >
       <CircleInside>
-        <IoArrowRedoSharp size={20} aria-hidden="true" />
+        <IoArrowRedoSharp size={30} style={{"color":`#fff`}}aria-hidden="true" />
       </CircleInside>
     </CircleButton>
   );
