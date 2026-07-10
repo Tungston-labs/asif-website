@@ -150,8 +150,8 @@ export const Label = styled.div`
     transform: translateY(-50%);
     width: 0.875rem;
     height: 0.875rem;
-    border-left: 0.125rem solid #c8a24c;
-    border-top: 0.125rem solid #c8a24c;
+    border-left: 0.125rem solid #947029;
+    border-top: 0.125rem solid #947029;
   }
 
   span::after {
@@ -162,7 +162,7 @@ export const Label = styled.div`
     transform: translateY(-50%);
     width: 0.875rem;
     height: 0.875rem;
-    border-right: 0.125rem solid #c8a24c;
-    border-bottom: 0.125rem solid #c8a24c;
+    border-right: 0.125rem solid #947029;
+    border-bottom: 0.125rem solid #947029;
   }
 `;

@@ -86,7 +86,7 @@ export const FeatureText = styled.p`
 export const QuoteButton = styled(Link)`
   margin-top: 2rem;
   padding: 14px 28px;
-  background: #c9a45c;
+  background: #947029;
   color: white;
   font-weight: 500;
   font-family: var(--font-jost), sans-serif;
@@ -99,7 +99,7 @@ export const QuoteButton = styled(Link)`
   display: inline-block;
 
   &:hover {
-    border: 1px solid #c9a45c;
+    border: 1px solid #947029;
     background: #fff;
     color: #000000;
   }

@@ -12,7 +12,7 @@ const moveRight = keyframes`
 
 export const BannerWrapper = styled.div`
   width: 100%;
-  background-color: #cfa652;
+  background-color: #947029;
   overflow: hidden;
   white-space: nowrap;
   padding: 0.875rem 0; 
@@ -32,7 +32,7 @@ export const TextItem = styled.span`
   letter-spacing: 0.1875rem; 
   text-transform: uppercase;
   margin-right: 2.5rem; 
-  color: #000;
+  color: #fff;
 `;
 
 export const Separator = styled.span`

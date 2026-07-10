@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   HeroSection,
@@ -40,9 +39,6 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setCurrent(0);
-  }, [isMobile]);
-  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -63,7 +59,8 @@ const Hero = () => {
   }, [isMobile]);
 
   const activeImages = isMobile ? mobileImages : desktopImages;
-  const imageSrc = activeImages[current];
+  const currentIndex = current % activeImages.length;
+  const imageSrc = activeImages[currentIndex];
 
   if (!imageSrc) return null;
   return (
@@ -84,23 +81,19 @@ const Hero = () => {
           </Subtitle>
 
           <ButtonGroup>
-            <Link href="/about">
-              <PrimaryButton>KNOW MORE</PrimaryButton>
-            </Link>
-
-            <Link href="/portfolio">
-              <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
-            </Link>
+            <PrimaryButton href="/about">KNOW MORE</PrimaryButton>
+            <SecondaryButton href="/portfolio">EXPLORE PROJECTS</SecondaryButton>
           </ButtonGroup>
 
           <ImageWrapper>
             {activeImages.map((img, index) => (
-              <SliderImage key={index} $active={index === current}>
+              <SliderImage key={index} $active={index === currentIndex}>
                 <Image
                   src={img}
-                  alt="Slider"
+                  alt=""
                   fill
-                  priority
+                  priority={index === 0}
+                  sizes="100vw"
                   style={{
                     objectFit: "cover",
                     width: "100%",

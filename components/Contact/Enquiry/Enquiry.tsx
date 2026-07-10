@@ -8,6 +8,8 @@ import {
   Title,
   SubText,
   Form,
+  Field,
+  Label,
   Row,
   Input,
   Button,
@@ -154,60 +156,90 @@ const Enquiry = () => {
         </SubText>
 
         <Form onSubmit={handleSubmit}>
-          <h4>Personal Information</h4>
+          <h3>Personal Information</h3>
 
           <Row>
-            <Input
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+            <Field>
+              <Label htmlFor="enquiry-name">Full Name</Label>
+              <Input
+                id="enquiry-name"
+                name="name"
+                placeholder="Full Name"
+                autoComplete="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="enquiry-email">Email Address</Label>
+              <Input
+                id="enquiry-email"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </Field>
           </Row>
 
           <Row>
-            <Input
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="address"
-              placeholder="Address/Area"
-              value={formData.address}
-              onChange={handleChange}
-              required
-            />
+            <Field>
+              <Label htmlFor="enquiry-phone">Phone Number</Label>
+              <Input
+                id="enquiry-phone"
+                name="phone"
+                type="tel"
+                placeholder="Phone Number"
+                autoComplete="tel"
+                inputMode="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="enquiry-address">Address/Area</Label>
+              <Input
+                id="enquiry-address"
+                name="address"
+                placeholder="Address/Area"
+                autoComplete="street-address"
+                value={formData.address}
+                onChange={handleChange}
+                required
+              />
+            </Field>
           </Row>
 
-          <h4>Enquiry Details</h4>
+          <h3>Enquiry Details</h3>
 
           <Row>
-            <Input
-              name="enquiryType"
-              placeholder="Enquiry Type"
-              value={formData.enquiryType}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="projectType"
-              placeholder="Type Of Project"
-              value={formData.projectType}
-              onChange={handleChange}
-              required
-            />
+            <Field>
+              <Label htmlFor="enquiry-type">Enquiry Type</Label>
+              <Input
+                id="enquiry-type"
+                name="enquiryType"
+                placeholder="Enquiry Type"
+                value={formData.enquiryType}
+                onChange={handleChange}
+                required
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="project-type">Type Of Project</Label>
+              <Input
+                id="project-type"
+                name="projectType"
+                placeholder="Type Of Project"
+                value={formData.projectType}
+                onChange={handleChange}
+                required
+              />
+            </Field>
           </Row>
 
           <Button type="submit" disabled={loading}>
@@ -216,6 +248,7 @@ const Enquiry = () => {
 
           {message && (
             <p
+              role={success ? "status" : "alert"}
               style={{
                 marginTop: "20px",
                 padding: "10px",

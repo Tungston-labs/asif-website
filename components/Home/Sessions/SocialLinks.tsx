@@ -9,16 +9,18 @@ const SocialLinks = () => {
         href="https://www.facebook.com/share/1JsGiUxt3S/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our Facebook page"
       >
-        <FaFacebookF />
+        <FaFacebookF aria-hidden="true"/>
       </a>
 
       <a
         href="https://www.instagram.com/architect_asif_ahmed?igsh=NzhtaWlkczQ2anNs"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our instagram page"
       >
-        <FaInstagram />
+        <FaInstagram aria-hidden="true"/>
       </a>
 
       {/* If you have Twitter link, replace below */}
@@ -26,8 +28,9 @@ const SocialLinks = () => {
         href="https://twitter.com"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our twitter page"
       >
-        <FaTwitter />
+        <FaTwitter aria-hidden="true" />
       </a>
 
     </SocialWrapper>

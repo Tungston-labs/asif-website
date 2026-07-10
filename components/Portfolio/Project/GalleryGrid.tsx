@@ -29,24 +29,21 @@ type Props = {
 };
 
 const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
-  const [selectedImage, setSelectedImage] = useState(images[0] || "");
+  const [selectedImageState, setSelectedImageState] = useState(images[0] || "");
+  const selectedImage = images.includes(selectedImageState)
+    ? selectedImageState
+    : images[0] || "";
 
   const trackRef = useRef<HTMLDivElement>(null);
   const thumbnailRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   // Reset the main image whenever the location/images change
   useEffect(() => {
-    if (images.length > 0) {
-      setSelectedImage(images[0]);
-
-      trackRef.current?.scrollTo({
-        left: 0,
-        behavior: "auto",
-      });
-    } else {
-      setSelectedImage("");
-    }
-  }, [selectedLocation, images]);
+    trackRef.current?.scrollTo({
+      left: 0,
+      behavior: "auto",
+    });
+  }, [selectedLocation]);
 
   // Keep selected thumbnail visible
   useEffect(() => {
@@ -79,14 +76,14 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
       e.preventDefault();
 
       const nextIndex = (currentIndex + 1) % images.length;
-      setSelectedImage(images[nextIndex]);
+      setSelectedImageState(images[nextIndex]);
     }
 
     if (e.key === "ArrowLeft") {
       e.preventDefault();
 
       const prevIndex = (currentIndex - 1 + images.length) % images.length;
-      setSelectedImage(images[prevIndex]);
+      setSelectedImageState(images[prevIndex]);
     }
   };
 
@@ -115,7 +112,7 @@ const GalleryGrid = ({ images, selectedLocation, socialLinks }: Props) => {
                 }}
                 key={`${img}-${index}`}
                 type="button"
-                onClick={() => setSelectedImage(img)}
+                onClick={() => setSelectedImageState(img)}
                 $active={selectedImage === img}
                 aria-label={`Show project image ${index + 1}`}
               >

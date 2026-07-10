@@ -61,7 +61,7 @@ export const Menu = styled.ul<MenuProps>`
     align-items: flex-start;
     justify-content: flex-start;
 
-    background: #d7ae5b;
+    background: #947029;
     padding: 6rem 2rem 2rem;
 
     /* ✅ THIS NOW WORKS */
@@ -83,10 +83,22 @@ export const Menu = styled.ul<MenuProps>`
 
     padding: 1rem 1.5rem;
 
-    svg {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+  }
+`;
+
+export const CloseButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: transparent;
+  border: 0;
+  color: #111;
+  cursor: pointer;
+
+  svg {
+    font-size: 1.5rem;
   }
 `;
 
@@ -108,14 +120,14 @@ export const MenuItem = styled.li`
   }
 
   a:hover {
-    color: #d7ae5b;
+    color: #947029;
   }
   @media (max-width: 1024px) {
     font-size: 0.86rem;
   }
   @media (min-width: 769px) {
     a.active {
-      color: #d7ae5b;
+      color: #947029;
     }
   }
 
@@ -145,7 +157,7 @@ export const MenuItem = styled.li`
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: #d7ae5b;
+        background: #947029;
 
         border-radius: 0.375rem;
         color: #000;
@@ -159,7 +171,7 @@ export const Button = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #d7ae5b;
+  background: #947029;
   color: #fff;
   padding: 0.55rem 0.8rem;
   border-radius: 0.375rem;
@@ -169,7 +181,7 @@ export const Button = styled.a`
 
   &:hover {
     transform: translateY(-0.125rem);
-    border: 1px solid #d7ae5b;
+    border: 1px solid #947029;
     background: #fff;
     color: #000;
   }
@@ -179,12 +191,19 @@ export const Button = styled.a`
   }
 `;
 
-export const HamburgerIcon = styled.div`
+export const HamburgerIcon = styled.button`
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: #111;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 48rem) {
-    display: block;
+    display: inline-flex;
   }
 `;
