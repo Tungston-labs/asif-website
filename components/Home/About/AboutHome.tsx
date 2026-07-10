@@ -61,7 +61,7 @@ const AboutHome = () => {
               src="/images/optimized/about/rectangle2.webp"
               alt="Client"
               width={500}
-              height={800}
+              height={600}
               sizes="(max-width: 768px) 80vw, 500px"
               style={{ marginTop: "-1.3rem" }}
             />

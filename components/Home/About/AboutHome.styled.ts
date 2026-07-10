@@ -167,7 +167,8 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
 }
   img {
     width: 100%;
-    height: auto;
+    height: 30rem;
+    max-width: 18rem;
     object-fit: cover;
   }
 
