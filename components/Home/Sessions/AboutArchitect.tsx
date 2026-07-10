@@ -23,10 +23,10 @@ const AboutArchitect = () => {
 
            <SideImage>
     <Image
-      src="/images/about/about-me.svg"
+      src="/images/optimized/about/about-me.webp"
       alt="decor"
       fill
-      priority
+      sizes="(max-width: 768px) 20rem, (max-width: 1024px) 14rem, 17rem"
     />
   </SideImage>
           <LeftGallery />
