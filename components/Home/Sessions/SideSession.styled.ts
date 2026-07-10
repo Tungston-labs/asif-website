@@ -22,11 +22,14 @@ export const SideNavWrapper = styled.div`
   }
 `;
 
-export const NavItem = styled.div`
+export const NavItem = styled.button`
   font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
 
   color: rgba(253, 253, 253, 1);
   cursor: pointer;

@@ -158,7 +158,7 @@ export const Card = styled.div`
   transition: 0.4s ease;
 
   &:hover {
-    border-color: #9d7422;
+    border-color: #947029;
   }
 
   @media (max-width: 1024px) {
@@ -188,7 +188,7 @@ export const Quote = styled.div`
 export const QuoteShape = styled.div`
   width: 1.5rem;
   height: 2.9rem;
-  background: #9d7422;
+  background: #947029;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 
   @media (max-width: 480px) {
@@ -224,11 +224,19 @@ export const AuthorWrapper = styled.div`
   margin-top: auto;
 `;
 
-export const Avatar = styled.img`
+export const Avatar = styled.div`
+  position: relative;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  object-fit: cover;
+  flex: 0 0 3.5rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const AuthorInfo = styled.div`
@@ -259,8 +267,8 @@ export const Label = styled.div`
     transform: translateY(-50%);
     width: 0.9rem;
     height: 0.9rem;
-    border-left: 2px solid #9d7422;
-    border-top: 2px solid #9d7422;
+    border-left: 2px solid #947029;
+    border-top: 2px solid #947029;
   }
 
   span::after {
@@ -271,7 +279,7 @@ export const Label = styled.div`
     transform: translateY(-50%);
     width: 0.9rem;
     height: 0.9rem;
-    border-right: 2px solid #9d7422;
-    border-bottom: 2px solid #9d7422;
+    border-right: 2px solid #947029;
+    border-bottom: 2px solid #947029;
   }
 `;

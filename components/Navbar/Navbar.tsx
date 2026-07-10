@@ -12,6 +12,7 @@ import {
   Menu,
   MenuItem,
   Button,
+  CloseButton,
   HamburgerIcon,
   CenterMenu,
   RightSection,
@@ -23,12 +24,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <NavbarContainer>
+    <NavbarContainer aria-label="Primary navigation">
       <Logo>
-        <Link href="/">
+        <Link href="/" aria-label="Asif Ahmed Architects home">
           <Image
             src="/images/logo.svg"
-            alt="Company Logo"
+            alt="Asif Ahmed Architects"
             width={140}
             height={40}
             priority
@@ -37,21 +38,31 @@ const Navbar = () => {
       </Logo>
 
       <CenterMenu>
-        <Menu $open={menuOpen}>
+        <Menu id="primary-menu" $open={menuOpen}>
           {menuOpen && (
             <div className="mobile-header">
               <Image
                 src="/images/logo.svg"
-                alt="logo"
+                alt="Asif Ahmed Architects"
                 width={120}
                 height={40}
               />
-              <FaTimes onClick={() => setMenuOpen(false)} />
+              <CloseButton
+                type="button"
+                aria-label="Close navigation menu"
+                onClick={() => setMenuOpen(false)}
+              >
+                <FaTimes aria-hidden="true" />
+              </CloseButton>
             </div>
           )}
 
           <MenuItem>
-            <Link className={pathname === "/" ? "active" : ""} href="/">
+            <Link
+              className={pathname === "/" ? "active" : ""}
+              href="/"
+              aria-current={pathname === "/" ? "page" : undefined}
+            >
               HOME
             </Link>
           </MenuItem>
@@ -60,6 +71,7 @@ const Navbar = () => {
             <Link
               className={pathname === "/about" ? "active" : ""}
               href="/about"
+              aria-current={pathname === "/about" ? "page" : undefined}
             >
               ABOUT US
             </Link>
@@ -69,6 +81,7 @@ const Navbar = () => {
             <Link
               className={pathname === "/portfolio" ? "active" : ""}
               href="/portfolio"
+              aria-current={pathname === "/portfolio" ? "page" : undefined}
             >
               OUR PORTFOLIO
             </Link>
@@ -78,27 +91,34 @@ const Navbar = () => {
             <Link
               className={pathname === "/contact" ? "active" : ""}
               href="/contact"
+              aria-current={pathname === "/contact" ? "page" : undefined}
             >
               CONTACT US
             </Link>
           </MenuItem>
 
           <MenuItem className="mobile-call">
-            <a href="tel:+91 9895076226">
-              <LuPhoneCall /> Call : 9895076226
+            <a href="tel:+919895076226" aria-label="Call Asif Ahmed Architects">
+              <LuPhoneCall aria-hidden="true" /> Call : 9895076226
             </a>
           </MenuItem>
         </Menu>
       </CenterMenu>
 
       <RightSection>
-        <Button href="tel:+91 9895076226">
-          <LuPhoneCall />
+        <Button href="tel:+919895076226" aria-label="Call Asif Ahmed Architects at +91 9895076226">
+          <LuPhoneCall aria-hidden="true" />
           Call: +91 9895076226
         </Button>
 
-        <HamburgerIcon onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+        <HamburgerIcon
+          type="button"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="primary-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </HamburgerIcon>
       </RightSection>
     </NavbarContainer>

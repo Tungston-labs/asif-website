@@ -95,7 +95,7 @@ export const ThumbnailRow = styled.div`
   padding: 0 24px var(--thumbnail-row-padding-bottom);
 
   scrollbar-width: thin;
-  scrollbar-color: #9d7422 #f2f2f2;
+  scrollbar-color: #947029 #f2f2f2;
 
   outline: none;
 
@@ -114,7 +114,7 @@ export const ThumbnailRow = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #9d7422;
+    background: #947029;
     border-radius: 10px;
   }
 
@@ -167,7 +167,7 @@ export const Thumbnail = styled.button<{ $active: boolean }>`
   ${(props) =>
     props.$active &&
     `
-    border: 2px solid #9d7422;
+    border: 2px solid #947029;
     transform: scale(1.05);
   `}
 
@@ -176,7 +176,7 @@ export const Thumbnail = styled.button<{ $active: boolean }>`
   }
 
   &:focus-visible {
-    outline: 2px solid #9d7422;
+    outline: 2px solid #947029;
     outline-offset: 2px;
   }
 `;

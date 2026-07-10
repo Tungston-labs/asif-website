@@ -24,7 +24,13 @@ const ProjectTabs = ({ active, onChange }: Props) => {
   return (
     <TabsWrapper>
       {locations.map((loc) => (
-        <Tab key={loc} $active={active === loc} onClick={() => onChange(loc)}>
+        <Tab
+          key={loc}
+          type="button"
+          $active={active === loc}
+          aria-pressed={active === loc}
+          onClick={() => onChange(loc)}
+        >
           {loc}
         </Tab>
       ))}

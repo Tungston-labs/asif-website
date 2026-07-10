@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 export const HeroSection = styled.section`
@@ -197,8 +198,11 @@ export const ButtonGroup = styled.div`
   flex-wrap: wrap;
 `;
 
-export const PrimaryButton = styled.button`
-  background: #9d7422;
+export const PrimaryButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #947029;
   color: #fff;
   border: none;
   border-radius: 0.3rem;
@@ -207,11 +211,12 @@ export const PrimaryButton = styled.button`
   cursor: pointer;
   letter-spacing: 0.05rem;
   font-size: 0.8rem;
+  text-decoration: none;
 
   &:hover {
     color: #000000;
     background-color: white;
-    border: 1px solid #9d7422;
+    border: 1px solid #947029;
   }
 
   @media (max-width: 48rem) {
@@ -219,7 +224,10 @@ export const PrimaryButton = styled.button`
   }
 `;
 
-export const SecondaryButton = styled.button`
+export const SecondaryButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #000000;
   color: #fff;
   border-radius: 0.3rem;
@@ -229,6 +237,7 @@ export const SecondaryButton = styled.button`
   cursor: pointer;
   letter-spacing: 0.05rem;
   font-size: 0.8rem;
+  text-decoration: none;
 
   &:hover {
     color: #000000;

@@ -12,7 +12,7 @@ const moveRight = keyframes`
 
 export const BannerWrapper = styled.div`
   width: 100%;
-  background-color: #9d7422;
+  background-color: #947029;
   overflow: hidden;
   white-space: nowrap;
   padding: 0.875rem 0; 

@@ -102,7 +102,7 @@ export const Description = styled.p`
 
 export const StyledLink = styled.a`
   margin-top: 2rem;
-  background-color: #9d7422;
+  background-color: #947029;
   color: #fff;
   border: none;
   padding: 14px 28px;
@@ -119,7 +119,7 @@ export const StyledLink = styled.a`
   &:hover {
     color: #000;
     background-color: white;
-    border: 1px solid #9d7422;
+    border: 1px solid #947029;
   }
   @media (max-width: 768px) {
     font-size: 1rem;

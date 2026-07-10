@@ -166,14 +166,14 @@ export const Label = styled.div`
 
   span::before {
     left: -1.5rem;
-    border-left: 0.125rem solid #9d7422;
-    border-top: 0.125rem solid #9d7422;
+    border-left: 0.125rem solid #947029;
+    border-top: 0.125rem solid #947029;
   }
 
   span::after {
     right: -1.5rem;
-    border-right: 0.125rem solid #9d7422;
-    border-bottom: 0.125rem solid #9d7422;
+    border-right: 0.125rem solid #947029;
+    border-bottom: 0.125rem solid #947029;
   }
 
   @media (max-width: 768px) {
