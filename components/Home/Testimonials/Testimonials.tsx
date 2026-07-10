@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Section,
   BackgroundBall,
@@ -52,7 +53,16 @@ export default function Testimonials() {
               <Content>{item.content}</Content>
 
               <AuthorWrapper>
-                <Avatar src={item.image} alt={item.name} />
+                <Avatar>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={56}
+                    height={56}
+                    sizes="56px"
+                    loading="lazy"
+                  />
+                </Avatar>
 
                 <AuthorInfo>
                   <h4>{item.name}</h4>

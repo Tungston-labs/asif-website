@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   HeroSection,
@@ -21,27 +20,24 @@ import {
 } from "./herosection.styles";
 
 const desktopImages = [
-  "/images/home/slider1.svg",
-  "/images/home/slider11.png",
-  "/images/home/slider3.svg",
-  "/images/home/slider5.svg",
+  "/images/optimized/home/slider1.webp",
+  "/images/optimized/home/slider11.webp",
+  "/images/optimized/home/slider3.webp",
+  "/images/optimized/home/slider5.webp",
 ];
 
 const mobileImages = [
-  "/images/home/home1-mobile.svg",
-  "/images/home/home2-mobile.svg",
-  "/images/home/home3-mobile.svg",
-  "/images/home/home4-mobile.svg",
-  "/images/home/home5-mobile.svg",
+  "/images/optimized/home/home1-mobile.webp",
+  "/images/optimized/home/home2-mobile.webp",
+  "/images/optimized/home/home3-mobile.webp",
+  "/images/optimized/home/home4-mobile.webp",
+  "/images/optimized/home/home5-mobile.webp",
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    setCurrent(0);
-  }, [isMobile]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -63,7 +59,8 @@ const Hero = () => {
   }, [isMobile]);
 
   const activeImages = isMobile ? mobileImages : desktopImages;
-  const imageSrc = activeImages[current];
+  const currentIndex = current % activeImages.length;
+  const imageSrc = activeImages[currentIndex];
 
   if (!imageSrc) return null;
   return (
@@ -84,34 +81,33 @@ const Hero = () => {
           </Subtitle>
 
           <ButtonGroup>
-            <Link href="/about">
-              <PrimaryButton>KNOW MORE</PrimaryButton>
-            </Link>
-
-            <Link href="/portfolio">
-              <SecondaryButton>EXPLORE PROJECTS</SecondaryButton>
-            </Link>
+            <PrimaryButton href="/about">KNOW MORE</PrimaryButton>
+            <SecondaryButton href="/portfolio">EXPLORE PROJECTS</SecondaryButton>
           </ButtonGroup>
 
           <ImageWrapper>
-            {activeImages.map((img, index) => (
-              <SliderImage key={index} $active={index === current}>
-                <Image
-                  src={img}
-                  alt="Slider"
-                  fill
-                  priority
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
-              </SliderImage>
-            ))}
+            <SliderImage key={imageSrc} $active>
+              <Image
+                src={imageSrc}
+                alt=""
+                fill
+                priority={currentIndex === 0}
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </SliderImage>
 
             <FloatingNote>
-              <ArrowImage src="/images/home/arrow.svg" alt="arrow" />
+              <ArrowImage
+                src="/images/home/arrow.svg"
+                alt=""
+                width={97}
+                height={84}
+              />
               <FloatingText>
                 Let’s Build Something <br />
                 Great Together

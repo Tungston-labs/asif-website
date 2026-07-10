@@ -13,6 +13,11 @@
       font-family: var(--font-jost);
   }
 
+  :where(a, button, input, select, textarea):focus-visible {
+    outline: 3px solid #947029;
+    outline-offset: 3px;
+  }
+
   :root {
     --primary-color: #7774f4;
     --primary-bg-color: #ffffff;
@@ -73,4 +78,3 @@
       margin: auto;
     }
   }
-

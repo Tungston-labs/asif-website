@@ -8,13 +8,15 @@ const sections = [
   { type: "portfolio-section", id: "projects", label: "Our Projects" },
   { type: "home-section", id: "testimonials", label: "Testimonials" },
   { type: "page", path: "/contact", label: "Get Free Consultant" },
-];
+] as const;
+
+type SectionItem = (typeof sections)[number];
 
 const SideNav = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleClick = (item: any) => {
+  const handleClick = (item: SectionItem) => {
     if (item.type === "page") {
       router.push(item.path);
       return;
@@ -43,7 +45,7 @@ const SideNav = () => {
   return (
     <SideNavWrapper>
       {sections.map((item, index) => (
-        <NavItem key={item.label} onClick={() => handleClick(item)}>
+        <NavItem key={item.label} type="button" onClick={() => handleClick(item)}>
           {item.label}
           {index === 0 && <Divider />}
         </NavItem>

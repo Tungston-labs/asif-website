@@ -8,9 +8,13 @@ const PortfolioCircle = () => {
   const router = useRouter();
 
   return (
-    <CircleButton onClick={() => router.push("/portfolio")}>
+    <CircleButton
+      type="button"
+      aria-label="View portfolio"
+      onClick={() => router.push("/portfolio")}
+    >
       <CircleInside>
-        <IoArrowRedoSharp size={20} />
+        <IoArrowRedoSharp size={20} aria-hidden="true" />
       </CircleInside>
     </CircleButton>
   );

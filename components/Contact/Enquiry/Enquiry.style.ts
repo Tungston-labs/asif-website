@@ -81,7 +81,7 @@ export const RightContainer = styled.div`
 
 export const Title = styled.h2`
   font-family: var(--font-jost), sans-serif;
-  font-size: 1.5 rem; 
+  font-size: 1.5rem; 
   font-weight: 500;
   margin-bottom: 1.25rem; 
 
@@ -103,13 +103,30 @@ export const SubText = styled.p`
 `;
 
 export const Form = styled.form`
-  h4 {
+  h3 {
     font-family: var(--font-jost), sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: #FFFFFF;
     margin: 1.875rem 0 1.25rem; 
   }
+`;
+
+export const Field = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+export const Label = styled.label`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 `;
 
 export const Row = styled.div`
@@ -123,7 +140,7 @@ export const Row = styled.div`
 `;
 
 export const Input = styled.input`
-  flex: 1;
+  width: 100%;
   background: transparent;
   border: 0.0625rem solid #444; 
   padding: 0.875rem 1rem; 
@@ -168,7 +185,7 @@ export const Select = styled.select`
 export const Button = styled.button`
   margin-top: 1.875rem; 
   padding: 1rem 2.5rem; 
-  background: linear-gradient(90deg, #c8a24c, #d8b36a);
+  background: linear-gradient(90deg, #947029, #947029);
   border: none;
   border-radius: 0.3125rem; 
   color: #fff;
@@ -177,6 +194,11 @@ export const Button = styled.button`
   letter-spacing: 0.0625rem; 
   cursor: pointer;
   width: fit-content;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.72;
+  }
 
   @media (max-width: 1024px) {
     width: 100%;

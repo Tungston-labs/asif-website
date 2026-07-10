@@ -189,8 +189,8 @@ export const Tag = styled.span<{ $color?: string }>`
     top: -0.3rem;
     width: 0.9rem;
     height: 0.9rem;
-    border-left: 2px solid #d7ae5b;
-    border-top: 2px solid #d7ae5b;
+    border-left: 2px solid #947029;
+    border-top: 2px solid #947029;
   }
 
   &::after {
@@ -200,8 +200,8 @@ export const Tag = styled.span<{ $color?: string }>`
     bottom: -0.3rem;
     width: 0.9rem;
     height: 0.9rem;
-    border-right: 2px solid #d7ae5b;
-    border-bottom: 2px solid #d7ae5b;
+    border-right: 2px solid #947029;
+    border-bottom: 2px solid #947029;
   }
 `;
 
@@ -238,7 +238,7 @@ export const Description = styled.p`
 
 export const TalkButton = styled(Link)`
   margin-top: 1rem;
-  background-color: #d7ae5b;
+  background-color: #947029;
   color: #ffffff;
   border: none;
   padding: 14px 28px;
@@ -253,7 +253,7 @@ export const TalkButton = styled(Link)`
   &:hover {
     color: #000;
     background-color: white;
-    border: 1px solid #d7ae5b;
+    border: 1px solid #947029;
   }
   @media (max-width: 1024px) {
     padding: 0.6rem 1.5rem;
@@ -348,7 +348,7 @@ export const SocialWrapper = styled.div`
   }
 
   svg:hover {
-    color: #d7ae5b;
+    color: #947029;
     transform: translateY(-2px);
   }
   @media (max-width: 1024px) {
@@ -366,12 +366,13 @@ export const SocialWrapper = styled.div`
   }
 `;
 
-export const CircleButton = styled.div`
+export const CircleButton = styled.button`
   width: 6rem;
   height: 6rem;
   top: 2;
   border-radius: 70%;
-  background: #d7ae5b;
+  background: #947029;
+  border: 0;
   display: flex;
   align-items: center;
   justify-content: center;

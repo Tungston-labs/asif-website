@@ -67,7 +67,7 @@ export const Card = styled.div`
   gap: 1.25rem;
 
   &:hover {
-    border-color: #d7ae5b;
+    border-color: #947029;
     transform: translateY(-0.375rem);
   }
 
