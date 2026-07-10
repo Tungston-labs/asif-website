@@ -49,4 +49,12 @@ export const testimonialsData: Testimonial[] = [
     content:
       "From the first sketch to the final detail, you understood our dream perfectly. In a world full of similar designs, your work stands out with its own unique signature. Thank you for giving us a home that is beautiful, meaningful, and filled with heart. Your work will be part of our family’s memories forever.",
   },
+  {
+    id: 6,
+    image: "/images/Jasykumaran.jpeg",
+    name: "Jasy kumaran ",
+    place: "Kanichukulangara Alappuzha",
+    content:
+      "We are absolutely delighted with our beautiful home, La Grande Vue, Kanichukulangara.Our architect Mr. Asif and his team transformed our vision into reality with a stunning design and exceptional attention even to the small details. The project was professionally supervised from start to finish , ensuring outstanding quality throughout. We truly appreciate the creativity, dedication, and commitment, and highly recommend their services to anyone looking for an architect who delivers excellence.",
+  },
 ];

@@ -100,7 +100,6 @@ export const Title = styled.h2`
   font-size: 2.25rem;
   font-weight: 300;
   margin-top: 0.75rem;
-  font-family: "Jost", sans-serif;
 
   span {
     font-weight: 500;
@@ -119,6 +118,7 @@ export const Subtitle = styled.p`
   color: #ffffff;
   font-size: 1rem;
   margin-top: 0.5rem;
+  font-family: var(--font-jost), sans-serif;
 
   @media (max-width: 480px) {
     font-size: 1rem;
@@ -200,6 +200,7 @@ export const Content = styled.p`
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
+  font-family: var(--font-jost), sans-serif;
   color: #d4d4d4;
   margin: 0.5rem 0 1.5rem;
 
@@ -246,6 +247,7 @@ export const AuthorInfo = styled.div`
 export const Label = styled.div`
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
+  font-family: var(--font-jost), sans-serif;
   margin-bottom: 0.5rem;
   padding: 0.3rem 1.5rem;
   position: relative;
