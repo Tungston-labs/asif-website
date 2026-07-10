@@ -119,6 +119,7 @@ export const Subtitle = styled.p`
   color: #ffffff;
   font-size: 1rem;
   margin-top: 0.5rem;
+      font-family: Jost;
 
   @media (max-width: 480px) {
     font-size: 1rem;
@@ -182,6 +183,8 @@ export const Card = styled.div`
 export const Quote = styled.div`
   display: flex;
   gap: 0.6rem;
+
+
   margin-bottom: 2rem;
 `;
 
@@ -199,6 +202,7 @@ export const QuoteShape = styled.div`
 export const Content = styled.p`
   font-size: 1rem;
   font-weight: 300;
+  font-family: Jost;
   line-height: 1.7;
   color: #d4d4d4;
   margin: 0.5rem 0 1.5rem;
@@ -243,11 +247,15 @@ export const AuthorInfo = styled.div`
   h4 {
     font-weight: 600;
     font-size: 1rem;
+      font-family: Jost;
+
   }
 
   p {
     font-size: 0.9rem;
     color: #aaa;
+      font-family: Jost;
+
   }
 `;
 
