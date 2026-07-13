@@ -24,7 +24,7 @@ export const Section = styled.section`
 
 export const HeaderWrapper = styled.div`
   text-align: center;
-  margin: -6rem auto 2rem;
+  margin: 2rem auto ;
 
   @media (max-width: 1024px) {
     margin: -2rem auto 2rem;
