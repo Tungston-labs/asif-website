@@ -112,7 +112,7 @@ background: linear-gradient(
   }
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
