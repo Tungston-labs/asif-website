@@ -20,7 +20,7 @@ export const projectsData: ProjectData[] = [
       "/images/IPHONE SORTED LIST/Kottayam/kottayam12.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam11.jpeg",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam10.jpeg",
-      "/images/IPHONE SORTED LIST/Kottayam/kottayam8.jpeg",
+      "/images/IPHONE SORTED LIST/Kottayam/kottayam8.webp",
       "/images/IPHONE SORTED LIST/Kottayam/kottayam13.jpeg",
     ],
 

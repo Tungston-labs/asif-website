@@ -67,7 +67,7 @@ export const FeatureList = styled.div`
 
 export const FeatureItem = styled.div``;
 
-export const FeatureTitle = styled.h4`
+export const FeatureTitle = styled.h3`
   font-family: Jost;
   font-size: 1rem;
   font-weight: 400;

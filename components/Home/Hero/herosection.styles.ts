@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
+const kenBurns = keyframes`
+0%{
+transform:scale(1) translateX(0);
+}
 
+100%{
+transform:scale(1.12) translateX(-2%);
+}
+`;
 export const HeroSection = styled.section`
   width: 100%;
   overflow: hidden;
@@ -30,22 +38,19 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const SliderImage = styled.div<{ $active: boolean }>`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%; /* 🔥 ADD THIS */
+export const SliderImage = styled.div<{ $active:boolean }>`
 
-  opacity: ${({ $active }) => ($active ? 1 : 0)};
-  transform: ${({ $active }) => ($active ? "scale(1)" : "scale(1.05)")};
+position:absolute;
+inset:0;
 
-  transition:
-    opacity 1s ease-in-out,
-    transform 5s ease-in-out;
+opacity:${({$active})=>$active?1:0};
 
-  z-index: ${({ $active }) => ($active ? 2 : 1)};
+animation:${({$active})=>$active&&kenBurns}
+8s ease forwards;
+
+transition:opacity 1.2s ease;
+
 `;
-
 const floatFadeMove = keyframes`
   0% {
     transform: translateY(10px);
