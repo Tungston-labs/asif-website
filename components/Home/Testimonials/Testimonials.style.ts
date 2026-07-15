@@ -313,9 +313,18 @@ export const Section = styled.section`
   color: white;
   font-family: "Jost", sans-serif;
 
-  @media (max-width: 1024px) { padding: 6rem 3rem; margin-top: 2rem; }
-  @media (max-width: 768px) { padding: 5rem 2rem; margin-top: 2rem; }
-  @media (max-width: 480px) { padding: 4rem 2rem; margin-top: 1rem; }
+  @media (max-width: 1024px) {
+    padding: 6rem 3rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    padding: 5rem 2rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 480px) {
+    padding: 4rem 2rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const BackgroundBall = styled.div`
@@ -325,13 +334,24 @@ export const BackgroundBall = styled.div`
   width: 31rem;
   height: 31rem;
   border-radius: 50%;
-  background: radial-gradient(circle, #ff833b 10%, rgba(255, 140, 0, 0.1) 50%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    #ff833b 10%,
+    rgba(255, 140, 0, 0.1) 50%,
+    transparent 70%
+  );
   filter: blur(7.5rem);
   animation: ${floatAnimation} 18s ease-in-out infinite;
   z-index: 0;
 
-  @media (max-width: 768px) { width: 22rem; height: 22rem; }
-  @media (max-width: 480px) { width: 18rem; height: 18rem; }
+  @media (max-width: 768px) {
+    width: 22rem;
+    height: 22rem;
+  }
+  @media (max-width: 480px) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -339,16 +359,24 @@ export const Header = styled.div`
   z-index: 2;
   margin-bottom: 1.5rem;
   max-width: 50rem;
-  @media (max-width: 768px) { margin-bottom: 3rem; }
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 2.25rem;
   font-weight: 300;
   margin-top: 0.75rem;
-  span { font-weight: 500; }
-  @media (max-width: 768px) { font-size: 1.5rem; }
-  @media (max-width: 480px) { font-size: 2rem; }
+  span {
+    font-weight: 500;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -392,8 +420,14 @@ export const Card = styled.div`
     border-color: #947029;
   }
 
-  @media (max-width: 768px) { width: 26rem; height: 26rem; }
-  @media (max-width: 480px) { width: calc(100vw - 4rem); height: 28rem; }
+  @media (max-width: 768px) {
+    width: 26rem;
+    height: 26rem;
+  }
+  @media (max-width: 480px) {
+    width: calc(100vw - 4rem);
+    height: 28rem;
+  }
 `;
 
 export const Quote = styled.div`
@@ -460,18 +494,28 @@ export const Avatar = styled.div`
   flex: 0 0 3.5rem;
   overflow: hidden;
   background-color: #1a1a1a;
-  
-  img { 
-    width: 100%; 
-    height: 100%; 
+
+  img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
   }
 `;
 
 export const AuthorInfo = styled.div`
-  h4 { font-weight: 600; font-size: 1rem; font-family: Jost, sans-serif; margin: 0; }
-  p { font-size: 0.85rem; color: #ffffff; font-family: Jost, sans-serif; margin: 0.2rem 0 0; }
+  h4 {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: Jost, sans-serif;
+    margin: 0;
+  }
+  p {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-family: Jost, sans-serif;
+    margin: 0.2rem 0 0;
+  }
 `;
 
 export const Label = styled.div`
@@ -484,22 +528,41 @@ export const Label = styled.div`
   display: inline-block;
 
   span::before {
-    content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-    width: 0.9rem; height: 0.9rem; border-left: 2px solid #947029; border-top: 2px solid #947029;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.9rem;
+    height: 0.9rem;
+    border-left: 2px solid #947029;
+    border-top: 2px solid #947029;
   }
   span::after {
-    content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-    width: 0.9rem; height: 0.9rem; border-right: 2px solid #947029; border-bottom: 2px solid #947029;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.9rem;
+    height: 0.9rem;
+    border-right: 2px solid #947029;
+    border-bottom: 2px solid #947029;
   }
 `;
 
 /* --- MODAL STYLES --- */
 export const ModalOverlay = styled.div`
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
-  display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   padding: 1rem;
 `;
@@ -512,7 +575,7 @@ export const ModalContainer = styled.div`
   border-radius: 4px;
   padding: 2.5rem 2rem 2rem;
   position: relative;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   max-height: 85vh;
@@ -520,14 +583,19 @@ export const ModalContainer = styled.div`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 1rem; right: 1.5rem;
-  background: none; border: none;
-  color: #ffffff; font-size: 2rem;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
   cursor: pointer;
   line-height: 1;
   transition: color 0.2s;
 
-  &:hover { color: #fff; }
+  &:hover {
+    color: #fff;
+  }
 `;
 
 export const ModalScrollArea = styled.div`
@@ -536,7 +604,14 @@ export const ModalScrollArea = styled.div`
   margin-bottom: 1rem;
   padding-right: 0.5rem;
 
-  &::-webkit-scrollbar { width: 4px; }
-  &::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
-  &::-webkit-scrollbar-thumb { background: #947029; border-radius: 2px; }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #947029;
+    border-radius: 2px;
+  }
 `;
