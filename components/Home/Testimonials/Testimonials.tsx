@@ -77,7 +77,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState } from "react";
@@ -103,7 +102,7 @@ import {
   ModalOverlay,
   ModalContainer,
   CloseButton,
-  ModalScrollArea
+  ModalScrollArea,
 } from "./Testimonials.style";
 
 import { testimonialsData, Testimonial } from "./testimonialsData";
@@ -122,7 +121,8 @@ const StarIcon = () => (
 );
 
 export default function Testimonials() {
-  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
+  const [selectedTestimonial, setSelectedTestimonial] =
+    useState<Testimonial | null>(null);
 
   const MAX_CHARACTER_LIMIT = 220;
 
@@ -156,8 +156,8 @@ export default function Testimonials() {
         <SliderTrack>
           {[...testimonialsData, ...testimonialsData].map((item, index) => {
             const isLongText = item.content.length > MAX_CHARACTER_LIMIT;
-            const displayedText = isLongText 
-              ? `${item.content.substring(0, MAX_CHARACTER_LIMIT)}...` 
+            const displayedText = isLongText
+              ? `${item.content.substring(0, MAX_CHARACTER_LIMIT)}...`
               : item.content;
 
             return (
@@ -217,7 +217,7 @@ export default function Testimonials() {
         <ModalOverlay onClick={handleCloseModal}>
           <ModalContainer onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={handleCloseModal}>&times;</CloseButton>
-            
+
             <Quote>
               <QuoteShape />
               <QuoteShape />
