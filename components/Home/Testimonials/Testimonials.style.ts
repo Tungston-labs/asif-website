@@ -409,7 +409,8 @@ export const Card = styled.div`
   height: 24rem; /* Keeps all cards at a strict, beautiful uniform size */
   padding: 2rem 1.5rem 1.5rem;
   flex-shrink: 0;
-  border: 1px solid rgba(220, 216, 216, 0.2);
+
+  border: 1px solid rgba(220, 216, 216, 0.4);
   background: rgba(30, 28, 28, 0.6);
   display: flex;
   flex-direction: column;
@@ -457,8 +458,8 @@ export const Content = styled.p`
 export const ReadMoreButton = styled.button`
   background: none;
   border: none;
-  color: #947029;
-  font-weight: 500;
+  color: #d4a84b;
+  font-weight: 600;
   cursor: pointer;
   padding-left: 0.5rem;
   font-family: inherit;
@@ -467,7 +468,7 @@ export const ReadMoreButton = styled.button`
   text-decoration: underline;
 
   &:hover {
-    color: #ff833b;
+    color: #ffb347;
   }
 `;
 
@@ -504,7 +505,7 @@ export const Avatar = styled.div`
 `;
 
 export const AuthorInfo = styled.div`
-  h4 {
+  h3 {
     font-weight: 600;
     font-size: 1rem;
     font-family: Jost, sans-serif;

@@ -201,7 +201,7 @@ export default function Testimonials() {
                     </Avatar>
 
                     <AuthorInfo>
-                      <h4>{item.name}</h4>
+                      <h3>{item.name}</h3>
                       <p>{item.place}</p>
                     </AuthorInfo>
                   </AuthorWrapper>
@@ -250,7 +250,7 @@ export default function Testimonials() {
                   />
                 </Avatar>
                 <AuthorInfo>
-                  <h4>{selectedTestimonial.name}</h4>
+                  <h3>{selectedTestimonial.name}</h3>
                   <p>{selectedTestimonial.place}</p>
                 </AuthorInfo>
               </AuthorWrapper>

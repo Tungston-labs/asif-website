@@ -267,7 +267,7 @@ export const TalkButton = styled(Link)`
   }
 `;
 
-export const PortfolioText = styled.h1`
+export const PortfolioText = styled.span`
   font-family: "Manrope";
   font-weight: 900;
   font-size: 8.33rem;
