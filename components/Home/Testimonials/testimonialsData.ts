@@ -11,7 +11,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 7,
     image: "/images/K.CherianThomas.jpeg",
-    name: "K. Cherian Thomas ",
+    name: "K. Cherian Thomas",
     place: "Ernakulam, Kadavantra ",
     content:
       "Working with Architect Asif Ahmed was a wonderful experience from start to finish. He took the time to understand our vision and transformed it into a home that perfectly reflects our lifestyle. Throughout the entire project, he was approachable, patient, and always willing to listen to our ideas. No matter how many revisions or changes we requested, he never hesitated to accommodate them and ensured every detail met our expectations. His professionalism, creativity, and commitment to quality made the entire journey smooth and stress-free. We are truly grateful for his dedication and couldn't be happier with our beautiful home. I would highly recommend Asif Ahmed to anyone looking for an architect who genuinely cares about bringing their clients' vision to life.",

@@ -82,7 +82,9 @@ const Hero = () => {
 
           <ButtonGroup>
             <PrimaryButton href="/about">KNOW MORE</PrimaryButton>
-            <SecondaryButton href="/portfolio">EXPLORE PROJECTS</SecondaryButton>
+            <SecondaryButton href="/portfolio">
+              EXPLORE PROJECTS
+            </SecondaryButton>
           </ButtonGroup>
 
           <ImageWrapper>
@@ -92,11 +94,11 @@ const Hero = () => {
                 alt=""
                 fill
                 priority={currentIndex === 0}
+                loading={currentIndex === 0 ? "eager" : "lazy"}
                 sizes="100vw"
+                fetchPriority={currentIndex === 0 ? "high" : "auto"}
                 style={{
                   objectFit: "cover",
-                  width: "100%",
-                  height: "100%",
                 }}
               />
             </SliderImage>

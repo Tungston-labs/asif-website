@@ -149,7 +149,7 @@ export const Card = styled.div`
   padding: 1.5rem;
   flex-shrink: 0;
 
-  border: 1px solid rgba(220, 216, 216, 0.2);
+  border: 1px solid rgba(220, 216, 216, 0.4);
   background: rgba(30, 28, 28, 0.6);
 
   display: flex;
@@ -204,7 +204,7 @@ export const Content = styled.p`
   font-family: Jost;
   line-height: 1.7;
   font-family: var(--font-jost), sans-serif;
-  color: #d4d4d4;
+  color: #e0e0e0;
   margin: 0.5rem 0 1.5rem;
   
   overflow-wrap: break-word;
@@ -244,7 +244,7 @@ export const Avatar = styled.div`
 `;
 
 export const AuthorInfo = styled.div`
-  h4 {
+  h3 {
     font-weight: 600;
     font-size: 1rem;
       font-family: Jost;
@@ -253,7 +253,7 @@ export const AuthorInfo = styled.div`
 
   p {
     font-size: 0.9rem;
-    color: #aaa;
+    color: #ccc;
       font-family: Jost;
 
   }

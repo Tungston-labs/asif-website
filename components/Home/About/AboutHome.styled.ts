@@ -189,10 +189,9 @@ export const ImageCard = styled.div<{ $offset?: boolean }>`
   }
 
 }
-
 `;
 
-export const ImageTitle = styled.h2`
+export const ImageTitle = styled.h3`
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
