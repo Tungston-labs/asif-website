@@ -29,17 +29,15 @@ const LeftGallery = () => {
 
   return (
     <GalleryWrapper>
-      {images.map((src, i) => (
-        <GalleryImage key={i} $active={i === index}>
-          <Image
-            src={src}
-            alt={`Gallery ${i}`}
-            fill
-            style={{ objectFit: "contain" }}
-            priority={i === 0}
-          />
-        </GalleryImage>
-      ))}
+      <GalleryImage $active>
+    <Image
+      src={images[index]}
+      alt={`Gallery ${index + 1}`}
+      fill
+      priority
+      style={{ objectFit: "contain" }}
+    />
+  </GalleryImage>
 
       <ExperienceBox>
         <span>20 + Years</span>

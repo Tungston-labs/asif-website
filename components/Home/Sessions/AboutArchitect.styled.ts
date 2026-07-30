@@ -64,9 +64,7 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
   position: absolute;
   height: 50rem;
   inset: 0;
-  opacity: ${({ $active }) => ($active ? 1 : 0)};
-  transition: opacity 0.8s ease;
-  animation: ${({ $active }) => ($active ? fadeZoom : "none")} 6s ease-in-out;
+
   @media (max-width: 2624px) and (min-width: 2325px) {
     height: 46rem;
   }
@@ -81,7 +79,7 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
     height: 50rem;
   }
   @media (max-width: 1524px) and (min-width: 1025px) {
-    height: 49rem;
+    height: 47rem;
   }
   @media (max-width: 1024px) and (min-width: 768px) {
     height: 39rem;
