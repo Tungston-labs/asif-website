@@ -92,8 +92,16 @@ export const testimonialsData: Testimonial[] = [
     id: 4,
     image: "/images/JohnT.M.jpeg",
     name: "John T.M",
-    place: ".00",
+    place: "Koothattukulam ",
     content:
       "We had a great experience working with Architect Asif Ahmad. He understood our requirements perfectly and designed a beautiful home that exceeded our expectations.",
+  },
+  {
+    id: 13,
+    image: "/images/LigithK.jpeg",
+    name: "Ligith K",
+    place: "Kannur ",
+    content:
+      "From concept to completion, the team exceeded our expectations. Their designs were elegant, practical, and thoughtfully tailored to our vision. What impressed us even more was their professionalism, transparency, and commitment to delivering every detail on time. Working with them was a seamless experience.",
   },
 ];
