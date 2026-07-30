@@ -21,8 +21,8 @@ export default function Home() {
 <DecorImage
   alt=""
   src="/images/home/bulb.png"
-  width={100}
-  height={200}
+  width={99}
+  height={183}
 />
     <ProjectsSection />
     <section id="testimonials">
