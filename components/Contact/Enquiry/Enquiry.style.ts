@@ -30,7 +30,7 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  background-image: url("/images/enquiry-left.svg");
+  background-image: url("/images/optimized/enquiry-left.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ export const RightContainer = styled.div`
   width: 37.75rem;   
   height: 41.625rem; 
 
-  background-image: url("/images/enquiry-right.svg");
+  background-image: url("/images/optimized/enquiry-right.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

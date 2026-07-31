@@ -131,7 +131,7 @@ export const projects = [
       "Modern architectural residences emphasizing durability, ventilation, and contemporary style.",
     images: [
       "/images/pallikunn8.jpeg",
-      "/images/pallikunn10.png",
+      "/images/optimized/projects/pallikunn10.webp",
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",
       "/images/pallikunn4.jpeg",

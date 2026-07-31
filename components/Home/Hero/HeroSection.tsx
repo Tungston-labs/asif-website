@@ -36,33 +36,21 @@ const mobileImages = [
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const activeImages = isMobile ? mobileImages : desktopImages;
-      setCurrent((prev) => (prev + 1) % activeImages.length);
+      setCurrent((prev) => prev + 1);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isMobile]);
+  }, []);
 
-  const activeImages = isMobile ? mobileImages : desktopImages;
-  const currentIndex = current % activeImages.length;
-  const imageSrc = activeImages[currentIndex];
+  const desktopIndex = current % desktopImages.length;
+  const mobileIndex = current % mobileImages.length;
 
-  if (!imageSrc) return null;
+  const desktopSrc = desktopImages[desktopIndex];
+  const mobileSrc = mobileImages[mobileIndex];
+
   return (
     <>
       <Navbar />
@@ -88,15 +76,32 @@ const Hero = () => {
           </ButtonGroup>
 
           <ImageWrapper>
-            <SliderImage key={imageSrc} $active>
+            {/* Desktop Hero Image Slider */}
+            <SliderImage key={`desktop-${desktopSrc}`} $active className="desktop-slider-image">
               <Image
-                src={imageSrc}
-                alt=""
+                src={desktopSrc}
+                alt="Architectural design showcase desktop"
                 fill
-                priority={currentIndex === 0}
-                loading={currentIndex === 0 ? "eager" : "lazy"}
+                priority={desktopIndex === 0}
+                loading={desktopIndex === 0 ? "eager" : "lazy"}
                 sizes="100vw"
-                fetchPriority={currentIndex === 0 ? "high" : "auto"}
+                fetchPriority={desktopIndex === 0 ? "high" : "auto"}
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </SliderImage>
+
+            {/* Mobile Hero Image Slider */}
+            <SliderImage key={`mobile-${mobileSrc}`} $active className="mobile-slider-image">
+              <Image
+                src={mobileSrc}
+                alt="Architectural design showcase mobile"
+                fill
+                priority={mobileIndex === 0}
+                loading={mobileIndex === 0 ? "eager" : "lazy"}
+                sizes="100vw"
+                fetchPriority={mobileIndex === 0 ? "high" : "auto"}
                 style={{
                   objectFit: "cover",
                 }}
