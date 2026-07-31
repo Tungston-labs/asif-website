@@ -38,18 +38,26 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const SliderImage = styled.div<{ $active:boolean }>`
+export const SliderImage = styled.div<{ $active: boolean }>`
+  position: absolute;
+  inset: 0;
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  animation: ${({ $active }) => $active && kenBurns} 8s ease forwards;
+  transition: opacity 1.2s ease;
 
-position:absolute;
-inset:0;
+  &.mobile-slider-image {
+    display: none;
+    @media (max-width: 48rem) {
+      display: block;
+    }
+  }
 
-opacity:${({$active})=>$active?1:0};
-
-animation:${({$active})=>$active&&kenBurns}
-8s ease forwards;
-
-transition:opacity 1.2s ease;
-
+  &.desktop-slider-image {
+    display: block;
+    @media (max-width: 48rem) {
+      display: none;
+    }
+  }
 `;
 const floatFadeMove = keyframes`
   0% {

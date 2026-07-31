@@ -64,6 +64,9 @@ export const GalleryImage = styled.div<{ $active: boolean }>`
   position: absolute;
   height: 50rem;
   inset: 0;
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
 
   @media (max-width: 2624px) and (min-width: 2325px) {
     height: 46rem;

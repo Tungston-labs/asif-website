@@ -12,7 +12,7 @@ export const HeroSection = styled.section`
   position: relative;
   width: 100%;
   height: 21.875rem; 
-  background-image: url("/images/Contact-bg.svg");
+  background-image: url("/images/optimized/contact-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

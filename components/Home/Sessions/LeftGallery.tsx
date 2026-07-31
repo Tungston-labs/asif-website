@@ -10,10 +10,10 @@ import {
 } from "./AboutArchitect.styled";
 
 const images = [
-  "/images/about/about1.svg",
-  "/images/about/about2.svg",
-  "/images/about/about3.svg",
-  "/images/about/about4.svg",
+  "/images/optimized/about/about1.webp",
+  "/images/optimized/about/about2.webp",
+  "/images/optimized/about/about3.webp",
+  "/images/optimized/about/about4.webp",
 ];
 
 const LeftGallery = () => {
@@ -29,15 +29,18 @@ const LeftGallery = () => {
 
   return (
     <GalleryWrapper>
-      <GalleryImage $active>
-    <Image
-      src={images[index]}
-      alt={`Gallery ${index + 1}`}
-      fill
-      priority
-      style={{ objectFit: "contain" }}
-    />
-  </GalleryImage>
+      {images.map((src, i) => (
+        <GalleryImage key={i} $active={i === index}>
+          <Image
+            src={src}
+            alt={`Architectural showcase gallery ${i + 1}`}
+            fill
+            priority={i === 0}
+            sizes="(max-width: 768px) 100vw, 30vw"
+            style={{ objectFit: "cover" }}
+          />
+        </GalleryImage>
+      ))}
 
       <ExperienceBox>
         <span>20 + Years</span>

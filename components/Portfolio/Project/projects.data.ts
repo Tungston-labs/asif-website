@@ -86,7 +86,7 @@ export const projectsData: ProjectData[] = [
     location: "KANNUR",
     images: [
       "/images/pallikunn8.jpeg",
-      "/images/pallikunn10.png",
+      "/images/optimized/projects/pallikunn10.webp",
       "/images/pallikunn5.jpeg",
       "/images/pallikunn2.jpeg",
       "/images/pallikunn7.jpeg",

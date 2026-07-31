@@ -1,15 +1,45 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Jost, Caveat, Manrope } from "next/font/google";
 import StyledComponentsRegistry from "../lib/styled-registry";
-
 import Providers from "@/providers/providers";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
-  title: "ASIF WEBSITE",
-  description: "VISIONARY ARCHITECT DESIGNED FOR THE WAY YOU LIVE",
+  title: "Architect Asif | Visionary Architecture & Design Studio",
+  description:
+    "We design thoughtful, contemporary spaces tailored for your lifestyle. Leading professional architecture firm specializing in residential and commercial projects.",
+  keywords: [
+    "Architect",
+    "Architecture Firm",
+    "Residential Architect",
+    "Commercial Architect",
+    "Interior Design",
+    "Architect Asif",
+  ],
+  authors: [{ name: "Architect Asif" }],
   icons: {
     icon: "/images/logofav.svg",
+    apple: "/images/logofav.svg",
+  },
+  openGraph: {
+    title: "Architect Asif | Visionary Architecture Studio",
+    description: "Thoughtful architectural spaces designed for the way you live.",
+    url: "https://architectasif.com",
+    siteName: "Architect Asif",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Architect Asif | Visionary Architecture Studio",
+    description: "Thoughtful architectural spaces designed for the way you live.",
   },
 };
 
